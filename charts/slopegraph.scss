@@ -1,0 +1,64 @@
+slopegraph {
+  @extend .chart-directive-container;
+  margin-top: 0;
+
+  font-family: 'Montserrat';
+
+  .group {
+    opacity: 1;
+    @include transition(200ms, ease-in-out);
+    text {
+      alignment-baseline: middle;
+      &.meta {
+        font-size: 10px;
+        pointer-events: none;
+      }
+      &.left {
+        text-anchor: end;
+      }
+      &.right {
+        text-anchor: start;
+      }
+    }
+    .reveal-on-select {
+      opacity: 0;
+    }
+    &.selected {
+      .reveal-on-select {
+        opacity: 1;
+      }
+      .evolution-line {
+        stroke: $emphasis-color;
+      }
+    }
+    &.not-selected{
+      opacity: 0.1;
+    }
+    .evolution-line {
+      stroke: $slopegraphLineColor;
+      stroke-width: 3px;
+    }
+  }
+  .bg-touch-area{
+    fill: transparent;
+  }
+  .slopegraph-label{
+    font-size: 10px;
+  }
+  .slopegraph-value{
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .separation-line {
+    stroke: #dedede;
+    stroke-width: 2px;
+  }
+  .left-date{
+    text-anchor:end;
+    font-size: 13px;
+  }
+  .right-date{
+    text-anchor:start;
+    font-size: 13px;
+  }
+}

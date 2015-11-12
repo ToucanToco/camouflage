@@ -1,0 +1,38 @@
+tc-brand-element {
+  padding-bottom: 0.5em;
+  position: relative;
+
+  @extend .secondary-font;
+  color: white;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1.5;
+
+  span {
+    opacity: 0.6;
+  }
+
+  a {
+    @extend .montserrat-bold-upper;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+
+  &.logo-underlay {
+    &::before {
+      content: '';
+      position: absolute;
+      opacity: 0.3;
+      left: -35px;
+      bottom: -5px;
+      background: url('../images/logo-mono.png');
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 95px;
+      pointer-events: none;
+    }
+  }
+}

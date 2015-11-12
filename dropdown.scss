@@ -1,0 +1,146 @@
+dropdown {
+  .selected-label {
+    @extend .font-carto-details-selected-label;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #999;
+    position: relative;
+    text-transform: capitalize;
+    cursor: pointer;
+    &.searchBox {
+      border: none;
+      text-align: center;
+      font-size: 14px;
+      line-height: 14px;
+      ::-moz-placeholder {
+        color: #fff;
+      }
+      ::-webkit-input-placeholder {
+        color: #fff;
+      }
+
+      @include respond-to(phone) {
+        font-size: 11px;
+      }
+
+      .input-search-container {
+        outline: 3px solid white;
+        display: inline-block;
+        position: relative;
+        text-align: left;
+
+        .input-shield {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+        }
+
+        input {
+          @extend .montserrat-bold-upper;
+          background-color: transparent;
+          border:none;
+          color: #fff;
+          display: inline-block;
+          vertical-align: middle;
+          max-width: 430px;
+          padding: 12px 20px;
+
+          @include respond-to(phone) {
+            padding: 7px 7px;
+            width: auto;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+        .icon-caret-bold, .icon-search {
+          display: inline-block;
+          float: right;
+          font-size: 11px;
+          position: relative;
+          top: 12px;
+          right: 12px;
+          @include transition(300ms, ease);
+          &.open {
+            @include rotate(180deg);
+          }
+
+          @include respond-to(phone) {
+            top: 7px;
+            right: 7px;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    .arrow-select-entity {
+      float: right;
+      margin-right: 6px;
+      @include transition(300ms, ease);
+      @include rotate(90deg);
+    }
+
+    .select-entity-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      z-index: 40000;
+      width: 100%;
+      background-color: #fff;
+      max-height: 0;
+      text-align: left;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      @extend .font-dropdown-select-entity;
+      @include transition(300ms, ease);
+
+      .entity-selected {
+        background: $emphasis-color;
+        color: #fff;
+      }
+
+      .entity, .entity-header {
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: normal;
+        color: $textColor;
+
+        &.selected, &:active, &:hover {
+          @extend .entity-selected;
+        }
+      }
+
+      .entity-header {
+        padding-top: 18px;
+        font-weight: bold;
+
+        @include respond-to(phone) {
+          padding-top: 14px;
+        }
+      }
+    }
+
+    &.open {
+      > .arrow-select-entity {
+        @include rotate(-90deg);
+      }
+
+      >.select-entity-dropdown {
+        border: 1px solid #d9d9d9;
+        max-height: 407px;
+      }
+      &.searchBox{
+        >.select-entity-dropdown {
+          max-height: 280px;
+          box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.33);
+          -webkit-box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.33);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+.tooltip-box {
+  @extend .primary-font;
+  padding: 0.1em 0.5em;
+  background-color: $averageBoxColor;
+  color: $averageBoxText;
+  text-align: right;
+  position: absolute;
+  pointer-events: none;
+  border-radius: 0;
+  font-weight: normal;
+  font-size: 0.9m;
+
+  @include respond-to(phone) {
+    font-size: 9px;
+  }
+
+  .text {
+    font-weight: normal;
+    font-size: 0.9m;
+
+    &::after {
+      content: ' ';
+    }
+  }
+
+  .value, .unit {
+    font-weight: bold;
+  }
+}
+
+md-tooltip {
+  $md-tooltip-bg-color: transparentize($averageBoxColor, 0.3);
+  border-radius: 0;
+
+  .md-background {
+    background-color: $md-tooltip-bg-color;
+  }
+
+  .md-content {
+    @extend .primary-font;
+    font-weight: normal;
+    font-size: 13px;
+    padding: 0 0.5em;
+    color: $averageBoxText;
+  }
+}
+
+.small-app-tooltip {
+  @extend .tooltip-box;
+  border-radius: 0;
+  font-size: smaller;
+
+  ._720kb-tooltip-caret {
+    &::before {
+      border-color: $averageBoxColor;
+    }
+  }
+
+  &._720kb-tooltip-top,
+  &._720kb-tooltip-bottom {
+    ._720kb-tooltip-caret {
+      &::before {
+        border-right-color: transparent;
+        border-left-color: transparent;
+      }
+    }
+  }
+
+  &._720kb-tooltip-left,
+  &._720kb-tooltip-right {
+    ._720kb-tooltip-caret {
+      &::before {
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+      }
+    }
+  }
+}
+
+.small-app-tooltip-modal {
+  @extend .small-app-tooltip;
+  z-index: 10000;
+}
+
+.small-app-tooltip-long {
+  @extend .small-app-tooltip;
+  text-align: left;
+  width: 300px;
+  text-transform: none;
+}

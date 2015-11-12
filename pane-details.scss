@@ -1,0 +1,311 @@
+.chart-legend-right, legend {
+  width: $chartLegendWidth;
+  padding-left: $marginChart;
+  padding-right: $paddingRightSlide;
+  padding-top: $chart-directive-container-margin-top;
+  padding-bottom: $chart-directive-container-margin-top;
+  background-color: $backgroundSlideCommentary;
+  overflow-y: auto;
+
+  &.shrink{
+    width: $chartLegendWidthShrink;
+    padding-left: $marginChart - 10;
+    .metric-wrapper {
+      width: $chartLegendWidth - $groupColorWidth - $marginChart - $paddingRightSlide - 10;
+    }
+  }
+
+  .selected-label {
+    @extend .montserrat-bold-upper;
+    text-transform: none;
+    font-size: 22.5px;
+    line-height: 23px;
+    position: relative;
+    margin-bottom: 0.3em;
+    .reminder-color-entity-select {
+      display: inline-block;
+      position: absolute;
+      top: -8px;
+      width: 26px;
+      height: 6px;
+      background-color: $emphasis-color;
+      margin-right: 10px;
+    }
+  }
+
+  .selected-meta {
+    font-family: $primary-font-family;
+    font-size: 11px;
+
+    &.emphasized {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    @include respond-to(phone) {
+      margin: 10px;
+    }
+  }
+  .group-metric-wrapper {
+    margin-top: 20px;
+    overflow: hidden; /* floats inside */
+    /*@include transition($transition-duration, $transition-type);*/
+
+    &.not-selected {
+      opacity: 0.3;
+    }
+  }
+  .group-color {
+    float: left;
+    width: $groupColorWidth;
+    height: 7px;
+    margin-top: 6px;
+    &.group-color-0 {
+      background-color: $barStackColor0;
+    }
+    &.group-color-1 {
+      background-color: $barStackColor1;
+    }
+    &.group-color-2 {
+      background-color: $barStackColor2;
+    }
+    &.group-color-3 {
+      background-color: $barStackColor3;
+    }
+    &.group-color-4 {
+      background-color: $barStackColor4;
+    }
+
+  }
+  /* Colors */
+  @each $color in $chartColors {
+    $i: index($chartColors, $color) - 1;
+    [data-serie="#{$i}"], [data-serie-index="#{$i}"] {
+      @include colorSVGElement($color);
+    }
+  }
+
+  .metric-wrapper {
+    float: left;
+    width: $chartLegendWidth - $groupColorWidth - $marginChart - $paddingRightSlide;
+    padding-left: 7px;
+    .metric-value {
+      @extend .primary-font;
+      text-transform: none;
+      font-size: 17.5px;
+      line-height: 20.5px;
+    }
+    .metric-label {
+      font-family: $primary-font-family;
+      font-size: 11px;
+    }
+  }
+
+  .color-selected-value{
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    top: -13px;
+    background-color: $emphasis-color;
+    &.bar-0 {
+      background-color: $colorChart0 ;
+    }
+    &.bar-1 {
+      background-color: $colorChart2 ;
+    }
+  }
+
+  .legend-helper {
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  .legend-helper-bottom {
+    @extend .legend-helper;
+    background: url('legend-helper-bottom.png') no-repeat;
+    background-size: 20px 20px;
+  }
+  .legend-helper-left {
+    @extend .legend-helper;
+    background: url('legend-helper-left.png') no-repeat;
+    background-size: 20px 20px;
+  }
+  .legend-helper-bubbles-scale {
+    @extend .legend-helper;
+    background: url('legend-helper-bubbles-scale.png') no-repeat;
+    background-size: 20px 20px;
+  }
+
+  .selected-kpis{
+    margin-top: 10px;
+    .kpi-group{
+      box-sizing: border-box;
+      border: solid 3px transparent;
+      padding-top: 17px;
+      padding-bottom: 17px;
+      margin-left: -15px;
+      padding-left: 15px;
+      transition: background-color $transition-type $transition-duration;
+
+      &.ng-leave {
+        display: none;
+      }
+
+      .comp-kpi-container {
+        position: relative;
+        @extend .font-carto-details-comp-kpi !optional;
+        text-transform: capitalize;
+      }
+
+      &.selected {
+        border-color: $emphasis-color;
+
+        @each $color in $scaleColors {
+          $i: index($scaleColors, $color) - 1;
+          &[data-scale-index="#{$i}"] {
+            border-color: transparent;
+            background-color: $color;
+            color: white;
+          }
+        }
+      }
+    }
+    .kpi-value{
+      @extend .font-carto-details-kpi-value !optional;
+    }
+    .kpi-label{
+      @extend .font-carto-details-selected-meta !optional;
+    }
+  }
+
+  .separator {
+    height: 3em;
+  }
+}
+
+.mobile-legend-handle {
+  display: none;
+}
+
+@include respond-to(phone) {
+  .with-settings-pane .mobile-legend {
+    display: none;
+  }
+  .mobile-legend {
+    // positionning
+    z-index: 101;
+    display: block;
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    min-height: $mobileLegendHandleHeight;
+
+    transition: top 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    top: initial;
+    transform: translateY(100%);
+    bottom: $mobileLegendHandleHeight;
+
+    &.show-full-legend {
+      top: $mobileLegendPositionTop;
+      transform: translateY(0);
+      bottom: initial;
+      //padding-top: 0;
+      .selected-label {
+        margin-top: $mobileLegendPadding;
+      }
+    }
+
+    // styling
+    background-color: $mobileLegendBackgroundColor;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.33);
+    margin-bottom: 0;
+    padding: 0;
+    // padding-top: $mobileLegendHandleHeight/2;
+
+    .group-metric-wrapper,
+    .selected-label {
+      margin: $mobileLegendPadding;
+      .color-selected-value {
+        position: relative;
+        width: 12px;
+        height: 12px;
+        background-color: #ffe295;
+        float: left;
+        margin-right: 10px;
+        margin-top: 20px;
+      }
+    }
+    .selected-label {
+      margin-top: $mobileLegendHandleHeight - 10px;
+    }
+
+    .mobile-commentary {
+      .slide-commentary-container {
+        padding: $mobileLegendPadding;
+        height: auto;
+        letter-spacing: 0px;
+      }
+    }
+    .mobile-legend-handle {
+      display: block;
+      color: $faded-text;
+      text-align: center;
+      font-size: 14px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      .handle-icon {
+        position: absolute;
+        top: 10px;
+        font-size: 13px;
+        color: #000;
+        opacity: 0.1;
+        transform-origin: 100% 0%;
+        transform: scaleX(2);
+      }
+      .top-right-icon {
+        z-index: 10;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+    }
+
+    &.slide-out {
+      transition: all 0.5s ease;
+      bottom: 0;
+      &.show-full-legend {
+        bottom: auto;
+        top: 0;
+        transform: translateY(-100%);
+      }
+    }
+  }
+
+  .legend-overlay {
+    transition: opacity 0.8s ease;
+    // positionning
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFF;
+    pointer-events: none;
+
+    opacity: 0;
+    // display: none; // not working well with transitions
+    &.show-full-legend {
+      opacity: 0.5;
+      display: block;
+    }
+  }
+
+}

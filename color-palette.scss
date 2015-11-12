@@ -1,0 +1,58 @@
+color-palette {
+  display: flex;
+  margin: 3em 0;
+  @extend .secondary-font;
+  font-weight: bold;
+  color: $textColor;
+
+  .category {
+    flex: 1;
+    border-right: solid 1px $grey;
+
+    &:last-child {
+      border-right-color: transparent;
+    }
+
+    .title {
+      @extend .montserrat-bold-upper;
+      font-size: larger;
+    }
+
+    .subtitle {
+      margin-bottom: 2em;
+    }
+
+    .color {
+      margin-bottom: 1em;
+
+      .preview {
+        margin: auto;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        margin-bottom: 0.5em;
+        cursor: pointer;
+      }
+
+      .name, .code {
+        height: 1em;
+      }
+
+      .code {
+        display: none;
+        opacity: 0.8;
+      }
+
+      &:hover, &:focus, &:active {
+        .name {
+          display: none;
+          height: 1em;
+        }
+
+        .code {
+          display: block;
+        }
+      }
+    }
+  }
+}

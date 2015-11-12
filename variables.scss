@@ -1,0 +1,804 @@
+$offsetMenu: 400px;
+$headerHeight: 90px;
+$viewportHeight: 768px;
+$viewportWidth: 1024px;
+$kpiNavigatorWidth:192px;
+$scrollbarSize: 0;
+$scroll-cue-height: 150px;
+$slide-height: $viewportHeight - $headerHeight;
+$commentary-height: 110px;
+$admin-footer-height: 50px;
+
+/******* RESPONSIVENESS ****/
+$headerHeight-mobile: 60px;
+$offsetMenu-mobile: 80%;
+$kpiNavigatorHeight-mobile: 80px;
+$knWidth-mobile: 130px;
+$scroll-cue-height-mobile: 50px;
+// Mobile legend/pane-details
+$mobileLegendPositionTop: 15px;
+$mobileLegendBackgroundColor: #FFF;
+$mobileLegendPadding: 15px;
+$mobileLegendHandleHeight: 50px;
+
+
+$screen-phone-max: 767px;
+$screen-tablet-max: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == phone {
+    @media screen and (max-width: $screen-phone-max),
+      projection and (max-width: $screen-phone-max) {
+      @content;
+    }
+  }
+  @else if $media == tablet {
+    @media screen and (min-width: $screen-phone-max+1) and (max-width: $screen-tablet-max),
+      projection and (min-width: $screen-phone-max+1) and (max-width: $screen-tablet-max) {
+      @content;
+    }
+  }
+  @else if $media == desktop {
+    @media screen and (min-width: $screen-tablet-max+1),
+    projection and (min-width: $screen-tablet-max+1){
+      @content;
+    }
+  }
+}
+
+.mobile-only {
+  @include respond-to(tablet) {
+    display: none;
+  }
+  @include respond-to(desktop) {
+    display: none;
+  }
+}
+
+.no-mobile {
+  @include respond-to(phone) {
+    display: none !important;
+  }
+}
+
+/******** CHARTS *******/
+
+$chartWidth: 590px;
+$marginChart: 30px;
+$chartLegendWidth:  $viewportWidth - $kpiNavigatorWidth - $chartWidth ;
+$chartLegendWidthShrink: $chartLegendWidth - 20;
+$groupColorWidth: 13px;
+$charts-font-size: 16px;
+
+$charts-font-size-mobile: 13px;
+
+/**** COLORS ******/
+$splash-color: black;
+
+$mainColor: #88b2a8;
+$mainColor_fade: #b2cdc6;
+$main-color-dark: darken($mainColor, 15) !default;
+
+
+$metaColor: #2a5c74;
+
+$nav-menuColor1: $mainColor;
+$nav-menuColor1_2: $mainColor_fade;
+
+
+$red: #ec1b2f;
+
+$controllerColor: $mainColor;
+$execsumColor: #3fb9be;
+$greyMissing: #ddd;
+
+$inactive-color: #bfbfbf;
+
+$positiveColor: #A7Bd3e;
+$negativeColor: #e78352;
+
+$emphasis-color: #f3c642;
+$emphasis-color-light: #fffaec;
+
+$aboveAverageColor: $positiveColor;
+$underAverageColor: $negativeColor;
+$averageBoxColor: #4e4e4e;
+$averageBoxText: #fff;
+$averageLineColor: #808080;
+
+$chartColors: $emphasis-color #b3d7de #81b1bd #437f9d #00354e;
+$stackedColors: #736B88 #B0C297 #877900 #A0A0A0 #986D5E #60947F;
+$comparisonColor:#D3EFF4;
+
+$waterfallInitialColor: #00354e;
+$waterfallPositiveColor: $positiveColor;
+$waterfallNegativeColor: $negativeColor;
+
+$slopegraphLineColor: #437f9d;
+
+$colorChart0: $emphasis-color;
+$colorChart1: #A1D1C5;
+$colorChart2: #2a5c74;
+$colorChart3: #6095a2;
+$colorChart4: #535353;
+
+$scaleColors: #6090bd #cae5ff #f3d0dc #9b2156;
+
+$scaleColor0: #6090bd;
+$scaleColor1: #cae5ff;
+$scaleColor2: #f3d0dc;
+$scaleColor3: #9b2156;
+
+$barStackColor0: $colorChart0;
+$barStackColor1: $colorChart1;
+$barStackColor2: $colorChart2;
+$barStackColor3: $colorChart3;
+$barStackColor4: $colorChart4;
+
+
+/**** HOME ****/
+$execsumBgColor: $mainColor;
+$transparentize-execsum-bg-overlay: 0.3; // 0: opaque overlay, 1: no overlay
+$execsumArrowColor: white;
+$search-selected-bg-color: transparentize($execsumBgColor, $transparentize-execsum-bg-overlay);
+$cartoSelectedColor: $emphasis-color;
+
+$sparkline-fill: $mainColor_fade;
+$sparkline-selection-stroke: $mainColor;
+
+$home-button-color: $emphasis-color;
+$home-secondary-color: white;
+
+$shadow: rgba(50, 50, 50, 0.33);
+
+/*** STUDIO ***/
+
+$small-apps-list-background: #e1e1e1;
+
+/*** TRANSTIONS ***/
+$transition-type: ease;
+$transition-duration: 0.6s;
+
+/**** FONTS ******/
+@font-face {
+  font-family: "Montserrat";
+  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url('../fonts/HelveticaNeue.otf') format('opentype');
+}
+@font-face {
+  font-family: "Roboto Slab";
+  font-weight: 200;
+  src: url('../fonts/RobotoSlab-Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Roboto Slab";
+  font-weight: 300;
+  src: url('../fonts/RobotoSlab-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  src: url('../fonts/RobotoSlab-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  src: url('../fonts/RobotoSlab-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url('../fonts/HelveticaNeueLTPro.otf') format('opentype');
+  font-weight: bold;
+}
+
+$primary-font-family: 'Montserrat';
+$secondary-font-family: 'Roboto Slab';
+
+.primary-font {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.secondary-font {
+  font-family: 'Roboto Slab';
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+.standard-font {
+  font-family: 'Helvetica Neue';
+  font-weight: normal;
+  letter-spacing: normal;
+  text-transform: none;
+}
+.montserrat-regular{
+  font-family: 'Montserrat';
+  letter-spacing: 1px;
+}
+.montserrat-bold{
+  font-family: 'Montserrat';
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.montserrat-bold-upper {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+$chart-font-family: $primary-font-family;
+$column-label-font-family: "Georgia";
+
+$fontSizeBase: 12px;
+
+/**** COLORS ******/
+// FIXME order this file !
+$neutralColor: #437f9d;
+
+$greyLight: #f5f5f5;
+$grey: #ededed;
+
+$backgroundSlideCommentary: $greyLight;
+
+$textColor: #4c4c4c;
+$faded-text: #b4b4b4;
+
+$dropAreaTextColor: #b7d1cb;
+$backgroundDropAreaColor: #f5faf9;
+$backgroundHeaderColor: $home-secondary-color;
+
+$paddingLeftSlide: 45px;
+$paddingRightSlide: 20px;
+$paddingTopComment: 35px;
+
+
+$notification-bg: $textColor;
+$notification-color: $home-secondary-color;
+$notification-faded: #717171;
+$notification-padding-horizontal: 2em;
+$notification-padding-vertical: $notification-padding-horizontal / 2;
+
+/* EXECSUM FONTS */
+.font-execsum-title {
+  @extend .secondary-font;
+  font-size: 45px;
+  line-height: 55px;
+
+  @include respond-to(phone) {
+    font-family: $primary-font-family;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: bold;
+  }
+}
+.font-execsum-content {
+  @extend .primary-font;
+  font-size: 15px;
+
+  @include respond-to(phone) {
+    font-size: 11px;
+  }
+}
+
+.font-execsum-content-emphasize {
+  font-weight: bold;
+  color: $execsumColor;
+}
+
+.font-search-selected-name {
+  @extend .secondary-font;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+
+  @include respond-to(phone) {
+    font-family: $primary-font-family;
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+.font-dashboard-report-comment {
+  @extend .secondary-font;
+  font-size: $fontSizeBase;
+}
+
+/* NAVMENU FONTS */
+
+.font-nav-menu-brand {
+  @extend .secondary-font;
+}
+
+.font-nav-menu-reports {
+  @extend .primary-font;
+  font-size: 12px;
+
+  @include respond-to(phone) {
+    font-size: 11px;
+  }
+}
+
+$font-size-nav-menu-level1: 32.5px;
+$font-size-nav-menu-level1-mobile: 22.5px;
+.font-nav-menu-level1{
+  @extend .secondary-font;
+  font-size: $font-size-nav-menu-level1;
+
+  @include respond-to(phone) {
+    font-family: $primary-font-family;
+    font-size: $font-size-nav-menu-level1-mobile;
+    letter-spacing: normal;
+    font-weight: bold;
+  }
+}
+.font-nav-menu-level2{
+  @extend .primary-font;
+  font-size: 12.5px;
+
+  @include respond-to(phone) {
+    font-size: 11px;
+  }
+}
+
+
+/* HEADER FONTS */
+.font-header-title {
+  @extend .primary-font;
+  font-size: 17.5px;
+  line-height: 30px;
+  letter-spacing: 3px;
+
+  @include respond-to(phone) {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+  }
+}
+.font-header-subtitle {
+  @extend .secondary-font;
+  font-size: 12.5px;
+  line-height: 12.5px;
+
+  @include respond-to(phone) {
+    // font-family: $primary-font-family;
+    // font-weight: bold;
+    font-style: italic;
+    font-size: 11px;
+  }
+}
+.font-header-text {
+  @extend .secondary-font;
+  font-size: 9px;
+}
+
+/* NOTIFICATIONS FONTS */
+.font-notification {
+  @extend .montserrat-bold;
+}
+
+/* SLIDE FONTS */
+.font-slide-commentary {
+  @extend .secondary-font;
+  font-size: 17.5px;
+  font-weight: normal;
+  color : #4c4c4c;
+  line-height: 23px;
+}
+.font-legend-value {
+  @extend .primary-font;
+  font-size: 22.5px;
+  line-height: 27px;
+}
+.font-legend-label {
+  font-family: $primary-font-family;
+  font-size: 11px;
+}
+.font-column-label {
+  font-family: $column-label-font-family;
+  font-style: italic;
+  font-size: 12.5px;
+}
+
+.font-buttons {
+  font-family: $chart-font-family;
+  text-transform: uppercase;
+  font-style: normal;
+
+  @include respond-to(phone) {
+    font-size: 11px;
+  }
+}
+
+.font-recommendation {
+  @extend .secondary-font;
+  font-weight: bold;
+}
+
+/* KPI NAVIGATOR FONTS */
+
+.font-kpi-navigator-title {
+  @extend .primary-font;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 1px;
+
+  @include respond-to(phone) {
+    font-size: 11px;
+    line-height: 11px;
+    letter-spacing: 1px;
+  }
+}
+.font-kpi-navigator-value {
+  /*@extend .secondary-font;*/
+  font-family: $primary-font-family;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 35px;
+}
+.font-kpi-navigator-value-unit {
+  /*@extend .secondary-font;*/
+  font-family: $primary-font-family;
+  font-size: 15px;
+}
+.font-kpi-navigator-label {
+  /*@extend .secondary-font;*/
+  font-family: $primary-font-family;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+/* SETTINGS PANEL FONTS */
+.font-settings-content-title {
+	@extend .font-execsum-title;
+  font-size: 28px;
+}
+.font-settings-content-subtitle {
+	@extend .font-kpi-navigator-title;
+}
+.font-settings-content-text {
+	@extend .secondary-font;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* CARTO FONTS */
+.font-legend-carto {
+  @extend .secondary-font;
+}
+.font-carto-details-selected-label {
+  @extend .primary-font;
+  font-size: 22.5px;
+}
+.font-carto-details-selected-meta {
+  @extend .primary-font;
+  font-size: 12px;
+}
+.font-carto-details-selected-submeta {
+  font-family: $primary-font-family;
+  font-size: 11px;
+}
+.font-carto-details-comp-kpi {
+  @extend .font-carto-details-selected-submeta;
+}
+.font-carto-details-kpi-value{
+  @extend .primary-font;
+  font-size: 17.5px;
+}
+.font-carto-details-select-entity {
+  @extend .secondary-font;
+  font-size: 13px;
+  line-height: 28px;
+}
+
+.font-variation-value {
+  font-family: Georgia;
+  font-style: italic;
+  font-size: 16px;
+  dominant-baseline: middle;
+
+  @include respond-to(phone) {
+    font-size: 14px;
+  }
+}
+
+.font-average-marker-text{
+  @extend .secondary-font;
+  font-size: 12px;
+  text-anchor: middle;
+}
+
+/* MODAL */
+.font-dialog-content {
+  @extend .primary-font;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: none;
+}
+
+
+/* DROPDOWN */
+.font-dropdown-select-entity {
+  @extend .montserrat-bold-upper;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+
+  @include respond-to(phone) {
+    font-size: 11px;
+  }
+}
+
+.nav-menu-group {
+  .nav-menuSelected {
+    background-color: $nav-menuColor1;
+  }
+}
+
+
+.kpi-navigator-container {
+  .kpi-navigator {
+    background-color: $nav-menuColor1_2;
+  }
+  .kpi-navigator-unit.selected {
+    background-color: $nav-menuColor1;
+  }
+}
+
+
+
+@mixin transform($translateX: 0px, $translateY: 0px) {
+  -webkit-transform: translate3d($translateX, $translateY, 0);
+  -moz-transform: translate3d($translateX, $translateY, 0);
+  -ms-transform: translate3d($translateX, $translateY, 0);
+  transform: translate3d($translateX, $translateY, 0);
+}
+
+@mixin rotate($angle) {
+  transform: rotate($angle);
+  -webkit-transform: rotate($angle);
+  -moz-transform: rotate($angle);
+  -o-transform: rotate($angle);
+  -ms-transform: rotate($angle);
+}
+
+@mixin transition($delay: $transition-duration, $ease: $transition-type, $attribute: all) {
+  -webkit-transition: $delay $ease $attribute;
+     -moz-transition: $delay $ease $attribute;
+      -ms-transition: $delay $ease $attribute;
+          transition: $delay $ease $attribute;
+}
+
+@mixin transition-slide() {
+  -webkit-transition: 500ms cubic-bezier(0.445, 0.050, 0.550, 0.950) all;
+  -moz-transition: 500ms cubic-bezier(0.445, 0.050, 0.550, 0.950) all;
+  -ms-transition: 500ms cubic-bezier(0.445, 0.050, 0.550, 0.950) all;
+  transition: 500ms cubic-bezier(0.445, 0.050, 0.550, 0.950) all;
+}
+
+@mixin text-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
+$slide-height: $viewportHeight - $headerHeight;
+@mixin overflow-x-wrapper() {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  min-width: 1px;
+}
+@mixin overflow-y-wrapper() {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+@mixin imageWithRetina($url, $width, $height) {
+  width: $width;
+  height: $height;
+  background: url('#{$url}.png') no-repeat;
+  background-size: $width $height;
+  background-position: center;
+  @media
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  projection and (-webkit-min-device-pixel-ratio: 2),
+  projection and (min-resolution: 192dpi) {
+    background: url('#{$url}@2x.png') no-repeat;
+    background-size: $width $height;
+    background-position: center;
+  }
+}
+
+.full-content {
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  @extend .font-buttons;
+  border: 1px solid $mainColor;
+  background-color: white;
+  color: $mainColor;
+  text-align:center;
+  min-width: 125px;
+  padding: 15px;
+  line-height: 38px;
+  font-weight: 400;
+  cursor: pointer;
+
+  &.active, &:hover, &:focus {
+    background-color: $mainColor_fade;
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: $controllerColor;
+    color: #fff;
+  }
+}
+
+@mixin bordered-button-creator($color: $mainColor, $bg-color: white, $hover-color: $bg-color) {
+  @extend .primary-font;
+  padding: 5px 15px;
+  border: 3px solid $color;
+  font-size: 15px;
+  margin: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  background: $bg-color;
+  color: $color;
+
+  &:hover {
+    background-color: $color;
+    color: $hover-color;
+  }
+
+  .icon {
+    font-size: 12px;
+  }
+
+  &.bordered-button-large {
+    padding: 15px 25px;
+  }
+
+  &.unbordered-button {
+    border-color: transparent;
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+      color: $hover-color;
+    }
+  }
+
+  &.light-bg {
+    &:hover {
+      color: lighten($color, 10);
+    }
+  }
+}
+
+.bordered-button {
+  @include bordered-button-creator();
+}
+
+.bordered-button-inverted {
+  @include bordered-button-creator(white, none, $mainColor);
+}
+
+.bordered-button-discreet {
+  @include bordered-button-creator($textColor);
+}
+
+.bordered-button-faded {
+  @include bordered-button-creator($mainColor_fade);
+}
+
+.bordered-button-emphasis {
+  @include bordered-button-creator($emphasis-color);
+}
+
+.rotated-90 {
+  @include rotate(-90deg);
+}
+
+.icon-caret-bold-left {
+  @extend .icon-caret-bold-right;
+  display: inline-block;
+  @include rotate(-180deg);
+}
+
+/* COMMON CHART CLASSES */
+
+$chart-directive-container-margin-top: 32px;
+$chart-directive-container-margin-top-mobile: 0;
+.chart-directive-container {
+  position: relative;
+  margin-top: $chart-directive-container-margin-top;
+  @extend .full-content;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  @include respond-to(phone) {
+    margin-top: $chart-directive-container-margin-top-mobile;
+  }
+}
+
+.chart-container {
+  flex: 1;
+  flex-direction: row;
+  align-items: stretch;
+
+  &.with-right-pane {
+    overflow: hidden;
+  }
+}
+
+.secondary  {
+  .chart-diretive-container {
+    flex-direction: column;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+@mixin colorSVGElement($color) {
+  &.bar, &.arc, &.area, &.legend-rect, &.node, &.node-part {
+    fill: $color;
+  }
+
+  > .line, &.line, &.event-line, &.group-overlay , &.group-overlay.selected {
+    stroke: $color;
+  }
+
+  &.group-color, &.color-selected-value {
+    background-color: $color;
+  }
+}
+
+@mixin scroll-opaque-cue-bg($color: white) {
+  background: -moz-linear-gradient(top, transparentize($color, 1) 0%, transparentize($color, 1) 8%, transparentize($color, 0.22) 79%, transparentize($color, 0) 99%, transparentize($color, 0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparentize($color, 1)), color-stop(8%, transparentize($color, 1)), color-stop(79%, transparentize($color, 0.22)), color-stop(99%, transparentize($color, 0)), color-stop(100%, transparentize($color, 0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, transparentize($color, 1) 0%, transparentize($color, 1) 8%, transparentize($color, 0.22) 79%, transparentize($color, 0) 99%, transparentize($color, 0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, transparentize($color, 1) 0%, transparentize($color, 1) 8%, transparentize($color, 0.22) 79%, transparentize($color, 0) 99%, transparentize($color, 0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, transparentize($color, 1) 0%, transparentize($color, 1) 8%, transparentize($color, 0.22) 79%, transparentize($color, 0) 99%, transparentize($color, 0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, transparentize($color, 1) 0%, transparentize($color, 1) 8%, transparentize($color, 0.22) 79%, transparentize($color, 0) 99%, transparentize($color, 0) 100%); /* W3C */
+}

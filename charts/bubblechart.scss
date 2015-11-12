@@ -1,0 +1,41 @@
+bubblechart {
+  @extend .chart-directive-container;
+  circle {
+    fill: $neutralColor;
+    stroke: darken($neutralColor,5%);
+  }
+  .label{
+    font-size: 12px;
+    fill: #4b4b4b;
+    text-anchor: middle;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    stroke-width: 0px;
+    @include respond-to(phone) {
+      font-weight: normal;
+      font-size: 11px;
+    }
+  }
+  .y.axis .domain {
+    stroke: none;
+  }
+  .tick {
+    text.identity{
+      @include transform(0, -10px);
+    }
+  }
+  .group-circle, .group-label {
+    &.selected {
+      circle{
+        fill: $emphasis-color;
+        stroke: darken($emphasis-color,5%);
+      }
+      .label {
+        fill: darken(#4b4b4b, 50%);
+        font-weight: bold;
+      }
+    }
+
+  }
+
+}

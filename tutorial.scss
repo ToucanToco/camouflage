@@ -1,0 +1,35 @@
+chart {
+  tutorial > .overlay {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.94;
+
+    .content {
+      @extend .font-slide-commentary;
+      width: 75%;
+      margin: auto;
+      font-size: 2em;
+      line-height: normal;
+      color: black;
+
+      .button {
+        @extend .font-buttons;
+        font-size: 1em;
+        width: 33%;
+        margin: auto;
+        margin-top: 2em;
+        background-color: white;
+        @include respond-to(phone) {
+          width: 76%;
+        }
+      }
+    }
+  }
+}

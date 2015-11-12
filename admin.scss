@@ -1,0 +1,131 @@
+[contenteditable] {
+  &:active, &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &:focus {
+    white-space: normal;
+  }
+
+  &[unclickable] {
+    pointer-events: none;
+
+    &:focus {
+      pointer-events: all;
+    }
+  }
+}
+
+/* Hidden element by default */
+
+.main-small-app-wrapper:not(.admin) {
+  .admin-only {
+    display: none !important;
+  }
+
+  .no-admin {
+    display: none !important;
+  }
+}
+
+.main-small-app-wrapper:not(.admin-capable),
+.small-app-thumbnail:not(.admin-capable) {
+  .admin-capabale-only {
+    display: none !important;
+  }
+}
+
+[ngf-drop] {
+  border: 5px dashed transparent;
+  transition: border-color $transition-type $transition-duration;
+
+  .instructions {
+    @extend .secondary-font;
+    font-weight: bold;
+    margin: 1em 0;
+    display: none;
+  }
+}
+
+.main-small-app-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: url('pattern-blueprints.png');
+  transition: $transition-duration $transition-type;
+  flex: 1;
+
+  small-app {
+    transition: $transition-duration $transition-type;
+    position: relative;
+    flex: 1;
+    box-shadow: 0 0 15px transparentize(black, 0.2);
+  }
+
+  .admin-footer {
+    @extend .montserrat-bold-upper;
+    text-align: center;
+    line-height: $admin-footer-height;
+    color: #DDD;
+  }
+
+  .admin-header {
+    @extend .montserrat-bold-upper;
+    flex-direction: row;
+    display: flex;
+    line-height: $admin-footer-height;
+    color: white;
+    justify-content: space-between;
+
+    .tucana-studio-breadcrumb {
+      color: #DDD;
+
+      a:first-child {
+        text-decoration: none;
+      }
+
+      .breadcrumb-separator {
+        margin: 0 12px;
+      }
+
+      span:last-child {
+        color: white;
+      }
+    }
+  }
+
+  .admin-header, .admin-footer {
+    transition: $transition-duration $transition-type;
+    height: $admin-footer-height;
+
+    &.ng-hide-add-active,
+    &.ng-hide-remove:not(.ng-hide-remove-active) {
+      height: 0;
+    }
+  }
+}
+
+/* Appear when admin */
+.admin {
+  padding: 0 2em;
+
+  &.small-app-thumbnail {
+    padding:0;
+  }
+
+  small-app {
+    // transform: translate3d(0, 0, 0);
+  }
+
+  [ngf-drop] {
+    border-color: #DDD;
+
+    &.dragover {
+      border-color: $emphasis-color;
+    }
+
+    .instructions {
+      display: block;
+    }
+  }
+}

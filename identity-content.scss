@@ -1,0 +1,226 @@
+$brand-color: #A0D1C5;
+$brand-accent: #f3c600;
+$button-hover-blue: #60919f;
+$input-height: 60px;
+$submit-button-margin-top: 90px;
+
+.toucan-overlay {
+
+  @mixin overlay-background($overlay-image-url) {
+    background:
+      linear-gradient(
+      transparentize($execsumBgColor, 0.9),
+      transparentize($execsumBgColor, 0.9)
+      ),
+      url($overlay-image-url);
+    background-repeat: no-repeat;
+  }
+  @mixin mobile-overlay($overlay-image-url) {
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    @include overlay-background($overlay-image-url);
+    background-size: 100%;
+  }
+  // - Background & colors
+  @extend .overlay;
+  @include overlay-background('tctc-bg-desktop.png');
+  background-position: top center;
+  background-size: cover;
+  color: #FFFFFF;
+  z-index: 50;
+  // - Positioning
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 7%;
+
+  // - Responsive background
+  @include respond-to(phone) {
+    .overlay-bottom-left {
+      @include mobile-overlay('mobile-login-bg-bottom-left.png');
+      background-position: left bottom;
+      bottom: 0;
+      left: 0;
+    }
+    .overlay-top-left {
+      @include mobile-overlay('mobile-login-bg-top-left.png');
+      background-position: left top;
+      top: 0;
+      left: 0;
+    }
+    .overlay-bottom-right {
+      @include mobile-overlay('mobile-login-bg-bottom-right.png');
+      background-position: right bottom;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+    background:
+      url('mobile-login-bg-behind.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @include respond-to(tablet) {
+    @include overlay-background('tctc-bg-desktop.png');
+    background-size: cover;
+    background-position: top center;
+    padding-bottom:0;
+  }
+
+  form {
+    z-index: 10;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    > div {
+      text-align: center;
+    }
+  }
+
+  .logo {
+    z-index: 10;
+    height: 90px;
+    margin: 20px;
+
+    img {
+      max-height: 100%;
+    }
+    @include respond-to(phone) {
+      height: 15%;
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  label {
+    display: inline-block;
+    font-size: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+  }
+
+
+  input[type="text"],
+  input[type="password"] {
+    width: 500px;
+    height: $input-height;
+    background-color: rgba(255,255,255,0.1);
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Georgia";
+    font-style: italic;
+    font-size: 18px;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    -webkit-appearance: none;
+    padding-left: 20px;
+    &:focus {
+      outline: none;
+    }
+
+    @include respond-to(phone) {
+      width: 80%;
+      height: $input-height*2/3;
+      margin-top: 8px;
+    }
+  }
+
+  .validate-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: $submit-button-margin-top;
+
+    input[type="submit"],
+    .validate-button {
+      @extend .montserrat-regular;
+      border-radius: 10px;
+      box-shadow: 0 0 0 0;
+      background-color: $brand-accent;
+      border-color: $brand-accent;
+      border-style: solid;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      width: 160px;
+      height: $input-height;
+      text-transform: uppercase;
+      transition: background-color 500ms ease, border 500ms ease, border-radius 500ms ease;
+      outline: 0;
+      text-align: center;
+
+      &:hover {
+        background-color: $button-hover-blue;
+        border-color: $button-hover-blue;
+      }
+    }
+    @include respond-to(phone) {
+      margin-top: $submit-button-margin-top*2/3;
+      input[type="submit"] {
+        padding-left: 30px;
+        padding-right: 30px;
+        height: $input-height*2/3;
+        width: auto;
+        font-size: 13px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .notification {
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: $input-height + $submit-button-margin-top/2;
+    width: 100%;
+    @include respond-to(phone) {
+      bottom: 60px;
+      font-size: 10px;
+    }
+  }
+
+  ::-moz-placeholder {
+    color: #fff;
+  }
+  ::-webkit-input-placeholder {
+    color: #fff;
+  }
+
+  .legend {
+    position: absolute;
+    font-size: 14px;
+    line-height: 14px;
+    right: 0;
+    top: 162px;
+    font-style: italic;
+  }
+
+  // - Ancienne charte
+  .custom-input {
+    margin-left: 26px;
+    margin-top: 20px;
+    width: 500px;
+    height: $input-height;
+    background-color: #A9D5CB;
+    padding-left: 20px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-style: italic;
+    font-family: "Georgia";
+    border: none;
+
+    @include respond-to(phone) {
+      width: 325px;
+    }
+  }
+}

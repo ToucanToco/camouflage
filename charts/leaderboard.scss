@@ -1,0 +1,457 @@
+chart {
+
+  bullet-chart,horizontal-barchart, stacked-barchart, leaderboard-centered-average {
+    @extend .chart-directive-container;
+
+    // FIXME I don't realy know why there is a huge gap between 0 and 1px :/
+    padding-top: 1px;
+
+
+    .chart-container, .chart-legend-right {
+      pointer-events: all;
+    }
+
+    .chart-container {
+      @extend .chart-container;
+      pointer-events: all;
+      flex-direction: column;
+
+      .upper-middle {
+        align-self: flex-end;
+        margin-right: 40px;
+        margin-left: 40px;
+
+        @include respond-to(phone) {
+          align-self: auto;
+          margin: 0 10px;
+        }
+      }
+    }
+
+    .average-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100%;
+      overflow: visible;
+      height: auto;
+    }
+    .average-marker-circle {
+      fill: #999;
+    }
+    .average-marker-text {
+      @extend .font-average-marker-text;
+    }
+    .average-marker-line {
+      stroke: #999;
+    }
+
+    .horizontal-barchart {
+      margin-top: 30px;
+
+      &.scrollable {
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      -webkit-overflow-scrolling: touch;
+
+      .bar-0 {
+        fill: $colorChart0;
+      }
+      .bar-1 {
+        fill: $colorChart1;
+      }
+
+      // Packs
+      .pack {
+        &[data-index="1"] .bar-0 {
+          fill: $colorChart1;
+        }
+        &[data-index="2"] .bar-0 {
+          fill: $colorChart2;
+        }
+
+        .pack-name {
+          font-size: $charts-font-size * 1.2;
+          font-weight: bold;
+          text-transform: capitalize;
+
+          @include respond-to(phone) {
+            font-size: $charts-font-size-mobile * 1.3;
+          }
+        }
+      }
+
+      .horizontal-bar-complement {
+        fill: #f5f5f5 !important;
+      }
+
+      .horizontal-barchart-label {
+        font-size: $charts-font-size;
+        color: #4b4b4b;
+        /*text-transform: capitalize;*/
+
+        @include respond-to(phone) {
+          font-size: $charts-font-size-mobile;
+          font-weight: normal;
+        }
+      }
+
+      .horizontal-barchart-value {
+        text-anchor: end;
+        font-size: $charts-font-size;
+        color: #4b4b4b;
+        /*alignment-baseline: baseline;*/
+        dominant-baseline: mathematical;
+
+        @include respond-to(phone) {
+          font-size: $charts-font-size-mobile;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .columns-legend {
+      align-self: flex-end;
+
+      display: flex;
+      flex-direction: row-reverse;
+
+      text-align: center;
+      padding-right: 19px;
+
+      @include respond-to(phone) {
+        right: 0px;
+        top: 10px;
+        position: absolute;
+        padding-right: 10px;
+        text-align: right;
+        .sparklines-legend {
+          font-size: 9px;
+        }
+      }
+
+      &.shrink {
+        padding-right: 15px;
+        .sparklines-legend {
+          margin-left: 2px;
+          margin-right: 5px;
+        }
+      }
+
+      .sparklines-legend {
+        width: 100px;
+        margin-left: 30px;
+        margin-right: 20px;
+        @include respond-to(phone) {
+          width: initial;
+        }
+      }
+
+      .variation-legend {
+        width: 90px;
+      }
+
+    }
+
+    .sparklines-legend, .variation-legend {
+      @extend .font-column-label;
+      height: 2em;
+      @include respond-to(phone) {
+        font-size: 9px;
+
+        .text {
+          display: inline-block;
+        }
+        .arrow-up-down {
+          padding-left: 0;
+          margin-left: 2px;
+        }
+      }
+
+      .text, .arrow-up-down {
+        display: inline-block;
+      }
+    }
+  }
+
+  horizontal-barchart {
+    .average-container {
+      height: 100%;
+    }
+  }
+
+  .horizontal-barchart-container {
+    dropdown {
+      .selected-label {
+        width: $chartLegendWidthShrink;
+        font-size: $charts-font-size;
+
+        @include respond-to(phone) {
+          font-size: $charts-font-size-mobile;
+        }
+
+        .selected-label-text {
+          padding-left: 30px;
+        }
+      }
+
+      .select-entity-dropdown {
+        padding-left: 30px;
+
+        > div {
+          padding-left: 0;
+        }
+
+        &.opened {
+          max-height: 300px;
+        }
+      }
+    }
+  }
+
+  leaderboard-centered-average {
+    pointer-events: all;
+    margin-top: 15px;
+
+    .horizontal-barchart {
+      margin-top: 45px;
+      @include respond-to(phone) {
+        margin-bottom: $mobileLegendHandleHeight - 10px;
+
+        .horizontal-barchart-label {
+          font-weight: bold;
+        }
+        .horizontal-barchart-value {
+          font-weight: normal;
+        }
+      }
+    }
+
+    .chart-container {
+      width: 100%;
+      .horizontal-barchart {
+        width: 100%;
+      }
+    }
+
+    .variation-legend {
+      text-align: right;
+      @include respond-to(phone) {
+        .text {
+          margin-bottom: 5px;
+        }
+        right: 0px;
+        font-size: 12px;
+        .arrow-up-down {
+          border-left: none;
+        }
+      }
+    }
+
+    .average-box {
+      font-family: $primary-font-family;
+      line-height: 41px;
+      padding: 0px 12px;
+      background-color: $averageBoxColor;
+      display: inline-block;
+      color: $averageBoxText;
+      position: absolute;
+      text-transform: uppercase;
+      font-size: 10px;
+      z-index: 1000;
+      cursor: pointer;
+      transform: translateX(-50%);
+
+      &:after {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba($averageBoxColor, 0);
+        border-top-color: $averageBoxColor;
+        border-width: 10px;
+        margin-left: -10px;
+      }
+
+      .average-value {
+        font-weight: bold;
+        font-size: 15px;
+
+        &::before {
+          content: ' ';
+        }
+      }
+      @include respond-to(phone) {
+        line-height: 30px;
+        padding: 0px 10px;
+        font-size: 9px;
+      }
+    }
+
+    .average-line {
+      stroke-width: 1.5px;
+      stroke: $averageLineColor;
+    }
+
+    text{
+      dominant-baseline: middle;
+      @include respond-to(phone) {
+        dominant-baseline: auto;
+      }
+      /*alignment-baseline: baseline;*/
+    }
+    .horizontal-barchart-variation-sign {
+      &.evolution-up{
+        fill: $aboveAverageColor;
+      }
+      &.evolution-down{
+        fill: $underAverageColor;
+      }
+    }
+    .horizontal-barchart-variation-sign-text {
+      fill: #fff;
+      text-anchor: middle;
+      font-size: 17px;
+    }
+
+    .bar{
+      &.above-average {
+        fill: $aboveAverageColor;
+      }
+      &.under-average {
+        fill: $underAverageColor;
+      }
+    }
+
+    .horizontal-barchart-value{
+      &.above-average {
+        text-anchor: start;
+      }
+      &.under-average {
+        text-anchor: end;
+      }
+    }
+    @include respond-to(phone) {
+      .horizontal-barchart {
+        .horizontal-barchart-value {
+          dominant-baseline: auto;
+        }
+      }
+    }
+    .packs-decorator {
+      stroke: #e4e4e4;
+    }
+    .packs-label {
+      font-weight: bold;
+    }
+  }
+
+  stacked-barchart {
+    @each $color in $stackedColors {
+      $i: index($stackedColors, $color) - 1;
+      [data-stack-index="#{$i}"] {
+        @include colorSVGElement($color);
+      }
+    }
+
+    .horizontal-barchart-label {
+      font-size: $charts-font-size;
+      color: #4b4b4b;
+      /*text-transform: capitalize;*/
+
+      @include respond-to(phone) {
+        font-size: $charts-font-size-mobile;
+      }
+    }
+
+    .outlier-group {
+      circle {
+        fill: $red;
+      }
+      rect {
+        fill: $red;
+      }
+      line {
+        stroke: #666;
+        stroke-width: 1px;
+      }
+      text {
+        fill: white;
+        text-anchor: middle;
+        font-family: $primary-font-family;
+        font-weight: bold;
+        font-size: 8px;
+        dominant-baseline: middle;
+
+      }
+
+    }
+
+
+    .y-groups {
+      .rect-for-selection {
+        fill: transparent;
+      }
+      &.selected {
+        .rect-for-selection {
+          stroke: #666;
+          stroke-width: 0.5px;
+        }
+
+      }
+    }
+
+    .stacked-grouped-controller {
+      right: 45px;
+      position: absolute;
+
+      .chart-controller {
+        margin-bottom: 0px;
+        color: $controllerColor;
+        border-top: 1px solid $controllerColor;
+        border-bottom: 1px solid $controllerColor;
+        &:first-child {
+          border-left: 1px solid $controllerColor;
+        }
+        &:last-child {
+          border-right: 1px solid $controllerColor;
+        }
+        &:nth-child(1) {
+          border-left: 1px solid $controllerColor;
+          border-right: 1px solid $controllerColor;
+        }
+        text-align: center;
+        width: 25px;
+        line-height: 22px;
+        &.active {
+          background-color: $controllerColor;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .main-chart {
+    .stacked-barchart {
+      margin-top: 0px !important;
+    }
+  }
+
+  .vertical-padding {
+
+    stacked-barchart {
+      margin-top: 0;
+    }
+
+    .chart-container {
+      margin-top: 30px;
+    }
+  }
+}

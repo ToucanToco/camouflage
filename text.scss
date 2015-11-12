@@ -1,0 +1,58 @@
+.text-slide-container {
+  padding: 5px 50px;
+  color: #4b4b4b;
+  .slide-text-container {
+    padding-top: 20px;
+    img {
+      width: 100%;
+    }
+  }
+  h1{
+    font-size: 44px;
+    font-family: 'Roboto Slab';
+  }
+  h2{
+    font-size: 40px;
+    font-family: 'Roboto Slab';
+  }
+  .paragraphs{
+    font-size: 16px;
+    font-family: 'Roboto Slab';
+
+  }
+  height: 575px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  color: $textColor;
+  font-family: 'Roboto Slab';
+  .fraction, .top, .bottom {
+    padding: 0 5px;
+  }
+
+  .fraction {
+    display: inline-block;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .bottom {
+    border-top: 1px solid #000;
+    display: block;
+  }
+
+  .paragraph-title {
+    font-size: 24px;
+    padding: 20px 0px;
+    &.first{
+      padding-top: $paddingTopComment;
+    }
+  }
+
+  .paragraph-item {
+    font-size: 16px;
+    list-style-image: url('puce_arrow.png');
+    margin-bottom:12px;
+    padding-left: 7px;
+  }
+}

@@ -1,0 +1,39 @@
+.line-interruted-by-text {
+  overflow-x: hidden;
+
+  &::before,
+  &::after {
+    background-color: $backgroundHeaderColor;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    opacity: 0.5;
+  }
+
+  &::before {
+    right: 2em;
+    margin-left: -50%;
+  }
+
+  &::after {
+    left: 2em;
+    margin-right: -50%;
+  }
+}
+
+
+@mixin flat-shadow($color: transparentize($textColor, 0.5)) {
+  box-shadow: 0px 2px 0px $color;
+}
+
+@mixin flat-shadowed-box(
+  $bg-color: $greyLight,
+  $shadow-color: transparentize(darken($bg-color, 40), 0.5)
+) {
+  background-color: $bg-color;
+  border-radius: 5px;
+  @include flat-shadow($shadow-color);
+}

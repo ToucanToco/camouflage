@@ -1,0 +1,369 @@
+// bower:scss
+// endbower
+
+@import 'variables';
+@import 'utils';
+
+* {
+  -webkit-tap-highlight-color: transparent !important;
+  box-sizing: border-box;
+
+  :focus {
+    outline: none;
+  }
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  @extend .primary-font;
+  font-size: 14px;
+}
+
+body {
+  display: flex;  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url('pattern.jpg');
+  color: #404040;
+  -webkit-user-select: none;
+  -webkit-font-smoothing: antialiased;
+
+  > ui-view {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  // Hide UI controls for login page
+  &.login-page {
+    header, kpinavigator {
+      display: none;
+    }
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.content-centered {
+  text-align: center;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.screen-container {
+  @extend .full-content;
+  overflow: hidden;
+
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.33);
+  z-index: 5;
+  transition: all 300ms  ease;
+  -webkit-transition-delay: 0.001s;
+  transition-delay: 0.001s;
+}
+
+.offsetright{
+  transform: translate3d($offsetMenu,0,0);
+
+  @include respond-to(phone) {
+    transform: translate3d($offsetMenu-mobile,0,0);
+  }
+}
+
+.overlay {
+  @extend .full-content;
+  position: absolute;
+  z-index: 1;
+  &.show-header {
+    top: $headerHeight;
+
+    @include respond-to(phone) {
+      top: $headerHeight-mobile;
+    }
+  }
+
+  &.loading {
+    height: 100%;
+    top: 0;
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 1s;
+
+    .spinner {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: url('loading-bubbles.svg') no-repeat center center;
+      background-size: 15%;
+    }
+
+    &.ng-hide-remove {
+      opacity: 1;
+      display: block !important;
+    }
+
+    &.ng-hide-add {
+      opacity: 0;
+      display: block !important;
+    }
+  }
+}
+
+.opaque {
+  background-color: transparentize(white, .3);
+}
+
+.overlay-data-error-container {
+  @extend .overlay;
+  background: transparentize(white, 0.2);
+  padding: 20%;
+
+  vertical-align: middle;
+  text-align: center;
+  @extend .montserrat-bold-upper;
+  font-size: 40px;
+
+  .overlay-data-error-img{
+    margin: 40px auto;
+    @include imageWithRetina('404',96px,90px);
+  }
+}
+
+.execsum {
+  text-align: center;
+  width: 100%;
+  margin-left: 0px;
+  h1 {
+    font-family: 'Roboto Slab';
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  .paragraphs {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-top: 60px;
+    color: #333;
+    p {
+      margin-top: 30px;
+    }
+  }
+  .kpis-study {
+    height: 405px;
+    padding-left: 38px;
+    padding-right: 38px;
+    .kpi-study-invert {
+    }
+    .kpi-study-full {
+      color: #fff;
+    }
+    .kpi-study {
+      float: left;
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-top: 15px;
+      /*color: #fff;*/
+      text-align: left;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 30px;
+      .kpi-study-invert {
+
+      }
+      .kpi-study-title {
+        text-transform: uppercase;
+        font-size: 18px;
+      }
+      .kpi-study-number {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 37px;
+        margin-top: 4px;
+      }
+    }
+    .kpi-study-large {
+      width: 454px;
+      height: 190px;
+    }
+    .kpi-study-small {
+      width: 296px;
+      height: 190px;
+    }
+
+  }
+  .pdf {
+    /*background-image: url('pdf.png');*/
+    width: 1024px;
+    height: 1450px;
+    background-size: 1024px 1450px;
+  }
+}
+.float{
+  float: left;
+}
+.flipH {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+
+.zero-margin-top {
+  margin-top: 0px !important;
+}
+
+.fullanims {
+
+  @mixin slide-animation($top) {
+    &.ng-enter {
+      @include transition-slide();
+      top: $top;
+    }
+
+    &.ng-enter.ng-enter-active {
+      @include transform(0, -$top);
+      @include respond-to(phone) {
+        @include transform(-$top, 0);
+      }
+    }
+
+    &.ng-leave{
+      @include transition-slide();
+    }
+
+    &.ng-leave.ng-leave-active {
+      @include transform(0, -$top);
+      @include respond-to(phone) {
+        @include transform(-$top, 0);
+      }
+    }
+  }
+
+  .slidenext {
+    @include slide-animation(100%);
+  }
+
+  .slideprev {
+    @include slide-animation(-100%);
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-opaque-cue {
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  left: 0;
+  height: $scroll-cue-height;
+  pointer-events: none;
+
+  @include scroll-opaque-cue-bg();
+
+  @include respond-to(phone) {
+    height: $scroll-cue-height-mobile;
+  }
+}
+.firefox34 {
+  .chart-container {
+    margin-bottom: 190px !important;
+  }
+  .main-space-wrapper {
+    flex:none;
+  }
+  filter.bottom-right {
+    bottom: 8em !important ;
+  }
+
+}
+
+@import 'helpers';
+
+@import 'admin';
+@import 'dashboard-report';
+@import 'header';
+@import 'kpinavigator';
+@import 'small-apps/upload';
+@import 'sparklines';
+@import 'arrow-selector';
+@import 'dropdown';
+@import 'nav-menu';
+@import 'settings-panel';
+@import 'color-legend';
+@import 'filters';
+@import 'home-report';
+@import 'legend';
+@import 'notifications';
+@import 'slidebox';
+@import 'text';
+@import 'variation';
+@import 'color-palette';
+@import 'icons';
+@import 'pane-details';
+@import 'tooltip';
+@import 'colors';
+@import 'forms';
+@import 'identity-content';
+@import 'tutorial';
+@import 'splash';
+@import 'update-version';
+
+@import 'utils/tc-brand-element';
+@import 'utils/dropdown';
+@import 'utils/dialog';
+@import 'utils/json-editable';
+@import 'utils/print';
+
+@import 'slides/tc-slide';
+@import 'slides/slide-editor';
+
+@import 'views/report-selector';
+
+@import 'charts';
+@import 'charts/barchart';
+@import 'charts/barlinechart';
+@import 'charts/bubblechart';
+@import 'charts/bullet-chart';
+@import 'charts/carto';
+@import 'charts/force-directed-chart';
+@import 'charts/leaderboard';
+@import 'charts/linechart';
+@import 'charts/map';
+@import 'charts/score-card';
+@import 'charts/slopegraph';
+@import 'charts/verbatim';
+
+// Store module
+@import '../scripts/store/small-apps-list/small-apps-list';
+@import '../scripts/store/new-small-app/new-small-app';
+
+// Small app module
+@import '../scripts/small-app/component/small-app';
+
+// Users module
+@import '../scripts/users/authentication/login';
+@import '../scripts/users/management/user-admin';
+
+@import 'specific';

@@ -1,0 +1,167 @@
+$report-selector-main-color: $mainColor !default;
+$report-selector-secondary-color: $mainColor_fade !default;
+$report-selector-half-padding: 20px !default;
+$report-selector-overlay-alpha: .5 !default;
+$report-selector-bg-image-desktop: "tctc-bg-desktop.png" !default;
+$report-selector-bg-image-phone: "tctc-bg-phone.png" !default;
+
+report-selector {
+  flex: 1;
+  background-color: white;
+  background-image: url("../images/#{$report-selector-bg-image-desktop}");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+
+  @include respond-to(phone) {
+    flex-direction: column;
+    background-image: url("../images/#{$report-selector-bg-image-phone}");
+  }
+
+  .report-selector-half-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $report-selector-half-padding;
+  }
+
+  .report-selector-title {
+    font-size: 40px;
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    border: none;
+    padding-top: 0!important;
+    &:focus{
+      border: none;
+      outline: none;
+    }
+  }
+  .report-selector-subtitle {
+    font-size: 11px;
+    font-style: italic;
+    margin-top: -20px;
+  }
+
+  .reports-guesses-container {
+    overflow-y: auto;
+    height: 290px;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    top: 47%;
+    text-align: left;
+    @include respond-to(phone) {
+      text-align: center;
+    }
+    .reports-guesses {
+      font-size: 18px;
+      @extend .primary-font;
+      .report-guess {
+        height: 58px;
+        line-height: 58px;
+        opacity: 0.8;
+        cursor: pointer;
+        &:first-child {
+          opacity: 1;
+        }
+      }
+
+    }
+  }
+  .report-selector-left{
+    @extend .report-selector-half-container;
+    text-align: right;
+    align-items: flex-end;
+    background-color: transparentize($report-selector-main-color, $report-selector-overlay-alpha);
+
+    .report-selector-title {
+      @extend .secondary-font;
+    }
+
+    @include respond-to(phone) {
+      text-align: center;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 0.2;
+    }
+  }
+
+  .report-selector-right{
+    @extend .report-selector-half-container;
+    align-items: flex-start;
+    background-color: transparentize($report-selector-secondary-color, $report-selector-overlay-alpha);
+    transition: background-color $transition-duration $transition-type;
+
+    @include respond-to(phone) {
+      text-align: center;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .report-selector-title {
+      @extend .montserrat-bold-upper;
+      font-style: normal;
+      padding: 0;
+    }
+
+    .input-report-wrapper {
+      position: relative;
+      width: 100%;
+
+      input {
+        width: 100%;
+        color: $textColor;
+
+        @include respond-to(phone) {
+          text-align: center;
+        }
+      }
+
+      .input-report-helper,
+      .reports-guesses-container {
+        position: absolute;
+
+        @include respond-to(phone) {
+          width: 100%;
+          text-align: center;
+          right: 0;
+          left: 0;
+        }
+      }
+
+      .input-report-helper {
+        top: 45px;
+        @extend .secondary-font;
+        font-style: italic;
+      }
+
+      .reports-guesses-container {
+        position: absolute;
+        top: 65px;
+      }
+    }
+
+    &.search-active {
+      background-color: $report-selector-secondary-color;
+
+      .input-report-helper {
+        display: none;
+      }
+    }
+  }
+
+  tc-brand-element {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+  }
+}

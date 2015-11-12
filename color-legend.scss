@@ -1,0 +1,13 @@
+.color-legend {
+  height: 50px;
+
+  svg {
+    height: 50px !important;
+  }
+
+  .legend-value {
+    @extend .font-legend-carto !optional;
+    text-anchor: middle;
+    alignment-baseline: baseline;
+  }
+}

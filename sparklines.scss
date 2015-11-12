@@ -1,0 +1,66 @@
+$sparkline-fill: $mainColor_fade !default;
+$sparkline-selection-stroke: $mainColor !default;
+
+.sparkline {
+
+  .area {
+    stroke-width: 0;
+    fill: $sparkline-fill;
+  }
+
+  circle.selection {
+    fill: $averageBoxColor;
+  }
+
+  line.selection {
+    stroke-width: 2px;
+    stroke: $sparkline-selection-stroke;
+  }
+}
+.widget-sparkline-container {
+  position : relative;
+  .sparkline-selected{
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    background: #4c4c4c;
+    color: white;
+    padding:1px 3px;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    pointer-events:none;
+
+    @include respond-to(phone) {
+      top: -25px;
+      padding: 3px;
+      font-size: 13px;
+      line-height: 20px;
+      .sparkline-selected-value {
+        font-size: 17px;
+      }
+    }
+  }
+  .line {
+    fill: none;
+    stroke-width: 3px;
+    stroke: nth($chartColors,1);
+    stroke-opacity: 0.7;
+    pointer-events:none;
+  }
+  .zeroBaseline {
+    stroke-width: 1px;
+    stroke: #999;
+    stroke-opacity: 0.4;
+  }
+  .sparkline-begin-date {
+    text-anchor: start;
+    fill: #ccc;
+    pointer-events:none;
+  }
+  .sparkline-end-date {
+    text-anchor: end;
+    fill: #ccc;
+    pointer-events:none;
+  }
+
+}

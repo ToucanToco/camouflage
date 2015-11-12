@@ -1,0 +1,19 @@
+{
+  "name": "tc-camouflage",
+  "homepage": "https://github.com/ToucanToco/camouflage",
+  "authors": [
+    "David Nowinsky <david@toucantoco.com>"
+  ],
+  "description": "Advanced techniques to integrate Toucan's in every brand environment",
+  "main": "main.scss",
+  "moduleType": [],
+  "license": "proprietary",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

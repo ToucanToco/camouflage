@@ -1,0 +1,19 @@
+.login-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @extend .full-content;
+  z-index: 100;
+  transition: $transition-duration $transition-type;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+
+  &.ng-enter:not(.ng-enter-active),
+  &.ng-leave-active {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+  .login-container {
+    background: $execsumBgColor;
+  }
+}

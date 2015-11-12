@@ -353,14 +353,14 @@ a {
 @import 'charts/verbatim';
 
 // Store module
-@import '../scripts/store/small-apps-list/small-apps-list';
-@import '../scripts/store/new-small-app/new-small-app';
+@import 'store/small-apps-list';
+@import 'store/new-small-app';
 
 // Small app module
-@import '../scripts/small-app/component/small-app';
+@import 'small-app/component';
 
 // Users module
-@import '../scripts/users/authentication/login';
-@import '../scripts/users/management/user-admin';
+@import 'users/authentication';
+@import 'users/management';
 
 @import 'specific';

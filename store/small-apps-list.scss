@@ -1,0 +1,128 @@
+.small-apps {
+  background: $mainColor;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+
+  .new-project {
+    @extend .identity-button;
+  }
+
+  .small-apps-list {
+    background-color: $small-apps-list-background;
+    flex: 1;
+    overflow-y: auto;
+
+    ul {padding-left:0;}
+
+    h1 {
+      @extend .montserrat-bold-upper;
+      font-size: 25px;
+    }
+
+    .small-app-item {
+      @extend .montserrat-bold-upper;
+      color: $textColor;
+      display: inline-block;
+      margin: 15px;
+      border: solid 5px transparent;
+
+      .small-app-thumbnail {
+        background-color: $textColor;
+        cursor: pointer;
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+
+        > small-app {
+          $small-app-scale: 3;
+          display: block;
+          transform-origin: 0 0;
+          transform: scale3d(1/$small-app-scale, 1/$small-app-scale, 1);
+          height: 100% * $small-app-scale;
+          width: 100% * $small-app-scale;
+        }
+
+        .small-app-shield {
+          position: absolute;
+          @extend .full-content;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .small-app-caption {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+
+        .small-app-actions {
+          width: 0;
+          overflow-x: hidden;
+          white-space: nowrap;
+          font-size: larger;
+
+          i {
+            cursor: pointer;
+
+            &:hover {
+              color: $emphasis-color;
+            }
+          }
+        }
+
+        .small-app-title {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-size: smaller;
+          overflow: hidden;
+          width: 225px;
+        }
+      }
+
+      &:hover {
+        border-color: $emphasis-color;
+
+        .small-app-caption {
+          justify-content: space-between;
+        }
+
+        .small-app-title {
+          width: 200px;
+          text-align: left;
+        }
+
+        .small-app-actions {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .create-small-app {
+    overflow-y: auto;
+    background-color: white;
+    color: $mainColor;
+    height: 200px;
+    font-size: 25px;
+    @extend .montserrat-bold-upper;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .create-small-app-action {
+      @extend .bordered-button;
+      @extend .bordered-button-large;
+    }
+  }
+  .project-list-brand {
+    background-color: $small-apps-list-background;
+  }
+}

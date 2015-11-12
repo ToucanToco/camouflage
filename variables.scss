@@ -1,29 +1,29 @@
-$offsetMenu: 400px;
-$headerHeight: 90px;
-$viewportHeight: 768px;
-$viewportWidth: 1024px;
-$kpiNavigatorWidth:192px;
-$scrollbarSize: 0;
-$scroll-cue-height: 150px;
-$slide-height: $viewportHeight - $headerHeight;
-$commentary-height: 110px;
-$admin-footer-height: 50px;
+$offsetMenu: 400px !default;
+$headerHeight: 90px !default;
+$viewportHeight: 768px !default;
+$viewportWidth: 1024px !default;
+$kpiNavigatorWidth:192px !default;
+$scrollbarSize: 0 !default;
+$scroll-cue-height: 150px !default;
+$slide-height: $viewportHeight - $headerHeight !default;
+$commentary-height: 110px !default;
+$admin-footer-height: 50px !default;
 
 /******* RESPONSIVENESS ****/
-$headerHeight-mobile: 60px;
-$offsetMenu-mobile: 80%;
-$kpiNavigatorHeight-mobile: 80px;
-$knWidth-mobile: 130px;
-$scroll-cue-height-mobile: 50px;
+$headerHeight-mobile: 60px !default;
+$offsetMenu-mobile: 80% !default;
+$kpiNavigatorHeight-mobile: 80px !default;
+$knWidth-mobile: 130px !default;
+$scroll-cue-height-mobile: 50px !default;
 // Mobile legend/pane-details
-$mobileLegendPositionTop: 15px;
-$mobileLegendBackgroundColor: #FFF;
-$mobileLegendPadding: 15px;
-$mobileLegendHandleHeight: 50px;
+$mobileLegendPositionTop: 15px !default;
+$mobileLegendBackgroundColor: #FFF !default;
+$mobileLegendPadding: 15px !default;
+$mobileLegendHandleHeight: 50px !default;
 
 
-$screen-phone-max: 767px;
-$screen-tablet-max: 1024px;
+$screen-phone-max: 767px !default;
+$screen-tablet-max: 1024px !default;
 
 @mixin respond-to($media) {
   @if $media == phone {
@@ -63,101 +63,101 @@ $screen-tablet-max: 1024px;
 
 /******** CHARTS *******/
 
-$chartWidth: 590px;
-$marginChart: 30px;
-$chartLegendWidth:  $viewportWidth - $kpiNavigatorWidth - $chartWidth ;
-$chartLegendWidthShrink: $chartLegendWidth - 20;
-$groupColorWidth: 13px;
-$charts-font-size: 16px;
+$chartWidth: 590px !default;
+$marginChart: 30px !default;
+$chartLegendWidth:  $viewportWidth - $kpiNavigatorWidth - $chartWidth !default;
+$chartLegendWidthShrink: $chartLegendWidth - 20 !default;
+$groupColorWidth: 13px !default;
+$charts-font-size: 16px !default;
 
-$charts-font-size-mobile: 13px;
+$charts-font-size-mobile: 13px !default;
 
 /**** COLORS ******/
-$splash-color: black;
+$splash-color: black !default;
 
-$mainColor: #88b2a8;
-$mainColor_fade: #b2cdc6;
+$mainColor: #88b2a8 !default;
+$mainColor_fade: #b2cdc6 !default;
 $main-color-dark: darken($mainColor, 15) !default;
 
 
-$metaColor: #2a5c74;
+$metaColor: #2a5c74 !default;
 
-$nav-menuColor1: $mainColor;
-$nav-menuColor1_2: $mainColor_fade;
+$nav-menuColor1: $mainColor !default;
+$nav-menuColor1_2: $mainColor_fade !default;
 
 
-$red: #ec1b2f;
+$red: #ec1b2f !default;
 
-$controllerColor: $mainColor;
-$execsumColor: #3fb9be;
-$greyMissing: #ddd;
+$controllerColor: $mainColor !default;
+$execsumColor: #3fb9be !default;
+$greyMissing: #ddd !default;
 
-$inactive-color: #bfbfbf;
+$inactive-color: #bfbfbf !default;
 
-$positiveColor: #A7Bd3e;
-$negativeColor: #e78352;
+$positiveColor: #A7Bd3e !default;
+$negativeColor: #e78352 !default;
 
-$emphasis-color: #f3c642;
-$emphasis-color-light: #fffaec;
+$emphasis-color: #f3c642 !default;
+$emphasis-color-light: #fffaec !default;
 
-$aboveAverageColor: $positiveColor;
-$underAverageColor: $negativeColor;
-$averageBoxColor: #4e4e4e;
-$averageBoxText: #fff;
-$averageLineColor: #808080;
+$aboveAverageColor: $positiveColor !default;
+$underAverageColor: $negativeColor !default;
+$averageBoxColor: #4e4e4e !default;
+$averageBoxText: #fff !default;
+$averageLineColor: #808080 !default;
 
-$chartColors: $emphasis-color #b3d7de #81b1bd #437f9d #00354e;
-$stackedColors: #736B88 #B0C297 #877900 #A0A0A0 #986D5E #60947F;
-$comparisonColor:#D3EFF4;
+$chartColors: $emphasis-color #b3d7de #81b1bd #437f9d #00354e !default;
+$stackedColors: #736B88 #B0C297 #877900 #A0A0A0 #986D5E #60947F !default;
+$comparisonColor:#D3EFF4 !default;
 
-$waterfallInitialColor: #00354e;
-$waterfallPositiveColor: $positiveColor;
-$waterfallNegativeColor: $negativeColor;
+$waterfallInitialColor: #00354e !default;
+$waterfallPositiveColor: $positiveColor !default;
+$waterfallNegativeColor: $negativeColor !default;
 
-$slopegraphLineColor: #437f9d;
+$slopegraphLineColor: #437f9d !default;
 
-$colorChart0: $emphasis-color;
-$colorChart1: #A1D1C5;
-$colorChart2: #2a5c74;
-$colorChart3: #6095a2;
-$colorChart4: #535353;
+$colorChart0: $emphasis-color !default;
+$colorChart1: #A1D1C5 !default;
+$colorChart2: #2a5c74 !default;
+$colorChart3: #6095a2 !default;
+$colorChart4: #535353 !default;
 
-$scaleColors: #6090bd #cae5ff #f3d0dc #9b2156;
+$scaleColors: #6090bd #cae5ff #f3d0dc #9b2156 !default;
 
-$scaleColor0: #6090bd;
-$scaleColor1: #cae5ff;
-$scaleColor2: #f3d0dc;
-$scaleColor3: #9b2156;
+$scaleColor0: #6090bd !default;
+$scaleColor1: #cae5ff !default;
+$scaleColor2: #f3d0dc !default;
+$scaleColor3: #9b2156 !default;
 
-$barStackColor0: $colorChart0;
-$barStackColor1: $colorChart1;
-$barStackColor2: $colorChart2;
-$barStackColor3: $colorChart3;
-$barStackColor4: $colorChart4;
+$barStackColor0: $colorChart0 !default;
+$barStackColor1: $colorChart1 !default;
+$barStackColor2: $colorChart2 !default;
+$barStackColor3: $colorChart3 !default;
+$barStackColor4: $colorChart4 !default;
 
 
 /**** HOME ****/
-$execsumBgColor: $mainColor;
-$transparentize-execsum-bg-overlay: 0.3; // 0: opaque overlay, 1: no overlay
-$execsumArrowColor: white;
-$search-selected-bg-color: transparentize($execsumBgColor, $transparentize-execsum-bg-overlay);
-$cartoSelectedColor: $emphasis-color;
+$execsumBgColor: $mainColor !default;
+$transparentize-execsum-bg-overlay: 0.3 !default; // 0: opaque overlay, 1: no overlay
+$execsumArrowColor: white !default;
+$search-selected-bg-color: transparentize($execsumBgColor, $transparentize-execsum-bg-overlay) !default;
+$cartoSelectedColor: $emphasis-color !default;
 
-$sparkline-fill: $mainColor_fade;
-$sparkline-selection-stroke: $mainColor;
+$sparkline-fill: $mainColor_fade !default;
+$sparkline-selection-stroke: $mainColor !default;
 
-$home-button-color: $emphasis-color;
-$home-secondary-color: white;
+$home-button-color: $emphasis-color !default;
+$home-secondary-color: white !default;
 
-$shadow: rgba(50, 50, 50, 0.33);
+$shadow: rgba(50, 50, 50, 0.33) !default;
 
 /*** STUDIO ***/
 
-$small-apps-list-background: #e1e1e1;
+$small-apps-list-background: #e1e1e1 !default;
 
 /*** TRANSTIONS ***/
-$transition-type: ease;
-$transition-duration: 0.6s;
+$transition-type: ease !default;
+$transition-duration: 0.6s !default;
 
 /**** FONTS ******/
 @font-face {
@@ -200,8 +200,8 @@ $transition-duration: 0.6s;
   font-weight: bold;
 }
 
-$primary-font-family: 'Montserrat';
-$secondary-font-family: 'Roboto Slab';
+$primary-font-family: 'Montserrat' !default;
+$secondary-font-family: 'Roboto Slab' !default;
 
 .primary-font {
   font-family: 'Montserrat';
@@ -238,37 +238,37 @@ $secondary-font-family: 'Roboto Slab';
   letter-spacing: 1px;
 }
 
-$chart-font-family: $primary-font-family;
-$column-label-font-family: "Georgia";
+$chart-font-family: $primary-font-family !default;
+$column-label-font-family: "Georgia" !default;
 
-$fontSizeBase: 12px;
+$fontSizeBase: 12px !default;
 
 /**** COLORS ******/
 // FIXME order this file !
-$neutralColor: #437f9d;
+$neutralColor: #437f9d !default;
 
-$greyLight: #f5f5f5;
-$grey: #ededed;
+$greyLight: #f5f5f5 !default;
+$grey: #ededed !default;
 
-$backgroundSlideCommentary: $greyLight;
+$backgroundSlideCommentary: $greyLight !default;
 
-$textColor: #4c4c4c;
-$faded-text: #b4b4b4;
+$textColor: #4c4c4c !default;
+$faded-text: #b4b4b4 !default;
 
-$dropAreaTextColor: #b7d1cb;
+$dropAreaTextColor: #b7d1cb !default;
 $backgroundDropAreaColor: #f5faf9;
-$backgroundHeaderColor: $home-secondary-color;
+$backgroundHeaderColor: $home-secondary-color !default;
 
 $paddingLeftSlide: 45px;
-$paddingRightSlide: 20px;
-$paddingTopComment: 35px;
+$paddingRightSlide: 20px !default;
+$paddingTopComment: 35px !default;
 
 
 $notification-bg: $textColor;
-$notification-color: $home-secondary-color;
-$notification-faded: #717171;
-$notification-padding-horizontal: 2em;
-$notification-padding-vertical: $notification-padding-horizontal / 2;
+$notification-color: $home-secondary-color !default;
+$notification-faded: #717171 !default;
+$notification-padding-horizontal: 2em !default;
+$notification-padding-vertical: $notification-padding-horizontal / 2 !default;
 
 /* EXECSUM FONTS */
 .font-execsum-title {

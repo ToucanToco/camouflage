@@ -46,8 +46,8 @@ settings-panel {
     height: 100%;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    padding-left: 2em;
-    padding-right: 1em;
+    display: flex;
+    flex-direction: column;
 
     .divider {
       height: 6em;
@@ -72,6 +72,167 @@ settings-panel {
     dropdown .selected-label.searchBox {
       text-align: left;
     }
+  }
+
+  .settings-tab-heading {
+    $darkGreen: darken($mainColor,10);
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background:  darken($mainColor,5);
+    .settings-tab-heading-item {
+      cursor: pointer;
+      font-size: 34px;
+      text-align: center;
+      background: $darkGreen;
+      border-radius: 53px;
+      height: 60px;
+      width: 60px;
+      margin: 0px 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.active {
+        background: #fff;
+        color: $darkGreen;
+
+      }
+      .icon {
+        @include respond-to(tablet) {
+          margin-top: -25px;
+        }
+      }
+    }
+  }
+
+  .settings-tab-content {
+    padding-left: 2em;
+    padding-right: 1em;
+    padding-bottom: 30px;
+    box-shadow:0px -5px 12px 0px rgba(50, 50, 50, 0.36);
+    position: relative;
+    flex:1;
+
+    &:after {
+      bottom: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-bottom-color: $mainColor;
+      border-width: 12px;
+      margin-left: -12px;
+      transition: left 200ms ease-in;
+    }
+
+    &[data-active-tab='glossary'] {
+      &:after {
+        left: 18%;
+      }
+    }
+
+    &[data-active-tab='data'] {
+      &:after {
+        left: 39%;
+      }
+    }
+
+    &[data-active-tab='share'] {
+      &:after {
+        left: 61%;
+      }
+    }
+
+    &[data-active-tab='comment'] {
+      &:after {
+        left: 82%;
+      }
+    }
+  }
+
+  .comment-container {
+    overflow: scroll;
+    height: 100%;
+    position: absolute;
+
+    .all-comments-wrapper {
+      color: #404040;
+      font-size: 12px;
+      @extend .montserrat;
+
+      .comment-wrapper {
+        background: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-top: 10px;
+
+        .comment-heading {
+          .comment-heading-left {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #c4c4c4;
+            width: 34px;
+            margin-right: 10px;
+            height: 34px;
+            border-radius: 15px;
+            text-align: center;
+            vertical-align: top;
+            padding-top: 9px;
+            font-size: 14px;
+            @extend .montserrat-bold-upper;
+           }
+
+          .comment-heading-right {
+            display: inline-block;
+           }
+        }
+
+        .comment-date {
+          color: #737373;
+        }
+
+        .comment-user {
+            @extend .montserrat-bold-upper;
+        }
+
+        .comment-text {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .comment-input-container {
+
+    .comment-input-text {
+      font-size: 12px;
+      @extend .montserrat-bold-upper;
+      margin-bottom: 5px;
+    }
+
+    .comment-input {
+      resize: none;
+      border: none;
+      overflow: auto;
+      outline: none;
+      box-shadow: none;
+      width: 100%;
+      border-radius: 5px;
+      padding: 5px;
+      height: 50px;
+    }
+  }
+
+  .settings-tab-footer {
+      height: 100px;
+      background: darken($mainColor, 10);
+      padding: 15px 20px;
+      box-shadow:0px -5px 12px 0px rgba(50, 50, 50, 0.30);
   }
 
   .radio {

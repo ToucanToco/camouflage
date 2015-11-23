@@ -53,6 +53,10 @@ verbatim {
           padding: 20px 0px;
           border-bottom: 1px solid #9c9c9c;
 
+          .verbatim-icon {
+            cursor: pointer;
+          }
+
           .verbatim-categories {
             display: inline-block;
             width: 323px;

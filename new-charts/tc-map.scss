@@ -1,0 +1,44 @@
+// Base colors
+$tc-map-base-map-color: white !default;
+$tc-map-border-color: lightergray !default;
+
+// Series colors
+$tc-map-categories-colors: $chartColors !default;
+$tc-map-missing-data: $tc-map-base-map-color !default;
+$tc-map-selected-color: $secondary-emphasis-color !default;
+
+// Animation
+$tc-map-transition-duration: $transition-duration !default;
+
+.tc-map {
+  .zone {
+    stroke: $tc-map-border-color;
+    fill: $tc-map-base-map-color;
+    transition: fill $tc-map-transition-duration;
+    cursor: pointer;
+  }
+
+  // Series colors
+  @each $color in $tc-map-categories-colors {
+    $i: index($tc-map-categories-colors, $color);
+    .zone[data-category-id="#{$i}"] {
+      fill: $color;
+    }
+
+    ~ .tc-legend .serie[data-serie-id="#{$i}"] .color {
+      background-color: $color;
+    }
+  }
+
+  .zone {
+    // Missing data
+    &[data-category-id="0"] {
+      fill: $tc-map-missing-data;
+    }
+
+    // Selection
+    &.selected {
+      fill: $tc-map-selected-color;
+    }
+  }
+}

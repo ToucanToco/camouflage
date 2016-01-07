@@ -1,3 +1,6 @@
+// bower:scss
+// endbower
+
 @import 'variables';
 @import 'utils';
 
@@ -83,13 +86,18 @@ a {
 .overlay {
   @extend .full-content;
   position: absolute;
+  top: 0;
   z-index: 1;
-  &.show-header {
-    top: $headerHeight;
+  transition: opacity $transition-duration/2 $transition-type;
 
-    @include respond-to(phone) {
-      top: $headerHeight-mobile;
-    }
+  &.ng-hide-add,
+  &.ng-hide-remove {
+    display: block !important;
+  }
+
+  &.ng-hide
+   {
+    opacity: 0;
   }
 
   &.loading {
@@ -104,16 +112,6 @@ a {
       width: 100%;
       background: url('loading-bubbles.svg') no-repeat center center;
       background-size: 15%;
-    }
-
-    &.ng-hide-remove {
-      opacity: 1;
-      display: block !important;
-    }
-
-    &.ng-hide-add {
-      opacity: 0;
-      display: block !important;
     }
   }
 }
@@ -131,6 +129,10 @@ a {
   text-align: center;
   @extend .montserrat-bold-upper;
   font-size: 40px;
+
+  .hint {
+    font-size: 20px;
+  }
 
   .overlay-data-error-img{
     margin: 40px auto;
@@ -302,7 +304,6 @@ a {
 @import 'dashboard-report';
 @import 'header';
 @import 'kpinavigator';
-@import 'small-apps/upload';
 @import 'sparklines';
 @import 'arrow-selector';
 @import 'dropdown';
@@ -326,6 +327,8 @@ a {
 @import 'tutorial';
 @import 'splash';
 @import 'update-version';
+
+@import 'small-apps/upload';
 
 @import 'utils/tc-brand-element';
 @import 'utils/dropdown';
@@ -351,16 +354,9 @@ a {
 @import 'charts/score-card';
 @import 'charts/slopegraph';
 @import 'charts/verbatim';
+@import 'charts/heatmap';
 
-// Store module
-@import 'store/small-apps-list';
-@import 'store/new-small-app';
-
-// Small app module
-@import 'small-app/component';
-
-// Users module
-@import 'users/authentication';
-@import 'users/management';
+// New Charts module
+@import 'new-charts/tc-charts';
 
 @import 'specific';

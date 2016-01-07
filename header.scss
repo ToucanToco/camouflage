@@ -119,6 +119,21 @@ header {
     flex-direction: row;
   }
 
+  .brand-client-small {
+    max-width: 80%;
+    max-height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-end;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
   .header-title{
     @extend .font-header-title;
   }
@@ -133,15 +148,22 @@ header {
   .header-button {
     @extend .bordered-button-discreet;
     @include respond-to(phone) {
-      display: none;
+      padding: 5px 9px;
+      border-width: 2px;
+      .icon {
+        margin-right: 0px;
+      }
+      .header-button-text{
+        display: none;
+      }
     }
   }
 
   .report-entity {
     @extend .header-button;
 
-    border-color: $mainColor;
-    color: $mainColor;
+    border-color: $textColor;
+    color: $textColor;
     top: -8px;
   }
 

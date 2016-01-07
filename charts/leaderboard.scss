@@ -213,13 +213,20 @@ chart {
   }
 
   leaderboard-centered-average {
+    $leaderboard-margin-top: 45px;
     pointer-events: all;
     margin-top: 15px;
 
     .horizontal-barchart {
-      margin-top: 45px;
+      margin-top: $leaderboard-margin-top;
+      .average-container {
+        margin-top: $leaderboard-margin-top;
+      }
       @include respond-to(phone) {
         margin-bottom: $mobileLegendHandleHeight - 10px;
+        .average-container {
+          margin-top: $leaderboard-margin-top - 10px;
+        }
 
         .horizontal-barchart-label {
           font-weight: bold;
@@ -264,6 +271,7 @@ chart {
       z-index: 1000;
       cursor: pointer;
       transform: translateX(-50%);
+      transition: opacity 300ms ease;
 
       &:after {
         top: 100%;
@@ -371,6 +379,14 @@ chart {
       }
     }
 
+    .variation-group {
+      .positive {
+        fill: $positiveColor;
+      }
+      .negative {
+        fill: $negativeColor;
+      }
+    }
     .outlier-group {
       circle {
         fill: $red;

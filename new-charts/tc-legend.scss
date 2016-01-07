@@ -1,0 +1,30 @@
+$tc-legend-colored-blocks-height: 10px !default;
+$tc-legend-colored-blocks-width: 20px !default;
+
+.tc-legend {
+  display: flex;
+  flex-direction: column;
+
+  .serie {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .color {
+      background-color: transparent; // Should be overwritten by each chart regarding it's color policy
+      height: $tc-legend-colored-blocks-height;
+      width: $tc-legend-colored-blocks-width;
+      margin-right: 1em;
+    }
+
+    .label {
+      flex: 1;
+      text-align: left;
+    }
+  }
+}

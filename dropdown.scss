@@ -23,10 +23,11 @@ dropdown {
       }
 
       .input-search-container {
-        outline: 3px solid white;
+        border: 3px solid white;
         display: inline-block;
         position: relative;
         text-align: left;
+        width: 100%;
 
         .input-shield {
           position: absolute;
@@ -56,11 +57,10 @@ dropdown {
           }
         }
         .icon-caret-bold, .icon-search {
-          display: inline-block;
           float: right;
-          font-size: 11px;
-          position: relative;
-          top: 12px;
+          font-size: 20px;
+          position: absolute;
+          top: 10px;
           right: 12px;
           @include transition(300ms, ease);
           &.open {
@@ -85,7 +85,6 @@ dropdown {
 
     .select-entity-dropdown {
       position: absolute;
-      top: 100%;
       left: 0px;
       z-index: 40000;
       width: 100%;
@@ -97,26 +96,32 @@ dropdown {
       @extend .font-dropdown-select-entity;
       @include transition(300ms, ease);
 
-      .entity-selected {
-        background: $emphasis-color;
-        color: #fff;
-      }
 
       .entity, .entity-header {
-        padding-left: 14px;
-        padding-right: 14px;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding: 10px 20px;
         font-weight: normal;
         color: $textColor;
+        &.entity-selected {
+          background: $emphasis-color;
+          color: #fff;
+        }
 
         &.selected, &:active, &:hover {
           @extend .entity-selected;
         }
+
+        &:first-child {
+          padding-top: 20px;
+        }
+
+        &:last-child {
+          padding-bottom: 20px;
+        }
       }
 
       .entity-header {
-        padding-top: 18px;
+        padding-top: 35px;
+        font-size: 16px;
         font-weight: bold;
 
         @include respond-to(phone) {
@@ -137,8 +142,7 @@ dropdown {
       &.searchBox{
         >.select-entity-dropdown {
           max-height: 280px;
-          box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.33);
-          -webkit-box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.33);
+          box-shadow: 4px 4px 0px 0px $shadow-color;
         }
       }
     }

@@ -1,4 +1,5 @@
-$nav-menu-subchapter-height: 75px !default;
+$nav-menu-subchapter-height: 65px !default;
+$nav-menu-chapter-padding-bottom: 20px !default;
 $nav-menu-subchapter-height-mobile: 58px !default;
 
 nav-menu-subchapter {
@@ -19,6 +20,11 @@ nav-menu-subchapter {
 
   &.selected {
     background-color: $nav-menu-selected-color;
+  }
+
+  &:last-child {
+    height: $nav-menu-subchapter-height + $nav-menu-chapter-padding-bottom;
+    padding-bottom: $nav-menu-chapter-padding-bottom;
   }
 }
 

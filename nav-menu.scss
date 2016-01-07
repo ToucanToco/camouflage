@@ -23,10 +23,17 @@ nav-menu {
   display: flex;
   flex-direction: column;
   background-color: $nav-menu-bg-color;
+  transform: translateX(-100%) translateZ(0);
+  transition: transform $transition-duration/2 $transition-type;
+  z-index: 10;
+  box-shadow: 1px 0px 7px 0px $shadow;
 
   @include respond-to(phone) {
     width: $offsetMenu-mobile;
-    box-shadow: 1px 0px 7px 0px $shadow;
+  }
+
+  &.opened {
+    transform: translateX(0) translateZ(0);
   }
 
   .nav-menu-content {

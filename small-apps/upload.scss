@@ -6,47 +6,87 @@ $upload-feedback-success-color: $positiveColor;
 $upload-feedback-error-color: $negativeColor;
 
 .upload-datasources-wrapper {
-  height: 100%;
   flex: 1;
   background-color: $upload-page-background-color;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .feedback {
+    @extend .secondary-font;
+    font-weight: bold;
+    text-transform: none;
+    margin: 1em 0;
+    color: $upload-feedback-success-color;
+
+    &.error {
+      color: $upload-feedback-error-color;
+    }
+  }
+
+  .actions button {
+    @extend .bordered-button;
+
+    .spinner {
+      display: none;
+      background: url('loading-bubbles.svg') no-repeat center right;
+      background-size: 100%;
+      margin-left: 1em;
+      width: 3em;
+      height: 1em;
+    }
+
+    &.disabled {
+      .spinner {
+        display: inline-block;
+      }
+    }
+  }
 }
 
 .upload-datasources {
   background-color: $upload-section-background-color;
   color: $upload-text-color;
   padding: 0px;
+  flex: 1;
 
   display: flex;
   justify-content: center;
-  align-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
   overflow-y: auto;
 
   .drop-message {
     margin-top: 1em;
   }
+
   .datasource {
-    height: 150px;
-    width: 400px;
     margin: 1em;
     padding: 1em;
+    width: 30em;
     border-color: $upload-drop-border-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &.uploaded {
+      background: $mainColor_fade;
+    }
+    .domain {
+      @extend .montserrat-regular;
+      text-transform: none;
+      font-weight: normal;
+    }
 
     .file-name {
       @extend .secondary-font;
       text-transform: none;
       font-weight: bold;
     }
-    .feedback {
-      @extend .secondary-font;
-      font-weight: bold;
-      text-transform: none;
-      margin: 1em 0;
-      color: $upload-feedback-success-color;
 
-      &.error {
-        color: $upload-feedback-error-color;
-      }
+    .status {
+      float: right;
+      color: $positiveColor;
     }
   }
 

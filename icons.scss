@@ -20,6 +20,10 @@
   &.negative {
     fill: $underAverageColor;
   }
+
+  &.neutral {
+    fill: $textColor;
+  }
 }
 .icon{
   &.better {

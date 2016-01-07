@@ -5,6 +5,8 @@
 $blocHeight : 190px;
 $mobileMinBlocHeight: 150px;
 $mobileMaxBlocHeight: 200px;
+$dashboard-kpi-padding: 20px;
+$dashboard-kpi-link-padding: .3em;
 
 .execsum {
 
@@ -26,6 +28,7 @@ $mobileMaxBlocHeight: 200px;
     .case-name {
       @extend .execsum-content;
       color: white;
+      margin-bottom: 10px;
     }
 
     .title {
@@ -39,7 +42,7 @@ $mobileMaxBlocHeight: 200px;
     }
 
     .search-report-container {
-      width: 555px;
+      width: 45%;
       margin: 30px auto;
 
       input {
@@ -130,7 +133,7 @@ $mobileMaxBlocHeight: 200px;
     }
 
     .category {
-      padding-bottom: 10px;
+      padding-bottom: 25px;
       text-align: center;
 
       > .name {
@@ -147,6 +150,7 @@ $mobileMaxBlocHeight: 200px;
         font-size: 12px;
         text-align: center;
         margin-top: 8px;
+        margin-bottom: 15px;
       }
 
       .kpi {
@@ -154,8 +158,8 @@ $mobileMaxBlocHeight: 200px;
         box-sizing: padding-box;
         background-color: white;
         width: 50%;
-        margin: 25px auto;
-        padding: 20px;
+        margin: 12.5px auto;
+        padding: $dashboard-kpi-padding;
         color: $textColor;
         height: $blocHeight;
         border-style: solid;
@@ -189,8 +193,8 @@ $mobileMaxBlocHeight: 200px;
           font-size: 20px;
           padding: 2.5px;
           padding-right: 0;
-          bottom: .3em;
-          right: .3em;
+          bottom: $dashboard-kpi-link-padding;
+          right: $dashboard-kpi-link-padding;
           border-radius: 50%;
           border: 2px solid transparentize($textColor, .7);
           transition: $transition-duration $transition-type;
@@ -204,6 +208,11 @@ $mobileMaxBlocHeight: 200px;
           position: absolute;
           left: 0;
           top: 0;
+          &.bg-contain {
+
+            background-size: contain;
+            background-position: center;
+          }
         }
 
         &.linked {
@@ -228,7 +237,9 @@ $mobileMaxBlocHeight: 200px;
           }
 
           .source {
-            right: 1.8em;
+            padding-left:0;
+            bottom: $dashboard-kpi-link-padding;
+            left: $dashboard-kpi-padding;
           }
         }
 
@@ -240,7 +251,7 @@ $mobileMaxBlocHeight: 200px;
 
         .value {
           @extend .montserrat-bold-upper;
-          font-size: 34px;
+          font-size: 40px;
           line-height: 30px;
           margin-top: 8px;
 
@@ -311,6 +322,52 @@ $mobileMaxBlocHeight: 200px;
           }
         }
 
+        .widget-type-score-card {
+          .name {
+            text-align:center;
+          }
+          .sc-entry {
+            display: flex;
+            align-items: baseline;
+            &[data-sentiment="better"] {
+              .sc-value, .sc-value-unit, .sc-variation > .icon {
+                color: $positiveColor;
+              }
+            }
+            &[data-sentiment="worse"] {
+              .sc-value, .sc-value-unit, .sc-variation > .icon {
+                color: $negativeColor;
+              }
+            }
+
+            .sc-dots {
+              flex: 1;
+              border-bottom: dotted 2px $grey;
+            }
+            .sc-value {
+              font-weight: bold;
+              font-size: 27px;
+            }
+            .sc-value-unit {
+              font-weight: normal;
+              font-size: 14px;
+            }
+            .sc-variation {
+              width: 30px;
+              margin-left: 8px;
+              text-transform: initial;
+              font-size: 11px;
+              .icon{
+                margin-right: 4px;
+              }
+              .sc-variation-value{
+                font-weight: normal;
+                font-size: 13px;
+              }
+            }
+          }
+
+        }
         .widget-type-value-sparkline{
           .widget-chart-container {
             @include widget-chart(57px);
@@ -386,7 +443,9 @@ $mobileMaxBlocHeight: 200px;
 
 
         &.medium {
-          width: 40% !important;
+          width: 44% !important;
+          height: auto !important;
+          max-height: none;
 
           @include respond-to(phone) {
             width: 90%!important;
@@ -396,7 +455,7 @@ $mobileMaxBlocHeight: 200px;
         &.small {
           display: inline-block;
           width: 25%;
-          margin: 25px;
+          margin: 12.5px;
           text-align: left;
           vertical-align: top;
 

@@ -16,6 +16,7 @@
   .execsum-content {
     letter-spacing: 2px;
     @extend .font-execsum-content;
+
     .emphasize {
       @extend .font-execsum-content-emphasize;
     }

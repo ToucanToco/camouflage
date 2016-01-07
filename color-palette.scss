@@ -1,29 +1,37 @@
 color-palette {
   display: flex;
+  flex-direction: column;
   margin: 3em 0;
   @extend .secondary-font;
   font-weight: bold;
   color: $textColor;
 
   .category {
-    flex: 1;
-    border-right: solid 1px $grey;
+    display: flex;
+    border-bottom: solid 1px $grey;
 
     &:last-child {
-      border-right-color: transparent;
+      border-bottom-color: transparent;
     }
 
     .title {
       @extend .montserrat-bold-upper;
       font-size: larger;
+      width: 9em;
     }
 
     .subtitle {
+      font-size: small;
       margin-bottom: 2em;
+      color: $faded-text;
     }
 
     .color {
+      display: flex;
+      flex-direction: column;
       margin-bottom: 1em;
+      margin-left: 0.5em;
+      width: 12em;
 
       .preview {
         margin: auto;
@@ -36,6 +44,8 @@ color-palette {
 
       .name, .code {
         height: 1em;
+        color: $faded-text;
+        text-align: center;
       }
 
       .code {

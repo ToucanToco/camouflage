@@ -512,6 +512,30 @@ $dashboard-kpi-link-padding: .3em;
   }
 }
 
+.admin-actions {
+  display: flex;
+  justify-content: center;
+
+  .action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+    background-color: $execsumArrowColor;
+    color: $execsumBgColor;
+    font-size: 2em;
+    border-radius: 50%;
+    height: 1.8em;
+    width: 1.8em;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $emphasis-color;
+      color: $execsumArrowColor;
+    }
+  }
+}
+
 .logout {
   cursor: pointer;
 

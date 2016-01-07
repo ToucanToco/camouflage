@@ -9,6 +9,7 @@ color-palette {
   .category {
     display: flex;
     border-bottom: solid 1px $grey;
+    align-items: center;
 
     &:last-child {
       border-bottom-color: transparent;
@@ -27,11 +28,11 @@ color-palette {
     }
 
     .color {
-      display: flex;
-      flex-direction: column;
       margin-bottom: 1em;
       margin-left: 0.5em;
+      margin-top: 1.5em;
       width: 12em;
+      height: 7em;
 
       .preview {
         margin: auto;

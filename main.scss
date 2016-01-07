@@ -18,12 +18,13 @@ html {
   overflow: hidden;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  @extend .primary-font;
+  font-family: $primary-font-family;
   font-size: 14px;
 }
 
 body {
-  display: flex;  margin: 0 auto;
+  display: flex;
+  margin: 0 auto;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -355,6 +356,14 @@ a {
 @import 'charts/slopegraph';
 @import 'charts/verbatim';
 @import 'charts/heatmap';
+
+@import 'store/small-apps-list';
+@import 'store/new-small-app';
+
+@import 'small-app/component';
+
+@import 'users/authentication';
+@import 'users/management';
 
 // New Charts module
 @import 'new-charts/tc-charts';

@@ -15,8 +15,11 @@
     background-color: $small-apps-list-background;
     flex: 1;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 
-    ul {padding-left:0;}
+    ul {
+      padding-left:0;
+    }
 
     h1 {
       @extend .montserrat-bold-upper;
@@ -52,6 +55,7 @@
           @extend .full-content;
           top: 0;
           left: 0;
+          background: linear-gradient(to bottom, rgba(0,0,0,0) 80%, rgba(0,0,0,0.3) 100%);
         }
       }
 

@@ -1,6 +1,5 @@
 @import 'helpers';
 @import 'home-report';
-@import '../icons/build/icons.scss';
 
 $blocHeight : 190px;
 $mobileMinBlocHeight: 150px;
@@ -515,6 +514,7 @@ $dashboard-kpi-link-padding: .3em;
 .admin-actions {
   display: flex;
   justify-content: center;
+  margin: 20px;
 
   .action {
     display: flex;
@@ -523,10 +523,10 @@ $dashboard-kpi-link-padding: .3em;
     margin: 0.5em;
     background-color: $execsumArrowColor;
     color: $execsumBgColor;
-    font-size: 2em;
+    font-size: 1.3em;
     border-radius: 50%;
-    height: 1.8em;
-    width: 1.8em;
+    height: 2.5em;
+    width: 2.5em;
     cursor: pointer;
 
     &:hover {

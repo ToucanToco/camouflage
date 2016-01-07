@@ -75,8 +75,8 @@ $charts-font-size-mobile: 13px;
 /**** COLORS ******/
 $splash-color: black;
 
-$mainColor: #88b2a8;
-$mainColor_fade: #b2cdc6;
+$mainColor: #88b2a8 !default;
+$mainColor_fade: #b2cdc6 !default;
 $main-color-dark: darken($mainColor, 6%) !default;
 
 
@@ -97,8 +97,8 @@ $inactive-color: #bfbfbf;
 $positiveColor: #34b364;
 $negativeColor: #ec1b2f;
 
-$emphasis-color: #f3c642;
-$secondary-emphasis-color: #e78352;
+$emphasis-color: #f3c642 !default;
+$secondary-emphasis-color: #e78352 !default;
 $emphasis-color-light: #fffaec;
 
 $aboveAverageColor: $positiveColor;
@@ -118,17 +118,17 @@ $waterfallNegativeColor: $negativeColor;
 $slopegraphLineColor: #437f9d;
 
 $colorChart0: $emphasis-color;
-$colorChart1: #A1D1C5;
-$colorChart2: #2a5c74;
-$colorChart3: #6095a2;
-$colorChart4: #535353;
+$colorChart1: #A1D1C5 !default;
+$colorChart2: #2a5c74 !default;
+$colorChart3: #6095a2 !default;
+$colorChart4: #535353 !default;
 
 $scaleColors: #6090bd #cae5ff #f3d0dc #9b2156;
 
-$scaleColor0: #6090bd;
-$scaleColor1: #cae5ff;
-$scaleColor2: #f3d0dc;
-$scaleColor3: #9b2156;
+$scaleColor0: #6090bd !default;
+$scaleColor1: #cae5ff !default;
+$scaleColor2: #f3d0dc !default;
+$scaleColor3: #9b2156 !default;
 
 $barStackColor0: $colorChart0;
 $barStackColor1: $colorChart1;
@@ -254,7 +254,7 @@ $grey: #ededed;
 
 $backgroundSlideCommentary: $greyLight;
 
-$textColor: #4c4c4c;
+$textColor: #4c4c4c !default;
 $faded-text: #b4b4b4;
 
 $dropAreaTextColor: #b7d1cb;

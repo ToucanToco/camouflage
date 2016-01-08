@@ -25,7 +25,7 @@ $submit-button-margin-top: 90px;
   }
   // - Background & colors
   @extend .overlay;
-  @include overlay-background('tctc-bg-desktop.png');
+  @include overlay-background('images/tctc-bg-desktop.png');
   background-position: top center;
   background-size: cover;
   color: #FFFFFF;
@@ -40,32 +40,32 @@ $submit-button-margin-top: 90px;
   // - Responsive background
   @include respond-to(phone) {
     .overlay-bottom-left {
-      @include mobile-overlay('mobile-login-bg-bottom-left.png');
+      @include mobile-overlay('images/mobile-login-bg-bottom-left.png');
       background-position: left bottom;
       bottom: 0;
       left: 0;
     }
     .overlay-top-left {
-      @include mobile-overlay('mobile-login-bg-top-left.png');
+      @include mobile-overlay('images/mobile-login-bg-top-left.png');
       background-position: left top;
       top: 0;
       left: 0;
     }
     .overlay-bottom-right {
-      @include mobile-overlay('mobile-login-bg-bottom-right.png');
+      @include mobile-overlay('images/mobile-login-bg-bottom-right.png');
       background-position: right bottom;
       bottom: 0;
       left: 0;
       z-index: -1;
     }
     background:
-      url('mobile-login-bg-behind.png');
+      url('images/mobile-login-bg-behind.png');
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   @include respond-to(tablet) {
-    @include overlay-background('tctc-bg-desktop.png');
+    @include overlay-background('images/tctc-bg-desktop.png');
     background-size: cover;
     background-position: top center;
     padding-bottom:0;

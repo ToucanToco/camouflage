@@ -1,5 +1,5 @@
-$report-selector-main-color: $mainColor !default;
-$report-selector-secondary-color: $mainColor_fade !default;
+$report-selector-main-color: $main-color !default;
+$report-selector-secondary-color: $main-color-fade !default;
 $report-selector-text-color: transparentize(white, 0.3) !default;
 $report-selector-half-padding: 20px !default;
 $report-selector-overlay-alpha: .5 !default;
@@ -14,7 +14,7 @@ report-selector {
   background-color: $report-selector-main-color;
   background:
     $report-selector-bg-overlay,
-    url("../images/#{$report-selector-bg-image-desktop}");
+    url("images/#{$report-selector-bg-image-desktop}");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -32,7 +32,7 @@ report-selector {
     flex-direction: column;
     background:
       $report-selector-bg-overlay,
-      url("../images/#{$report-selector-bg-image-phone}");
+      url("images/#{$report-selector-bg-image-phone}");
   }
 
   .report-selector-search {

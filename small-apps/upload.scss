@@ -1,7 +1,7 @@
-$upload-drop-border-color: darken($mainColor_fade, 10) !default;
+$upload-drop-border-color: darken($main-color-fade, 10) !default;
 $upload-section-background-color: white;
 $upload-page-background-color: #DDD;
-$upload-text-color: $textColor;
+$upload-text-color: $text-color;
 $upload-feedback-success-color: $positiveColor;
 $upload-feedback-error-color: $negativeColor;
 
@@ -29,7 +29,7 @@ $upload-feedback-error-color: $negativeColor;
 
     .spinner {
       display: none;
-      background: url('loading-bubbles.svg') no-repeat center right;
+      background: url('images/loading-bubbles.svg') no-repeat center right;
       background-size: 100%;
       margin-left: 1em;
       width: 3em;
@@ -70,7 +70,7 @@ $upload-feedback-error-color: $negativeColor;
     justify-content: space-between;
 
     &.uploaded {
-      background: $mainColor_fade;
+      background: $main-color-fade;
     }
     .domain {
       @extend .montserrat-regular;

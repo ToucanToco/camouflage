@@ -12,7 +12,7 @@ $knPaddingVertical-mobile: 13px;
 $knPaddingHorizontal-mobile: 13px;
 
 kpinavigator {
-  background-color: $mainColor_fade;
+  background-color: $main-color-fade;
   width: $kpiNavigatorWidth + $scrollbarSize;
   @include overflow-y-wrapper();
   overflow-x: hidden;

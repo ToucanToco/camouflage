@@ -1,5 +1,5 @@
 .small-apps {
-  background: $mainColor;
+  background: $main-color;
   text-align: center;
   color: white;
   display: flex;
@@ -28,13 +28,13 @@
 
     .small-app-item {
       @extend .montserrat-bold-upper;
-      color: $textColor;
+      color: $text-color;
       display: inline-block;
       margin: 15px;
       border: solid 5px transparent;
 
       .small-app-thumbnail {
-        background-color: $textColor;
+        background-color: $text-color;
         cursor: pointer;
         width: 300px;
         height: 200px;
@@ -112,7 +112,7 @@
   .create-small-app {
     overflow-y: auto;
     background-color: white;
-    color: $mainColor;
+    color: $main-color;
     height: 200px;
     font-size: 25px;
     @extend .montserrat-bold-upper;

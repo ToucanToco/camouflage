@@ -45,8 +45,8 @@
     }
 
     &:hover {
-      color: $mainColor;
-      @include flat-shadow($mainColor);
+      color: $main-color;
+      @include flat-shadow($main-color);
     }
 
     &:active, &.selected {

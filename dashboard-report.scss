@@ -159,7 +159,7 @@ $dashboard-kpi-link-padding: .3em;
         width: 50%;
         margin: 12.5px auto;
         padding: $dashboard-kpi-padding;
-        color: $textColor;
+        color: $text-color;
         height: $blocHeight;
         border-style: solid;
         border-width: 5px;
@@ -195,7 +195,7 @@ $dashboard-kpi-link-padding: .3em;
           bottom: $dashboard-kpi-link-padding;
           right: $dashboard-kpi-link-padding;
           border-radius: 50%;
-          border: 2px solid transparentize($textColor, .7);
+          border: 2px solid transparentize($text-color, .7);
           transition: $transition-duration $transition-type;
         }
 
@@ -544,7 +544,7 @@ $dashboard-kpi-link-padding: .3em;
   width: 100%;
   padding-top: $height / 3;
 
-  background: $mainColor;
+  background: $main-color;
   @extend .montserrat-bold-upper;
   text-align: center;
 

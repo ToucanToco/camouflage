@@ -7,7 +7,7 @@ force-directed-chart {
   }
 
   line.link {
-    stroke: $textColor;
+    stroke: $text-color;
     stroke-width: 2px;
     opacity: 0.25;
   }
@@ -45,7 +45,7 @@ force-directed-chart {
   }
 
   .node-legend {
-    fill: $textColor;
+    fill: $text-color;
     stroke: none;
   }
 }

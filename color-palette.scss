@@ -1,74 +1,19 @@
 color-palette {
-  display: flex;
-  flex-direction: column;
-  margin: 3em 0;
   @extend .secondary-font;
-  font-weight: bold;
-  color: $textColor;
+  color: $text-color;
 
   .category {
-    display: flex;
-    border-bottom: solid 1px $grey;
-    align-items: center;
-
-    &:last-child {
-      border-bottom-color: transparent;
-    }
-
     .title {
-      justify-content: flex-start;
       @extend .montserrat-bold-upper;
-      font-size: larger;
-      width: 9em;
     }
 
     .subtitle {
-      font-size: small;
-      margin-bottom: 2em;
       color: $faded-text;
     }
 
     .color {
-      margin-bottom: 1em;
-      margin-top: 1.5em;
-      justify-content: flex-end;
-      width: 12em;
-      height: 7em;
-
-      .preview {
-        margin: auto;
-        border-radius: 50%;
-        height: 60px;
-        width: 60px;
-        margin-bottom: 0.5em;
-        cursor: pointer;
-      }
-
       .name, .code {
-        height: 1em;
         color: $faded-text;
-        text-align: center;
-      }
-      md-input-container {
-        margin: 0 0 0 2em;
-        width: 8em;
-      }
-      .code {
-        display: none;
-        opacity: 0.8;
-        height: 1.5em;
-      }
-
-      &:hover, &:focus, &:active {
-        .name {
-          display: none;
-          height: 1em;
-        }
-
-        .code {
-          display: inline-block;
-          text-align: center;
-        }
       }
     }
   }

@@ -11,10 +11,10 @@ $dateWidth: 125px;
 $navmenu-button-padding: 2em;
 
 $nav-menu-color: white !default;
-$nav-menu-bg-color: $mainColor_fade !default;
-$nav-menu-fade-color: $mainColor !default;
+$nav-menu-bg-color: $main-color-fade !default;
+$nav-menu-fade-color: $main-color !default;
 $nav-menu-fade-hover-color: transparentize($nav-menu-color, 0.5) !default;
-$nav-menu-selected-color: $mainColor !default;
+$nav-menu-selected-color: $main-color !default;
 
 nav-menu {
   position: absolute;

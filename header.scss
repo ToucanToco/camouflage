@@ -100,7 +100,7 @@ header {
       justify-content: center;
 
       .brand-client {
-        background-image: url('logo-brand-header@2x.png');
+        background-image: url('images/logo-brand-header@2x.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -162,8 +162,8 @@ header {
   .report-entity {
     @extend .header-button;
 
-    border-color: $textColor;
-    color: $textColor;
+    border-color: $text-color;
+    color: $text-color;
     top: -8px;
   }
 

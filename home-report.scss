@@ -47,7 +47,7 @@
 
   @for $i from 1 through 10 {
     .bg-#{$i} {
-      background: url('bg-#{$i}.png');
+      background: url('images/bg-#{$i}.png');
       background-size: cover;
       &.bg-overlay {
         background:
@@ -55,7 +55,7 @@
         transparentize($execsumBgColor, $transparentize-execsum-bg-overlay),
         transparentize($execsumBgColor, $transparentize-execsum-bg-overlay)
         ),
-        url('bg-#{$i}.png');
+        url('images/bg-#{$i}.png');
         background-size: cover;
       }
       background-repeat: no-repeat;

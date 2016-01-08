@@ -124,17 +124,17 @@
   }
   .legend-helper-bottom {
     @extend .legend-helper;
-    background: url('legend-helper-bottom.png') no-repeat;
+    background: url('images/legend-helper-bottom.png') no-repeat;
     background-size: 20px 20px;
   }
   .legend-helper-left {
     @extend .legend-helper;
-    background: url('legend-helper-left.png') no-repeat;
+    background: url('images/legend-helper-left.png') no-repeat;
     background-size: 20px 20px;
   }
   .legend-helper-bubbles-scale {
     @extend .legend-helper;
-    background: url('legend-helper-bubbles-scale.png') no-repeat;
+    background: url('images/legend-helper-bubbles-scale.png') no-repeat;
     background-size: 20px 20px;
   }
 

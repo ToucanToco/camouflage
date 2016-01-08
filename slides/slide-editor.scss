@@ -100,12 +100,12 @@ slide-editor {
         padding-top: $padding-unit;
         display: flex;
         @extend .montserrat-bold-upper;
-        color: $mainColor;
+        color: $main-color;
         text-decoration: underline;
         cursor: pointer;
 
         > * {
-          border-right: solid 2px $mainColor;
+          border-right: solid 2px $main-color;
           padding-right: $padding-unit;
           margin-right: $padding-unit;
 
@@ -142,7 +142,7 @@ slide-editor {
         justify-content: space-between;
         padding: $padding-unit;
         margin-bottom: $padding-unit;
-        @include flat-shadowed-box($mainColor, $main-color-dark);
+        @include flat-shadowed-box($main-color, $main-color-dark);
         .column-name {
           color: $slide-editor-even-bg-color;
         }
@@ -183,7 +183,7 @@ slide-editor {
           font-size: 1em;
           display: flex;
           border-radius: 0.5em;
-          border: dashed 1px $mainColor;
+          border: dashed 1px $main-color;
           margin-bottom: 0.5em;
           padding: 1em;
 
@@ -216,7 +216,7 @@ slide-editor {
 
 }
 
-$drop-zone-color: $mainColor !default;
+$drop-zone-color: $main-color !default;
 
 [ngf-drop].drop-zone {
   @extend .montserrat-bold-upper;

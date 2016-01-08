@@ -1,3 +1,26 @@
+// Color palette
+$main-color: #88b2a8 !default;
+$main-color-fade: #b2cdc6 !default;
+$text-color: #4C4C4C !default;
+$dark-color: #000000 !default; // FIXME Unused
+$emphasis-color: #f3c642 !default;
+$secondary-emphasis-color: #e78352 !default;
+$scale-color-0: #B3D7D2 !default;
+$scale-color-1: #81B1BD !default;
+$scale-color-2: #437F9D !default;
+$scale-color-3: #00354E !default;
+$chart-color-0: #736B88 !default;
+$chart-color-1: #B0C297 !default;
+$chart-color-2: #877900 !default;
+$chart-color-3: #A0A0A0 !default;
+$chart-color-4: #986D5E !default;
+$chart-color-5: #60947F !default;
+
+
+$main-color-dark: darken($main-color, 6%) !default;
+
+$emphasis-color-light: #fffaec;
+
 $offsetMenu: 400px;
 $headerHeight: 90px;
 $viewportHeight: 768px;
@@ -75,20 +98,16 @@ $charts-font-size-mobile: 13px;
 /**** COLORS ******/
 $splash-color: black;
 
-$mainColor: #88b2a8 !default;
-$mainColor_fade: #b2cdc6 !default;
-$main-color-dark: darken($mainColor, 6%) !default;
-
 
 $metaColor: #2a5c74;
 
-$nav-menuColor1: $mainColor;
-$nav-menuColor1_2: $mainColor_fade;
+$nav-menuColor1: $main-color;
+$nav-menuColor1_2: $main-color-fade;
 
 
 $red: #ec1b2f;
 
-$controllerColor: $mainColor;
+$controllerColor: $main-color;
 $execsumColor: #3fb9be;
 $greyMissing: #ddd;
 
@@ -97,19 +116,15 @@ $inactive-color: #bfbfbf;
 $positiveColor: #34b364;
 $negativeColor: #ec1b2f;
 
-$emphasis-color: #f3c642 !default;
-$secondary-emphasis-color: #e78352 !default;
-$emphasis-color-light: #fffaec;
-
 $aboveAverageColor: $positiveColor;
 $underAverageColor: $negativeColor;
 $averageBoxColor: #4e4e4e;
 $averageBoxText: #fff;
 $averageLineColor: #808080;
 
-$chartColors: $emphasis-color #b3d7de #81b1bd #437f9d #00354e;
-$stackedColors: #736B88 #B0C297 #877900 #A0A0A0 #986D5E #60947F;
-$comparisonColor:#D3EFF4;
+$chartColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4;
+$stackedColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4;
+$comparisonColor: #D3EFF4;
 
 $waterfallInitialColor: #00354e;
 $waterfallPositiveColor: $positiveColor;
@@ -117,18 +132,18 @@ $waterfallNegativeColor: $negativeColor;
 
 $slopegraphLineColor: #437f9d;
 
-$colorChart0: $emphasis-color;
-$colorChart1: #A1D1C5 !default;
-$colorChart2: #2a5c74 !default;
-$colorChart3: #6095a2 !default;
-$colorChart4: #535353 !default;
+$colorChart0: $chart-color-0;
+$colorChart1: $chart-color-1;
+$colorChart2: $chart-color-2;
+$colorChart3: $chart-color-3;
+$colorChart4: $chart-color-4;
 
-$scaleColors: #6090bd #cae5ff #f3d0dc #9b2156;
+$scaleColors: $scale-color-0 $scale-color-1 $scale-color-2 $scale-color-3;
 
-$scaleColor0: #6090bd !default;
-$scaleColor1: #cae5ff !default;
-$scaleColor2: #f3d0dc !default;
-$scaleColor3: #9b2156 !default;
+$scaleColor0: $scale-color-0;
+$scaleColor1: $scale-color-1;
+$scaleColor2: $scale-color-2;
+$scaleColor3: $scale-color-3;
 
 $barStackColor0: $colorChart0;
 $barStackColor1: $colorChart1;
@@ -139,14 +154,14 @@ $barStackColor4: $colorChart4;
 $shadow-color: rgba(0, 0, 0, 0.15);
 
 /**** HOME ****/
-$execsumBgColor: $mainColor;
+$execsumBgColor: $main-color;
 $transparentize-execsum-bg-overlay: 0.3; // 0: opaque overlay, 1: no overlay
 $execsumArrowColor: white;
 $search-selected-bg-color: transparentize($execsumBgColor, $transparentize-execsum-bg-overlay);
 $cartoSelectedColor: $emphasis-color;
 
-$sparkline-fill: $mainColor_fade;
-$sparkline-selection-stroke: $mainColor;
+$sparkline-fill: $main-color-fade;
+$sparkline-selection-stroke: $main-color;
 
 $home-button-color: $emphasis-color;
 $home-secondary-color: white;
@@ -254,7 +269,7 @@ $grey: #ededed;
 
 $backgroundSlideCommentary: $greyLight;
 
-$textColor: #4c4c4c !default;
+$text-color: #4c4c4c !default;
 $faded-text: #b4b4b4;
 
 $dropAreaTextColor: #b7d1cb;
@@ -266,7 +281,7 @@ $paddingRightSlide: 20px;
 $paddingTopComment: 35px;
 
 
-$notification-bg: $textColor;
+$notification-bg: $text-color;
 $notification-color: $home-secondary-color;
 $notification-faded: #717171;
 $notification-padding-horizontal: 2em;
@@ -641,7 +656,7 @@ $slide-height: $viewportHeight - $headerHeight;
 @mixin imageWithRetina($url, $width, $height) {
   width: $width;
   height: $height;
-  background: url('#{$url}.png') no-repeat;
+  background: url('images/#{$url}.png') no-repeat;
   background-size: $width $height;
   background-position: center;
   @media
@@ -649,7 +664,7 @@ $slide-height: $viewportHeight - $headerHeight;
   screen and (min-resolution: 192dpi),
   projection and (-webkit-min-device-pixel-ratio: 2),
   projection and (min-resolution: 192dpi) {
-    background: url('#{$url}@2x.png') no-repeat;
+    background: url('images/#{$url}@2x.png') no-repeat;
     background-size: $width $height;
     background-position: center;
   }
@@ -662,9 +677,9 @@ $slide-height: $viewportHeight - $headerHeight;
 
 .button {
   @extend .font-buttons;
-  border: 1px solid $mainColor;
+  border: 1px solid $main-color;
   background-color: white;
-  color: $mainColor;
+  color: $main-color;
   text-align:center;
   min-width: 125px;
   padding: 15px;
@@ -673,7 +688,7 @@ $slide-height: $viewportHeight - $headerHeight;
   cursor: pointer;
 
   &.active, &:hover, &:focus {
-    background-color: $mainColor_fade;
+    background-color: $main-color-fade;
     color: #fff;
   }
 
@@ -683,7 +698,7 @@ $slide-height: $viewportHeight - $headerHeight;
   }
 }
 
-@mixin bordered-button-creator($color: $mainColor, $bg-color: white, $hover-color: $bg-color) {
+@mixin bordered-button-creator($color: $main-color, $bg-color: white, $hover-color: $bg-color) {
   @extend .primary-font;
   padding: 5px 15px;
   border: 3px solid $color;
@@ -740,19 +755,19 @@ $slide-height: $viewportHeight - $headerHeight;
 }
 
 .bordered-button-inverted {
-  @include bordered-button-creator(white, transparent, $mainColor);
+  @include bordered-button-creator(white, transparent, $main-color);
 }
 
 .bordered-button-discreet {
-  @include bordered-button-creator($textColor);
+  @include bordered-button-creator($text-color);
 }
 
 .bordered-button-discreet-inverted {
-  @include bordered-button-creator($textColor, transparent, $mainColor);
+  @include bordered-button-creator($text-color, transparent, $main-color);
 }
 
 .bordered-button-faded {
-  @include bordered-button-creator($mainColor_fade);
+  @include bordered-button-creator($main-color-fade);
 }
 
 .bordered-button-emphasis {

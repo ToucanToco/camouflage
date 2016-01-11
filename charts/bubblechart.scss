@@ -1,8 +1,15 @@
 bubblechart {
   @extend .chart-directive-container;
-  circle {
+  .circle-main {
     fill: $neutralColor;
     stroke: darken($neutralColor,5%);
+  }
+  .circle-drill {
+    stroke: $emphasis-color;
+    stroke-width: 1px;
+    stroke-dasharray: 7,4;
+    cursor: pointer !important;
+    fill: transparent;
   }
   .label{
     font-size: 12px;
@@ -24,15 +31,25 @@ bubblechart {
       @include transform(0, -10px);
     }
   }
+  .group-line-drill {
+    stroke: lighten($emphasis-color,30%);
+    stroke-width: 2px;
+  }
   .group-circle, .group-label {
     &.selected {
-      circle{
+      .circle-main{
         fill: $emphasis-color;
         stroke: darken($emphasis-color,5%);
       }
       .label {
         fill: darken(#4b4b4b, 50%);
         font-weight: bold;
+      }
+    }
+    &.drilling {
+      .circle-main{
+        fill: lighten($emphasis-color,30%);
+        stroke: darken($emphasis-color,5%);
       }
     }
 

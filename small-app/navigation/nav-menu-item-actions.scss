@@ -1,0 +1,18 @@
+$nav-menu-item-actions-color: $nav-menu-fade-color !default;
+$nav-menu-item-actions-hover-color: $nav-menu-color !default;
+$nav-menu-item-actions-size: 20px !default;
+
+nav-menu-item-actions {
+  color: $nav-menu-item-actions-color;
+  font-size: $nav-menu-item-actions-size;
+
+  > i:hover {
+    color: $nav-menu-item-actions-hover-color;
+  }
+}
+
+.selected {
+  nav-menu-item-actions {
+    color: transparentize($nav-menu-item-actions-hover-color, 0.5);
+  }
+}

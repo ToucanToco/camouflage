@@ -308,7 +308,6 @@ a {
 @import 'sparklines';
 @import 'arrow-selector';
 @import 'dropdown';
-@import 'nav-menu';
 @import 'settings-panel';
 @import 'color-legend';
 @import 'filters';
@@ -360,6 +359,7 @@ a {
 @import 'store/new-small-app';
 
 @import 'small-app/component';
+@import 'small-app/nav-menu';
 
 @import 'users/authentication';
 @import 'users/management';

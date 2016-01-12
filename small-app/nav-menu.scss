@@ -1,4 +1,4 @@
-@import 'icons';
+@import '../icons';
 
 $paddingLeftMenu: 30px;
 $paddingLeftMenu-mobile: 20px;
@@ -175,8 +175,6 @@ nav-menu {
       padding-left: $paddingLeftMenu-mobile;
     }
   }
-
 }
-
 
 @import 'navigation/nav-menu-item';

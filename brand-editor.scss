@@ -1,0 +1,32 @@
+.brand-logo-editor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 20em;
+  align-items: center;
+
+  .brand-logo {
+    border: 5px dashed transparent;
+    margin: 1em;
+    border-color: $upload-drop-border-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30em;
+
+    .file-name{
+      margin-bottom: 3em;
+    }
+
+    .datasource{
+      text-align: center;
+
+      img {
+        padding: auto;
+        max-height: 50px;
+        margin-bottom: 3em;
+      }
+    }
+  }
+}

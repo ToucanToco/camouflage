@@ -10,167 +10,24 @@ $dashboard-kpi-link-padding: .3em;
 .execsum {
 
   dashboard-report {
-    position: absolute;
-    left: 0;
-    @extend .full-content;
-    @include overflow-y-wrapper();
+    background-color: $main-color;
 
-    .dashboard-report {
-      padding-bottom: 70px;
-      min-height: 100%;
-    }
-
-    .dashboard-header {
-      padding: 30px 0;
-    }
-
-    .case-name {
-      @extend .execsum-content;
-      color: white;
-      margin-bottom: 10px;
-    }
-
-    .title {
-      @extend .execsum-title;
-      padding-top: 5px;
-      @include respond-to(phone) {
-        max-width: 100%;
-        font-size: 23px;
-
-      }
-    }
-
-    .search-report-container {
-      width: 45%;
-      margin: 30px auto;
-
-      input {
-        width: 430px;
-      }
-      .open {
-        .select-entity-dropdown{
-          border: none;
-        }
-      }
-
-      @include respond-to(phone) {
-        width: 90%;
-        margin: 5%;
-      }
-    }
     .search-selected-container {
-      width: 510px;
-      margin: 30px auto;
       background: $search-selected-bg-color;
-      padding: 30px;
-      position: relative;
-
-      @include respond-to(phone) {
-        width: 90%;
-        margin: 15px auto;
-        padding: 20px;
-      }
-
-      .search-selected-close {
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        font-size: 19px;
-        padding: 20px;
-        cursor: pointer;
-
-        @include respond-to(phone) {
-          font-size: 13px;
-          padding: 15px;
-        }
-      }
-      .search-selected-name {
-        @extend .font-search-selected-name;
-        font-style: normal;
-      }
-      .search-selected-attributes {
-        @extend .montserrat-bold-upper;
-        font-size: 12px;
-        margin-top: 18px;
-        .search-selected-attribute {
-          &:last-of-type {
-            .attribute-delimiter{
-              display:none;
-            }
-          }
-        }
-
-      }
     }
     .search-selected-peers {
-      width: 100%;
-      text-align: center;
-      padding: 60px 0px;
-      margin: 40px 0px;
       background:linear-gradient(
       transparentize($execsumBgColor, 0.4),
       transparentize($execsumBgColor, 0.4)
       );
-      font-size: 20px;
-      font-family: $secondary-font-family;
-      .search-selected-peers-intro{
-        @extend .montserrat-bold-upper;
-        font-size: 14px;
-        margin-bottom: 40px;
-      }
-      .search-selected-peer{
-        margin-top: 25px;
-      }
-      .search-selected-peer-name{
-        font-weight: bold;
-        font-style: normal;
-      }
-      .search-selected-peer-subname{
-        font-style: italic;
-      }
-
     }
 
     .category {
-      padding-bottom: 25px;
-      text-align: center;
-
       > .name {
-        font-family: 'Georgia';
-        font-weight: bold;
-        font-style: italic;
-        font-size: 15px;
-        letter-spacing: 1px;
         @extend .line-interruted-by-text;
       }
-
-      .subtitle {
-        @extend .primary-font;
-        font-size: 12px;
-        text-align: center;
-        margin-top: 8px;
-        margin-bottom: 15px;
-      }
-
       .kpi {
-        position: relative;
-        box-sizing: padding-box;
-        background-color: white;
-        width: 50%;
-        margin: 12.5px auto;
-        padding: $dashboard-kpi-padding;
         color: $text-color;
-        height: $blocHeight;
-        border-style: solid;
-        border-width: 5px;
-        border-color: transparent;
-
-        @include respond-to(phone) {
-          width: 90%;
-          min-height: $mobileMinBlocHeight;
-          height: 100%;
-          max-height: $mobileMaxBlocHeight;
-        }
 
         &.worse {
           .value, .comment .icon {
@@ -185,42 +42,10 @@ $dashboard-kpi-link-padding: .3em;
         }
 
         .link {
-          display: none;
-
-          cursor: pointer;
-          position: absolute;
-          font-size: 20px;
-          padding: 2.5px;
-          padding-right: 0;
-          bottom: $dashboard-kpi-link-padding;
-          right: $dashboard-kpi-link-padding;
-          border-radius: 50%;
           border: 2px solid transparentize($text-color, .7);
-          transition: $transition-duration $transition-type;
-        }
-
-        .widget-image,
-        widget-video {
-          @extend .full-content;
-          background-size: cover;
-          background-repeat: no-repeat;
-          position: absolute;
-          left: 0;
-          top: 0;
-          &.bg-contain {
-
-            background-size: contain;
-            background-position: center;
-          }
         }
 
         &.linked {
-          cursor: pointer;
-
-          .link {
-            display: block;
-          }
-
           &:hover, &:focus, &:active {
             border-color: $emphasis-color;
 
@@ -230,104 +55,16 @@ $dashboard-kpi-link-padding: .3em;
 
             .link {
               background-color: $emphasis-color;
-              color: white;
-              border-color: white;
-            }
-          }
-
-          .source {
-            padding-left:0;
-            bottom: $dashboard-kpi-link-padding;
-            left: $dashboard-kpi-padding;
-          }
-        }
-
-        .name {
-          @extend .montserrat-bold-upper;
-          font-size: 22px;
-          transition: $transition-duration $transition-type;
-        }
-
-        .value {
-          @extend .montserrat-bold-upper;
-          font-size: 40px;
-          line-height: 30px;
-          margin-top: 8px;
-
-          .unit {
-            font-size: 22px;
-            text-transform: none;
-          }
-        }
-
-        @include respond-to(phone) {
-          .value {
-            line-height: 24px;
-            letter-spacing: -0.025em;
-          }
-        }
-
-        .comment {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-top: 10px;
-          @extend .font-dashboard-report-comment;
-
-          .icon {
-            font-size: 2.4em;
-
-            &.icon-bullet {
-              font-size: 1em;
-            }
-          }
-
-          .text {
-            margin-left: 0.5em;
-          }
-          @include respond-to(phone) {
-            line-height: 2em;
-            .icon {
-              font-size: 2em;
-            }
-            .text {
-              font-size: 1.2em;
-              line-height: 1.5em;
             }
           }
         }
 
         .source {
-          @extend .standard-font;
-          position: absolute;
-          bottom: -18px;
-          right: 0px;
           color: $faded-text;
-          font-size: smaller;
-          padding-right: 0px;
-        }
-
-        .sparkline-container {
-          position: relative;
-          width: 100%;
-        }
-
-        @mixin widget-chart($height){
-          height: $height;
-          svg {
-            height: 100%;
-            width: 100%;
-            opacity: 0.5;
-          }
         }
 
         .widget-type-score-card {
-          .name {
-            text-align:center;
-          }
           .sc-entry {
-            display: flex;
-            align-items: baseline;
             &[data-sentiment="better"] {
               .sc-value, .sc-value-unit, .sc-variation > .icon {
                 color: $positiveColor;
@@ -340,194 +77,27 @@ $dashboard-kpi-link-padding: .3em;
             }
 
             .sc-dots {
-              flex: 1;
               border-bottom: dotted 2px $grey;
             }
-            .sc-value {
-              font-weight: bold;
-              font-size: 27px;
-            }
-            .sc-value-unit {
-              font-weight: normal;
-              font-size: 14px;
-            }
-            .sc-variation {
-              width: 30px;
-              margin-left: 8px;
-              text-transform: initial;
-              font-size: 11px;
-              .icon{
-                margin-right: 4px;
-              }
-              .sc-variation-value{
-                font-weight: normal;
-                font-size: 13px;
-              }
-            }
-          }
-
-        }
-        .widget-type-value-sparkline{
-          .widget-chart-container {
-            @include widget-chart(57px);
-            width: 100%;
-            position: relative !important;
           }
         }
 
         .widget-type-leaderboard {
-          height: 140px;
-
           .widget-chart-container {
-            @include widget-chart(90px);
-            margin-top: 20px;
-            svg {
-              opacity: 1;
-            }
             .bar {
               fill: nth($chartColors,2);
             }
-            .bar-complement {
-              fill: #f5f5f5;
-            }
-            .bar-value {
-              text-anchor: end;
-              font-weight: bold,
-            }
-            text {
-              opacity: 0.7;
-            }
           }
-          @include respond-to(phone) {
-            .name {
-              height: auto;
-              margin-bottom: 12px;
-              font-size: 16px;
-            }
-            text {
-              font-size: 12px;
-            }
-            .widget-chart-container {
-              margin-top: 5px;
-            }
-          }
-        }
-
-        .widget-type-media-video {
-          video {
-            height: 180px;
-          }
-        }
-
-        .widget-type-line {
-          .widget-chart-container {
-            @include widget-chart(112px);
-            width: 100%;
-            position: absolute;
-          }
-        }
-
-        .widget-type-text {
-          .name {
-            height: 25px !important;
-          }
-          .main-text {
-            @extend .montserrat-bold-upper;
-            font-size: 25px;
-            line-height: 25px;
-            margin-top: 8px;
-            text-transform: none;
-          }
-        }
-
-
-        &.medium {
-          width: 44% !important;
-          height: auto !important;
-          max-height: none;
-
-          @include respond-to(phone) {
-            width: 90%!important;
-          }
-        }
-
-        &.small {
-          display: inline-block;
-          width: 25%;
-          margin: 12.5px;
-          text-align: left;
-          vertical-align: top;
-
-          @include respond-to(phone) {
-            width: 90%!important;
-            margin: 6px 0;
-          }
-
-          .name {
-            font-size: 16px;
-            height: 2 * 16px + 12px;
-            overflow-y: hidden;
-
-            @include respond-to(phone) {
-              height: auto;
-              margin-bottom: 12px;
-            }
-          }
-
-          .comment{
-            max-width: none;
-
-            .text {
-              flex: 1;
-            }
-
-            .icon {
-              margin-left: 0;
-            }
-          }
-
-          .widget-type-leaderboard {
-            .widget-chart-container {
-              margin-top:5px;
-            }
-          }
-        }
-
-        &.separator {
-          height: 0;
-          width: 0;
-          margin: 0;
-          padding: 0;
-          border: none;
-          display: block;
-          clear: both;
         }
       }
-    }
-
-    .execsum-note {
-      position: initial;
     }
   }
 }
 
 .admin-actions {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-
   .action {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5em;
     background-color: $execsumArrowColor;
     color: $execsumBgColor;
-    font-size: 1.3em;
-    border-radius: 50%;
-    height: 2.5em;
-    width: 2.5em;
-    cursor: pointer;
 
     &:hover {
       background-color: $emphasis-color;
@@ -537,19 +107,7 @@ $dashboard-kpi-link-padding: .3em;
 }
 
 .logout {
-  cursor: pointer;
-
-  $height: 4em;
-  height: $height;
-  width: 100%;
-  padding-top: $height / 3;
-
   background: $main-color;
-  @extend .montserrat-bold-upper;
-  text-align: center;
-
-  @include transition($transition-duration, $transition-type, background);
-
   &:hover, &:focus {
     background: $emphasis-color;
   }

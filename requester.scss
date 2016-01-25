@@ -2,13 +2,14 @@ requester {
   &.upper-right {
     width: $chartLegendWidth;
     position: absolute;
-    top: 0;
-    right: 20px;
-  }
-  @include respond-to(phone) {
-    width: 115px;
-    dropdown .selected-label {
-      font-size: 14px;
+    top: -35px;
+    right: 0px;
+    @include respond-to(phone) {
+      width: 115px;
+      top: -22px;
+      dropdown .selected-label {
+        font-size: 14px !important;
+      }
     }
   }
 

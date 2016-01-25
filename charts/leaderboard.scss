@@ -118,9 +118,9 @@ chart {
 
       display: flex;
       flex-direction: row-reverse;
-
       text-align: center;
-      padding-right: 19px;
+      right: 19px;
+      position: absolute;
 
       @include respond-to(phone) {
         right: 0px;

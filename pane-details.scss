@@ -6,6 +6,7 @@
   padding-bottom: $chart-directive-container-margin-top;
   background-color: $backgroundSlideCommentary;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 
   &.shrink{
     width: $chartLegendWidthShrink;

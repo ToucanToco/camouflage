@@ -1,6 +1,16 @@
 requester {
   &.upper-right {
     width: $chartLegendWidth;
+    position: absolute;
+    top: 0;
+    right: 20px;
   }
+  @include respond-to(phone) {
+    width: 115px;
+    dropdown .selected-label {
+      font-size: 14px;
+    }
+  }
+
 
 }

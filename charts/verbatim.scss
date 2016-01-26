@@ -1,114 +1,16 @@
 verbatim {
-  @extend .full-content;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-
-    .filter-container {
-      padding: 50px 60px;
-      height: 126px;
-      background-color: $backgroundSlideCommentary;
-
-      .selected-label {
-        width: 510px;
-        @extend .primary-font;
-        font-size: 15px;
-        text-transform: uppercase;
-        .select-entity-dropdown {
-          .entity {
-            padding-left: 25px;
-            font-family: $primary-font-family;
-            font-weight: normal;
-            font-size: 11px;
-            line-height: 29px;
-            &.selected {
-              color: #fff;
-              background-color: $controllerColor;
-            }
-          }
-          &.select-open{
-            height: 213px;
-          }
-        }
-      }
+ .verbatim-categorie {
+    &:nth-of-type(1) {
+      background: $backgroundSlideCommentary;
     }
-
-    .verbatims-and-opaque-cue {
-      flex: 1;
-      margin-top: 30px;
-      position: relative;
-
-      .verbatims {
-        position: absolute;
-        @extend .full-content;
-        padding-left: 57px;
-        padding-right: 45px + $scrollbarSize;
-        padding-bottom: $scroll-cue-height;
-
-        &.scrollable {
-          @include overflow-y-wrapper();
-        }
-
-        .verbatim {
-          padding: 20px 0px;
-          border-bottom: 1px solid #9c9c9c;
-
-          .verbatim-icon {
-            cursor: pointer;
-          }
-          .verbatim-categories {
-            display: inline-block;
-            width: 323px;
-            margin-right: 27px;
-            vertical-align: top;
-            .verbatim-categorie {
-              display: inline-block;
-              height: 32px;
-              line-height: 32px;
-              text-align: center;
-              font-family: $primary-font-family;
-              font-size: 11px;
-              &:nth-of-type(1){
-                background: $backgroundSlideCommentary;
-                width: 100%;
-                margin-bottom: 4px;
-                @include text-ellipsis();
-              }
-              &:nth-of-type(2){
-                background: $barStackColor0;
-                width: 124px;
-              }
-              &:nth-of-type(3){
-                background: $barStackColor1;
-                text-transform: uppercase;
-                color: #fff;
-                width: 136px;
-                font-weight: bold;
-              }
-              &:nth-of-type(4){
-                background: $barStackColor2;
-                width: 54px;
-              }
-            }
-          }
-          .verbatim-text {
-            display: inline-block;
-            width: 370px;
-            font-family: $secondary-font-family;
-            font-size: 13px;
-            font-weight: 200;
-
-          }
-        }
-
-      }
+    &:nth-of-type(2) {
+      background: $barStackColor0;
     }
-}
-
-@-moz-document url-prefix() {
-  .verbatim-container {
-    .verbatim-text {
-      width: 360px !important;
+    &:nth-of-type(3) {
+      background: $barStackColor1;
+    }
+    &:nth-of-type(4) {
+      background: $barStackColor2;
     }
   }
 }

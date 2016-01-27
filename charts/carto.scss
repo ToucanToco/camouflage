@@ -46,7 +46,7 @@ carto {
   }
 
   .entity {
-    stroke: #ddd;
+    stroke: none;
     @include transition(800ms, ease);
   }
 }

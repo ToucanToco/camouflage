@@ -83,6 +83,9 @@ $screen-tablet-max: 1024px;
     display: none !important;
   }
 }
+/*** TRANSTIONS ***/
+$transition-type: ease;
+$transition-duration: 0.6s;
 
 /******** CHARTS *******/
 
@@ -211,13 +214,26 @@ $bullet-chart-detail-block-bg: #f0f0f0 !default;
 $bullet-chart-axis-color: #f5f5f5 !default;
 $bullet-chart-axis-text-color: #cacac9 !default;
 
+/*** NEW CHARTS ***/
+// TC-LEGEND
+$tc-legend-colored-blocks-height: 10px !default;
+$tc-legend-colored-blocks-width: 20px !default;
+// TC-MAP
+// Base colors
+$tc-map-base-map-color: white !default;
+$tc-map-border-color: lightergray !default;
+// Series colors
+$tc-map-categories-colors: $chartColors !default;
+$tc-map-missing-data: $tc-map-base-map-color !default;
+$tc-map-selected-color: $secondary-emphasis-color !default;
+// Animation
+$tc-map-transition-duration: $transition-duration !default;
+
+
 /*** STUDIO ***/
 
 $small-apps-list-background: #e1e1e1;
 
-/*** TRANSTIONS ***/
-$transition-type: ease;
-$transition-duration: 0.6s;
 
 /**** FONTS ******/
 @font-face {

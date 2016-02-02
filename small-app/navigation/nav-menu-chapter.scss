@@ -1,49 +1,6 @@
-$nav-menu-chapter-height: 100px !default;
-$nav-menu-chapter-height-mobile: 80px !default;
-
 nav-menu-chapter {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
   border-bottom: $nav-menu-item-border-width solid $nav-menu-color;
-
-  .chapter {
-    @extend %nav-menu-item;
-    display: flex;
-    height: $nav-menu-chapter-height;
-    align-items: center;
-    width: 100%;
-
-    @include respond-to(phone) {
-      height: $nav-menu-chapter-height-mobile;
-    }
-
-    .title {
-      @extend .font-nav-menu-level1;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      flex: 1;
-    }
-
-    .arrow {
-      @extend .icon;
-      @extend .icon-menu_fleche;
-      font-size: $nav-menu-chapter-height / 5;
-    }
-
-    &.opened .arrow {
-      @extend .icon-menu_fleche_active;
-    }
-  }
-
   &.selected .chapter:not(.opened) {
     background-color: $nav-menu-selected-color;
   }
-}
-
-.new-nav-menu-chapter {
-  @extend nav-menu-chapter;
-  border-bottom: none;
-  @extend %new-nav-menu-item;
 }

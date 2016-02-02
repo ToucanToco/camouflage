@@ -165,8 +165,39 @@ $sparkline-selection-stroke: $main-color;
 
 $home-button-color: $emphasis-color;
 $home-secondary-color: white;
+$home-shadow-color: rgba(50, 50, 50, 0.33);
 
-$shadow: rgba(50, 50, 50, 0.33);
+/*** SMALL APP ***/
+// NAV-MENU
+// Colors
+$nav-menu-color:                              white !default;
+$nav-menu-bg-color:                           $main-color-fade !default;
+$nav-menu-fade-color:                         $main-color !default;
+$nav-menu-fade-hover-color:                   transparentize($nav-menu-color, 0.5) !default;
+$nav-menu-selected-color:                     $main-color !default;
+// Dimensions
+$nav-menu-padding-left:                       30px;
+$nav-menu-padding-left-mobile:                20px;
+$nav-menu-border-width:                       2px !default;
+$nav-menu-icon-home-width:                    25 + 2 *  $nav-menu-padding-left;
+$nav-menu-button-padding:                     2em;
+// NAV-MENU-ITEM
+// Colors
+$nav-menu-item-color:                         $nav-menu-color !default;
+// Dimensions
+$nav-menu-item-border-width:                  $nav-menu-border-width !default;
+$nav-menu-item-padding-horizontal:            $nav-menu-padding-left !default;
+// NAV-MENU-ITEM-CHAPTER/SUBCHAPTER
+// Colors
+$nav-menu-item-actions-color:                 $nav-menu-fade-color !default;
+$nav-menu-item-actions-hover-color:           $nav-menu-color !default;
+// Dimensions
+$nav-menu-chapter-height:                     100px !default;
+$nav-menu-chapter-height-mobile:              80px !default;
+$nav-menu-subchapter-height:                  65px !default;
+$nav-menu-chapter-padding-bottom:             20px !default;
+$nav-menu-subchapter-height-mobile:           58px !default;
+$nav-menu-item-actions-size:                  20px !default;
 
 /*** STUDIO ***/
 

@@ -202,6 +202,10 @@ $nav-menu-item-actions-size:                  20px !default;
 $new-small-app-primary-color:                 $main-color-dark !default;
 $new-small-app-secondary-color:               darken($main-color-fade, 10) !default;
 
+// CHARTS
+$barColor: nth($chartColors,3);
+$lineColor: nth($chartColors,1);
+
 /*** STUDIO ***/
 
 $small-apps-list-background: #e1e1e1;

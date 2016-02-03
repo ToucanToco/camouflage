@@ -264,6 +264,14 @@ $dialog-min-height: 250px !default;
 $dialog-width: 350px !default;
 $dialog-bg-color: $greyLight !default;
 
+/*** Report-selector ***/
+$report-selector-main-color: $main-color !default;
+$report-selector-secondary-color: $main-color-fade !default;
+$report-selector-text-color: transparentize(white, 0.3) !default;
+$report-selector-half-padding: 20px !default;
+$report-selector-overlay-alpha: .5 !default;
+$report-selector-bg-image-desktop: "tctc-bg-desktop.png" !default;
+$report-selector-bg-image-phone: "tctc-bg-phone.png" !default;
 
 /*** STUDIO ***/
 

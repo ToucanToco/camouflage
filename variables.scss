@@ -259,6 +259,9 @@ $slide-editor-odd-bg-color: white !default;
 $drop-zone-color: $main-color !default;
 
 
+// BRAND EDITOR
+$upload-drop-border-color: darken($main-color-fade, 10) !default;
+
 /*** UTILS ***/
 $dialog-min-height: 250px !default;
 $dialog-width: 350px !default;

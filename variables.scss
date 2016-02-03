@@ -156,6 +156,22 @@ $barStackColor4: $colorChart4;
 
 $shadow-color: rgba(0, 0, 0, 0.15);
 
+/**** COLORS TO ORDER ******/
+// FIXME order this file !
+$neutralColor: #437f9d;
+
+$greyLight: #f5f5f5;
+$grey: #ededed;
+
+$backgroundSlideCommentary: $greyLight;
+
+$text-color: #4c4c4c !default;
+$faded-text: #b4b4b4;
+
+$dropAreaTextColor: #b7d1cb;
+$backgroundDropAreaColor: #f5faf9;
+
+
 /**** HOME ****/
 $execsumBgColor: $main-color;
 $transparentize-execsum-bg-overlay: 0.3; // 0: opaque overlay, 1: no overlay
@@ -169,6 +185,7 @@ $sparkline-selection-stroke: $main-color;
 $home-button-color: $emphasis-color;
 $home-secondary-color: white;
 $home-shadow-color: rgba(50, 50, 50, 0.33);
+$backgroundHeaderColor: $home-secondary-color;
 
 /*** SMALL APP ***/
 // NAV-MENU
@@ -231,6 +248,16 @@ $tc-map-missing-data: $tc-map-base-map-color !default;
 $tc-map-selected-color: $secondary-emphasis-color !default;
 // Animation
 $tc-map-transition-duration: $transition-duration !default;
+
+/*** SLIDES ***/
+// RECOMMENDATION
+$recommendation-color: $emphasis-color !default;
+$recommendation-notifier-width: 70px !default;
+// SLIDE EDITOR
+$slide-editor-even-bg-color: $greyLight !default;
+$slide-editor-odd-bg-color: white !default;
+$drop-zone-color: $main-color !default;
+
 
 
 /*** STUDIO ***/
@@ -321,22 +348,6 @@ $chart-font-family: $primary-font-family;
 $column-label-font-family: "Georgia";
 
 $fontSizeBase: 12px;
-
-/**** COLORS ******/
-// FIXME order this file !
-$neutralColor: #437f9d;
-
-$greyLight: #f5f5f5;
-$grey: #ededed;
-
-$backgroundSlideCommentary: $greyLight;
-
-$text-color: #4c4c4c !default;
-$faded-text: #b4b4b4;
-
-$dropAreaTextColor: #b7d1cb;
-$backgroundDropAreaColor: #f5faf9;
-$backgroundHeaderColor: $home-secondary-color;
 
 $paddingLeftSlide: 45px;
 $paddingRightSlide: 20px;
@@ -865,7 +876,6 @@ $chart-directive-container-margin-top-mobile: 0;
 
 .chart-container {
   flex: 1;
-  flex-direction: row;
   align-items: stretch;
 
   &.with-right-pane {

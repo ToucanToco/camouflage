@@ -1,12 +1,7 @@
 color-palette {
-  @extend .secondary-font;
   color: $text-color;
 
   .category {
-    .title {
-      @extend .montserrat-bold-upper;
-    }
-
     .subtitle {
       color: $faded-text;
     }

@@ -275,6 +275,12 @@ $report-selector-half-padding: 20px !default;
 $report-selector-overlay-alpha: .5 !default;
 $report-selector-bg-image-desktop: "tctc-bg-desktop.png" !default;
 $report-selector-bg-image-phone: "tctc-bg-phone.png" !default;
+/*** dashboard-report ***/
+$dashboard-report-block-height : 190px;
+$dashboard-report-min-block-height: 150px;
+$dashboard-report-max-block-height: 200px;
+$dashboard-kpi-padding: 20px;
+$dashboard-kpi-link-padding: .3em;
 
 /*** STUDIO ***/
 

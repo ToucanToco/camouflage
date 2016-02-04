@@ -321,7 +321,8 @@ $sparkline-fill: $main-color-fade !default;
 $sparkline-selection-stroke: $main-color !default;
 /*** STUDIO ***/
 $small-apps-list-background: #e1e1e1;
-
+/*** TOOLTIP ***/
+$md-tooltip-bg-color: transparentize($averageBoxColor, 0.3);
 
 /*** TOUCAN COLORS ***/
 // These colors will stay the same regardless of the client's colors

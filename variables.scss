@@ -307,7 +307,18 @@ $menu-button-width: 50px;
 /*** LOGIN ***/
 $login-input-height: 60px;
 $login-submit-button-margin-top: 90px;
-
+/*** Settigns panel ***/
+$settings-panel-width: 350px !default;
+$mobile-settings-panel-width: 300px !default;
+$settings-panel-tab-heading-bg: $main-color-dark !default;
+$settings-panel-tab-inactive-color: darken($settings-panel-tab-heading-bg, 7%) !default;
+$settings-panel-tab-inactive-text-color: darken($settings-panel-tab-heading-bg, 15%) !default;
+$settings-panel-tab-size: 60px !default;
+$settings-button-size: 2em;
+$settings-panel-tab-horizontal-padding: 10px;
+/*** SPARKLINES ***/
+$sparkline-fill: $main-color-fade !default;
+$sparkline-selection-stroke: $main-color !default;
 /*** STUDIO ***/
 $small-apps-list-background: #e1e1e1;
 

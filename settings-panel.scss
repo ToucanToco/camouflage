@@ -1,56 +1,9 @@
-$settings-panel-width: 350px !default;
-$mobile-settings-panel-width: 300px !default;
-$settings-panel-tab-heading-bg: $main-color-dark !default;
-$settings-panel-tab-inactive-color: darken($settings-panel-tab-heading-bg, 7%) !default;
-$settings-panel-tab-inactive-text-color: darken($settings-panel-tab-heading-bg, 15%) !default;
-$settings-panel-tab-size: 60px !default;
-
 settings-panel {
-  position: absolute;
-  height: 100%;
-  width: $settings-panel-width;
-  top: 0px;
-
   background: $main-color;
-  color: white;
-  font-weight: normal;
-
-  right: -$settings-panel-width;
-
-  @include respond-to(phone) {
-    width: $mobile-settings-panel-width;
-    right: -$mobile-settings-panel-width;
-  }
-
-  $settings-button-size: 2em;
   .settings-button-container {
-    position: absolute;
-    left: -$settings-button-size * 1.1;
-    transition: left 400ms;
-    top: 50%;
-    margin-top: -2em;
 
     >.settings-button {
       background: $main-color;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: $settings-button-size;
-      line-height: 2;
-      height: $settings-button-size;
-      width: $settings-button-size;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      svg {
-        height: 40%;
-        transform: translateX(-20%);
-        @include transition(400ms, ease);
-
-        path {
-          fill: white !important;
-        }
-      }
 
       @include respond-to(phone) {
         background: inherit;
@@ -60,77 +13,20 @@ settings-panel {
   }
 
   > .settings-content {
-    height: 100%;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    display: flex;
-    flex-direction: column;
-
-    .divider {
-      height: 6em;
-    }
-
-    .title {
-      @extend .font-settings-content-title;
-    }
-
-    .subtitle {
-      @extend .font-settings-content-subtitle;
-      padding-top: 1.2em;
-    }
-
-    p {
-      @extend .font-settings-content-text;
-      margin-top: 0;
-    }
-
-    dropdown .selected-label.searchBox {
-      text-align: left;
-    }
-
 
     .settings-tab-heading {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
       background: $settings-panel-tab-heading-bg;
-      $settings-panel-tab-horizontal-padding: 10px;
-      padding: 20px $settings-panel-tab-horizontal-padding;
 
       .settings-tab-heading-item {
-        position: relative;
-        cursor: pointer;
-        font-size: 34px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        flex: 1;
-
         // Active indicator
         &::after {
-          bottom: -36px;
-          left: 50%;
-          border: solid transparent;
-          content: " ";
-          height: 0;
-          width: 0;
-          position: absolute;
-          pointer-events: none;
           border-bottom-color: $main-color;
-          border-width: 16px;
-          margin-left: -16px;
-          transition: bottom $transition-duration/2 $transition-type;
-          z-index: 1;
         }
 
         &:hover {
           .icon-tab {
             background: lighten($settings-panel-tab-inactive-color, 5);
           }
-
           .icon-explanation {
             color: lighten($settings-panel-tab-inactive-text-color, 5);
           }
@@ -139,66 +35,31 @@ settings-panel {
         &.active {
           .icon-tab {
             background: #fff;
-
-            svg path {
-              fill: $settings-panel-tab-inactive-color;
-            }
           }
           .icon-explanation {
             color: white;
           }
-
-          &::after {
-            bottom: -20px;
+          .icon-tab {
+            svg path {
+              fill: $settings-panel-tab-inactive-color;
+            }
           }
         }
 
         .icon-tab {
           background: $settings-panel-tab-inactive-color;
-          border-radius: 50%;
-          height: $settings-panel-tab-size;
-          width: $settings-panel-tab-size;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          svg {
-            fill: white;
-            height: 30px;
-          }
         }
 
         .icon-explanation {
-          text-transform: uppercase;
-          font-size: 10px;
           color: $settings-panel-tab-inactive-text-color;
-          margin-top: 8px;
-
         }
       }
     }
     .settings-tab-content {
-      padding-left: 2em;
-      padding-right: 1em;
-      padding-bottom: 30px;
-      padding-top: 2em;
       box-shadow:0px 0px 40px 0px $shadow-color;
-      position: relative;
-      flex:1;
 
       .tab-indicator {
-        bottom: 100%;
-        left: 50%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
         border-bottom-color: $main-color;
-        border-width: 12px;
-        margin-left: -12px;
-        transition: left 200ms ease-in;
       }
     }
     .share-container {
@@ -206,114 +67,13 @@ settings-panel {
         .share-action{
           @extend .bordered-button-discreet;
           background: $main-color;
-          color: white;
-          border-color: white;
-          text-align:center;
-          padding-top: 10px;
-          padding-bottom: 10px;
-          border-width: 2px;
-          font-size: 13px;
-          margin-bottom: 20px;
-
         }
-      }
-    }
-    .comment-container {
-      overflow: scroll;
-      height: 100%;
-      position: absolute;
-      .all-comments-wrapper {
-        color: #404040;
-        font-size: 12px;
-        @extend .montserrat;
-        .comment-wrapper {
-          background: white;
-          padding: 10px 15px;
-          border-radius: 5px;
-          margin-top: 10px;
-          .comment-heading {
-            .comment-heading-left {
-              display: inline-block;
-              background: #f0f0f0;
-              color: #c4c4c4;
-              width: 34px;
-              margin-right: 10px;
-              height: 34px;
-              border-radius: 15px;
-              text-align: center;
-              vertical-align: top;
-              padding-top: 9px;
-              font-size: 14px;
-              @extend .montserrat-bold-upper;
-             }
-            .comment-heading-right {
-              display: inline-block;
-             }
-          }
-          .comment-date {
-            color: #737373;
-          }
-          .comment-user {
-              @extend .montserrat-bold-upper;
-          }
-          .comment-text {
-            margin-top: 5px;
-          }
-        }
-      }
-    }
-    .comment-input-container {
-      .comment-input-text {
-        font-size: 12px;
-        @extend .montserrat-bold-upper;
-        margin-bottom: 5px;
-      }
-      .comment-input {
-        resize: none;
-        border: none;
-        overflow: auto;
-        outline: none;
-        box-shadow: none;
-        width: 100%;
-        border-radius: 5px;
-        padding: 5px;
-        height: 50px;
       }
     }
     .settings-tab-footer {
-        height: 100px;
-        background: darken($main-color, 10);
-        padding: 15px 20px;
-        box-shadow:0px -5px 12px 0px rgba(50, 50, 50, 0.30);
+      background: darken($main-color, 10);
+      box-shadow:0px -5px 12px 0px rgba(50, 50, 50, 0.30);
     }
 
-  }
-
-  .radio {
-    @extend .font-carto-details-selected-label;
-    line-height: 1.5;
-  }
-}
-
-.main-space-wrapper {
-
-  &.offsetleft {
-    @include transform(-$settings-panel-width);
-
-    @include respond-to(phone) {
-      @include transform(-$mobile-settings-panel-width);
-    }
-
-    settings-panel {
-      .settings-button svg {
-        transform: rotate(90deg);
-      }
-    }
-  }
-}
-
-.fullanims {
-  .main-space-wrapper {
-    transition: 300ms ease all;
   }
 }

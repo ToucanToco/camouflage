@@ -221,6 +221,23 @@ $nav-menu-subchapter-height:                  65px !default;
 $nav-menu-chapter-padding-bottom:             20px !default;
 $nav-menu-subchapter-height-mobile:           58px !default;
 $nav-menu-item-actions-size:                  20px !default;
+
+// KPINAVIGATOR
+$knHeight: 122px;
+$knHeightLarge: 212px;
+$knPaddingLeft: 20px;
+$knPaddingRight: 20px + $scrollbarSize;
+$knPaddingBottom: 30px ;
+$knPaddingTop: 32px;
+$knPaddingVertical: 20px;
+$knPaddingHorizontal: 32px;
+$knTitleHeight: 45px;
+
+$knPaddingVertical-mobile: 13px;
+$knPaddingHorizontal-mobile: 13px;
+
+$kpiValueWidth: 90px;
+
 /*** STORE ***/
 $new-small-app-primary-color:                 $main-color-dark !default;
 $new-small-app-secondary-color:               darken($main-color-fade, 10) !default;
@@ -286,11 +303,18 @@ $button-inactive-color: $inactive-color !default;
 $headerPaddingTop: 10px;
 $paddingHeader: 20px;
 $menu-button-width: 50px;
+/*** LOGIN ***/
+$login-input-height: 60px;
+$login-submit-button-margin-top: 90px;
 
 /*** STUDIO ***/
 $small-apps-list-background: #e1e1e1;
 
 
+/*** TOUCAN COLORS ***/
+// These colors will stay the same regardless of the client's colors
+$toucan-brand-accent: $emphasis-color;
+$toucan-button-hover-blue: #60919f;
 /**** FONTS ******/
 @font-face {
   font-family: "Montserrat";

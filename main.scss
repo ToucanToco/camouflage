@@ -301,11 +301,11 @@ a {
 
 @import 'helpers';
 
-@import 'home-report';
+@import 'report-home';
 @import 'admin';
 @import 'dashboard-report';
 @import 'header';
-@import 'kpinavigator';
+@import 'kpi-navigator';
 @import 'sparklines';
 @import 'dropdown';
 @import 'settings-panel';
@@ -321,7 +321,6 @@ a {
 @import 'tooltip';
 @import 'colors';
 @import 'forms';
-@import 'identity-content';
 @import 'tutorial';
 @import 'update-version';
 @import 'requester';

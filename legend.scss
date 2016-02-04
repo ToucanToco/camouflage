@@ -1,44 +1,14 @@
 .legend-container {
-  margin-top: 40px;
-  padding-left: $paddingLeftSlide;
-  padding-right: $paddingRightSlide;
-  height: 45px;
-  .color-selected-value {
-    height: 4px;
-    width: 40px;
-  }
   .legend-group {
-    position: relative;
-    float: left;
-    color: #4b4b4b;
-    margin-right: 16px;
-    width: 203px;
     &:last-of-type{
       .legend-color-reminder {
         background-color: $colorChart2;
-      }
-    }
-    &:first-child{
-      .legend-value {
-        width: 300px;
       }
     }
     &:first-of-type{
       .legend-color-reminder {
         background-color: $colorChart0;
       }
-    }
-    .legend-subgroup {
-      margin-left: 35px;
-    }
-    .legend-label {
-      @extend .font-legend-label;
-      @include text-ellipsis;
-    }
-    .legend-value {
-      @extend .font-legend-value;
-      @include text-ellipsis;
-      color: #4b4b4b;
     }
     .legend-color-reminder {
       position: absolute;
@@ -52,22 +22,5 @@
         background-color: $colorChart2 ;
       }
     }
-    .legend-helper {
-      position: absolute;
-    }
-    .legend-helper-bottom {
-      background: url('images/legend-helper-bottom.png') no-repeat;
-      background-size: 20px 20px;
-      width: 20px;
-      height: 20px;
-    }
-    .legend-helper-left {
-      background: url('images/legend-helper-left.png') no-repeat;
-      background-size: 20px 20px;
-      width: 20px;
-      height: 20px;
-      top: -3px;
-    }
-
   }
 }

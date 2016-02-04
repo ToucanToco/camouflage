@@ -258,7 +258,6 @@ $slide-editor-even-bg-color: $greyLight !default;
 $slide-editor-odd-bg-color: white !default;
 $drop-zone-color: $main-color !default;
 
-
 // BRAND EDITOR
 $upload-drop-border-color: darken($main-color-fade, 10) !default;
 
@@ -281,9 +280,14 @@ $dashboard-report-min-block-height: 150px;
 $dashboard-report-max-block-height: 200px;
 $dashboard-kpi-padding: 20px;
 $dashboard-kpi-link-padding: .3em;
+/*** FILTERS ***/
+$button-inactive-color: $inactive-color !default;
+/*** HEADER ***/
+$headerPaddingTop: 10px;
+$paddingHeader: 20px;
+$menu-button-width: 50px;
 
 /*** STUDIO ***/
-
 $small-apps-list-background: #e1e1e1;
 
 

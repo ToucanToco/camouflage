@@ -43,6 +43,7 @@ $mobileLegendPositionTop: 15px;
 $mobileLegendBackgroundColor: #FFF;
 $mobileLegendPadding: 15px;
 $mobileLegendHandleHeight: 50px;
+$mobile-charts-wrapper-margin-bottom: $mobileLegendHandleHeight + 30px;
 
 
 $screen-phone-max: 767px;
@@ -170,6 +171,10 @@ $faded-text: #b4b4b4;
 
 $dropAreaTextColor: #b7d1cb;
 $backgroundDropAreaColor: #f5faf9;
+$paddingLeftSlide: 45px;
+$paddingRightSlide: 20px;
+$paddingTopComment: 35px;
+
 
 
 /**** HOME ****/
@@ -223,20 +228,20 @@ $nav-menu-subchapter-height-mobile:           58px !default;
 $nav-menu-item-actions-size:                  20px !default;
 
 // KPINAVIGATOR
-$knHeight: 122px;
-$knHeightLarge: 212px;
-$knPaddingLeft: 20px;
-$knPaddingRight: 20px + $scrollbarSize;
-$knPaddingBottom: 30px ;
-$knPaddingTop: 32px;
-$knPaddingVertical: 20px;
-$knPaddingHorizontal: 32px;
-$knTitleHeight: 45px;
+$knHeight:                                    122px;
+$knHeightLarge:                               212px;
+$knPaddingLeft:                               20px;
+$knPaddingRight:                              20px + $scrollbarSize;
+$knPaddingBottom:                             30px ;
+$knPaddingTop:                                32px;
+$knPaddingVertical:                           20px;
+$knPaddingHorizontal:                         32px;
+$knTitleHeight:                               45px;
 
-$knPaddingVertical-mobile: 13px;
-$knPaddingHorizontal-mobile: 13px;
+$knPaddingVertical-mobile:                    13px;
+$knPaddingHorizontal-mobile:                  13px;
 
-$kpiValueWidth: 90px;
+$kpiValueWidth:                               90px;
 
 /*** STORE ***/
 $new-small-app-primary-color:                 $main-color-dark !default;
@@ -244,90 +249,97 @@ $new-small-app-secondary-color:               darken($main-color-fade, 10) !defa
 
 // CHARTS
 // BAR/BARLINE
-$barColor: nth($chartColors,3);
-$lineColor: nth($chartColors,1);
+$barColor:                                    nth($chartColors,3);
+$lineColor:                                   nth($chartColors,1);
 // BULLETCHART
-$bullet-chart-detail-block-bg: #f0f0f0 !default;
-$bullet-chart-axis-color: #f5f5f5 !default;
-$bullet-chart-axis-text-color: #cacac9 !default;
+$bullet-chart-detail-block-bg:                #f0f0f0 !default;
+$bullet-chart-axis-color:                     #f5f5f5 !default;
+$bullet-chart-axis-text-color:                #cacac9 !default;
 
 /*** NEW CHARTS ***/
 // TC-LEGEND
-$tc-legend-colored-blocks-height: 10px !default;
-$tc-legend-colored-blocks-width: 20px !default;
+$tc-legend-colored-blocks-height:             10px !default;
+$tc-legend-colored-blocks-width:              20px !default;
 // TC-MAP
 // Base colors
-$tc-map-base-map-color: white !default;
-$tc-map-border-color: lightergray !default;
+$tc-map-base-map-color:                       white !default;
+$tc-map-border-color:                         lightergray !default;
 // Series colors
-$tc-map-categories-colors: $chartColors !default;
-$tc-map-missing-data: $tc-map-base-map-color !default;
-$tc-map-selected-color: $secondary-emphasis-color !default;
+$tc-map-categories-colors:                    $chartColors !default;
+$tc-map-missing-data:                         $tc-map-base-map-color !default;
+$tc-map-selected-color:                       $secondary-emphasis-color !default;
 // Animation
-$tc-map-transition-duration: $transition-duration !default;
+$tc-map-transition-duration:                  $transition-duration !default;
 
 /*** SLIDES ***/
 // RECOMMENDATION
-$recommendation-color: $emphasis-color !default;
-$recommendation-notifier-width: 70px !default;
+$recommendation-color:                        $emphasis-color !default;
+$recommendation-notifier-width:               70px !default;
 // SLIDE EDITOR
-$slide-editor-even-bg-color: $greyLight !default;
-$slide-editor-odd-bg-color: white !default;
-$drop-zone-color: $main-color !default;
+$slide-editor-even-bg-color:                  $greyLight !default;
+$slide-editor-odd-bg-color:                   white !default;
+$drop-zone-color:                             $main-color !default;
 
 // BRAND EDITOR
-$upload-drop-border-color: darken($main-color-fade, 10) !default;
+$upload-drop-border-color:                    darken($main-color-fade, 10) !default;
 // NOTIFICATIONS
-$notification-line-height: 1.42em;
+$notification-line-height:                    1.42em;
+$notification-bg:                             $text-color;
+$notification-color:                          $home-secondary-color;
+$notification-faded:                          #717171;
+$notification-padding-horizontal:             2em;
+$notification-padding-vertical:               $notification-padding-horizontal / 2;
 /*** UTILS ***/
-$dialog-min-height: 250px !default;
-$dialog-width: 350px !default;
-$dialog-bg-color: $greyLight !default;
+$dialog-min-height:                           250px !default;
+$dialog-width:                                350px !default;
+$dialog-bg-color:                             $greyLight !default;
 
 /*** Report-selector ***/
-$report-selector-main-color: $main-color !default;
-$report-selector-secondary-color: $main-color-fade !default;
-$report-selector-text-color: transparentize(white, 0.3) !default;
-$report-selector-half-padding: 20px !default;
-$report-selector-overlay-alpha: .5 !default;
-$report-selector-bg-image-desktop: "tctc-bg-desktop.png" !default;
-$report-selector-bg-image-phone: "tctc-bg-phone.png" !default;
+$report-selector-main-color:                  $main-color !default;
+$report-selector-secondary-color:             $main-color-fade !default;
+$report-selector-text-color:                  transparentize(white, 0.3) !default;
+$report-selector-half-padding:                20px !default;
+$report-selector-overlay-alpha:               .5 !default;
+$report-selector-bg-image-desktop:            "tctc-bg-desktop.png" !default;
+$report-selector-bg-image-phone:              "tctc-bg-phone.png" !default;
 /*** dashboard-report ***/
-$dashboard-report-block-height : 190px;
-$dashboard-report-min-block-height: 150px;
-$dashboard-report-max-block-height: 200px;
-$dashboard-kpi-padding: 20px;
-$dashboard-kpi-link-padding: .3em;
+$dashboard-report-block-height:               190px;
+$dashboard-report-min-block-height:           150px;
+$dashboard-report-max-block-height:           200px;
+$dashboard-kpi-padding:                       20px;
+$dashboard-kpi-link-padding:                  .3em;
 /*** FILTERS ***/
-$button-inactive-color: $inactive-color !default;
+$button-inactive-color:                       $inactive-color !default;
+$bottom-right-filter-bottom:                  2em;
+$bottom-right-filter-right:                   $paddingRightSlide + 20px;
 /*** HEADER ***/
-$headerPaddingTop: 10px;
-$paddingHeader: 20px;
-$menu-button-width: 50px;
+$headerPaddingTop:                            10px;
+$paddingHeader:                               20px;
+$menu-button-width:                           50px;
 /*** LOGIN ***/
-$login-input-height: 60px;
-$login-submit-button-margin-top: 90px;
+$login-input-height:                          60px;
+$login-submit-button-margin-top:              90px;
 /*** Settigns panel ***/
-$settings-panel-width: 350px !default;
-$mobile-settings-panel-width: 300px !default;
-$settings-panel-tab-heading-bg: $main-color-dark !default;
-$settings-panel-tab-inactive-color: darken($settings-panel-tab-heading-bg, 7%) !default;
-$settings-panel-tab-inactive-text-color: darken($settings-panel-tab-heading-bg, 15%) !default;
-$settings-panel-tab-size: 60px !default;
-$settings-button-size: 2em;
-$settings-panel-tab-horizontal-padding: 10px;
+$settings-panel-width:                        350px !default;
+$mobile-settings-panel-width:                 300px !default;
+$settings-panel-tab-heading-bg:               $main-color-dark !default;
+$settings-panel-tab-inactive-color:           darken($settings-panel-tab-heading-bg, 7%) !default;
+$settings-panel-tab-inactive-text-color:      darken($settings-panel-tab-heading-bg, 15%) !default;
+$settings-panel-tab-size:                     60px !default;
+$settings-button-size:                        2em;
+$settings-panel-tab-horizontal-padding:       10px;
 /*** SPARKLINES ***/
-$sparkline-fill: $main-color-fade !default;
-$sparkline-selection-stroke: $main-color !default;
+$sparkline-fill:                              $main-color-fade !default;
+$sparkline-selection-stroke:                  $main-color !default;
 /*** STUDIO ***/
-$small-apps-list-background: #e1e1e1;
+$small-apps-list-background:                  #e1e1e1;
 /*** TOOLTIP ***/
-$md-tooltip-bg-color: transparentize($averageBoxColor, 0.3);
+$md-tooltip-bg-color:                         transparentize($averageBoxColor, 0.3);
 
 /*** TOUCAN COLORS ***/
 // These colors will stay the same regardless of the client's colors
-$toucan-brand-accent: $emphasis-color;
-$toucan-button-hover-blue: #60919f;
+$toucan-brand-accent:                         $emphasis-color;
+$toucan-button-hover-blue:                    #60919f;
 /**** FONTS ******/
 @font-face {
   font-family: "Montserrat";
@@ -412,16 +424,7 @@ $column-label-font-family: "Georgia";
 
 $fontSizeBase: 12px;
 
-$paddingLeftSlide: 45px;
-$paddingRightSlide: 20px;
-$paddingTopComment: 35px;
 
-
-$notification-bg: $text-color;
-$notification-color: $home-secondary-color;
-$notification-faded: #717171;
-$notification-padding-horizontal: 2em;
-$notification-padding-vertical: $notification-padding-horizontal / 2;
 
 /* EXECSUM FONTS */
 .font-execsum-title {
@@ -926,8 +929,8 @@ $chart-directive-container-margin-top: 32px;
 $chart-directive-container-margin-top-mobile: 0;
 .chart-directive-container {
   position: relative;
-  margin-top: $chart-directive-container-margin-top;
   @extend .full-content;
+  margin-top: $chart-directive-container-margin-top;
   display: flex;
   flex-direction: row;
   align-items: stretch;

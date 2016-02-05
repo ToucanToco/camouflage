@@ -13,4 +13,19 @@ verbatim {
       background: $barStackColor2;
     }
   }
+
+  .filter-container {
+    background-color: $backgroundSlideCommentary;
+
+    .selected-label {
+      .select-entity-dropdown {
+        .entity {
+          &.selected {
+            background-color: $controllerColor;
+          }
+        }
+      }
+    }
+  }
+
 }

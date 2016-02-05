@@ -1,16 +1,6 @@
-$report-selector-main-color: $main-color !default;
-$report-selector-secondary-color: $main-color-fade !default;
-$report-selector-text-color: transparentize(white, 0.3) !default;
-$report-selector-half-padding: 20px !default;
-$report-selector-overlay-alpha: .5 !default;
-$report-selector-bg-image-desktop: "tctc-bg-desktop.png" !default;
-$report-selector-bg-image-phone: "tctc-bg-phone.png" !default;
-
 report-selector {
   $report-selector-main-color-overlay: transparentize($report-selector-main-color, $report-selector-overlay-alpha);
   $report-selector-bg-overlay: linear-gradient(to bottom, $report-selector-main-color-overlay, $report-selector-main-color-overlay);
-
-  flex: 1;
   background-color: $report-selector-main-color;
   background:
     $report-selector-bg-overlay,
@@ -18,220 +8,51 @@ report-selector {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-around;
-  text-align: center;
-  padding: 3em;
-
   @include respond-to(phone) {
-    padding: 1em;
-    padding-bottom: 100px;
-    flex-direction: column;
     background:
       $report-selector-bg-overlay,
       url("images/#{$report-selector-bg-image-phone}");
   }
 
-  .report-selector-search {
-    width: 100%;
-    margin-bottom: 3em;
-  }
-
-  .report-selector-title {
-    @extend .secondary-font;
-  }
-
-  .report-selector-title,
-  .input-report-wrapper input {
-    font-size: 40px;
-
-    @include respond-to(phone) {
-      font-size: 30px;
-    }
-  }
-
-  .report-selector-subtitle {
-    font-size: 11px;
-    font-style: italic;
-    margin-top: -20px;
-  }
-
   .input-report-wrapper {
     $report-selector-input-color: $report-selector-text-color;
-    display: inline-block;
-    position: relative;
     color: $report-selector-input-color;
-
-    @include respond-to(phone) {
-      display: block;
-      width: 100%;
-    }
 
     input,
     input:focus {
-      @extend .montserrat-bold-upper;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      background: 0 0;
-      border: none;
       border-bottom: solid 3px $report-selector-input-color;
       color: $report-selector-input-color; // Override user agent stylesheet
-      padding-top: 0 !important;
-      max-width: 350px;
 
       &::-webkit-input-placeholder {
         color: $report-selector-input-color;
-        opacity: 1;
-      }
-
-      @include respond-to(phone) {
-        text-align: center;
-        max-width: 100%;
-      }
-    }
-
-    .input-report-helper,
-    .reports-guesses-container {
-      position: absolute;
-
-      @include respond-to(phone) {
-        width: 100%;
-        text-align: center;
-        right: 0;
-        left: 0;
-      }
-    }
-
-    .input-report-helper {
-      bottom: -1.5em;
-      @extend .secondary-font;
-      font-weight: normal;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-
-    &.search-active {
-      .reports-guesses-container {
-        pointer-events: auto;
       }
     }
 
     .reports-guesses-container {
-      pointer-events: none;
-      overflow-y: auto;
-      height: 290px;
-      -webkit-overflow-scrolling: touch;
-      position: absolute;
-      top: 120%;
-      text-align: left;
       color: opacify($report-selector-input-color, 1);
+    }
 
-      @include respond-to(phone) {
-        text-align: center;
-      }
+    .report-selector-widget-container {
+      .report-selector-chart {
+        border: solid 3px $report-selector-text-color;
 
-      .reports-guesses {
-        font-size: 18px;
-        @extend .primary-font;
+        .selected-details {
+          background: $report-selector-text-color;
 
-        .report-guess {
-          line-height: 3;
-          cursor: pointer;
+          i {
+            color: $secondary-emphasis-color;
+          }
+          .report-button {
+            @extend .bordered-button-discreet-inverted;
+            @extend .bordered-button-medium;
+          }
         }
       }
     }
-  }
-
-  .report-selector-widget-container {
-    transition: opacity $transition-duration $transition-type;
-    flex: 1;
-    display: flex;
-    padding: 3em 10em;
-
-    .report-selector-chart {
-      flex: 1;
-      display: flex;
-      border: solid 3px $report-selector-text-color;
-      padding: 1em;
-      position: relative;
-
-      tc-chart {
-        flex: 1;
-      }
-
-      .tc-legend {
-        position: absolute;
-        bottom: 0;
-        left: 100%;
-        margin-left: 2em;
-      }
-
-      .selected-details {
-        position: absolute;
-        bottom: .5em;
-        right: .5em;
-        left: .5em;
-        background: $report-selector-text-color;
-        font-size: 1.7em;
-        color: black;
-        display: flex;
-        flex-direction: row;
-        justify-content: stretch;
-        align-items: center;
-        padding: .6em;
-
-        .label {
-          flex: 1;
-          text-align: left;
-        }
-
-        i {
-          color: $secondary-emphasis-color;
-          margin-right: .3em;
-          font-size: 2em;
-        }
-
-        .report-button {
-          @extend .bordered-button-discreet-inverted;
-          @extend .bordered-button-medium;
-        }
-      }
-    }
-
-    &.search-active {
-      pointer-events: none;
-      opacity: 0;
-    }
-  }
-
-  .report-selector-list {
-    padding: 0 15%;
-    overflow: hidden;
-
-    @include respond-to(phone) {
-      padding: 0;
-    }
-  }
-
-  .reports-list {
-    margin-top: 1em;
   }
 
   .report-button {
     @extend .bordered-button-inverted;
     @extend .bordered-button-medium;
-    display: inline-block;
-  }
-
-  tc-brand-element {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    text-align: center;
   }
 }

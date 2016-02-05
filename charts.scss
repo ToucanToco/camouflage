@@ -1,14 +1,4 @@
 chart {
-  flex: 1;
-  position: relative;
-  @extend .font-charts;
-
-  > .chart-wrapper {
-    position: absolute;
-    @extend .full-content;
-  }
-
-
   /* Colors */
   @each $color in $chartColors {
     $i: index($chartColors, $color) - 1;
@@ -38,83 +28,6 @@ chart {
     @include colorSVGElement($emphasis-color);
   }
 
-  .bar-complement {
-    fill: #ccc;
-  }
-
-  .axis-unit {
-    fill: #6c6c6c;
-  }
-
-}
-
-.generic-chart {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-
-
-  &.scrollable-x {
-    @include overflow-x-wrapper();
-  }
-  &.scrollable {
-    @include overflow-y-wrapper();
-    display: block;
-
-    svg.svg-chart-container {
-     @extend .full-content;
-      height: initial;
-    }
-  }
-
-  > svg {
-    flex: 1;
-
-    path, line, circle, rect {
-      cursor: pointer;
-    }
-  }
-
-  > .chart-filters-container {
-    text-align: right;
-    padding: 0 2em;
-  }
-}
-
-.chart-container {
-  font-family: $chart-font-family;
-  display: flex;
-  align-items: stretch;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Axis */
-.axis {
-  &.y .tick text{
-    fill: #666;
-    shape-rendering: crispEdges;
-    @include respond-to(phone) {
-      font-size: 8px;
-    }
-  }
-  &.x .tick text{
-    fill: #4b4b4b;
-    shape-rendering: crispEdges;
-    @include respond-to(phone) {
-      font-size: 8px;
-    }
-  }
-  .tick line{
-    fill: none;
-    stroke: #D8D8D8;
-    shape-rendering: crispEdges;
-  }
-  .domain {
-    stroke: #4b4b4b;
-    stroke-width: 2px;
-    fill: none;
-  }
 }
 
 /* Used to override default colors for consistency across report */
@@ -129,25 +42,7 @@ chart {
 }
 
 /* Utility classes */
-
 chart {
-  .vertical-padding {
-    .linechart-container {
-      height: 75%;
-    }
-  }
-
-  .secondary  {
-    .chart-diretive-container {
-      flex-direction: column;
-    }
-
-    .chart-legend-right {
-      padding-top: $chart-directive-container-margin-top / 2;
-      padding-bottom: $chart-directive-container-margin-top / 2;
-    }
-  }
-
   .gray-bg {
     background-color: $greyLight;
 
@@ -159,14 +54,5 @@ chart {
       @include scroll-opaque-cue-bg($greyLight);
     }
   }
-  .right-pane-container {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    margin-left: 20px;
 
-    @include respond-to(phone) {
-      display: none;
-    }
-  }
 }

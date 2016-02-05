@@ -1,147 +1,20 @@
-dropdown {
-  .selected-label {
-    @extend .font-carto-details-selected-label;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #999;
-    position: relative;
-    text-transform: capitalize;
-    cursor: pointer;
-    &.searchBox {
-      border: none;
-      text-align: center;
-      font-size: 14px;
-      line-height: 14px;
-      ::-moz-placeholder {
-        color: #fff;
-      }
-      ::-webkit-input-placeholder {
+dropdown .selected-label {
+  .select-entity-dropdown {
+    .entity, .entity-header {
+      color: $text-color;
+      &.entity-selected {
+        background: $emphasis-color;
         color: #fff;
       }
 
-      @include respond-to(phone) {
-        font-size: 11px;
-      }
-
-      .input-search-container {
-        border: 3px solid white;
-        display: inline-block;
-        position: relative;
-        text-align: left;
-        width: 100%;
-
-        .input-shield {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0px;
-          left: 0px;
-        }
-
-        input {
-          @extend .montserrat-bold-upper;
-          background-color: transparent;
-          border:none;
-          color: #fff;
-          display: inline-block;
-          vertical-align: middle;
-          max-width: 430px;
-          padding: 12px 20px;
-
-          @include respond-to(phone) {
-            padding: 7px 7px;
-            width: auto;
-          }
-
-          &:focus {
-            outline: none;
-          }
-        }
-        .icon-caret-bold, .icon-search {
-          float: right;
-          font-size: 20px;
-          position: absolute;
-          top: 10px;
-          right: 12px;
-          @include transition(300ms, ease);
-          &.open {
-            @include rotate(180deg);
-          }
-
-          @include respond-to(phone) {
-            top: 7px;
-            right: 7px;
-            font-size: 10px;
-          }
-        }
-      }
-    }
-
-    .arrow-select-entity {
-      float: right;
-      margin-right: 6px;
-      @include transition(300ms, ease);
-      @include rotate(90deg);
-    }
-
-    .select-entity-dropdown {
-      position: absolute;
-      left: 0px;
-      z-index: 40000;
-      width: 100%;
-      background-color: #fff;
-      max-height: 0;
-      text-align: left;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-      @extend .font-dropdown-select-entity;
-      @include transition(300ms, ease);
-
-
-      .entity, .entity-header {
-        padding: 10px 20px;
-        font-weight: normal;
-        color: $text-color;
-        &.entity-selected {
-          background: $emphasis-color;
-          color: #fff;
-        }
-
-        &.selected, &:active, &:hover {
-          @extend .entity-selected;
-        }
-
-        &:first-child {
-          padding-top: 20px;
-        }
-
-        &:last-child {
-          padding-bottom: 20px;
-        }
-      }
-
-      .entity-header {
-        padding-top: 35px;
-        font-size: 16px;
-        font-weight: bold;
-
-        @include respond-to(phone) {
-          padding-top: 14px;
-        }
+      &.selected, &:active, &:hover {
+        @extend .entity-selected;
       }
     }
 
     &.open {
-      > .arrow-select-entity {
-        @include rotate(-90deg);
-      }
-
-      >.select-entity-dropdown {
-        border: 1px solid #d9d9d9;
-        max-height: 407px;
-      }
       &.searchBox{
         >.select-entity-dropdown {
-          max-height: 280px;
           box-shadow: 4px 4px 0px 0px $shadow-color;
         }
       }

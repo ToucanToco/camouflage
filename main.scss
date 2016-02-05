@@ -301,20 +301,17 @@ a {
 
 @import 'helpers';
 
+@import 'report-home';
 @import 'admin';
 @import 'dashboard-report';
 @import 'header';
-@import 'kpinavigator';
+@import 'kpi-navigator';
 @import 'sparklines';
-@import 'arrow-selector';
 @import 'dropdown';
 @import 'settings-panel';
-@import 'color-legend';
 @import 'filters';
-@import 'home-report';
 @import 'legend';
 @import 'notifications';
-@import 'slidebox';
 @import 'text';
 @import 'variation';
 @import 'color-palette';
@@ -323,18 +320,11 @@ a {
 @import 'tooltip';
 @import 'colors';
 @import 'forms';
-@import 'identity-content';
-@import 'tutorial';
-@import 'update-version';
-@import 'requester';
 
 @import 'brand-editor';
 
-@import 'utils/tc-brand-element';
-@import 'utils/dropdown';
 @import 'utils/dialog';
 @import 'utils/json-editable';
-@import 'utils/print';
 
 @import 'slides/tc-slide';
 @import 'slides/slide-editor';
@@ -342,27 +332,18 @@ a {
 @import 'views/report-selector';
 
 @import 'charts';
-@import 'charts/barchart';
+@import 'charts/waterfall';
 @import 'charts/barlinechart';
 @import 'charts/bubblechart';
 @import 'charts/bullet-chart';
 @import 'charts/force-directed-chart';
 @import 'charts/leaderboard';
 @import 'charts/linechart';
-@import 'charts/map';
-@import 'charts/score-card';
 @import 'charts/slopegraph';
 @import 'charts/verbatim';
 @import 'charts/heatmap';
 
-@import 'store/small-apps-list';
-@import 'store/new-small-app';
-
-@import 'small-app/component';
 @import 'small-app/nav-menu';
-
-@import 'users/authentication';
-@import 'users/management';
 
 // New Charts module
 @import 'new-charts/tc-charts';

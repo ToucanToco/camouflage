@@ -1,56 +1,17 @@
-@import 'icons';
-
-$notification-line-height: 1.42em;
-
 notifications {
   .notification {
     background: $notification-bg;
-    display: flex;
-    align-items: center;
-    height: 4 * $notification-padding-vertical;
-    padding: $notification-padding-vertical $notification-padding-horizontal;
-    @extend .font-notification;
     color: $notification-color;
-    transition: all $transition-duration $transition-type;
-    overflow: hidden;
-
-    @include respond-to(phone) {
-        height: 2 * $notification-padding-vertical + $notification-line-height;
-    }
-
-    &.ng-enter, &.ng-leave-active {
-      height: 0;
-      padding: 0 $notification-padding-horizontal;
-    }
-
-    &.ng-enter-active {
-      height: 4 * $notification-padding-vertical;
-      padding: $notification-padding-vertical $notification-padding-horizontal;
-      @include respond-to(phone) {
-        height: 2 * $notification-padding-vertical + $notification-line-height;
-      }
-    }
-
-    .notification-icon {
-      margin-right: 1em;
-    }
 
     .text {
-      flex: 1;
       color: $notification-faded;
-      text-overflow: ellipsis;
 
       strong {
         color: $notification-color;
       }
       @include respond-to(phone) {
         color: $notification-color;
-        font-weight: normal;
       }
-    }
-
-    .close-button {
-      @extend .clickable;
     }
   }
 }

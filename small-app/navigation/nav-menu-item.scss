@@ -1,23 +1,11 @@
-$nav-menu-item-border-width: $nav-menu-border-width !default;
-$nav-menu-item-color: $nav-menu-color !default;
-$nav-menu-item-padding-horizontal: $paddingLeftMenu !default;
-
-%nav-menu-item {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+%nav-menu-item--brand {
   color: $nav-menu-item-color;
-  width: 100%;
-  padding: 0 $nav-menu-item-padding-horizontal;
 }
 
-%new-nav-menu-item {
-  @extend .admin-only;
-
+%new-nav-menu-item--brand {
   .title {
     color: $nav-menu-fade-color;
   }
-
   &:hover .title {
     color: $nav-menu-fade-hover-color;
   }

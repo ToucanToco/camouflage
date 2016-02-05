@@ -1,89 +1,19 @@
-$button-inactive-color: $inactive-color !default;
-
-.upper-positioned {
-  margin-right: $paddingRightSlide + 20px;
-  align-self: flex-end;
-}
-
-label {
-  display: inline-block;
-  max-width: 100%;
-}
-
 filter {
-  $bottom-right-filter-bottom: 2em;
-  $bottom-right-filter-right: $paddingRightSlide + 20px;
-
-  &.bottom-right {
-    position: absolute;
-    bottom: $bottom-right-filter-bottom;
-    right: $bottom-right-filter-right;
-
-    &.offseted {
-      right: $bottom-right-filter-right + $chartLegendWidth;
-    }
-
-    @include respond-to(phone) {
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      text-align: center;
-
-      .chart-controller {
-        border-bottom: none;
-
-        &:first-child  {
-          border-left: none;
-        }
-
-        &:last-child  {
-          border-right: none;
-        }
-      }
-    }
-  }
-
   controller-buttons {
-    .controller-group {
-      @include respond-to(phone) {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-      }
-    }
 
     .chart-controller {
-      cursor: pointer;
       color: $controllerColor;
       background-color: #fff;
-      @extend .font-buttons;
       border-top: 1px solid $controllerColor;
       border-bottom: 1px solid $controllerColor;
       border-right: 1px solid $controllerColor;
-      margin: 0;
 
       &:first-child {
         border-left: 1px solid $controllerColor;
       }
 
-      text-align:center;
-      min-width: 125px;
-      padding: 0 15px;
-      line-height: 38px;
-      font-weight: 400;
 
       @include respond-to(phone) {
-        flex: 1;
-        min-width: 60px;
-        padding: 10px 5px;
-        line-height: normal;
-        white-space: normal;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
         border-color: $button-inactive-color;
         color: $button-inactive-color;
       }
@@ -95,37 +25,4 @@ filter {
     }
   }
 
-  &.upper-middle {
-    height: 25px;
-    margin-bottom: 10px;
-
-    @include respond-to(phone) {
-      height: 14px;
-      right: 0;
-    }
-
-    label {
-      margin-bottom: 0px;
-    }
-
-    .chart-controller {
-      padding: 2px 6px;
-      line-height: 18px;
-      font-weight: 400;
-      min-width: inherit;
-      font-size: 12px;
-
-      @include respond-to(phone) {
-        height: 14px;
-        font-size: 10px;
-        padding: 10px 5px;
-      }
-    }
-
-  }
-}
-
-
-.upper-filters-container {
-  @extend .upper-positioned;
 }

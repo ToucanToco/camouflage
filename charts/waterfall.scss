@@ -1,0 +1,23 @@
+.waterfall-chart-container {
+  .expandable {
+    stroke: $emphasis-color;
+  }
+
+  [data-serie="positive"] {
+    &.bar{
+      fill: $waterfallPositiveColor;
+    }
+  }
+
+  [data-serie="negative"] {
+    &.bar{
+      fill: $waterfallNegativeColor;
+    }
+  }
+
+  [data-serie="initial"] {
+    /*fill: nth($chartColors, 1);*/
+    fill: $waterfallInitialColor;
+  }
+
+}

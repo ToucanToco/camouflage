@@ -1,191 +1,19 @@
-$headerPaddingTop: 10px;
-$paddingHeader: 20px;
-$menu-button-width: 50px;
-
 header {
-  height: auto;
   background: $backgroundHeaderColor;
-  box-shadow: 0px 2px 9px -2px $shadow;
-  z-index: 1;
+  box-shadow: 0px 2px 9px -2px $home-shadow-color;
 }
 
 .header {
   background: $backgroundHeaderColor;
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  height: $headerHeight;
-  margin-bottom: 0px;
-  padding-left: $paddingHeader;
-  padding-right: $paddingHeader;
-  color: #4c4c4c;
-  font-size: 8.5px;
-  font-family: $primary-font-family;
-  box-shadow: 0px 2px 9px -2px $shadow;
-  z-index: 100;
-  @include respond-to(phone) {
-    height: $headerHeight-mobile;
-    padding-left: $paddingHeader / 2;
-    padding-right: $paddingHeader / 2;
-  }
-
-  justify-content: space-between;
-  .header-left-container,
-  .header-middle-container,
-  .header-right-container {
-    flex:1;
-  }
-  &.header-studio {
-    .header-left-container {
-      text-align: left;
-      height: 100%;
-    }
-  }
-  .header-left-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    .menu-touch-area {
-      width: $menu-button-width;
-      height: $headerHeight;
-      cursor: pointer;
-      @include respond-to(phone) {
-        width: $headerHeight-mobile;
-        height: $headerHeight-mobile;
-      }
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .header-brand-logo {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      img {
-        max-height: 30px;
-      }
-      margin-bottom: 8px; // height of the "MENU" text
-    }
-    .menu-icon-subtext {
-      text-transform: uppercase;
-      margin-top: 2px;
-    }
-    .menu-icon {
-      .icon {
-        font-size: 2em;
-      }
-    }
-  }
-  .centered-content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .header-middle-container {
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
-    display: flex;
-    .centered-content {
-      width: 100%;
-    }
-    .brand-client-container {
-      flex:1;
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      align-items: stretch;
-      justify-content: center;
-
-      .brand-client {
-        background-image: url('images/logo-brand-header@2x.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        flex: 1;
-        margin: $paddingHeader 0;
-
-        @include respond-to(phone) {
-          margin: $paddingHeader/2 0;
-        };
-      }
-    }
-  }
-  .header-right-container {
-    display:flex;
-    justify-content: flex-end;
-    flex-direction: row;
-  }
-
-  .brand-client-small {
-    max-width: 80%;
-    max-height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: flex-end;
-
-    img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-  }
-
-  .header-title{
-    @extend .font-header-title;
-  }
-  .header-subtitle{
-    @extend .font-header-subtitle;
-  }
-  .brand-studio {
-    max-height: 100%;
-    align-self: center;
-  }
-
+  box-shadow: 0px 2px 9px -2px $home-shadow-color;
   .header-button {
     @extend .bordered-button-discreet;
-    @include respond-to(phone) {
-      padding: 5px 9px;
-      border-width: 2px;
-      .icon {
-        margin-right: 0px;
-      }
-      .header-button-text{
-        display: none;
-      }
-    }
   }
-
   .report-entity {
     @extend .header-button;
-
     border-color: $text-color;
     color: $text-color;
     top: -8px;
   }
 
-  .help-button {
-    top: 18px;
-    right: $paddingHeader;
-  }
-
-  &.hide-menu-button {
-    .menu-touch-area, .menu-icon, .menu-icon-subtext {
-      display: none;
-    }
-  }
-  .icon-grid {
-    display: inline-block;
-    position: relative;
-    top: -1px;
-    margin-right: 5px;
-  }
-}
-
-.header-studio {
-  text-align: center;
-  flex: none;
 }

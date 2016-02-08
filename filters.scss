@@ -1,4 +1,9 @@
 filter {
+  tc-slider {
+    .tc-slider {
+      border-color: $controllerColor;
+    }
+  }
   controller-buttons {
 
     .chart-controller {

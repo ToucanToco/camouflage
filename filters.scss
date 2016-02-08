@@ -2,13 +2,6 @@ filter {
   tc-slider {
     .tc-slider {
       border-color: $controllerColor;
-      .rz-bubble{
-        color: $controllerColor;
-      }
-      .rz-bar.rz-selection {
-        background: $controllerColor;
-      }
-
     }
   }
   controller-buttons {

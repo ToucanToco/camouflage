@@ -7,3 +7,21 @@
   background-color: $emphasis-color;
   color: white;
 }
+.select2-search__field {
+  border: 2px solid $greyLight;
+  color: $text-color;
+}
+.select2-search__field:focus {
+  border: 2px solid $emphasis-color;
+}
+.select2-search::after {
+  @extend .icon-d3;
+  content: "\E016";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  color: $text-color;
+}
+.select2-search:focus {
+  color: $emphasis-color;
+}

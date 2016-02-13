@@ -56,17 +56,12 @@
 
         .widget-type-score-card {
           .sc-entry {
-            &[data-sentiment="better"] {
-              .sc-value, .sc-value-unit, .sc-variation > .icon {
-                color: $positiveColor;
+            @each $color in $sentimentColors {
+              $i: index($sentimentColors, $color) - 1;
+              &[data-sentiment="#{$i}"] {
+                @include colorScoreCardElements($color);
               }
             }
-            &[data-sentiment="worse"] {
-              .sc-value, .sc-value-unit, .sc-variation > .icon {
-                color: $negativeColor;
-              }
-            }
-
             .sc-dots {
               border-bottom: dotted 2px $grey;
             }

@@ -16,7 +16,6 @@ $chart-color-3: #A0A0A0 !default;
 $chart-color-4: #986D5E !default;
 $chart-color-5: #60947F !default;
 
-
 $main-color-dark: darken($main-color, 6%) !default;
 
 $emphasis-color-light: #fffaec;
@@ -121,6 +120,14 @@ $inactive-color: #bfbfbf;
 $positiveColor: #34b364;
 $negativeColor: #ec1b2f;
 
+$sentiment-color-0: $negativeColor;
+$sentiment-color-1: $positiveColor;
+$sentiment-color-2: #FFAF46;
+$sentiment-color-3: #FFAF46;
+$sentiment-color-4: #FFAF46;
+$sentiment-color-5: #FFAF46;
+
+
 $aboveAverageColor: $positiveColor;
 $underAverageColor: $negativeColor;
 $averageBoxColor: #4e4e4e;
@@ -129,6 +136,7 @@ $averageLineColor: #808080;
 
 $chartColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5;
 $stackedColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5;
+$sentimentColors: $sentiment-color-0 $sentiment-color-1 $sentiment-color-2 $sentiment-color-3 $sentiment-color-4 $sentiment-color-5 ;
 $comparisonColor: #D3EFF4;
 
 $waterfallInitialColor: #00354e;
@@ -961,7 +969,7 @@ $chart-directive-container-margin-top-mobile: 0;
 }
 
 @mixin colorSVGElement($color) {
-  &.bar, &.arc, &.area, &.legend-rect, &.node, &.node-part {
+  &.bar, &.arc, &.area, &.legend-rect, &.node, &.node-part, &.target {
     fill: $color;
   }
 
@@ -971,6 +979,11 @@ $chart-directive-container-margin-top-mobile: 0;
 
   &.group-color, &.color-selected-value {
     background-color: $color;
+  }
+}
+@mixin colorScoreCardElements($color) {
+  .sc-value, .sc-value-unit, .sc-variation > .icon {
+    color: $color;
   }
 }
 

@@ -12,12 +12,6 @@ bullet-chart {
 
   .target rect, rect.target {
     fill: $targetColor;
-    &.red-target {
-      fill: $negativeColor;
-    }
-    &.green-target {
-      fill: $positiveColor;
-    }
   }
   .axis {
     path.domain {

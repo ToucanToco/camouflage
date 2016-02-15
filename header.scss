@@ -9,11 +9,16 @@ header {
   .header-button {
     @extend .bordered-button-discreet;
   }
-  .report-entity {
-    @extend .header-button;
-    border-color: $text-color;
-    color: $text-color;
-    top: -8px;
-  }
+}
 
+.report-selector-button {
+  @extend .bordered-button-discreet;
+  cursor: default;
+  top: -8px;
+}
+
+report-selector-button {
+  .select2-container--header {
+    @extend .bordered-button-discreet;
+  }
 }

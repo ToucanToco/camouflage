@@ -12,13 +12,13 @@ header {
 }
 
 .report-selector-button {
-  @include bordered-button-creator($text-color);
+  @extend .bordered-button-discreet;
   cursor: default;
   top: -8px;
 }
 
 report-selector-button {
   .select2-container--header {
-    @include bordered-button-creator($text-color);
+    @extend .bordered-button-discreet;
   }
 }

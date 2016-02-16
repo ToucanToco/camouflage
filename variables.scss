@@ -118,15 +118,14 @@ $greyMissing: #ddd;
 
 $inactive-color: #bfbfbf;
 
-$positiveColor: #34b364;
-$negativeColor: #ec1b2f;
+$positiveColor: #34b364 !default;
+$negativeColor: #ec1b2f !default;
+$warningColor: #FFAF46 !default;
+$neutralColor: #333 !default;
+$verypositive: #ff00ff !default;
+$verynegative: #ff00ff !default;
+$sentimentExtra: #ff00ff !default;
 
-$sentiment-color-0: $negativeColor;
-$sentiment-color-1: $positiveColor;
-$sentiment-color-2: #FFAF46;
-$sentiment-color-3: #FFAF46;
-$sentiment-color-4: #FFAF46;
-$sentiment-color-5: #FFAF46;
 
 
 $aboveAverageColor: $positiveColor;
@@ -137,7 +136,16 @@ $averageLineColor: #808080;
 
 $chartColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5;
 $stackedColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5;
-$sentimentColors: $sentiment-color-0 $sentiment-color-1 $sentiment-color-2 $sentiment-color-3 $sentiment-color-4 $sentiment-color-5 ;
+$sentimentColors: (
+  positive: $positiveColor,
+  negative: $negativeColor,
+  warning: $warningColor,
+  neutral: $neutralColor,
+  verypositive: $verypositive,
+  verynegative: $verynegative,
+  sentimentExtra: $sentimentExtra
+);
+
 $comparisonColor: #D3EFF4;
 
 $waterfallInitialColor: #00354e;

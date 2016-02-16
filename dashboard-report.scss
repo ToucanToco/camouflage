@@ -56,12 +56,6 @@
 
         .widget-type-score-card {
           .sc-entry {
-            @each $color in $sentimentColors {
-              $i: index($sentimentColors, $color) - 1;
-              &[data-sentiment="#{$i}"] {
-                @include colorScoreCardElements($color);
-              }
-            }
             .sc-dots {
               border-bottom: dotted 2px $grey;
             }

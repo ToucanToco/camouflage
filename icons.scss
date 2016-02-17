@@ -13,9 +13,9 @@
 }
 .icon{
   &.better {
-    color: $positiveColor;
+    color: $positive-color;
   }
   &.worse {
-    color: $negativeColor;
+    color: $negative-color;
   }
 }

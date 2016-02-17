@@ -22,13 +22,13 @@
 
         &.worse {
           .value, .comment .icon {
-            color: $negativeColor;
+            color: $negative-color;
           }
         }
 
         &.better {
           .value, .comment .icon {
-            color: $positiveColor;
+            color: $positive-color;
           }
         }
 

@@ -118,18 +118,18 @@ $greyMissing: #ddd;
 
 $inactive-color: #bfbfbf;
 
-$positiveColor: #34b364 !default;
-$negativeColor: #ec1b2f !default;
-$warningColor: #FFAF46 !default;
-$neutralColor: #333 !default;
-$verypositive: #ff00ff !default;
-$verynegative: #ff00ff !default;
-$sentimentExtra: #ff00ff !default;
+$positive-color: #34b364 !default;
+$negative-color: #ec1b2f !default;
+$warning-color: #FFAF46 !default;
+$neutral-color: #333 !default;
+$verypositive-color: #ff00ff !default;
+$verynegative-color: #ff00ff !default;
+$sentiment-extra-color: #ff00ff !default;
 
 
 
-$aboveAverageColor: $positiveColor;
-$underAverageColor: $negativeColor;
+$aboveAverageColor: $positive-color;
+$underAverageColor: $negative-color;
 $averageBoxColor: #4e4e4e;
 $averageBoxText: #fff;
 $averageLineColor: #808080;
@@ -137,20 +137,20 @@ $averageLineColor: #808080;
 $chartColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5;
 $stackedColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5;
 $sentimentColors: (
-  positive: $positiveColor,
-  negative: $negativeColor,
-  warning: $warningColor,
-  neutral: $neutralColor,
-  verypositive: $verypositive,
-  verynegative: $verynegative,
-  sentimentExtra: $sentimentExtra
+  positive: $positive-color,
+  negative: $negative-color,
+  warning: $warning-color,
+  neutral: $neutral-color,
+  verypositive: $verypositive-color,
+  verynegative: $verynegative-color,
+  sentimentExtra: $sentiment-extra-color
 );
 
 $comparisonColor: #D3EFF4;
 
 $waterfallInitialColor: #00354e;
-$waterfallPositiveColor: $positiveColor;
-$waterfallNegativeColor: $negativeColor;
+$waterfallPositiveColor: $positive-color;
+$waterfallNegativeColor: $negative-olor;
 
 $slopegraphLineColor: #437f9d;
 

@@ -22,13 +22,13 @@
 
         &.worse {
           .value, .comment .icon {
-            color: $negativeColor;
+            color: $negative-color;
           }
         }
 
         &.better {
           .value, .comment .icon {
-            color: $positiveColor;
+            color: $positive-color;
           }
         }
 
@@ -56,17 +56,6 @@
 
         .widget-type-score-card {
           .sc-entry {
-            &[data-sentiment="better"] {
-              .sc-value, .sc-value-unit, .sc-variation > .icon {
-                color: $positiveColor;
-              }
-            }
-            &[data-sentiment="worse"] {
-              .sc-value, .sc-value-unit, .sc-variation > .icon {
-                color: $negativeColor;
-              }
-            }
-
             .sc-dots {
               border-bottom: dotted 2px $grey;
             }

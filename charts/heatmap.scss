@@ -9,13 +9,13 @@ heatmap {
 
   [data-serie="positive"] {
     &.heatmap-square{
-      fill: $positiveColor;
+      fill: $positive-color;
     }
   }
 
   [data-serie="negative"] {
     &.heatmap-square{
-      fill: $negativeColor;
+      fill: $negative-color;
     }
   }
 }

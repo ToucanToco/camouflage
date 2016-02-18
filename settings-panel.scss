@@ -65,8 +65,7 @@ settings-panel {
     .share-container {
       .share-actions-container {
         .share-action{
-          @extend .bordered-button-discreet;
-          background: $main-color;
+          @extend .bordered-button-inverted;
         }
       }
     }

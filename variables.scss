@@ -599,6 +599,7 @@ $font-size-nav-menu-level1-mobile: 22.5px;
   font-family: $column-label-font-family;
   font-style: italic;
   font-size: 12.5px;
+  line-height: 1.1;
 }
 
 .font-buttons {
@@ -961,6 +962,8 @@ $slide-height: $viewportHeight - $headerHeight;
 
 $chart-directive-container-margin-top: 32px;
 $chart-directive-container-margin-top-mobile: 0;
+$chart-directive-container-margin-top-compact: $chart-directive-container-margin-top / 2;
+
 .chart-directive-container {
   position: relative;
   @extend .full-content;
@@ -972,6 +975,10 @@ $chart-directive-container-margin-top-mobile: 0;
   @include respond-to(phone) {
     margin-top: $chart-directive-container-margin-top-mobile;
   }
+}
+
+.compact .chart-directive-container {
+  margin-top: $chart-directive-container-margin-top-compact;
 }
 
 .chart-container {

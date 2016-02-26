@@ -9,12 +9,27 @@ $scale-color-0: #B3D7D2 !default;
 $scale-color-1: #81B1BD !default;
 $scale-color-2: #437F9D !default;
 $scale-color-3: #00354E !default;
-$chart-color-0: #736B88 !default;
-$chart-color-1: #B0C297 !default;
-$chart-color-2: #877900 !default;
-$chart-color-3: #A0A0A0 !default;
-$chart-color-4: #986D5E !default;
-$chart-color-5: #60947F !default;
+
+$chart-color-0: #9394b4 !default;
+$chart-color-1: #d8c03d !default;
+$chart-color-2: #b0c297 !default;
+$chart-color-3: #61839b !default;
+$chart-color-4: #60947f !default;
+$chart-color-5: #736b88 !default;
+$chart-color-6: #637939 !default;
+$chart-color-7: #ad494a !default;
+$chart-color-8: #a0a0a0 !default;
+$chart-color-9: #b39286 !default;
+$chart-color-10: #d09da1 !default;
+$chart-color-11: #b09c4d !default;
+$chart-color-12: #9eb6c8 !default;
+$chart-color-13: #ace0c6 !default;
+$chart-color-14: #d8773d !default;
+$chart-color-15: #a9d9df !default;
+$chart-color-16: #b96e6e !default;
+$chart-color-17: #d8d63d !default;
+$chart-color-18: #407181 !default;
+$chart-color-19: #d3bdde !default;
 
 $main-color-dark: darken($main-color, 6%) !default;
 
@@ -134,8 +149,8 @@ $averageBoxColor: #4e4e4e;
 $averageBoxText: #fff;
 $averageLineColor: #808080;
 
-$chartColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5;
-$stackedColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5;
+$chartColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5 $chart-color-6 $chart-color-7 $chart-color-8 $chart-color-9 $chart-color-10 $chart-color-11 $chart-color-12 $chart-color-13 $chart-color-14 $chart-color-15 $chart-color-16 $chart-color-17 $chart-color-18 $chart-color-19;
+$stackedColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5 $chart-color-6 $chart-color-7 $chart-color-8 $chart-color-9 $chart-color-10 $chart-color-11 $chart-color-12 $chart-color-13 $chart-color-14 $chart-color-15 $chart-color-16 $chart-color-17 $chart-color-18 $chart-color-19;
 $sentimentColors: (
   positive: $positive-color,
   negative: $negative-color,

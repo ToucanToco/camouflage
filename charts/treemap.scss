@@ -1,0 +1,21 @@
+tc-treemap{
+  .children:hover rect.child,
+  .breadcrumb:hover{
+    fill: $emphasis-color;
+  }
+  .reveal-button {
+    stroke: $main-color;
+    fill: #fff;
+  }
+  .reveal-button-text {
+    text-anchor: middle;
+    fill: $main-color;
+  }
+  .grandparent:hover .reveal-button, .reveal-button.selected{
+    fill: $main-color;
+  }
+  .grandparent:hover .reveal-button-text, .reveal-button-text.selected{
+    fill: #fff;
+  }
+
+}

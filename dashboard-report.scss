@@ -71,6 +71,24 @@
         }
       }
     }
+
+    .date-report {
+      display: inline-block;
+
+    }
+    .date-report, .chart-controller{
+      @extend .bordered-button-inverted;
+      @extend .bordered-button-medium;
+      &:not(.disabled):hover {
+        background-color: $emphasis-color;
+        color: white;
+      }
+      &.active {
+        background-color: $emphasis-color;
+        border-color: $emphasis-color;
+
+      }
+    }
   }
 }
 

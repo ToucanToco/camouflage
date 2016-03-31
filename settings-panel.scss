@@ -4,11 +4,6 @@ settings-panel {
 
     >.settings-button {
       background: $main-color;
-
-      // @include respond-to(phone) {
-      //   background: $main-color;
-      //   color: $main-color;
-      // }
     }
   }
 

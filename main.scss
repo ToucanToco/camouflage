@@ -28,7 +28,6 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: url('images/pattern.jpg');
   color: #404040;
   -webkit-user-select: none;
   -webkit-font-smoothing: antialiased;
@@ -38,7 +37,6 @@ body {
     flex-direction: column;
     width: 100%;
   }
-
   // Hide UI controls for login page
   &.login-page {
     header, kpinavigator {
@@ -125,11 +123,21 @@ a {
   @extend .overlay;
   background: transparentize(white, 0.2);
   padding: 20%;
-
   vertical-align: middle;
   text-align: center;
   @extend .montserrat-bold-upper;
   font-size: 40px;
+  display: flex;
+  justify-content: center;
+
+  md-progress-circular .md-inner .md-right .md-half-circle {
+    border-right-color: $main-color;
+    border-top-color: $main-color;
+  }
+  md-progress-circular .md-inner .md-left .md-half-circle {
+    border-left-color: $main-color-fade;
+    border-top-color: $main-color-fade;
+  }
 
   .hint {
     font-size: 20px;
@@ -155,58 +163,6 @@ a {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 16px;
-  }
-  .paragraphs {
-    padding-left: 120px;
-    padding-right: 120px;
-    margin-top: 60px;
-    color: #333;
-    p {
-      margin-top: 30px;
-    }
-  }
-  .kpis-study {
-    height: 405px;
-    padding-left: 38px;
-    padding-right: 38px;
-    .kpi-study-invert {
-    }
-    .kpi-study-full {
-      color: #fff;
-    }
-    .kpi-study {
-      float: left;
-      margin-right: 10px;
-      margin-left: 10px;
-      margin-top: 15px;
-      /*color: #fff;*/
-      text-align: left;
-      padding-left: 30px;
-      padding-right: 30px;
-      padding-top: 30px;
-      .kpi-study-invert {
-
-      }
-      .kpi-study-title {
-        text-transform: uppercase;
-        font-size: 18px;
-      }
-      .kpi-study-number {
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 37px;
-        margin-top: 4px;
-      }
-    }
-    .kpi-study-large {
-      width: 454px;
-      height: 190px;
-    }
-    .kpi-study-small {
-      width: 296px;
-      height: 190px;
-    }
-
   }
   .pdf {
     /*background-image: url('images/pdf.png');*/

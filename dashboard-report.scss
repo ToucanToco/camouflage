@@ -86,7 +86,10 @@
       &.active {
         background-color: $emphasis-color;
         border-color: $emphasis-color;
-
+      }
+      padding: 0 15px;
+      &:not(.active):first-child {
+        border-left: 3px solid white;
       }
     }
   }

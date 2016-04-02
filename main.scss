@@ -129,6 +129,8 @@ a {
   font-size: 40px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   md-progress-circular .md-inner .md-right .md-half-circle {
     border-right-color: $main-color;

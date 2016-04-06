@@ -1,0 +1,10 @@
+.widget-value-on-the-fly__positive .value,
+.widget-value-on-the-fly__positive .comment,
+.widget-value-on-the-fly__positive .icon {
+  color: $positive-color;
+}
+.widget-value-on-the-fly__negative .value,
+.widget-value-on-the-fly__negative .comment,
+.widget-value-on-the-fly__negative .icon {
+  color: $negative-color;
+}

@@ -87,11 +87,9 @@
         background-color: $emphasis-color;
         border-color: $emphasis-color;
       }
-      padding: 0 15px;
-      &:first-child {
-        // override the usual style for controller buttons
-        @extend .bordered-button-inverted;
-        @extend .bordered-button-medium;
+      padding: 0 12px;
+      &:not(.active):first-child {
+        border-left: 3px solid white;
       }
     }
   }

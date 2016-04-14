@@ -1,0 +1,10 @@
+.widget-value-dynamic__positive .value,
+.widget-value-dynamic__positive .comment,
+.widget-value-dynamic__positive .icon {
+  color: $positive-color;
+}
+.widget-value-dynamic__negative .value,
+.widget-value-dynamic__negative .comment,
+.widget-value-dynamic__negative .icon {
+  color: $negative-color;
+}

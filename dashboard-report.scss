@@ -76,7 +76,7 @@
       display: inline-block;
 
     }
-    .date-report, .chart-controller{
+    .date-report, .chart-controller {
       @extend .bordered-button-inverted;
       @extend .bordered-button-medium;
       &:not(.disabled):hover {
@@ -86,7 +86,11 @@
       &.active {
         background-color: $emphasis-color;
         border-color: $emphasis-color;
-
+      }
+      &:first-child {
+        // override the usual style for controller buttons
+        @extend .bordered-button-inverted;
+        @extend .bordered-button-medium;
       }
     }
   }

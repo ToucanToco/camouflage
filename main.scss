@@ -120,18 +120,6 @@ a {
 }
 
 .overlay-data-error-container {
-  @extend .overlay;
-  background: transparentize(white, 0.2);
-  padding: 20%;
-  vertical-align: middle;
-  text-align: center;
-  @extend .montserrat-bold-upper;
-  font-size: 40px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-
   md-progress-circular .md-inner .md-right .md-half-circle {
     border-right-color: $main-color;
     border-top-color: $main-color;
@@ -141,14 +129,6 @@ a {
     border-top-color: $main-color-fade;
   }
 
-  .hint {
-    font-size: 20px;
-  }
-
-  .overlay-data-error-img{
-    margin: 40px auto;
-    @include imageWithRetina('404',96px,90px);
-  }
 }
 
 .execsum {

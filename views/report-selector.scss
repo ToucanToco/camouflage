@@ -45,6 +45,8 @@ report-selector {
           .report-button {
             @extend .bordered-button-discreet-inverted;
             @extend .bordered-button-medium;
+            color: #4c4c4c;
+            border-color: #4c4c4c;
           }
         }
       }

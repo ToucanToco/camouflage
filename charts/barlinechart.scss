@@ -1,39 +1,13 @@
-$barColor: nth($chartColors,3);
-$lineColor: nth($chartColors,1);
-/*$lineColor: #f3c642;*/
-
 barlinechart {
-  position: absolute;
-  @extend .full-content;
-
-  .barlinechart-container {
-    @extend .full-content;
-
-    display: flex;
-    flex-direction: column;
-    align-items: stretcth;
-
-    .chart-container {
-      flex: 1;
-      @extend .full-content;
-    }
-  }
-
   .bar {
     fill: $barColor;
   }
+
   .line {
     stroke: $lineColor !important;
   }
-  .bar-value {
-    text-anchor: middle;
-    fill: #fff;
-    font-weight: bold;
-  }
+
   .line-value {
-    text-anchor: middle;
-    fill: transparent;
-    font-weight: bold;
     &.selected {
       fill: $lineColor;
     }
@@ -49,57 +23,4 @@ barlinechart {
       background-color: $lineColor;
     }
   }
-  .x.axis{
-    .domain {
-      stroke: none;
-    }
-  }
-  .zero-baseline {
-    stroke: #a8a8a8;
-    stroke-width: 2px;
-
-  }
-
-  .minimal-legend-container {
-    height: 56px;
-
-    .legend-group {
-      margin-left: $paddingLeftSlide;
-      .legend-color-reminder {
-        display: inline-block;
-        width: 28px;
-        height: 7px;
-        margin-right: 25px;
-        position: relative;
-        top: -3px;
-      }
-      .legend-label{
-        display: inline-block;
-        @extend .montserrat-bold;
-        font-size: 20px;
-        margin-right: 15px;
-      }
-      .legend-date{
-        text-transform: uppercase;
-        display: inline-block;
-        @extend .secondary-font;
-        color: #333;
-        font-weight: 400;
-        margin-right: 5px;
-      }
-      .legend-value{
-        display: inline-block;
-        @extend .secondary-font;
-        color: #aaa;
-        font-weight: 400;
-        margin-right: 8px;
-        &:last-of-type{
-          .value-separator {
-            display:none;
-          }
-        }
-      }
-    }
-  }
-
 }

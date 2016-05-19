@@ -1,79 +1,21 @@
 heatmap {
-  @extend .chart-directive-container;
-  .x-label {
-    text-anchor: middle;
-
-  }
-  legend{
-    [data-serie-index="1"].group-color{
-      background-color: #444;
-    }
-  }
-  .y-label, .x-label {
-    @include respond-to(phone) {
-      font-size: 12px;
-    }
-  }
   .heatmap-square-group {
-    cursor: pointer;
-    &.deselected {
-      .heatmap-square{
-        fill-opacity: 0.2;
-      }
-    }
     &.focus-selected {
-      .heatmap-square{
+      .heatmap-square {
         stroke: $emphasis-color;
-        stroke-width: 6px;
-        @include respond-to(phone) {
-          stroke-width: 3px;
-        }
       }
-    }
-    &.selected {
-      .heatmap-value {
-        opacity: 1;
-      }
-      .heatmap-variation {
-        opacity: 1;
-      }
-    }
-  }
-  .heatmap-square{
-    transition: 700ms ease all;
-  }
-  .heatmap-value {
-    @extend .montserrat-bold-upper;
-    fill: white;
-    font-size: 14px;
-    opacity: 0;
-    text-anchor: middle;
-    pointer-events:none;
-    @include respond-to(phone) {
-      font-size: 11px;
-    }
-
-  }
-  .heatmap-variation {
-    fill: white;
-    font-size: 10px;
-    opacity: 0;
-    text-anchor: middle;
-    pointer-events:none;
-    @include respond-to(phone) {
-      font-size: 8px;
     }
   }
 
   [data-serie="positive"] {
     &.heatmap-square{
-      fill: $positiveColor;
+      fill: $positive-color;
     }
   }
 
   [data-serie="negative"] {
     &.heatmap-square{
-      fill: $negativeColor;
+      fill: $negative-color;
     }
   }
 }

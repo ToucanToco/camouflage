@@ -1,18 +1,4 @@
-.icon::before {
-  vertical-align: text-bottom;
-}
-
 .icon-d3 {
-  font-family: "Toucan Toco";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  text-decoration: none;
-  text-transform: none;
-  vertical-align: text-bottom;
-
   &.positive {
     fill: $aboveAverageColor;
   }
@@ -27,24 +13,9 @@
 }
 .icon{
   &.better {
-    color: $positiveColor;
+    color: $positive-color;
   }
   &.worse {
-    color: $negativeColor;
-  }
-}
-
-// Avoid unwanted space (disgraceful when rotating)
-.icon-caret {
-  line-height: 1;
-}
-.icon-evolution-up{
-  #icon-fleche-cercle {
-    color: white !important;
-  }
-}
-.icon-evolution-down{
-  #icon-fleche-cercle {
-    color: white !important;
+    color: $negative-color;
   }
 }

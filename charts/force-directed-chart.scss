@@ -1,42 +1,12 @@
 force-directed-chart {
-  height: 100%;
-
-  .force-directed-chart-container {
-    @extend .chart-directive-container;
-    height: 100%;
-  }
-
   line.link {
     stroke: $text-color;
-    stroke-width: 2px;
-    opacity: 0.25;
   }
-
   .node {
-    transition: all 0.3s ease;
-    stroke: transparent;
-    stroke-width: 1px;
-
-      &.selected {
-        stroke: $emphasis-color;
-      }
-    }
-
-  .node-scale {
-    transition: all 1s ease;
-  }
-
-  .group-overlay {
-    fill: transparent;
-    stroke-width: 3px;
-    opacity: 0;
-    transition: all 1s ease;
-
     &.selected {
-      opacity: 1;
+      stroke: $emphasis-color;
     }
   }
-
   @each $color in $chartColors {
     $i: index($chartColors, $color) - 1;
     [data-source-index="#{$i}"], [data-source-index="#{$i}"].selected {
@@ -46,6 +16,5 @@ force-directed-chart {
 
   .node-legend {
     fill: $text-color;
-    stroke: none;
   }
 }

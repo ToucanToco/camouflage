@@ -1,12 +1,3 @@
-@import 'helpers';
-@import 'home-report';
-
-$blocHeight : 190px;
-$mobileMinBlocHeight: 150px;
-$mobileMaxBlocHeight: 200px;
-$dashboard-kpi-padding: 20px;
-$dashboard-kpi-link-padding: .3em;
-
 .execsum {
 
   dashboard-report {
@@ -31,13 +22,13 @@ $dashboard-kpi-link-padding: .3em;
 
         &.worse {
           .value, .comment .icon {
-            color: $negativeColor;
+            color: $negative-color;
           }
         }
 
         &.better {
           .value, .comment .icon {
-            color: $positiveColor;
+            color: $positive-color;
           }
         }
 
@@ -65,17 +56,6 @@ $dashboard-kpi-link-padding: .3em;
 
         .widget-type-score-card {
           .sc-entry {
-            &[data-sentiment="better"] {
-              .sc-value, .sc-value-unit, .sc-variation > .icon {
-                color: $positiveColor;
-              }
-            }
-            &[data-sentiment="worse"] {
-              .sc-value, .sc-value-unit, .sc-variation > .icon {
-                color: $negativeColor;
-              }
-            }
-
             .sc-dots {
               border-bottom: dotted 2px $grey;
             }
@@ -89,6 +69,27 @@ $dashboard-kpi-link-padding: .3em;
             }
           }
         }
+      }
+    }
+
+    .date-report {
+      display: inline-block;
+
+    }
+    .date-report, .chart-controller {
+      @extend .bordered-button-inverted;
+      @extend .bordered-button-medium;
+      &:not(.disabled):hover {
+        background-color: $emphasis-color;
+        color: white;
+      }
+      &.active {
+        background-color: $emphasis-color;
+        border-color: $emphasis-color;
+      }
+      padding: 0 12px;
+      &:not(.active):first-child {
+        border-left: 3px solid white;
       }
     }
   }

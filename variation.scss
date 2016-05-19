@@ -1,57 +1,18 @@
-.horizontal-barchart-variation-value {
-  @extend .font-variation-value;
-}
-
 .variation-legend {
   .arrow-up-down {
     border-left: solid 1px $faded-text;
-    margin-left: 1em;
-    padding-left: 1em;
-    width: 2em;
-
-    .icon {
-      @include transition(300ms, ease);
-    }
-
-    &.up .icon {
-      @include rotate(90deg);
-    }
-
-    &.down .icon {
-      @include rotate(-90deg);
-    }
-  }
-
-  &[role="button"] {
-    cursor: pointer;
   }
 }
 
 .variation {
-  white-space: nowrap;
 
   > .icon {
-    &::after{
-      content: ' ';
-    }
-
     &.icon-positif {
-      color: $positiveColor;
+      color: $positive-color;
     }
 
     &.icon-negatif {
-      color: $negativeColor;
-    }
-  }
-
-  > .value {
-    @extend .font-variation-value;
-  }
-}
-.horizontal-barchart-variation-group {
-  .icon-d3 {
-    @include respond-to(phone) {
-      font-size: 13px;
+      color: $negative-color;
     }
   }
 }

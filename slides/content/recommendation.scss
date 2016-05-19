@@ -1,104 +1,15 @@
-$recommendation-color: $emphasis-color !default;
-$recommendation-notifier-width: 70px !default;
-
-recommendation{
+recommendation {
   .recommendation-container {
-    @include respond-to(phone) {
-      display: none ;
-      visibility: hidden;
-    }
-    position: absolute;
-    z-index: 4000;
-    width: 100%;
-    color: white;
-    @include transition(500ms, ease);
-    @extend .font-recommendation;
-    pointer-events: none;
-    @include transform(0px, -100%);
-    margin-top: $recommendation-notifier-width;
-    &.showReco{
-      @include transform(0px, 0px);
-      margin-top: 0px;
-      .recommendation-content{
-        opacity: 1;
-      }
-    }
-
-    .recommendation-content{
-      z-index: 32;
+    .recommendation-content {
       background: $recommendation-color;
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      pointer-events: all;
-      opacity: 0;
-      @include transition(800ms, ease);
-
-      .fa,.icon {
-        font-size: 37px;
-        padding: 0px 40px;
-        &.icon-close {
-          cursor: pointer;
-        }
-      }
-      .recommendation-content-text {
-        font-size: 16px;
-        flex:1;
-        padding: 30px 0px;
-      }
     }
     .recommendation-notifier {
-      min-width: $recommendation-notifier-width;
-      display: inline-block;
-      position: relative;
-      float: right;
-      right: 20px;
-      top: 0px;
-      text-transform: uppercase;
-      text-align: center;
-      opacity: 1;
-      @include transition(800ms, ease);
-      cursor: pointer;
-      pointer-events: all;
-
-      &.disappear{
-        opacity: 0.0;
-      }
-
       .content {
-        height: $recommendation-notifier-width;
         background-color: $recommendation-color;
-        font-weight: bold;
-        padding: 0px 10px;
-
-        .fa {
-          font-size: 32px;
-          padding-top: 10px;
-          display: block;
-        }
       }
-
       .flag {
-        $recommandation-flag-width: $recommendation-notifier-width / 7;
-        $recommandation-flag-height: $recommandation-flag-width * 3 / 7;
-
-        $recommandation-flag-pin-count: strip-units($recommandation-flag-width) / strip-units($recommandation-flag-height) * 3;
-
-        @function flagClipPath($pin-count) {
-          $clip-path: 'polygon(100% 100%, 100% 0%, 0% 0%';
-          $points-total: 2 * $pin-count + 2;
-          @for $i from 0 through $pin-count {
-            $clip-path: $clip-path + ", #{2 * $i / $points-total * 100}% 100%";
-            $clip-path: $clip-path + ", #{(2 * $i + 1) / $points-total* 100}% 0%";
-          }
-          $clip-path: $clip-path + ', 100% 100%)';
-          @return $clip-path;
-        }
-
-        width: 100%;
-        height: $recommandation-flag-height;
         background: $recommendation-color;
-        clip-path: #{flagClipPath($recommandation-flag-pin-count)};
+
       }
     }
   }

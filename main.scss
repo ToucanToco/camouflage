@@ -28,7 +28,6 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: url('images/pattern.jpg');
   color: #404040;
   -webkit-user-select: none;
   -webkit-font-smoothing: antialiased;
@@ -38,7 +37,6 @@ body {
     flex-direction: column;
     width: 100%;
   }
-
   // Hide UI controls for login page
   &.login-page {
     header, kpinavigator {
@@ -122,23 +120,15 @@ a {
 }
 
 .overlay-data-error-container {
-  @extend .overlay;
-  background: transparentize(white, 0.2);
-  padding: 20%;
-
-  vertical-align: middle;
-  text-align: center;
-  @extend .montserrat-bold-upper;
-  font-size: 40px;
-
-  .hint {
-    font-size: 20px;
+  md-progress-circular .md-inner .md-right .md-half-circle {
+    border-right-color: $main-color;
+    border-top-color: $main-color;
+  }
+  md-progress-circular .md-inner .md-left .md-half-circle {
+    border-left-color: $main-color-fade;
+    border-top-color: $main-color-fade;
   }
 
-  .overlay-data-error-img{
-    margin: 40px auto;
-    @include imageWithRetina('404',96px,90px);
-  }
 }
 
 .execsum {
@@ -155,58 +145,6 @@ a {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 16px;
-  }
-  .paragraphs {
-    padding-left: 120px;
-    padding-right: 120px;
-    margin-top: 60px;
-    color: #333;
-    p {
-      margin-top: 30px;
-    }
-  }
-  .kpis-study {
-    height: 405px;
-    padding-left: 38px;
-    padding-right: 38px;
-    .kpi-study-invert {
-    }
-    .kpi-study-full {
-      color: #fff;
-    }
-    .kpi-study {
-      float: left;
-      margin-right: 10px;
-      margin-left: 10px;
-      margin-top: 15px;
-      /*color: #fff;*/
-      text-align: left;
-      padding-left: 30px;
-      padding-right: 30px;
-      padding-top: 30px;
-      .kpi-study-invert {
-
-      }
-      .kpi-study-title {
-        text-transform: uppercase;
-        font-size: 18px;
-      }
-      .kpi-study-number {
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 37px;
-        margin-top: 4px;
-      }
-    }
-    .kpi-study-large {
-      width: 454px;
-      height: 190px;
-    }
-    .kpi-study-small {
-      width: 296px;
-      height: 190px;
-    }
-
   }
   .pdf {
     /*background-image: url('images/pdf.png');*/
@@ -297,20 +235,18 @@ a {
 
 @import 'helpers';
 
+@import 'report-home';
 @import 'admin';
 @import 'dashboard-report';
 @import 'header';
-@import 'kpinavigator';
+@import 'kpi-navigator';
 @import 'sparklines';
-@import 'arrow-selector';
 @import 'dropdown';
 @import 'settings-panel';
-@import 'color-legend';
 @import 'filters';
-@import 'home-report';
+@import 'tc-slider';
 @import 'legend';
 @import 'notifications';
-@import 'slidebox';
 @import 'text';
 @import 'variation';
 @import 'color-palette';
@@ -319,17 +255,13 @@ a {
 @import 'tooltip';
 @import 'colors';
 @import 'forms';
-@import 'identity-content';
-@import 'tutorial';
-@import 'update-version';
+@import 'tc-dropdown';
+@import 'widget-value-dynamic';
 
 @import 'brand-editor';
 
-@import 'utils/tc-brand-element';
-@import 'utils/dropdown';
 @import 'utils/dialog';
 @import 'utils/json-editable';
-@import 'utils/print';
 
 @import 'slides/tc-slide';
 @import 'slides/slide-editor';
@@ -337,30 +269,22 @@ a {
 @import 'views/report-selector';
 
 @import 'charts';
-@import 'charts/barchart';
+@import 'charts/waterfall';
 @import 'charts/barlinechart';
 @import 'charts/bubblechart';
 @import 'charts/bullet-chart';
-@import 'charts/carto';
 @import 'charts/force-directed-chart';
 @import 'charts/leaderboard';
 @import 'charts/linechart';
-@import 'charts/map';
-@import 'charts/score-card';
 @import 'charts/slopegraph';
 @import 'charts/verbatim';
 @import 'charts/heatmap';
+@import 'charts/treemap';
+@import 'charts/barchart';
 
-@import 'store/small-apps-list';
-@import 'store/new-small-app';
+@import 'sentiment';
 
-@import 'small-app/component';
 @import 'small-app/nav-menu';
-
-@import 'users/authentication';
-@import 'users/management';
 
 // New Charts module
 @import 'new-charts/tc-charts';
-
-@import 'specific';

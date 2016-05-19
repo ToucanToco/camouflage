@@ -1,34 +1,6 @@
-$nav-menu-subchapter-height: 65px !default;
-$nav-menu-chapter-padding-bottom: 20px !default;
-$nav-menu-subchapter-height-mobile: 58px !default;
-
 nav-menu-subchapter {
-  @extend %nav-menu-item;
-  height: $nav-menu-subchapter-height;
-
-  @include respond-to(phone) {
-    height: $nav-menu-subchapter-height-mobile;
-  }
-
-  .title {
-    @extend .font-nav-menu-level2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    flex: 1;
-  }
-
   &.selected {
     background-color: $nav-menu-selected-color;
   }
 
-  &:last-child {
-    height: $nav-menu-subchapter-height + $nav-menu-chapter-padding-bottom;
-    padding-bottom: $nav-menu-chapter-padding-bottom;
-  }
-}
-
-.new-nav-menu-subchapter {
-  @extend nav-menu-subchapter;
-  @extend %new-nav-menu-item;
 }

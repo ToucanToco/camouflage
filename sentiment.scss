@@ -1,0 +1,18 @@
+
+chart{
+  @each $name, $color in $sentimentColors {
+    [data-sentiment="#{$name}"] {
+      @include colorSVGElement($color);
+    }
+  }
+
+}
+
+.kpi{
+  @each $name, $color in $sentimentColors {
+    [data-sentiment="#{$name}"] {
+			@include colorScoreCardElements($color);
+    }
+  }
+
+}

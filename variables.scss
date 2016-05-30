@@ -974,6 +974,7 @@ $chart-directive-container-margin-top-compact: $chart-directive-container-margin
 
   @include respond-to(phone) {
     margin-top: $chart-directive-container-margin-top-mobile;
+    flex-direction: column-reverse;
   }
 }
 

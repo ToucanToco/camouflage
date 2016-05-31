@@ -1,60 +1,50 @@
 report-selector {
-  $report-selector-main-color-overlay: transparentize($report-selector-main-color, $report-selector-overlay-alpha);
-  $report-selector-bg-overlay: linear-gradient(to bottom, $report-selector-main-color-overlay, $report-selector-main-color-overlay);
-  background-color: $report-selector-main-color;
-  background:
-    $report-selector-bg-overlay,
-    url("images/#{$report-selector-bg-image-desktop}");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  @include respond-to(phone) {
-    background:
-      $report-selector-bg-overlay,
-      url("images/#{$report-selector-bg-image-phone}");
-  }
+  .report-selector-wrapper {
+    $report-selector-main-color-overlay: transparentize($report-selector-main-color, $report-selector-overlay-alpha);
+    $report-selector-bg-overlay: linear-gradient(to bottom, $report-selector-main-color-overlay, $report-selector-main-color-overlay);
+    background-color: $report-selector-main-color;
+    background: $report-selector-bg-overlay;
 
-  .input-report-wrapper {
-    $report-selector-input-color: $report-selector-text-color;
-    color: $report-selector-input-color;
+    .input-report-wrapper {
+      $report-selector-input-color: $report-selector-text-color;
+      color: $report-selector-input-color;
 
-    input,
-    input:focus {
-      border-bottom: solid 3px $report-selector-input-color;
-      color: $report-selector-input-color; // Override user agent stylesheet
+      input,
+      input:focus {
+        border-bottom: solid 3px $report-selector-input-color;
+        color: $report-selector-input-color; // Override user agent stylesheet
 
-      &::-webkit-input-placeholder {
-        color: $report-selector-input-color;
+        &::-webkit-input-placeholder {
+          color: $report-selector-input-color;
+        }
       }
-    }
 
-    .reports-guesses-container {
-      color: opacify($report-selector-input-color, 1);
-    }
+      .reports-guesses-container {
+        color: opacify($report-selector-input-color, 1);
+      }
 
-    .report-selector-widget-container {
-      .report-selector-chart {
-        border: solid 3px $report-selector-text-color;
+      .report-selector-widget-container {
+        .report-selector-chart {
+          border: solid 3px $report-selector-text-color;
 
-        .selected-details {
-          background: $report-selector-text-color;
+          .selected-details {
+            background: $report-selector-text-color;
 
-          i {
-            color: $secondary-emphasis-color;
-          }
-          .report-button {
-            @extend .bordered-button-discreet-inverted;
-            @extend .bordered-button-medium;
-            color: #4c4c4c;
-            border-color: #4c4c4c;
+            i {
+              color: $secondary-emphasis-color;
+            }
+            .report-button {
+              @extend .bordered-button-discreet-inverted;
+              @extend .bordered-button-medium;
+            }
           }
         }
       }
     }
-  }
 
-  .report-button {
-    @extend .bordered-button-inverted;
-    @extend .bordered-button-medium;
+    .report-button {
+      @extend .bordered-button-inverted;
+      @extend .bordered-button-medium;
+    }
   }
 }

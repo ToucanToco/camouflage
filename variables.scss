@@ -872,92 +872,6 @@ $slide-height: $viewportHeight - $headerHeight;
   }
 }
 
-@mixin bordered-button-creator($color: $main-color, $bg-color: white, $hover-color: $bg-color) {
-  @extend .primary-font;
-  padding: 5px 15px;
-  border: 3px solid $color;
-  font-size: 15px;
-  margin: 10px;
-  cursor: pointer;
-  text-decoration: none;
-  background: $bg-color;
-  color: $color;
-
-  &:not(.disabled):hover {
-    background-color: $color;
-    color: $hover-color;
-  }
-
-  .icon {
-    font-size: 12px;
-  }
-
-  &.bordered-button-large {
-    padding: 15px 25px;
-  }
-
-  &.bordered-button-medium {
-    padding: 6px 25px;
-  }
-
-  &.unbordered-button {
-    border-color: transparent;
-    background-color: transparent;
-
-    &:not(.disabled):hover {
-      background-color: transparent;
-      color: $hover-color;
-    }
-  }
-
-  &.light-bg {
-    &:not(.disabled):hover {
-      color: lighten($color, 10);
-    }
-  }
-
-  &.disabled {
-    cursor: not-allowed;
-    border-color: lighten($color, 10);
-    background: lighten($bg-color, 10);
-    color: lighten($color, 10);
-  }
-}
-
-.bordered-button {
-  @include bordered-button-creator();
-}
-
-.bordered-button-inverted {
-  @include bordered-button-creator(white, transparent, $main-color);
-}
-
-.bordered-button-discreet {
-  @include bordered-button-creator($text-color);
-}
-
-.bordered-button-discreet-inverted {
-  @include bordered-button-creator($text-color, transparent, $main-color);
-}
-
-.bordered-button-faded {
-  @include bordered-button-creator($main-color-fade);
-}
-
-.bordered-button-emphasis {
-  @include bordered-button-creator($emphasis-color);
-}
-
-.rotated-90 {
-  @include rotate(-90deg);
-}
-
-.icon-caret-bold-left {
-  @extend .icon-caret-bold-right;
-  display: inline-block;
-  @include rotate(-180deg);
-}
-
 /* COMMON CHART CLASSES */
 
 $chart-directive-container-margin-top: 32px;
@@ -974,6 +888,7 @@ $chart-directive-container-margin-top-compact: $chart-directive-container-margin
 
   @include respond-to(phone) {
     margin-top: $chart-directive-container-margin-top-mobile;
+    flex-direction: column-reverse;
   }
 }
 

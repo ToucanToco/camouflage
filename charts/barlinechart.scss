@@ -7,6 +7,10 @@ barlinechart {
     stroke: $lineColor !important;
   }
 
+  .bar-group.selected .bar {
+    fill: darken($barColor, 10);
+  }
+
   .line-value {
     &.selected {
       fill: $lineColor;

@@ -4,6 +4,10 @@ settings-panel {
 
     >.settings-button {
       background: $main-color;
+
+      &.highlighted {
+        background: $emphasis-color;
+      }
     }
   }
 

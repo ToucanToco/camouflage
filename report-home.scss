@@ -5,15 +5,13 @@
 
   @for $i from 1 through 10 {
     .bg-#{$i} {
-      background: url('images/bg-#{$i}.png');
       background-size: cover;
       &.bg-overlay {
         background:
         linear-gradient(
         transparentize($execsumBgColor, $transparentize-execsum-bg-overlay),
         transparentize($execsumBgColor, $transparentize-execsum-bg-overlay)
-        ),
-        url('images/bg-#{$i}.png');
+        );
         background-size: cover;
       }
       background-repeat: no-repeat;

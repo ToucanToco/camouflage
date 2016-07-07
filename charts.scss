@@ -21,7 +21,7 @@ chart {
   }
 
   [data-scale-index="missing"] {
-    @include colorSVGElement(#fafafa);
+    @include colorSVGElement(#eee);
   }
 
   .selected {

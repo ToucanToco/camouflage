@@ -121,11 +121,11 @@ a {
 }
 
 .overlay-data-error-container {
-  md-progress-circular .md-inner .md-right .md-half-circle .md-gap {
+  md-progress-circular .md-inner .md-right .md-half-circle {
     border-right-color: $emphasis-color;
     border-top-color: $emphasis-color;
   }
-  md-progress-circular .md-inner .md-left .md-half-circle .md-gap {
+  md-progress-circular .md-inner .md-left .md-half-circle {
     border-left-color: $emphasis-color;
     border-top-color: $emphasis-color;
   }

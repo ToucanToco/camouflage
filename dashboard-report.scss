@@ -67,6 +67,9 @@
             .bar {
               fill: nth($chartColors,2);
             }
+            .target {
+              fill: nth($chartColors,1);
+            }
           }
         }
       }

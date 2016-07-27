@@ -757,7 +757,7 @@ $font-size-nav-menu-level1-mobile: 22.5px;
   .kpi-navigator-unit.selected {
     background-color: $nav-menuColor1;
     @include respond-to(phone) {
-      background-color: $nav-menuColor1_2!important;
+      background-color: transparent!important;
     }
 
     .kpi-navigator-title {

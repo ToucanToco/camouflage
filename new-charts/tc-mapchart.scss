@@ -1,0 +1,16 @@
+$tc-mapchart-scale-colors: $scaleColors;
+$tc-mapchart-category-colors: $chartColors;
+
+@each $color in $tc-mapchart-scale-colors {
+  $i: index($tc-mapchart-scale-colors, $color) - 1;
+  .map-chart__zone[data-scale-index="#{$i}"] {
+    fill: $color;
+  }
+}
+
+@each $color in $tc-mapchart-category-colors {
+  $i: index($tc-mapchart-category-colors, $color) - 1;
+  .map-chart__marker[data-color-index="#{$i}"] {
+    fill: $color;
+  }
+}

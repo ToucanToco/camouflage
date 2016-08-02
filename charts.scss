@@ -21,7 +21,7 @@ chart {
   }
 
   [data-scale-index="missing"] {
-    @include colorSVGElement(#fafafa);
+    @include colorSVGElement(#eee);
   }
 
   .selected {
@@ -39,6 +39,10 @@ chart {
 
 .current-report-entity {
   fill: $emphasis-color;
+  .stacked-barchart-value,
+  .horizontal-barchart-label {
+    fill: $emphasis-color;
+  }
 }
 
 /* Utility classes */

@@ -1,0 +1,6 @@
+@each $color in $chartColors {
+  $i: index($chartColors, $color) - 1;
+  .tc-legend-ordinal__category[data-category-index="#{$i}"] .tc-legend-ordinal__category-color {
+    background-color: $color;
+  }
+}

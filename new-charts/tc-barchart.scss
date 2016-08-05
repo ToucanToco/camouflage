@@ -1,0 +1,8 @@
+.bar-chart__chart-container .bar-group {
+  @each $color in $chartColors {
+    $i: index($chartColors, $color) - 1;
+    &[data-serie-index="#{$i}"] .bar {
+      fill: $color;
+    }
+  }
+}

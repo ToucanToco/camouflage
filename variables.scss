@@ -50,7 +50,7 @@ $header-report-selector-dropdown-max-height: 50vh;
 /******* RESPONSIVENESS ****/
 $headerHeight-mobile: 60px;
 $offsetMenu-mobile: 80%;
-$kpiNavigatorHeight-mobile: 80px;
+$kpiNavigatorHeight-mobile: 45px;
 $knWidth-mobile: 130px;
 $scroll-cue-height-mobile: 50px;
 // Mobile legend/pane-details
@@ -176,7 +176,8 @@ $colorChart2: $chart-color-2;
 $colorChart3: $chart-color-3;
 $colorChart4: $chart-color-4;
 
-$scaleColors: $scale-color-0 $scale-color-1 $scale-color-2 $scale-color-3;
+$scale-colors: $scale-color-0 $scale-color-1 $scale-color-2 $scale-color-3;
+$scaleColors: $scale-colors;
 
 $scaleColor0: $scale-color-0;
 $scaleColor1: $scale-color-1;
@@ -630,6 +631,7 @@ $font-size-nav-menu-level1-mobile: 22.5px;
     font-size: 11px;
     line-height: 11px;
     letter-spacing: 1px;
+    color: $main-color-dark;
   }
 }
 .font-kpi-navigator-value {
@@ -755,6 +757,13 @@ $font-size-nav-menu-level1-mobile: 22.5px;
   }
   .kpi-navigator-unit.selected {
     background-color: $nav-menuColor1;
+    @include respond-to(phone) {
+      background-color: transparent!important;
+    }
+
+    .kpi-navigator-title {
+      color: white;
+    }
   }
 }
 

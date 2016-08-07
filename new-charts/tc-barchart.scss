@@ -1,3 +1,5 @@
+$tc-bar-chart-bar-color--selected: $emphasis-color;
+
 .bar-chart__chart-container .bar-group {
   @each $color in $chartColors {
     $i: index($chartColors, $color) - 1;
@@ -5,4 +7,8 @@
       fill: $color;
     }
   }
+}
+
+.bar-chart__chart-container .x-groups--selected .bar-group .bar {
+  fill: $tc-bar-chart-bar-color--selected;
 }

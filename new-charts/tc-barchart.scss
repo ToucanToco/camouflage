@@ -1,14 +1,14 @@
 $tc-bar-chart-bar-color--selected: $emphasis-color;
 
-.bar-chart__chart-container .bar-group {
+.bar-chart__chart-container .bar-chart__bar-group {
   @each $color in $chartColors {
     $i: index($chartColors, $color) - 1;
-    &[data-serie-index="#{$i}"] .bar {
+    &[data-serie-index="#{$i}"] .vertical-bar__bar {
       fill: $color;
     }
   }
 }
 
-.bar-chart__chart-container .x-groups--selected .bar-group .bar {
+.bar-chart__chart-container .x-groups--selected .bar-group .vertical-bar__bar {
   fill: $tc-bar-chart-bar-color--selected;
 }

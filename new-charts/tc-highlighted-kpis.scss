@@ -1,0 +1,30 @@
+.highlighted-kpi__comment {
+  color: $text-color;
+}
+
+@mixin colorHighlightedKpi($color) {
+  .highlighted-kpi__badge--bullet {
+    background-color: $color;
+  }
+
+  .highlighted-kpi__badge--icon,
+  .highlighted-kpi__value {
+    color: $color;
+  }
+}
+
+.highlighted-kpi--positive {
+  @include colorHighlightedKpi($positive-color);
+}
+
+.highlighted-kpi--negative {
+  @include colorHighlightedKpi($negative-color);
+}
+
+.highlighted-kpi--neutral {
+  @include colorHighlightedKpi($neutral-color);
+}
+
+.highlighted-kpi--warning {
+  @include colorHighlightedKpi($warning-color);
+}

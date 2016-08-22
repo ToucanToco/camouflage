@@ -11,4 +11,8 @@ $tc-bar-chart-bar-color--selected: $emphasis-color;
 
 .bar-chart__chart-container .x-groups--selected .bar-group .vertical-bar__bar {
   fill: $tc-bar-chart-bar-color--selected;
+
+  &:hover {
+    fill: $tc-charts-hover-zone;
+  }
 }

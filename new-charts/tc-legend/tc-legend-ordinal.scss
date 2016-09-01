@@ -1,6 +1,18 @@
-@each $color in $chartColors {
-  $i: index($chartColors, $color) - 1;
-  .tc-legend-ordinal__category[data-category-index="#{$i}"] .tc-legend-ordinal__category-color {
+@mixin colorTcLegendCategoryByAttr($attr, $value, $color) {
+  .tc-legend-ordinal__category[#{$attr}="#{$value}"] .tc-legend-ordinal__category-color {
     background-color: $color;
   }
+}
+
+@mixin colorTcLegendCategoryById($id, $color) {
+  @include colorTcLegendCategoryByAttr(data-category-index, $id, $color);
+}
+
+@mixin colorTcLegendCategoryByName($name, $color) {
+  @include colorTcLegendCategoryByAttr(data-category, $name, $color);
+}
+
+@each $color in $chartColors {
+  $i: index($chartColors, $color) - 1;
+  @include colorTcLegendCategoryById($i, $color);
 }

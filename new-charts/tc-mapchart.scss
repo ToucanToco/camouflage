@@ -14,3 +14,17 @@ $tc-mapchart-category-colors: $chartColors;
     fill: $color;
   }
 }
+// TC-DETAILS colors
+@each $color in $tc-mapchart-scale-colors {
+  $i: index($tc-mapchart-scale-colors, $color) - 1;
+  .tc-details__color.map-zone[data-color-index="#{$i}"] {
+    background-color: $color;
+  }
+}
+
+@each $color in $tc-mapchart-category-colors {
+  $i: index($tc-mapchart-category-colors, $color) - 1;
+  .tc-details__color.map-marker[data-color-index="#{$i}"] {
+    background-color: $color;
+  }
+}

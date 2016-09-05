@@ -7,11 +7,15 @@ nav-menu .select-report-container {
     background: darken($metaColor,10%);
   }
 }
+
 .nav-menu__top__home-button {
-  color: $home-button-color;
-  @include respond-to(phone) {
-    background-color: $home-button-color;
-    color: white;
+  background-color: $home-button-color;
+  color: white;
+}
+
+.nav-menu__top__store-button {
+  &:hover {
+    color: $home-button-color;
   }
 }
 

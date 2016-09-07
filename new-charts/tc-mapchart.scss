@@ -1,5 +1,5 @@
 $tc-mapchart-scale-colors: $scaleColors;
-$tc-mapchart-category-colors: $chartColors;
+$tc-mapchart-serie-colors: $chartColors;
 
 @each $color in $tc-mapchart-scale-colors {
   $i: index($tc-mapchart-scale-colors, $color) - 1;
@@ -8,8 +8,8 @@ $tc-mapchart-category-colors: $chartColors;
   }
 }
 
-@each $color in $tc-mapchart-category-colors {
-  $i: index($tc-mapchart-category-colors, $color) - 1;
+@each $color in $tc-mapchart-serie-colors {
+  $i: index($tc-mapchart-serie-colors, $color) - 1;
   .map-chart__marker[data-color-index="#{$i}"] {
     fill: $color;
   }
@@ -22,8 +22,8 @@ $tc-mapchart-category-colors: $chartColors;
   }
 }
 
-@each $color in $tc-mapchart-category-colors {
-  $i: index($tc-mapchart-category-colors, $color) - 1;
+@each $color in $tc-mapchart-serie-colors {
+  $i: index($tc-mapchart-serie-colors, $color) - 1;
   .tc-details__color.map-marker[data-color-index="#{$i}"] {
     background-color: $color;
   }

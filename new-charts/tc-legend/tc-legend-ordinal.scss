@@ -1,15 +1,15 @@
 @mixin colorTcLegendCategoryByAttr($attr, $value, $color) {
-  .tc-legend-ordinal__category[#{$attr}="#{$value}"] .tc-legend-ordinal__category-color {
+  .tc-legend-ordinal__serie[#{$attr}="#{$value}"] .tc-legend-ordinal__serie-color {
     background-color: $color;
   }
 }
 
 @mixin colorTcLegendCategoryById($id, $color) {
-  @include colorTcLegendCategoryByAttr(data-category-index, $id, $color);
+  @include colorTcLegendCategoryByAttr(data-serie-index, $id, $color);
 }
 
 @mixin colorTcLegendCategoryByName($name, $color) {
-  @include colorTcLegendCategoryByAttr(data-category, $name, $color);
+  @include colorTcLegendCategoryByAttr(data-serie, $name, $color);
 }
 
 @each $color in $chartColors {

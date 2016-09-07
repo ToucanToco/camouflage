@@ -1,12 +1,6 @@
 nav-menu {
   background-color: $nav-menu-bg-color;
 }
-nav-menu .select-report-container {
-  background-color: $metaColor;
-  .select-generic .select-item.selected {
-    background: darken($metaColor,10%);
-  }
-}
 
 .nav-menu__top__home-button {
   background-color: $home-button-color;

@@ -9,6 +9,9 @@
   // tc-barchart
   @include colorTcBarchartBarByName($name, $color);
 
+  // tc-horizontal-barchart
+  @include colorTcHorizontalBarchartBarByName($name, $color);
+
   // tc-legend
   @include colorTcLegendCategoryByName($name, $color);
 }

@@ -11,4 +11,7 @@
 
   // tc-legend
   @include colorTcLegendCategoryByName($name, $color);
+
+  // tc-lines
+  @include colorTcLinesSerieByAttr($name, $color);
 }

@@ -15,11 +15,6 @@
   border: 2px solid $emphasis-color;
 }
 .select2-search::after {
-  @extend .icon-d3;
-  content: "\E016";
-  position: absolute;
-  top: 12px;
-  right: 10px;
   color: $text-color;
 }
 .select2-search:focus {

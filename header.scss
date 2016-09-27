@@ -22,3 +22,7 @@ report-selector-button {
     @extend .bordered-button-discreet;
   }
 }
+
+.header__requester {
+  @extend .bordered-button;
+}

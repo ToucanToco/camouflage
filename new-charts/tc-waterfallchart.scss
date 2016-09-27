@@ -1,0 +1,59 @@
+// $tc-bar-chart-bar-color--selected: $emphasis-color;
+//
+// .bar-chart__chart-container .bar-chart__bar-group {
+//   @each $color in $chartColors {
+//     $i: index($chartColors, $color) - 1;
+//     &[data-serie-index="#{$i}"] .vertical-bar__bar {
+//       fill: $color;
+//     }
+//   }
+// }
+//
+// .bar-chart__chart-container .x-groups--selected .bar-group .vertical-bar__bar {
+//   fill: $tc-bar-chart-bar-color--selected;
+// }
+$tc-waterfall-boundaries-color: $waterfallInitialColor;
+$tc-waterfall-positive-color: $waterfallPositiveColor;
+$tc-waterfall-negative-color: $waterfallNegativeColor;
+
+@mixin colorWaterfallBarAndValues($color) {
+  .vertical-bar__bar-value,
+  .vertical-bar__bar-variation,
+  .vertical-bar__bar {
+    fill: $color;
+  }
+}
+
+.waterfall-chart__bar-group--boundary {
+  @include colorWaterfallBarAndValues($tc-waterfall-boundaries-color);
+
+  .vertical-bar__bar-label {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .vertical-bar__bar-label,
+  .vertical-bar__bar-meta {
+    fill: $tc-waterfall-boundaries-color;
+  }
+}
+
+.waterfall-chart__bar-group--positive {
+  @include colorWaterfallBarAndValues($tc-waterfall-positive-color);
+}
+
+.waterfall-chart__bar-group--negative {
+  @include colorWaterfallBarAndValues($tc-waterfall-negative-color);
+}
+
+.waterfall-chart__expandable .vertical-bar__bar {
+  stroke: $emphasis-color;
+
+  &:hover {
+    fill: $tc-charts-hover-zone;
+  }
+}
+
+.waterfall-chart__y-axis-unit {
+  fill: #666; // TODO: put that in a variable
+}

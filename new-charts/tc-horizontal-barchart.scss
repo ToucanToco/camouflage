@@ -1,0 +1,20 @@
+$tc-bar-chart-bar-color--selected: $emphasis-color;
+
+@mixin colorTcHorizontalBarchartBarByAttr($attr, $value, $color) {
+  .horizontal-bar-chart__bar-group .horizontal-bar__bar[#{$attr}="#{$value}"] {
+    fill: $color;
+  }
+}
+
+@mixin colorTcHorizontalBarchartBarById($id, $color) {
+  @include colorTcHorizontalBarchartBarByAttr(data-serie-index, $id, $color);
+}
+
+@mixin colorTcHorizontalBarchartBarByName($name, $color) {
+  @include colorTcHorizontalBarchartBarByAttr(data-serie, $name, $color);
+}
+
+@each $color in $chartColors {
+  $i: index($chartColors, $color) - 1;
+  @include colorTcHorizontalBarchartBarById($i, $color);
+}

@@ -1,0 +1,20 @@
+@mixin colorChartsElementsByName($name, $color) {
+  // Legacy
+  [data-subgroup="#{$name}"],
+  [data-label="#{$name}"],
+  [data-serie="#{$name}"] {
+    @include colorSVGElement($color);
+  }
+
+  // tc-barchart
+  @include colorTcBarchartBarByName($name, $color);
+
+  // tc-horizontal-barchart
+  @include colorTcHorizontalBarchartBarByName($name, $color);
+
+  // tc-legend
+  @include colorTcLegendCategoryByName($name, $color);
+
+  // tc-lines
+  @include colorTcLinesSerieByName($name, $color);
+}

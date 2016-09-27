@@ -1,0 +1,21 @@
+@mixin colorTcLinesSerieByAttr($attr, $value, $color) {
+  .tc-chart-lines__line[#{$attr}="#{$value}"] .tc-chart-line__path {
+    stroke: $color;
+  }
+}
+
+@mixin colorTcLinesSerieById($id, $color) {
+  @include colorTcLinesSerieByAttr(data-serie-index, $id, $color);
+}
+
+@mixin colorTcLinesSerieByName($name, $color) {
+  @include colorTcLinesSerieByAttr(data-serie, $name, $color);
+}
+
+@each $color in $chartColors {
+  $i: index($chartColors, $color) - 1;
+  @include colorTcLinesSerieById($i, $color);
+}
+
+.tc-chart-line__path {}
+.tc-chart-line__point {}

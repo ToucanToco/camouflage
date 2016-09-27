@@ -1,0 +1,13 @@
+.tc-details {
+  background-color: $backgroundSlideCommentary;
+}
+
+.tc-details__value {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.tc-details__color {
+  margin-right: 5px;
+}

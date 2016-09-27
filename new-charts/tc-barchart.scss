@@ -1,0 +1,29 @@
+$tc-bar-chart-bar-color--selected: $emphasis-color;
+
+@mixin colorTcBarchartBarByAttr($attr, $value, $color) {
+  .bar-chart__chart-container .bar-chart__bar-group[#{$attr}="#{$value}"] .vertical-bar__bar {
+    fill: $color;
+  }
+}
+
+@mixin colorTcBarchartBarById($id, $color) {
+  @include colorTcBarchartBarByAttr(data-serie-index, $id, $color);
+}
+
+@mixin colorTcBarchartBarByName($name, $color) {
+  @include colorTcBarchartBarByAttr(data-serie, $name, $color);
+}
+
+@each $color in $chartColors {
+  $i: index($chartColors, $color) - 1;
+  @include colorTcBarchartBarById($i, $color);
+}
+
+
+.bar-chart__chart-container .x-groups--selected .bar-chart__bar-group .vertical-bar__bar {
+  fill: $tc-bar-chart-bar-color--selected;
+
+  &:hover {
+    fill: $tc-charts-hover-zone;
+  }
+}

@@ -1,2 +1,11 @@
+$tc-charts-hover-zone: transparentize(lightgray, 0.8);
+
+@import 'tc-barchart';
+@import 'tc-details';
+@import 'tc-highlighted-kpis';
+@import 'tc-horizontal-barchart';
+@import 'tc-legend/tc-legend';
 @import 'tc-map';
 @import 'tc-mapchart';
+@import 'tc-waterfallchart';
+@import 'tc-lines';

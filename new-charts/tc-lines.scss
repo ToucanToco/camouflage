@@ -1,6 +1,12 @@
 @mixin colorTcLinesSerieByAttr($attr, $value, $color) {
-  .tc-chart-lines__line[#{$attr}="#{$value}"] .tc-chart-line__path {
-    stroke: $color;
+  .tc-chart-lines__line[#{$attr}="#{$value}"] {
+    .tc-chart-line__path {
+      stroke: $color;
+    }
+
+    .tc-chart-line__point {
+      fill: $color;
+    }
   }
 }
 

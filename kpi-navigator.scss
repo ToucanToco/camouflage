@@ -1,3 +1,25 @@
 kpinavigator {
   background-color: $main-color-fade;
+
+  .kpi-navigator-unit {
+    color: white;
+
+    @include respond-to(phone) {
+      .kpi-navigator-title {
+        color: $main-color-dark;
+      }
+    }
+    
+    &.selected {
+      background-color: $nav-menuColor1;
+
+      @include respond-to(phone) {
+        background-color: transparent!important;
+      }
+
+      .kpi-navigator-title {
+        color: white;
+      }
+    }
+  }
 }

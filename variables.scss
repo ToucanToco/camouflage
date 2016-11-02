@@ -151,7 +151,7 @@ $averageLineColor: #808080;
 
 $chartColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5 $chart-color-6 $chart-color-7 $chart-color-8 $chart-color-9 $chart-color-10 $chart-color-11 $chart-color-12 $chart-color-13 $chart-color-14 $chart-color-15 $chart-color-16 $chart-color-17 $chart-color-18 $chart-color-19;
 $stackedColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5 $chart-color-6 $chart-color-7 $chart-color-8 $chart-color-9 $chart-color-10 $chart-color-11 $chart-color-12 $chart-color-13 $chart-color-14 $chart-color-15 $chart-color-16 $chart-color-17 $chart-color-18 $chart-color-19;
-$sentimentColors: (
+$sentiment-colors: (
   positive: $positive-color,
   negative: $negative-color,
   warning: $warning-color,
@@ -160,6 +160,7 @@ $sentimentColors: (
   verynegative: $verynegative-color,
   sentimentExtra: $sentiment-extra-color
 );
+$sentimentColors: $sentiment-colors; // Backwards compat
 
 $comparisonColor: #D3EFF4;
 
@@ -628,7 +629,6 @@ $font-size-nav-menu-level1-mobile: 22.5px;
     font-size: 11px;
     line-height: 11px;
     letter-spacing: 1px;
-    color: $main-color-dark;
   }
 }
 .font-kpi-navigator-value {
@@ -744,23 +744,6 @@ $font-size-nav-menu-level1-mobile: 22.5px;
 .nav-menu-group {
   .nav-menuSelected {
     background-color: $nav-menuColor1;
-  }
-}
-
-
-.kpi-navigator-container {
-  .kpi-navigator {
-    background-color: $nav-menuColor1_2;
-  }
-  .kpi-navigator-unit.selected {
-    background-color: $nav-menuColor1;
-    @include respond-to(phone) {
-      background-color: transparent!important;
-    }
-
-    .kpi-navigator-title {
-      color: white;
-    }
   }
 }
 

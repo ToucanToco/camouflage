@@ -1,0 +1,13 @@
+@mixin colorTcHeatmapSquaresByAttr($attr, $value, $color) {
+  .tc-heatmap__square[#{$attr}="#{$value}"] {
+    background-color: $color;
+  }
+}
+
+@mixin colorTcHeatmapSquaresBySentiment($id, $color) {
+  @include colorTcHeatmapSquaresByAttr(data-sentiment, $id, $color);
+}
+
+@each $sentiment, $color in $sentimentColors {
+  @include colorTcHeatmapSquaresBySentiment($sentiment, $color);
+}

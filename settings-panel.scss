@@ -1,7 +1,9 @@
 settings-panel {
   background: $main-color;
   .settings-button-container {
-
+    >.settings-button.with-notification::after {
+      background: $emphasis-color;
+    }
     >.settings-button {
       background: $main-color;
 
@@ -39,6 +41,7 @@ settings-panel {
             color: white;
           }
           .icon-tab {
+            color: $settings-panel-tab-inactive-color;
             svg path {
               fill: $settings-panel-tab-inactive-color;
             }
@@ -47,6 +50,9 @@ settings-panel {
 
         .icon-tab {
           background: $settings-panel-tab-inactive-color;
+        }
+        .icon-tab.with-notification:after {
+          background: $emphasis-color;
         }
 
         .icon-explanation {

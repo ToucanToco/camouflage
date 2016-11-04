@@ -2,7 +2,7 @@
   background-color: $main-color;
 }
 
-.date-selector-dropdown__item--selected {
+.date-selector-dropdown__item.date-selector-dropdown__item--selected {
   background-color: $emphasis-color;
-  border-color: $emphasis-color!important;
+  border-color: $emphasis-color;
 }

@@ -1,0 +1,8 @@
+.date-selector-dropdown {
+  background-color: $main-color;
+}
+
+.date-selector-dropdown__item.date-selector-dropdown__item--selected {
+  background-color: $emphasis-color;
+  border-color: $emphasis-color;
+}

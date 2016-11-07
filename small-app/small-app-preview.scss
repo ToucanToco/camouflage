@@ -1,0 +1,12 @@
+.small-app-preview__action-bar {
+  color: white;
+  background-color: $main-color;
+}
+
+.small-app-preview__home {
+  background-color: $main-color;
+}
+.small-app-preview-container:hover .small-app-preview__action-bar {
+  color: $main-color;
+  background-color: white;
+}

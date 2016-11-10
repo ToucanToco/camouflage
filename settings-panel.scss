@@ -79,5 +79,12 @@ settings-panel {
       box-shadow:0px -5px 12px 0px rgba(50, 50, 50, 0.30);
     }
 
+    .comment-input-container {
+      .comment-input {
+        .comment-action {
+          background-color: $emphasis-color;
+        }
+      }
+    }
   }
 }

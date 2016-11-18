@@ -1,0 +1,34 @@
+// Block
+.sorter{
+  display: flex;
+
+  // Elements
+  &__button{
+    border-color: $button-inactive-color;
+    color: $button-inactive-color;
+
+    // Modifier
+    &.selected{
+      background-color: $controllerColor;
+      border-color: $controllerColor;
+      color: #fff;
+    }
+
+    // Child
+    &::after{
+      color: #fff;
+    }
+  }
+}
+
+// Media queries
+@media (min-width: 768px){
+  // Block
+  .sorter{
+    // Element
+    &__button{
+      border-color: $controllerColor;
+      color: $controllerColor;
+    }
+  }
+}

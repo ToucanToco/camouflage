@@ -921,6 +921,9 @@ $chart-directive-container-margin-top-compact: $chart-directive-container-margin
   .sc-value, .sc-value-unit, .sc-variation > .icon {
     color: $color;
   }
+  &.heatmap-square{
+    background-color: $color;
+  }
 }
 
 @mixin scroll-opaque-cue-bg($color: white) {

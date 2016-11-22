@@ -54,6 +54,11 @@
           color: $faded-text;
         }
 
+        .widget-type-heatmap {
+          .heatmap-dots {
+            border-bottom: dotted 2px $grey;
+          }
+        }
         .widget-type-score-card {
           .sc-entry {
             .sc-dots {

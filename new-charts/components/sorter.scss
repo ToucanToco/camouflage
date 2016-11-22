@@ -1,34 +1,39 @@
 // Block
-.sorter{
+.sorter {
   display: flex;
 
-  // Elements
-  &__button{
+  // Element
+  &__button {
     border-color: $button-inactive-color;
     color: $button-inactive-color;
 
-    // Modifier
-    &.selected{
-      background-color: $controllerColor;
-      border-color: $controllerColor;
+    // Child
+    &::after {
       color: #fff;
     }
 
-    // Child
-    &::after{
+    // Modifier
+    &--selected {
+      background-color: $controllerColor;
+      border-color: $controllerColor;
       color: #fff;
     }
   }
 }
 
 // Media queries
-@media (min-width: 768px){
+@media (min-width: 768px) {
   // Block
-  .sorter{
+  .sorter {
     // Element
-    &__button{
+    &__button {
       border-color: $controllerColor;
       color: $controllerColor;
+
+      // Modifier
+      &--selected {
+        color: #fff;
+      }
     }
   }
 }

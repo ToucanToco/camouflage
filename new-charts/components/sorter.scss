@@ -1,39 +1,29 @@
-// Block
 .sorter {
   display: flex;
-
-  // Element
-  &__button {
-    border-color: $button-inactive-color;
-    color: $button-inactive-color;
-
-    // Child
-    &::after {
-      color: #fff;
-    }
-
-    // Modifier
-    &--selected {
-      background-color: $controllerColor;
-      border-color: $controllerColor;
-      color: #fff;
-    }
-  }
 }
 
-// Media queries
-@media (min-width: 768px) {
-  // Block
-  .sorter {
-    // Element
-    &__button {
-      border-color: $controllerColor;
-      color: $controllerColor;
+.sorter__button {
+  border-color: $button-inactive-color;
+  color: $button-inactive-color;
+}
 
-      // Modifier
-      &--selected {
-        color: #fff;
-      }
-    }
+.sorter__button::after {
+  color: #fff;
+}
+
+.sorter__button--selected {
+  background-color: $controllerColor;
+  border-color: $controllerColor;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .sorter__button {
+    border-color: $controllerColor;
+    color: $controllerColor;
+  }
+
+  .sorter__button--selected {
+    color: #fff;
   }
 }

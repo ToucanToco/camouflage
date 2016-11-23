@@ -1,5 +1,7 @@
 $tc-charts-hover-zone: transparentize(lightgray, 0.8);
 
+@import 'components/components';
+
 @import 'tc-barchart';
 @import 'tc-details';
 @import 'tc-heatmap';

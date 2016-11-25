@@ -1,0 +1,54 @@
+//// TEMPORARY COLORS
+//// TODO move to camouflage and use variables, also add all 6 sentiments
+//.tc-heat-bar__group .tc-heat-bar__bar{
+//  fill: #DDD;
+//}
+//.tc-heat-bar__group[data-sentiment="negative"] {
+//  .tc-heat-bar__bar {
+//    fill: red;
+//  }
+//  text {
+//    fill: red;
+//  }
+//}
+//.tc-heat-bar__group[data-sentiment="positive"] {
+//  .tc-heat-bar__bar {
+//    fill: green;
+//  }
+//  text {
+//    fill: green;
+//  }
+//
+//}
+//
+//
+//@mixin colorTcHeatBarByAttr($attr, $value, $color) {
+//  .tc-heat-bar__group[data-sentiment="#{$value}"] {
+//    .tc-heat-bar__bar {
+//      fill: $color;
+//    }
+//    text {
+//      fill: $color;
+//    }
+//  }
+//}
+//
+//@mixin colorTcHeatBarBySentiment($id, $color) {
+//  @include colorTcHeatBarByAttr(data-sentiment, $id, $color);
+//}
+//
+//@each $sentiment, $color in $sentimentColors {
+//  @include colorTcHeatBarBySentiment($sentiment, $color);
+//}
+
+
+@each $name, $color in $sentimentColors {
+  .tc-heat-bar__group[data-sentiment="#{$name}"] {
+    .tc-heat-bar__bar {
+      fill: $color;
+    }
+    text {
+      fill: $color;
+    }
+  }
+}

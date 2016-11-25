@@ -1,0 +1,31 @@
+.map-chart__zoom-icon {
+
+  .fa-search-minus {
+    border: 1px solid $main-color;
+    color: $main-color;
+  }
+}
+
+.map-chart__zoom-zones {
+  color: $text-color;
+  border-bottom: 1px solid $text-color;
+}
+
+.map-chart__zoom-zones--active {
+  border-bottom-color: transparent;
+}
+
+.zones-markers-toggle__button {
+  color: $main-color-fade;
+  border: 1px solid $main-color-fade;
+  border-right: none;
+
+  &:last-child {
+    border-right: 1px solid $main-color-fade;
+  }
+}
+
+.zones-markers-toggle__button--active {
+  background-color: $main-color-fade;
+  color: white;
+}

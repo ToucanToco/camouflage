@@ -1,18 +1,24 @@
-.map-chart__zoom-icon {
+.icon-container {
 
   .fa-search-minus {
     border: 1px solid $main-color;
     color: $main-color;
+
+    &:hover {
+      background-color: $main-color;
+      color: white;
+    }
   }
 }
 
-.map-chart__zoom-zones {
+.depth__button {
   color: $text-color;
   border-bottom: 1px solid $text-color;
 }
 
-.map-chart__zoom-zones--active {
-  border-bottom-color: transparent;
+.map-zone--selected {
+  stroke: $emphasis-color;
+  stroke-width: 2.5px;
 }
 
 .zones-markers-toggle__button {

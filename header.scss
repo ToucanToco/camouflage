@@ -24,5 +24,12 @@ report-selector-button {
 }
 
 .header__requester {
-  @extend .bordered-button;
+  @media screen and (min-width: $screen-phone-max+1) {
+    //We can't @extend inside a @media or @include
+    @include bordered-button-creator($text-color);
+  }
+
+  @include respond-to(phone) {
+    background-color: $main-color;
+  }
 }

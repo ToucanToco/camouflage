@@ -6,3 +6,15 @@
 .widget-value-dynamic__negative .icon {
   color: $negative-color;
 }
+.widget-value-dynamic__warning .value,
+.widget-value-dynamic__warning .icon {
+  color: $warning-color;
+}
+.widget-value-dynamic__verypositive .value,
+.widget-value-dynamic__verypositive .icon {
+  color: $verypositive-color;
+}
+.widget-value-dynamic__verynegative .value,
+.widget-value-dynamic__verynegative .icon {
+  color: $verynegative-color;
+}

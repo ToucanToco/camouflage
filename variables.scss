@@ -905,7 +905,7 @@ $chart-directive-container-margin-top-compact: $chart-directive-container-margin
 }
 
 @mixin colorSVGElement($color) {
-  &.bar, &.arc, &.area, &.legend-rect, &.node, &.node-part, &.target {
+  &.bar, &.arc, &.area, &.legend-rect, &.node, &.node-part, &.target, .text-serie {
     fill: $color;
   }
 

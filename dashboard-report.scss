@@ -85,12 +85,18 @@
 
     }
     .date-report, .chart-controller {
-      @extend .bordered-button-inverted;
-      @extend .bordered-button-medium;
+      border: 3px solid transparentize(white, 0.6);
+      color: white;
+
+      &:not(.active):first-child {
+        border-left: 3px solid transparentize(white, 0.6);
+      }
+
       &:not(.disabled):hover {
         background-color: $emphasis-color;
         color: white;
       }
+
       &.active {
         background-color: $emphasis-color;
         border-color: $emphasis-color;

@@ -29,5 +29,48 @@ filter, requester {
       }
     }
   }
+}
 
+filter.upper-right .filter__tc-dropdown,
+requester.upper-right .filter__tc-dropdown,
+requester.upper-middle .filter__tc-dropdown,
+filter.upper-middle .filter__tc-dropdown,
+filter.bottom-right .filter__tc-dropdown
+ {
+  border-bottom: 1px solid $greyDark;
+
+  @include respond-to(phone) {
+    border: 1px solid $greyDark;
+  }
+}
+
+filter.bottom-right .filter__tc-dropdown {
+  border: 1px solid $main-color;
+  border-bottom: 1px solid $main-color;
+  color: $main-color;
+
+  .select2-container--filter-dropdown .select2-selection--single .select2-selection__rendered {
+    &::after {
+      color: $main-color-dark;
+    }
+  }
+}
+
+filter.bottom-right{
+  .filter__tc-dropdown .select2-container--open .select2-selection--single .select2-selection__rendered {
+    background-color: $main-color;
+    color: white;
+
+    &::after {
+      color: white;
+    }
+  }
+}
+
+.select2-container--filter-dropdown.select2-container--open .select2-dropdown--below {
+  border: 1px solid $greyDark;
+}
+
+.select2-container--open .select2-dropdown--above {
+  border-bottom: 1px solid $greyDark;
 }

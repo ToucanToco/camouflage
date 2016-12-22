@@ -11,6 +11,11 @@
     fill: $text-color;
   }
 }
+@each $name, $color in $sentimentColors {
+  .icon-d3[data-sentiment="#{$name}"] {
+    fill: $color;
+  }
+}
 .icon{
   &.better {
     color: $positive-color;

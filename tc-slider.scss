@@ -3,7 +3,7 @@ tc-slider {
     .rz-bubble{
       color: $controllerColor;
     }
-    .rz-bar.rz-selection {
+    .rz-bar, .rz-bar.rz-selection {
       background: $controllerColor;
     }
 

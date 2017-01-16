@@ -266,6 +266,7 @@ a {
 
 @import 'utils/dialog';
 @import 'utils/json-editable';
+@import 'utils/date-selector';
 
 @import 'slides/tc-slide';
 @import 'slides/slide-editor';
@@ -285,10 +286,12 @@ a {
 @import 'charts/heatmap';
 @import 'charts/treemap';
 @import 'charts/barchart';
+@import 'charts/mapchart';
 
 @import 'sentiment';
 
 @import 'small-app/nav-menu';
+@import 'small-app/small-app-preview';
 
 // New Charts module
 @import 'new-charts/tc-charts';

@@ -1,0 +1,37 @@
+.icon-container {
+
+  .fa-search-minus {
+    border: 1px solid $main-color;
+    color: $main-color;
+
+    &:hover {
+      background-color: $main-color;
+      color: white;
+    }
+  }
+}
+
+.depth__button {
+  color: $text-color;
+  border-bottom: 1px solid $text-color;
+}
+
+.map-zone--selected {
+  stroke: $emphasis-color;
+  stroke-width: 2.5px;
+}
+
+.zones-markers-toggle__button {
+  color: $main-color-fade;
+  border: 1px solid $main-color-fade;
+  border-right: none;
+
+  &:last-child {
+    border-right: 1px solid $main-color-fade;
+  }
+}
+
+.zones-markers-toggle__button--active {
+  background-color: $main-color-fade;
+  color: white;
+}

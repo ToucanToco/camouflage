@@ -1,0 +1,29 @@
+.sorter {
+  display: flex;
+}
+
+.sorter__button {
+  border-color: $button-inactive-color;
+  color: $button-inactive-color;
+}
+
+.sorter__button::after {
+  color: #fff;
+}
+
+.sorter__button--selected {
+  background-color: $controllerColor;
+  border-color: $controllerColor;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .sorter__button {
+    border-color: $controllerColor;
+    color: $controllerColor;
+  }
+
+  .sorter__button--selected {
+    color: #fff;
+  }
+}

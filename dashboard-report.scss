@@ -54,6 +54,11 @@
           color: $faded-text;
         }
 
+        .widget-type-heatmap {
+          .heatmap-dots {
+            border-bottom: dotted 2px $grey;
+          }
+        }
         .widget-type-score-card {
           .sc-entry {
             .sc-dots {
@@ -80,19 +85,22 @@
 
     }
     .date-report, .chart-controller {
-      @extend .bordered-button-inverted;
-      @extend .bordered-button-medium;
+      border: 3px solid transparentize(white, 0.6);
+      color: white;
+      background-color: transparent;
+
+      &:not(.active):first-child {
+        border-left: 3px solid transparentize(white, 0.6);
+      }
+
       &:not(.disabled):hover {
         background-color: $emphasis-color;
         color: white;
       }
+
       &.active {
         background-color: $emphasis-color;
         border-color: $emphasis-color;
-      }
-      padding: 0 12px;
-      &:not(.active):first-child {
-        border-left: 3px solid white;
       }
     }
   }

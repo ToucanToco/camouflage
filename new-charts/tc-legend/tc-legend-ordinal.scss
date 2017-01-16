@@ -16,3 +16,8 @@
   $i: index($chartColors, $color) - 1;
   @include colorTcLegendCategoryById($i, $color);
 }
+
+@each $sentiment, $color in $sentiment-colors {
+  @include colorTcLegendCategoryByAttr(data-sentiment, $sentiment, $color);
+}
+@include colorTcLegendCategoryByAttr(data-serie-index, comparison, $comparisonColor);

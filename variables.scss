@@ -873,7 +873,7 @@ $chart-directive-container-margin-top-compact: $chart-directive-container-margin
 .chart-directive-container {
   position: relative;
   @extend .full-content;
-  margin-top: $chart-directive-container-margin-top;
+  padding-top: $chart-directive-container-margin-top;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -885,7 +885,7 @@ $chart-directive-container-margin-top-compact: $chart-directive-container-margin
 }
 
 .compact .chart-directive-container {
-  margin-top: $chart-directive-container-margin-top-compact;
+  padding-top: $chart-directive-container-margin-top-compact;
 }
 
 .chart-container {

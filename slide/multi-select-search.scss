@@ -1,0 +1,13 @@
+.multi-select-search__badge,
+.multi-select-search__tag {
+  background-color: $search-selected-bg-color;
+}
+
+.multi-select-search__result:hover,
+.multi-select-search__results:not(:hover) .multi-select-search__result--active {
+  background-color: $emphasis-color;
+}
+
+.multi-select-search__search {
+  box-shadow: 0 0 0 3px $emphasis-color inset;
+}

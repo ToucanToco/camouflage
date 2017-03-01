@@ -1,0 +1,17 @@
+.dropdown-feedback__app {
+  color: $main-color;
+}
+
+.dropdown-notifications__notif--unread-All {
+  .dropdown-notifications__title {
+    color: $emphasis-color;
+  }
+}
+
+.dropdown-notifications__title {
+  color: $main-color;
+}
+
+.notifications-button__bubble {
+  background-color: $emphasis-color;
+}

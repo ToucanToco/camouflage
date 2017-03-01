@@ -1,3 +1,47 @@
+$shadow-color: darken($grey, 15%);
+
+@mixin dropdown-shadow($width, $right, $right-after) {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  right: $right;
+  top: 84px;
+  z-index: 20;
+  width: $width;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 3px $shadow-color);
+  -webkit-overflow-scrolling: touch;
+
+  @include respond-to(phone) {
+    top: 74px;
+  }
+
+  &::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -0.5em;
+    top: 0;
+    right: $right-after;
+    box-sizing: border-box;
+    border: 1em solid black;
+    border-color: transparent transparent white white;
+    transform-origin: 0 0;
+    transform: rotate(135deg);
+
+    @include respond-to(phone) {
+      right: 2%;
+    }
+  }
+}
+
+.dropdown-feedback__contact {
+  border-top: 1px solid lighten($shadow-color, 17%);
+}
+
 .dropdown-feedback__app {
   color: $main-color;
 }
@@ -8,10 +52,27 @@
   }
 }
 
+.dropdown-notifications__header {
+  border-bottom: 1px solid lighten($shadow-color, 40%);
+}
+
 .dropdown-notifications__title {
   color: $main-color;
 }
 
 .notifications-button__bubble {
   background-color: $emphasis-color;
+}
+
+.dropdown-notifications__notif,
+.dropdown-notifications__no-notif {
+  border-bottom: 1px solid lighten($shadow-color, 40%);
+}
+
+.dropdown-notifications__notif--unread {
+  background-color: lighten($shadow-color, 50%);
+}
+
+.dropdown-notifications__notif-date {
+  color: $grey;
 }

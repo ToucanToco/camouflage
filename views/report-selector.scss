@@ -50,3 +50,10 @@ report-selector {
     }
   }
 }
+
+@keyframes blink {
+  50% {
+    border-color: $emphasis-color;
+    color: $emphasis-color;
+  }
+}

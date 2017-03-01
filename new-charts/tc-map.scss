@@ -10,7 +10,7 @@
       fill: $color;
     }
 
-    ~ .tc-legend .serie[data-serie-id="#{$i}"] .color {
+    ~ .tc-report-selector-legend .serie[data-serie-id="#{$i}"] .color {
       background-color: $color;
     }
   }

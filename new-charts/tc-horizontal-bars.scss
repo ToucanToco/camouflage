@@ -1,5 +1,5 @@
 @each $sentiment, $color in $sentiment-colors {
-  .horizontal-bar__bar[data-sentiment="#{$sentiment}"] {
+  .horizontal-bar__bar-group .horizontal-bar__bar[data-sentiment="#{$sentiment}"] {
     fill: $color;
   }
 }

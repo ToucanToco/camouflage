@@ -66,13 +66,13 @@ $shadow-color: darken($grey, 15%);
 
 .dropdown-notifications__notif,
 .dropdown-notifications__no-notif {
-  border-bottom: 1px solid lighten($shadow-color, 40%);
+  border-bottom: 1px solid lighten($shadow-color, 10%);
 }
 
 .dropdown-notifications__notif--unread {
-  background-color: lighten($shadow-color, 50%);
+  background-color: lighten($shadow-color, 18%);
 }
 
 .dropdown-notifications__notif-date {
-  color: $grey;
+  color: darken($shadow-color, 15%);
 }

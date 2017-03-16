@@ -1,4 +1,4 @@
-$shadow-color: darken($grey, 15%);
+$shadow-color: rgba(50, 50, 50, 0.43);
 
 @mixin dropdown-shadow($width, $right, $right-after) {
   display: none;
@@ -52,10 +52,6 @@ $shadow-color: darken($grey, 15%);
   }
 }
 
-.dropdown-notifications__header {
-  border-bottom: 1px solid lighten($shadow-color, 40%);
-}
-
 .dropdown-notifications__title {
   color: $main-color;
 }
@@ -70,9 +66,9 @@ $shadow-color: darken($grey, 15%);
 }
 
 .dropdown-notifications__notif--unread {
-  background-color: lighten($shadow-color, 18%);
+  background-color: lighten($shadow-color, 60%);
 }
 
 .dropdown-notifications__notif-date {
-  color: darken($shadow-color, 15%);
+  color: darken($shadow-color, 5%);
 }

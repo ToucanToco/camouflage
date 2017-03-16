@@ -1,0 +1,9 @@
+{
+  "name": "tc-camouflage",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ToucanToco/tucana.git"
+  },
+  "license": "proprietary",
+  "version": "0.0.0"
+}

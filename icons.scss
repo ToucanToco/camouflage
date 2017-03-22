@@ -12,6 +12,10 @@
   }
 }
 @each $name, $color in $sentimentColors {
+  .icon[data-sentiment="#{$name}"] {
+    color: $color;
+  }
+
   .icon-d3[data-sentiment="#{$name}"] {
     fill: $color;
   }

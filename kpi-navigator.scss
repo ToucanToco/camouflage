@@ -9,7 +9,7 @@ kpinavigator {
         color: $main-color-dark;
       }
     }
-    
+
     &.selected {
       background-color: $nav-menuColor1;
 
@@ -21,5 +21,9 @@ kpinavigator {
         color: white;
       }
     }
+  }
+  
+  .swiper-slide-active .kpi-navigator-title {
+    color: white;
   }
 }

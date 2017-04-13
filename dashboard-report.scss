@@ -132,3 +132,10 @@
     background-color: $emphasis-color;
   }
 }
+
+.action-dashboard-button {
+
+  &:hover {
+    color: $text-color!important;
+  }
+}

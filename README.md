@@ -40,14 +40,7 @@ In your local `camouflage` folder:
 
     yarn link
 
-or
-
-    bower link
-
 Then in your dependent project folder:
 
     yarn link tc-camouflage
 
-or
-
-    bower link tc-camouflage

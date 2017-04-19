@@ -7,7 +7,7 @@ bubblechart {
     stroke: $emphasis-color;
   }
   .group-line-drill {
-    stroke: lighten($emphasis-color,30%);
+    stroke: $greyLight;
   }
   .group-circle, .group-label {
     &.selected {
@@ -17,9 +17,15 @@ bubblechart {
       }
     }
     &.drilling {
-      .circle-main{
-        fill: lighten($emphasis-color,30%);
-        stroke: darken($emphasis-color,5%);
+      .circle-drill{
+        stroke: lighten($emphasis-color,30%);
+        fill: transparent
+      }
+      &:not(.selected) {
+        .circle-main{
+          fill: lighten($emphasis-color,30%);
+          stroke: darken($emphasis-color,5%);
+        }
       }
     }
   }

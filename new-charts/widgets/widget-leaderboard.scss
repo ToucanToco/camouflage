@@ -1,9 +1,11 @@
 @each $sentiment, $color in $sentiment-colors {
-  rect.no-sentiment-zones[data-sentiment="#{$sentiment}"] {
+ 
+  rect:not(.sentiment-zones)[data-sentiment="#{$sentiment}"] {
     fill: $color !important;
   }
   
   stop[data-sentiment="#{$sentiment}"] {
     stop-color: $color;
   }
+  
 }

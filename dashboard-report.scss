@@ -69,12 +69,12 @@
 
         .widget-type-leaderboard {
           .widget-chart-container {
-            .bar {
-              fill: nth($chartColors,2);
-            }
-            .target {
-              fill: nth($chartColors,1);
-            }
+            .bar:not(.sentiment-zones) {
+                fill: nth($chartColors,2);
+              }
+            .target:not(.sentiment-zones) {
+                fill: nth($chartColors,1);
+              }
           }
         }
       }

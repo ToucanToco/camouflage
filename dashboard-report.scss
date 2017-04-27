@@ -1,8 +1,11 @@
+.dashboard-report__background-image,
+.dashboard-report__background-overlay {
+  background-color: $main-color;
+}
+
 .execsum {
 
   dashboard-report {
-    background-color: $main-color;
-
     .search-selected-container {
       background: $search-selected-bg-color;
     }

@@ -30,7 +30,6 @@ body {
   height: 100%;
   overflow: hidden;
   color: #404040;
-  -webkit-user-select: none;
   -webkit-font-smoothing: antialiased;
 
   > ui-view {

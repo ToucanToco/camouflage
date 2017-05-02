@@ -1,0 +1,18 @@
+.tutorial-swiper__modal-explanation {
+  color: lighten($text-color, 15%);
+}
+
+.tutorial-swiper__pagination {
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: $main-color;
+  }
+}
+
+.tutorial-swiper__button-start {
+  background-color: $emphasis-color;
+  color: white;
+
+  &:hover {
+    background-color: $toucan-button-hover-blue;
+  }
+}

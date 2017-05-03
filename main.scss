@@ -30,7 +30,6 @@ body {
   height: 100%;
   overflow: hidden;
   color: #404040;
-  -webkit-user-select: none;
   -webkit-font-smoothing: antialiased;
 
   > ui-view {
@@ -264,6 +263,7 @@ a {
 @import 'colors';
 @import 'forms';
 @import 'tc-dropdown';
+@import 'tutorial';
 @import 'widget-value-dynamic';
 @import 'execsum';
 

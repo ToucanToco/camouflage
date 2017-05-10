@@ -371,6 +371,12 @@ $sparkline-selection-stroke:                  $main-color !default;
 $small-apps-list-background:                  #e1e1e1;
 /*** TOOLTIP ***/
 $md-tooltip-bg-color:                         transparentize($averageBoxColor, 0.3);
+/*** DEBUG-PANEL ***/
+$md-tooltip-bg-color:                         transparentize($averageBoxColor, 0.3);
+$main-color-very-dark:                        darken($main-color, 25%);
+$beige:                                       #FFFDEB;
+$light-grey:                                  #dddddd;
+$red-color:                                   #e78352;
 
 /*** TOUCAN COLORS ***/
 // These colors will stay the same regardless of the client's colors

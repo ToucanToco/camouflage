@@ -1,0 +1,59 @@
+.debug-panel__details {
+  background-color: $beige;
+}
+
+.debug-panel__errors {
+  background-color: lighten($red-color, 30%);
+  border: dashed 2px $red-color;
+  color: $red-color;
+}
+
+.debug-panel__section {
+  background-color: $main-color;
+}
+
+.debug-panel__tab {
+  color: $main-color;
+
+  &:not(.debug-panel__tab--active) {
+    background-color: $main-color-very-dark;
+
+    &:active,
+    &:hover {
+      background-color: $emphasis-color;
+    }
+  }
+}
+
+.debug-panel-dataset__action {
+  &:not(.debug-panel-dataset__action--active) {
+    color: $main-color-very-dark;
+
+    &:active,
+    &:hover {
+      color: $emphasis-color;
+    }
+  }
+
+  &:not(:first-child)::before {
+    background-color: $main-color-very-dark;
+  }
+}
+
+.debug-panel-dataset__code {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    $light-grey 0,
+    $light-grey .07142857em,
+    transparent .07142857em,
+    transparent 1.42857143em
+  );
+}
+
+.debug-panel-dataset__data {
+  td,
+  th,
+  tr {
+    border-color: $light-grey;
+  }
+}

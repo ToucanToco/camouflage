@@ -1,4 +1,5 @@
-chart {
+chart,
+.execsum-tile__chart-container {
   bullet-chart,
   horizontal-barchart,
   stacked-barchart,
@@ -30,7 +31,6 @@ chart {
         fill: $underAverageColor;
       }
     }
-
 
     .bar{
       &.above-average {

@@ -1,4 +1,5 @@
-chart {
+chart,
+.execsum-tile__chart-container {
   /* Colors */
   @each $color in $chartColors {
     $i: index($chartColors, $color) - 1;

@@ -13,18 +13,8 @@
   }
 }
 
-.highlighted-kpi--positive {
-  @include colorHighlightedKpi($positive-color);
-}
-
-.highlighted-kpi--negative {
-  @include colorHighlightedKpi($negative-color);
-}
-
-.highlighted-kpi--neutral {
-  @include colorHighlightedKpi($neutral-color);
-}
-
-.highlighted-kpi--warning {
-  @include colorHighlightedKpi($warning-color);
+@each $name, $color in $sentimentColors {
+  .highlighted-kpi[data-sentiment="#{$name}"] {
+    @include colorHighlightedKpi($color)
+  }
 }

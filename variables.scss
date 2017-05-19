@@ -108,7 +108,7 @@ $transition-duration: 0.6s;
 
 $chartWidth: 590px;
 $marginChart: 30px;
-$chartLegendWidth:  $viewportWidth - $kpiNavigatorWidth - $chartWidth ;
+$chartLegendWidth:  $viewportWidth - $kpiNavigatorWidth - $chartWidth;
 $chartLegendWidthShrink: $chartLegendWidth - 20;
 $groupColorWidth: 13px;
 $charts-font-size: 16px;
@@ -868,49 +868,6 @@ $slide-height: $viewportHeight - $headerHeight;
     background-color: $controllerColor;
     color: #fff;
   }
-}
-
-/* COMMON CHART CLASSES */
-
-$chart-directive-container-margin-top: 32px;
-$chart-directive-container-margin-top-mobile: 0;
-$chart-directive-container-margin-top-compact: $chart-directive-container-margin-top / 2;
-
-.chart-directive-container {
-  position: relative;
-  @extend .full-content;
-  margin-top: $chart-directive-container-margin-top;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-
-  @include respond-to(phone) {
-    margin-top: $chart-directive-container-margin-top-mobile;
-    flex-direction: column-reverse;
-  }
-}
-
-.compact .chart-directive-container {
-  margin-top: $chart-directive-container-margin-top-compact;
-}
-
-.chart-container {
-  flex: 1;
-  align-items: stretch;
-
-  &.with-right-pane {
-    overflow: hidden;
-  }
-}
-
-.secondary  {
-  .chart-diretive-container {
-    flex-direction: column;
-  }
-}
-
-.clickable {
-  cursor: pointer;
 }
 
 @mixin colorSVGElement($color) {

@@ -14,6 +14,12 @@ verbatim {
     }
   }
 
+  @each $sentiment, $color in $sentiment-colors {
+    .verbatim-categorie[data-sentiment="#{$sentiment}"] {
+      background: $color !important;
+    }
+  }
+
   .filter-container {
     background-color: $backgroundSlideCommentary;
 

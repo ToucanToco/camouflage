@@ -18,3 +18,7 @@ $tc-bar-chart-bar-color--selected: $emphasis-color;
   $i: index($chartColors, $color) - 1;
   @include colorTcHorizontalBarchartBarById($i, $color);
 }
+
+.horizontal-bar-chart__y-label-container--highlighted .horizontal-bar-chart__label {
+  fill: $tc-bar-chart-bar-color--selected;
+}

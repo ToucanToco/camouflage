@@ -1,5 +1,0 @@
-@each $sentiment, $color in $sentiment-colors {
-  circle [data-sentiment="#{$sentiment}"] {
-    fill: $color;
-  }
-}

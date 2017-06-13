@@ -111,7 +111,6 @@ $marginChart: 30px;
 $chartLegendWidth:  $viewportWidth - $kpiNavigatorWidth - $chartWidth;
 $chartLegendWidthShrink: $chartLegendWidth - 20;
 $groupColorWidth: 13px;
-$variationSerieWidth: 70px;
 $charts-font-size: 16px;
 
 $charts-font-size-mobile: 13px;
@@ -872,7 +871,7 @@ $slide-height: $viewportHeight - $headerHeight;
 }
 
 @mixin colorSVGElement($color) {
-  &.bar, &.arc, &.area, &.legend-rect, &.node, &.node-part, &.target, .text-serie {
+  &.bar, &.arc, &.area, &.legend-rect, &.node, &.node-part, &.target, .text-serie, &.circle {
     fill: $color;
   }
 

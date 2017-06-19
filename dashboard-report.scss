@@ -79,6 +79,10 @@
                 fill: nth($chartColors,1);
               }
           }
+          .horizontal-barchart-subgroup.horizontal-barchart-subgroup--highlighted .bar-label {
+            color: $emphasis-color;
+            fill: $emphasis-color;
+          }
         }
       }
     }

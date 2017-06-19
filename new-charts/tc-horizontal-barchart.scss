@@ -20,5 +20,6 @@ $tc-bar-chart-bar-color--selected: $emphasis-color;
 }
 
 .horizontal-bar-chart__y-label-container--highlighted .horizontal-bar-chart__label {
+  color: $tc-bar-chart-bar-color--selected;
   fill: $tc-bar-chart-bar-color--selected;
 }

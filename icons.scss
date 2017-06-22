@@ -19,6 +19,10 @@
   .icon-d3[data-sentiment="#{$name}"] {
     fill: $color;
   }
+
+  .icon-d3.color[data-sentiment="#{$name}"] {
+    color: $color;
+  }
 }
 .icon{
   &.better {

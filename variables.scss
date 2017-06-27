@@ -72,9 +72,33 @@ $screen-tablet-max: 1024px;
       @content;
     }
   }
+  @if $media == phone-portrait {
+    @media screen and (max-width: $screen-phone-max) and (orientation: portrait),
+      projection and (max-width: $screen-phone-max) and (orientation: portrait) {
+      @content;
+    }
+  }
+  @if $media == phone-landscape {
+    @media screen and (max-width: $screen-phone-max) and (orientation: landscape),
+      projection and (max-width: $screen-phone-max) and (orientation: landscape) {
+      @content;
+    }
+  }
   @else if $media == tablet {
     @media screen and (min-width: $screen-phone-max+1) and (max-width: $screen-tablet-max),
       projection and (min-width: $screen-phone-max+1) and (max-width: $screen-tablet-max) {
+      @content;
+    }
+  }
+  @else if $media == tablet-portrait {
+    @media screen and (min-width: $screen-phone-max+1) and (max-width: $screen-tablet-max) and (orientation: portrait),
+      projection and (min-width: $screen-phone-max+1) and (max-width: $screen-tablet-max) and (orientation: portrait) {
+      @content;
+    }
+  }
+  @else if $media == tablet-landscape {
+    @media screen and (min-width: $screen-phone-max+1) and (max-width: $screen-tablet-max) and (orientation: landscape),
+      projection and (min-width: $screen-phone-max+1) and (max-width: $screen-tablet-max) and (orientation: landscape) {
       @content;
     }
   }

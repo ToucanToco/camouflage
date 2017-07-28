@@ -26,4 +26,9 @@ bullet-chart {
   .detail-block-bg {
     fill: $bullet-chart-detail-block-bg;
   }
+
+  .highlighted {
+    color: $emphasis-color;
+    fill: $emphasis-color !important;
+  }
 }

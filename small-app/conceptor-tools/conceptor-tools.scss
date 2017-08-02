@@ -1,0 +1,416 @@
+$upload-page-background-color: #DDD;
+$upload-silver-color: #CFCFCF;
+$upload-whitesmoke-color: #FAFAFA;
+$upload-drop-message-hover-color: #FFFCF4;
+$upload-drop-message-hover-text-color: #f5c700;
+$upload-drop-message-ready-color: #87B2A8;
+$upload-warning-message-color: #e78352;
+$upload-feedback-validate-color: #a7c300;
+$h1-darken-color: #bbbbbb;
+
+@mixin upload-drop-zone-params(
+  $background-color: $upload-whitesmoke-color,
+  $border-color: $upload-silver-color,
+  $border-type: dashed,
+  $border-width: 2px
+) {
+  @extend .montserrat-regular;
+  align-items: center;
+  background-color: $background-color;
+  border: $border-type $border-width $border-color;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  font-size: 1em;
+  height: 3.5em;
+  justify-content: center;
+  letter-spacing: 1px;
+  width: 21em;
+}
+
+@mixin file-upload-slot-feedback--params(
+  $color: $upload-warning-message-color,
+  $font-weight: bold
+) {
+  text-align: right;
+    span {
+      color: $color;
+      font-size: 1em;
+      font-weight: $font-weight;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+}
+
+.modal-body__file-upload-slot {
+  background-color: $upload-page-background-color;
+}
+
+a.conceptor-tools__action,
+.conceptor-tools__action {
+  text-decoration: none;
+
+  &:hover {
+    background-color: $emphasis-color;
+    color: white;
+  }
+}
+
+.template-container--light {
+  background-color: #eeeeee;
+}
+
+.upload-block--multiple-1 {
+  background-color: white;
+  border: solid 1px $upload-silver-color;
+  box-shadow: 0 1px 0 0 darken($upload-silver-color, 20%);
+}
+
+.upload-block--multiple-2 {
+  box-shadow: 0 2px 0 0 darken($upload-silver-color, 20%);
+}
+
+.upload-slot-block {
+  border: solid 1px $upload-silver-color;
+  box-shadow: 0 2px 0 0 darken($upload-silver-color, 20%);
+}
+
+.upload-slot-block--light-shadow {
+  box-shadow: 0 1px 0 0 darken($upload-silver-color, 20%)!important;
+}
+
+.upload-slot-block__header {
+  background-color: $upload-whitesmoke-color;
+}
+
+.upload-slot-block__specs-button,
+.upload-slot-block__trash-button,
+.upload-slot-block__validation-button,
+.upload-slot-block__download-button {
+  color: darken($upload-page-background-color, 10%);
+
+  &:hover {
+    color: darken($upload-page-background-color, 20%);
+  }
+}
+
+.upload-slot-block__validation-button--enable {
+  color: $upload-drop-message-ready-color;
+
+  &:hover {
+    color: darken($upload-drop-message-ready-color, 10%);
+  }
+}
+
+.upload-slot-block__upload-date--ready {
+  color: $upload-drop-message-ready-color;
+}
+
+.upload-slot-block__warning-message-upload {
+  color: $upload-warning-message-color;
+}
+
+.conceptor-tools__new-datasource {
+  border: dashed 3px darken($upload-silver-color, 20%);
+  color: darken($upload-silver-color, 20%);
+
+  &:hover {
+    background-color: darken($upload-whitesmoke-color, 5%);
+    border-color: $upload-drop-message-hover-text-color;
+    color: $upload-drop-message-hover-text-color;
+
+    i {
+      color: lighten($upload-silver-color, 5%);
+    }
+  }
+
+  i {
+    color: $upload-silver-color;
+  }
+}
+
+.conceptor-tools__more-datasources {
+  border: solid 2px darken($upload-silver-color, 20%);
+}
+
+.modal-footer__file-upload-slot__bottom-button--populate {
+  &:hover {
+    background-color: $text-color;
+    color: white;
+  }
+  &::after {
+    color: $text-color;
+  }
+  &:hover:after {
+      color: white;
+    }
+  &.modal-footer__file-upload-slot__bottom-button--populate--focused:after {
+    color: white;
+  }
+}
+
+.modal-footer__file-upload-slot__bottom-button--populate__dropdown {
+  border: solid 1px $upload-silver-color;
+  box-shadow: 0 2px 0 0 darken($upload-silver-color, 20%);
+}
+
+.populate-dropdown-input {
+  color: $text-color;
+}
+
+.populate-dropdown-input .populate-dropdown-input-label {
+  background: white;
+  border: 2px solid $text-color;
+}
+
+.populate-dropdown-input .populate-dropdown-input-label:after,
+.populate-dropdown-input .populate-dropdown-input-label:hover::after {
+  background: transparent;
+  border: 3px solid #333;
+}
+
+.modal-footer__file-upload-slot-feedback--error {
+  @include file-upload-slot-feedback--params;
+
+  p {
+    color: $upload-warning-message-color;
+  }
+}
+
+.modal-footer__file-upload-slot-feedback--success {
+  @include file-upload-slot-feedback--params(
+    $color: $upload-feedback-validate-color,
+    $font-weight: bold
+  );
+}
+
+.modal-footer__file-upload-slot-feedback--info {
+  @include file-upload-slot-feedback--params(
+    $color: $upload-silver-color,
+    $font-weight: normal
+  );
+}
+
+// INITIAL
+.upload-slot-block__info-message-upload {
+  color: darken($upload-page-background-color, 10%);
+}
+
+.upload-drop-zone--empty {
+  i {
+    color: darken($upload-page-background-color, 10%);
+  }
+  span {
+    color: darken($upload-page-background-color, 15%);
+  }
+}
+
+.upload-drop-zone--hover {
+  @include upload-drop-zone-params(
+    $upload-drop-message-hover-color,
+    $upload-drop-message-hover-text-color
+  );
+  i {
+    color: $upload-drop-message-hover-text-color;
+  }
+
+  span {
+    color: $upload-drop-message-hover-text-color;
+  }
+}
+
+.upload-drop-zone--ready {
+  @include upload-drop-zone-params(
+    $upload-drop-message-ready-color,
+    darken($upload-drop-message-ready-color,10%),
+    solid,
+    1px
+  );
+  box-shadow: 0 2px 0 0 darken($upload-drop-message-ready-color,15%);
+  i {
+    color: white;
+  }
+  span {
+    color: white;
+  }
+}
+
+.upload-drop-zone--modifier {
+  i {
+    color: darken($upload-page-background-color, 15%);
+
+    &:hover {
+      color: darken($upload-page-background-color, 40%);
+    }
+  }
+
+  span {
+    color: darken($upload-page-background-color, 10%);
+  }
+}
+
+.upload-drop-zone--error {
+  @include upload-drop-zone-params(
+    lighten($upload-warning-message-color, 37%),
+    $upload-warning-message-color
+  );
+
+  i {
+    color: $upload-warning-message-color;
+  }
+
+  span {
+    color: $upload-warning-message-color;
+  }
+}
+
+.upload-slot-block__datasource-notice {
+  border-top: 2px solid $upload-whitesmoke-color;
+  color: $upload-silver-color;
+}
+
+.upload-slot-block--dragover {
+  .upload-drop-zone--drag {
+    @include upload-drop-zone-params(
+      $upload-drop-message-hover-color,
+      $upload-drop-message-hover-text-color
+    );
+
+    span {
+      color: $upload-drop-message-hover-text-color;
+    }
+  }
+}
+
+.admin-workspace-body {
+  h1 {
+    color: white;
+  }
+
+  .h1--darken {
+    color: $h1-darken-color;
+  }
+}
+
+.admin-workspace-body__file-upload-slot {
+  background-color: $upload-page-background-color;
+}
+
+.conceptor-tools__upload-data-block__file-name__header__container-right__fa-download {
+  background-color: transparent;
+  color: darken($upload-page-background-color, 10%);
+
+  &:hover {
+    color: darken($upload-page-background-color, 35%);
+    cursor: pointer;
+  }
+
+  &.focused {
+    color: darken($upload-page-background-color, 35%);
+
+    .fa-download {
+      color: darken($upload-page-background-color, 35%);
+    }
+    p {
+      color: darken($upload-page-background-color, 20%);
+    }
+  }
+}
+
+.fa-download__dropdown {
+  background-color: white;
+  border: solid 1px $upload-silver-color;
+  box-shadow: 0 2px 0 0 darken($upload-silver-color, 20%);
+}
+
+.fa-download__dropdown__file-name__header {
+  background-color: $upload-whitesmoke-color;
+  color: darken($upload-page-background-color, 20%);
+}
+
+.fa-download__dropdown__download-file {
+  &.download-file--disabled {
+    p {
+      color: $upload-page-background-color;
+    }
+    &:hover {
+      p {
+        color: $upload-page-background-color;
+      }
+    }
+  }
+
+  &:hover {
+    p {
+      color: darken($upload-page-background-color, 35%);
+    }
+  }
+
+  i {
+    color: darken($upload-page-background-color, 35%)!important;
+  }
+}
+
+.modal-footer__file-upload-slot-feedback--error {
+  @include file-upload-slot-feedback--params;
+}
+
+.upload-drop-zone--empty {
+  @include upload-drop-zone-params();
+}
+
+.upload-drop-zone--modifier {
+  @include upload-drop-zone-params();
+}
+
+
+.assets-upload__new-datasource.conceptor-tools__new-datasource {
+  border: dashed 3px darken($upload-silver-color, 20%);
+  &:hover {
+    border-color: $upload-drop-message-hover-text-color;
+  }
+}
+
+.modal-header--studio-modal {
+  background-color: $upload-page-background-color;
+}
+
+
+.studio-modal-required {
+  color: darken($upload-page-background-color, 10%);
+}
+
+.modal-footer--studio-modal {
+  border-top: 1px solid $upload-page-background-color;
+}
+
+.modal-header--open-specs {
+  background-color: $upload-page-background-color;
+}
+
+.datasources-files__item {
+  background-color: $upload-page-background-color;
+}
+
+.datasources-files__pipe {
+  color: darken($upload-silver-color, 20%);
+}
+
+.datasources-files__actions {
+  .fa {
+    color: darken($upload-silver-color, 20%);
+  }
+}
+
+.datasources-files__item--ready {
+  background-color: lighten($upload-drop-message-ready-color, 25%);
+  color: darken($upload-drop-message-ready-color, 10%);
+
+  .fa {
+    color: darken($upload-drop-message-ready-color, 10%);
+  }
+
+  .datasources-files__pipe {
+    color: $upload-drop-message-ready-color;
+  }
+}

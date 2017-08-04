@@ -296,16 +296,10 @@ a.conceptor-tools__action,
   background-color: $upload-page-background-color;
 }
 
-.conceptor-tools__upload-data-block__file-name__header__container-right__fa-download {
+.upload-slot-block__download-button {
   background-color: transparent;
-  color: darken($upload-page-background-color, 10%);
 
-  &:hover {
-    color: darken($upload-page-background-color, 35%);
-    cursor: pointer;
-  }
-
-  &.focused {
+  &.upload-slot-block__download-button--active {
     color: darken($upload-page-background-color, 35%);
 
     .fa-download {
@@ -317,18 +311,18 @@ a.conceptor-tools__action,
   }
 }
 
-.fa-download__dropdown {
+.download-button__dropdown {
   background-color: white;
   border: solid 1px $upload-silver-color;
   box-shadow: 0 2px 0 0 darken($upload-silver-color, 20%);
 }
 
-.fa-download__dropdown__file-name__header {
+.download-button__header {
   background-color: $upload-whitesmoke-color;
   color: darken($upload-page-background-color, 20%);
 }
 
-.fa-download__dropdown__download-file {
+.download-button__download-file {
   &.download-file--disabled {
     p {
       color: $upload-page-background-color;

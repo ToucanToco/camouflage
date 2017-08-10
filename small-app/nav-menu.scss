@@ -5,11 +5,19 @@ nav-menu {
 .nav-menu__top__dashboard-button {
   background-color: $home-button-color;
   color: white;
+
+  .icon-dashboard_mobile {
+    color: darken($home-button-color, 20%);
+  }
 }
 
 .nav-menu__top__store-button {
   &:hover {
     color: $home-button-color;
+  }
+
+  .icon-appstore_mobile {
+    color: #ddd;
   }
 }
 

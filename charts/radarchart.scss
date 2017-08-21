@@ -7,6 +7,10 @@
   }
 }
 
+.radar-legend__label {
+  color: $text-color;
+}
+
 // Radar shape
 @mixin colorTcRadarchartShapeByAttr($attr, $value, $color) {
   .radar-shape[#{$attr}="#{$value}"] {
@@ -45,14 +49,4 @@
 @each $color in $chartColors {
   $i: index($chartColors, $color) - 1;
   @include colorTcRadarchartMetricsLabelById($i, $color);
-}
-
-// Color hue linear gradient for legend label
-$quantity: 12;
-$step: 50deg / $quantity;
-
-@for $i from 0 through $quantity - 1 {
-	.radar-legend:nth-child(#{$i + 1}) .radar-legend__label {
-		background: adjust-hue(#BA5800, $step * $i);
-	}
 }

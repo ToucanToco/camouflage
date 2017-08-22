@@ -1,11 +1,11 @@
-kpinavigator {
+.slide-navigator {
   background-color: $main-color-fade;
 
-  .kpi-navigator-unit {
+  .slide-navigator__unit {
     color: white;
 
     @include respond-to(phone) {
-      .kpi-navigator-title {
+      .slide-navigator__title {
         color: $main-color-dark;
       }
     }
@@ -17,13 +17,13 @@ kpinavigator {
         background-color: transparent!important;
       }
 
-      .kpi-navigator-title {
+      .slide-navigator__title {
         color: white;
       }
     }
   }
 
-  .swiper-slide-active .kpi-navigator-title {
+  .swiper-slide-active .slide-navigator__title {
     color: white;
   }
 }

@@ -18,7 +18,7 @@
   .radar-shape[#{$attr}="#{$value}"] {
     stroke: $color;
   }
-    .market-reference[#{$attr}="#{$value}"] {
+    .fill-shape[#{$attr}="#{$value}"] {
         fill: $color;
         stroke: none;
     }

@@ -2,8 +2,10 @@
   .domain, line {
     stroke: #E9E9E9;
   }
-  text {
-    fill: #ccc;
+  .tick {
+    text {
+      fill: #ddd;
+    }
   }
 }
 
@@ -16,6 +18,10 @@
   .radar-shape[#{$attr}="#{$value}"] {
     stroke: $color;
   }
+    .fill-shape[#{$attr}="#{$value}"] {
+        fill: $color;
+        stroke: none;
+    }
 }
 
 @mixin colorTcRadarchartShapeById($id, $color) {

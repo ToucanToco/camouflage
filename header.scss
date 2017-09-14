@@ -34,6 +34,14 @@ report-selector-button {
   }
 }
 
+.analytics-banner {
+  border-bottom-color: $emphasis-color !important;
+
+  &::after {
+    border-color: darken($emphasis-color, 25%) transparent transparent transparent;
+  }
+}
+
 .staging-banner {
   border-bottom-color: $toucan-button-hover-blue;
 

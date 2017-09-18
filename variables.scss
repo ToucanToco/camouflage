@@ -5,10 +5,12 @@ $text-color: #4C4C4C !default;
 $dark-color: #000000 !default; // FIXME Unused
 $emphasis-color: #f3c642 !default;
 $secondary-emphasis-color: #e78352 !default;
-$scale-color-0: #B3D7D2 !default;
-$scale-color-1: #81B1BD !default;
-$scale-color-2: #437F9D !default;
-$scale-color-3: #00354E !default;
+
+$scale-color-0: #E5FFFF !default;
+$scale-color-1: #B3D7D2 !default;
+$scale-color-2: #81B1BD !default;
+$scale-color-3: #437F9D !default;
+$scale-color-4: #00354E !default;
 
 $chart-color-0: #9394b4 !default;
 $chart-color-1: #d8c03d !default;
@@ -201,13 +203,14 @@ $colorChart2: $chart-color-2;
 $colorChart3: $chart-color-3;
 $colorChart4: $chart-color-4;
 
-$scale-colors: $scale-color-0 $scale-color-1 $scale-color-2 $scale-color-3;
+$scale-colors: $scale-color-0 $scale-color-1 $scale-color-2 $scale-color-3 $scale-color-4;
 $scaleColors: $scale-colors;
 
 $scaleColor0: $scale-color-0;
 $scaleColor1: $scale-color-1;
 $scaleColor2: $scale-color-2;
 $scaleColor3: $scale-color-3;
+$scaleColor4: $scale-color-4;
 
 $barStackColor0: $colorChart0;
 $barStackColor1: $colorChart1;

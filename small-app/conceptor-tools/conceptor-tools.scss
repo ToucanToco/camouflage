@@ -42,6 +42,10 @@ $h1-darken-color: #bbbbbb;
     }
 }
 
+conceptor-tools {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
 .modal-body__file-upload-slot {
   background-color: $upload-page-background-color;
 }
@@ -60,7 +64,8 @@ a.conceptor-tools__action,
   background-color: #eeeeee;
 }
 
-.upload-block--multiple-1 {
+.upload-block--multiple-1,
+.upload-block--multiple-2 {
   background-color: white;
   border: solid 1px $upload-silver-color;
   box-shadow: 0 1px 0 0 darken($upload-silver-color, 20%);
@@ -81,6 +86,14 @@ a.conceptor-tools__action,
 
 .upload-slot-block__header {
   background-color: $upload-whitesmoke-color;
+}
+
+.upload-slot-block__files-count {
+  border-bottom: 1px solid $upload-drop-message-ready-color;
+}
+
+.upload-slot-block__datasource-validation {
+  color: $upload-drop-message-hover-text-color;
 }
 
 .upload-slot-block__specs-button,
@@ -189,6 +202,14 @@ a.conceptor-tools__action,
     $color: $upload-silver-color,
     $font-weight: normal
   );
+}
+
+.datasource {
+  border: dashed $main-color 3px;
+}
+
+.config-files-editor .error {
+  color: red;
 }
 
 // INITIAL
@@ -407,4 +428,8 @@ a.conceptor-tools__action,
   .datasources-files__pipe {
     color: $upload-drop-message-ready-color;
   }
+}
+
+.status {
+  color: $positive-color;
 }

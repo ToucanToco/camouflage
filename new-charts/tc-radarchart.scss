@@ -1,6 +1,6 @@
 .radar-axis {
   .domain, line {
-    stroke: #E9E9E9;
+    stroke: #bbbbbb;
   }
   .tick {
     text {
@@ -11,6 +11,8 @@
 
 .radar-legend__label {
   color: $text-color;
+  font-size: 11px;
+  font-spacing: normal;
 }
 
 // Radar shape

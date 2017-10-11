@@ -1,0 +1,71 @@
+
+.table-header-mobile-container, .table-header-fixed-container{
+  background: white;
+}
+
+.table-row{
+  color: $dark-color;
+}
+
+.table-mobile-body .table-element-container{
+  border-right-color: $light-grey;
+
+  &:first-child {
+    border-left-color: $light-grey;
+  }
+}
+
+.table-comment .table-element-content, .header-label{
+  color: $text-color;
+}
+
+.expanded-img{
+  background: $main-color;
+  > .icon-close{
+    color:white;
+  }
+}
+
+.table-variation {
+  color: $text-color;
+
+  .icon {
+
+    &.icon-positif {
+      color: $positive-color;
+    }
+
+    &.icon-negatif {
+      color: $negative-color;
+    }
+  }
+}
+
+.table-element.table-tag{
+  // default color when colorTags is set to false (true by default)
+  background: $light-grey;
+  color:white;
+}
+
+.table-value{
+  color:$text-color;
+}
+
+@mixin colorTcTableByAttr($attr, $value, $color) {
+  .table-tag[#{$attr}="#{$value}"] {
+    background: $color;
+  }
+}
+
+@mixin colorTcTableById($id, $color) {
+  @include colorTcTableByAttr(data-serie-index, $id, $color);
+}
+
+@each $color in $chartColors {
+  $i: index($chartColors, $color) - 1;
+  @include colorTcTableById($i, $color);
+}
+
+.table-mobile-body-container .table-row {
+  border-bottom-color: $light-grey;
+}

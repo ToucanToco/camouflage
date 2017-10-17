@@ -1,0 +1,27 @@
+.capture-chart__form {
+  @include respond-to(phone) {
+    border-bottom: 1px dashed #a5a0a0;
+  }
+}
+
+.capture-chart__form-input input,
+.capture-chart__form-input textarea {
+  color: $text-color;
+  border: 2px solid $text-color;
+}
+
+.capture-chart__form-input .capture-chart__form-input--error {
+  border-color: $negative-color;
+}
+
+.capture-chart__form-button {
+  background-color: $emphasis-color;
+  &:disabled {
+    background-color: rgb(236, 236, 236);
+    color: rgb(185, 185, 185);
+  }
+}
+
+.capture-chart__canvas-container__info {
+  color: #a5a0a0;
+}

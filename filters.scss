@@ -34,6 +34,7 @@ filter, requester {
 filter.upper-right .filter__tc-dropdown,
 requester.upper-right .filter__tc-dropdown,
 requester.upper-middle .filter__tc-dropdown,
+requester.bottom-right .filter__tc-dropdown,
 filter.upper-middle .filter__tc-dropdown,
 filter.bottom-right .filter__tc-dropdown
  {
@@ -44,6 +45,7 @@ filter.bottom-right .filter__tc-dropdown
   }
 }
 
+requester.bottom-right .filter__tc-dropdown,
 filter.bottom-right .filter__tc-dropdown {
   border: 1px solid $main-color;
   border-bottom: 1px solid $main-color;
@@ -56,6 +58,7 @@ filter.bottom-right .filter__tc-dropdown {
   }
 }
 
+requester.bottom-right,
 filter.bottom-right{
   .filter__tc-dropdown .select2-container--open .select2-selection--single .select2-selection__rendered {
     background-color: $main-color;

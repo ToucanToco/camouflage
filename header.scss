@@ -8,6 +8,7 @@ header {
   box-shadow: 0px 2px 9px -2px $home-shadow-color;
   .header-button {
     @extend .bordered-button-discreet;
+    margin: 6px;
   }
 }
 

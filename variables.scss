@@ -38,7 +38,7 @@ $main-color-dark: darken($main-color, 6%) !default;
 $emphasis-color-light: #fffaec;
 
 $offsetMenu: 400px;
-$headerHeight: 90px;
+$headerHeight: 60px;
 $viewportHeight: 768px;
 $viewportWidth: 1024px;
 $kpiNavigatorWidth:192px;
@@ -378,7 +378,7 @@ $bottom-right-filter-bottom:                  2em;
 $bottom-right-filter-right:                   $paddingRightSlide + 20px;
 /*** HEADER ***/
 $headerPaddingTop:                            10px;
-$paddingHeader:                               20px;
+$paddingHeader:                               8px;
 $menu-button-width:                           50px;
 /*** LOGIN ***/
 $login-input-height:                          60px;

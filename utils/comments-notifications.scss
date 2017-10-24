@@ -1,11 +1,11 @@
 $shadow-color: rgba(50, 50, 50, 0.43);
 
-@mixin dropdown-shadow($width, $right, $right-after) {
+@mixin dropdown-shadow($width, $right, $right-phone, $right-after, $right-after-phone) {
   display: none;
   position: absolute;
   flex-direction: column;
   right: $right;
-  top: 84px;
+  top: 54px;
   z-index: 20;
   width: $width;
   height: auto;
@@ -15,7 +15,8 @@ $shadow-color: rgba(50, 50, 50, 0.43);
   -webkit-overflow-scrolling: touch;
 
   @include respond-to(phone) {
-    top: 74px;
+    right: $right-phone;
+    top: 58px;
   }
 
   &::after{
@@ -33,7 +34,7 @@ $shadow-color: rgba(50, 50, 50, 0.43);
     transform: rotate(135deg);
 
     @include respond-to(phone) {
-      right: 2%;
+      right: $right-after-phone;
     }
   }
 }

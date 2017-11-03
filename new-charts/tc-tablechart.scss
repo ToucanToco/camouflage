@@ -7,7 +7,7 @@
   color: $dark-color;
 }
 
-.table-mobile-body .table-element-container{
+.table-element-container{
   border-right-color: $light-grey;
 
   &:first-child {
@@ -66,6 +66,6 @@
   @include colorTcTableById($i, $color);
 }
 
-.table-mobile-body-container .table-row {
+.table-mobile-body-container .table-row,.table-fixed-body  .table-row {
   border-bottom-color: $light-grey;
 }

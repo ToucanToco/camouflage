@@ -41,4 +41,12 @@ report-selector-button {
   &::after {
     border-color: darken($toucan-button-hover-blue, 25%) transparent transparent transparent;
   }
+
+  &.staging-banner--local {
+    border-bottom-color: $red-color;
+
+    &::after {
+      border-color: darken($red-color, 25%) transparent transparent transparent;
+    }
+  }
 }

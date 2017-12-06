@@ -1,3 +1,6 @@
+$backgroundColor: #eeeeee;
+$closeIconColor: #D4D4D4;
+
 
 .table-header-mobile-container, .table-header-fixed-container{
   background: white;
@@ -7,7 +10,7 @@
   color: $dark-color;
 }
 
-.table-mobile-body .table-element-container{
+.table-element-container{
   border-right-color: $light-grey;
 
   &:first-child {
@@ -20,25 +23,15 @@
 }
 
 .expanded-img{
-  background: $main-color;
+  background: $backgroundColor;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
   > .icon-close{
-    color:white;
+    color:$closeIconColor;
   }
 }
 
 .table-variation {
   color: $text-color;
-
-  .icon {
-
-    &.icon-positif {
-      color: $positive-color;
-    }
-
-    &.icon-negatif {
-      color: $negative-color;
-    }
-  }
 }
 
 .table-element.table-tag{
@@ -49,6 +42,16 @@
 
 .table-value{
   color:$text-color;
+}
+
+// Table bullet
+
+// Bullet bar
+.table-element__bullet-bar__complement{
+  fill: $backgroundColor;
+}
+.table-element__bullet-target__bar{
+  fill: $emphasis-color;
 }
 
 @mixin colorTcTableByAttr($attr, $value, $color) {
@@ -66,6 +69,19 @@
   @include colorTcTableById($i, $color);
 }
 
-.table-mobile-body-container .table-row {
+.table-mobile-body-container .table-row,.table-fixed-body  .table-row {
   border-bottom-color: $light-grey;
+}
+
+// Use data-sentiment to color values, variation symbols and bullet bars
+@each $sentiment, $color in $sentiment-colors {
+  .tc-value__value[data-sentiment="#{$sentiment}"]{
+    color: $color;
+  }
+  .tc-variation__symbol[data-sentiment="#{$sentiment}"]{
+    fill: $color;
+  }
+  .table-element__bullet-bar[data-sentiment="#{$sentiment}"]{
+    fill: $color;
+  }
 }

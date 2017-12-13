@@ -1,6 +1,0 @@
-nav-menu-chapter {
-  border-bottom: $nav-menu-item-border-width solid $nav-menu-color;
-  &.selected .chapter:not(.opened) {
-    background-color: $nav-menu-selected-color;
-  }
-}

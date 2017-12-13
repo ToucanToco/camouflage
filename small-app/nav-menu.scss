@@ -21,4 +21,86 @@ nav-menu {
   }
 }
 
-@import 'navigation/nav-menu-item';
+.nav-menu__wrapper {
+  background-color: $nav-menu-bg-color;
+}
+
+.nav-menu_chapters--ghost {
+  background-color: $nav-menu-selected-color;
+}
+
+.nav-menu__chapter-wrapper.nav-menu__chapter--active .chapter__content,
+.nav-menu__chapter.nav-menu__chapter--active,
+.nav-menu__subchapter.nav-menu__subchapter--active {
+  background-color: $nav-menu-selected-color;
+}
+
+.nav-menu__chapter-wrapper {
+  border-bottom: $nav-menu-item-border-width solid $nav-menu-color;
+}
+
+.chapter__content,
+.nav-menu__chapter--new {
+  color: $nav-menu-item-color;
+}
+
+.nav-menu__subchapter,
+.nav-menu__subchapter--new {
+  color: white;
+}
+
+.nav-menu__chapter--new,
+.nav-menu__subchapter--new {
+  &:hover {
+    color: transparentize($nav-menu-item-actions-hover-color, 0.5);
+    .chapter__title  {
+      color: transparentize($nav-menu-item-actions-hover-color, 0.5);
+    }
+  }
+}
+
+.nav-menu-subchapter--new {
+  @extend .admin-only;
+
+  .title {
+    color: $nav-menu-fade-color;
+  }
+
+  &.selected {
+    background-color: $nav-menu-selected-color;
+  }
+}
+
+.nav-menu__chapter--new .chapter__title,
+.nav-menu__subchapter--new {
+  color: $nav-menu-selected-color;
+}
+
+.nav-action-buttons,
+.nav-menu__add-subchapter {
+  color: $nav-menu-item-actions-color;
+
+  > i:hover {
+    color: $nav-menu-item-actions-hover-color;
+  }
+}
+
+.nav-menu__add-subchapter {
+  &:hover {
+    color: $nav-menu-item-actions-hover-color;
+  }
+}
+
+.nav-menu__chapter--active,
+.nav-menu__subchapter--active,
+.slide-navigator__unit.selected {
+  .nav-action-buttons,
+  .nav-menu__add-subchapter {
+    color: transparentize($nav-menu-item-actions-hover-color, 0.5);
+  }
+  .nav-menu__add-subchapter {
+    &:hover {
+      color: $nav-menu-item-actions-hover-color;
+    }
+  }
+}

@@ -14,6 +14,10 @@
   border-color: $negative-color;
 }
 
+.capture-chart__loading-bar__progress {
+  background-color: $emphasis-color;
+}
+
 .capture-chart__form-button {
   background-color: $emphasis-color;
   &:disabled {

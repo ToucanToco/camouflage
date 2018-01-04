@@ -45,7 +45,7 @@ $kpiNavigatorWidth:192px;
 $scrollbarSize: 0;
 $scroll-cue-height: 150px;
 $slide-height: $viewportHeight - $headerHeight;
-$commentary-height: 110px;
+$commentary-height: 70px;
 $admin-footer-height: 50px;
 $header-report-selector-dropdown-max-height: 50vh;
 
@@ -617,10 +617,10 @@ $font-size-nav-menu-level1-mobile: 22.5px;
 /* SLIDE FONTS */
 .font-slide-commentary {
   @extend .secondary-font;
-  font-size: 17.5px;
+  font-size: 14px;
   font-weight: normal;
   color : #4c4c4c;
-  line-height: 23px;
+  line-height: 18px;
 }
 .font-legend-value {
   @extend .primary-font;

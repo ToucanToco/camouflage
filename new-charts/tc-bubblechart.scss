@@ -1,0 +1,69 @@
+.bubblechart__color-gradient__tick {
+  fill: $grey;
+}
+
+circle.bubblechart__bubbles__main {
+  fill: $neutralColor;
+
+  &.selected{
+    stroke: $emphasis-color !important;
+  }
+  &.drilling{
+    &.drilled{
+      fill: lighten($emphasis-color,30%) !important;
+      stroke: darken($emphasis-color,5%);
+    }
+  }
+}
+
+circle.bubblechart__bubbles__children {
+  fill: $neutralColor;
+
+  &.selected{
+    stroke: $emphasis-color !important;
+  }
+}
+
+circle.bubblechart__bubbles__main__drill-circle {
+  stroke: $emphasis-color;
+  fill: transparent;
+}
+
+
+.bubblechart__axises {
+  .domain, line {
+    stroke: $grey;
+  }
+  .tick {
+    text {
+      fill: #4b4b4b;
+    }
+  }
+  path.domain {
+    stroke: #4b4b4b;
+  }
+}
+
+@each $sentiment, $color in $sentiment-colors {
+  .sentiment-zone[data-sentiment="#{$sentiment}"] {
+    fill: lighten($color, 10);
+    fill-opacity: .5;
+  }
+}
+
+.bubblechart__color-legend {
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+// BUBBLE LABELS
+text.bubblechart__label{
+  &.highlighted {
+    fill: $emphasis-color;
+  }
+}
+
+// CHILDREN LINES
+.bubblechart__lines__children {
+  stroke: $greyLight;
+}

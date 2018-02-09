@@ -1,0 +1,22 @@
+@mixin colorversusBarsByAttr($attr, $value, $color) {
+  .versuschart-category__bar[#{$attr}="#{$value}"] {
+    background-color: $color;
+  }
+}
+
+@mixin colorversusBarsById($id, $color) {
+  @include colorversusBarsByAttr(data-serie-index, $id, $color);
+}
+
+@each $color in $chartColors {
+  $i: index($chartColors, $color) - 1;
+  @include colorversusBarsById($i, $color);
+}
+
+.versuschart-category__unit {
+  color: #a9a9a9;
+}
+
+.versuschart-category__label--main {
+  fill: #898a8c;
+}

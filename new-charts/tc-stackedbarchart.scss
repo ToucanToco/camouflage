@@ -1,0 +1,20 @@
+@mixin colorStackedBarsByAttr($attr, $value, $color) {
+    .stackedbarchart-group[#{$attr}="#{$value}"] {
+      background-color: $color;
+    }
+  }
+  
+  @mixin colorStackedBarsById($id, $color) {
+    @include colorStackedBarsByAttr(data-serie-index, $id, $color);
+  }
+  
+  @each $color in $chartColors {
+    $i: index($chartColors, $color) - 1;
+    @include colorStackedBarsById($i, $color);
+  }
+  
+  @each $sentiment, $color in $sentiment-colors {
+    .stackedbarchart-group[data-sentiment="#{$sentiment}"], .variation-clue[data-sentiment="#{$sentiment}"]{
+      background-color: $color;
+    }
+  }

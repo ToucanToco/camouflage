@@ -1,4 +1,20 @@
 settings-panel {
+  filter, requester {
+    tc-slider {
+      .tc-slider {
+        border-color: white;
+        .rz-bubble {
+          color: white;
+        }
+        .rz-bar, .rz-bar.rz-selection {
+          background: white;
+        }
+      }
+    }
+
+
+  }
+
   background: $main-color;
   .settings-button-container {
     >.settings-button.with-notification::after {

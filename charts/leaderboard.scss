@@ -5,6 +5,11 @@ chart,
   stacked-barchart,
   leaderboard-centered-average {
     .horizontal-barchart {
+      .horizontal-barchart-label {
+        &.highlighted {
+          fill: $emphasis-color;
+        };
+      }
       .bar-0 {
         fill: $colorChart0;
       }

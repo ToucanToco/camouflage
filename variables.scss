@@ -497,6 +497,15 @@ $secondary-font-family: 'Roboto Slab';
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.montserrat-tabular {
+  font-family: 'Montserrat-Tabular';
+  font-feature-settings: 'tnum';
+}
+.montserrat-tabular-bold {
+  font-family: 'Montserrat-Tabular';
+  font-feature-settings: 'tnum';
+  font-weight: bold;
+}
 
 $chart-font-family: $primary-font-family;
 $column-label-font-family: "Georgia";

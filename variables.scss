@@ -421,6 +421,15 @@ $toucan-button-hover-blue:                    #60919f;
   font-weight: bold;
 }
 @font-face {
+  font-family: "Montserrat-Tabular";
+  src: url('../fonts/Montserrat-SemiBold-Tabular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Montserrat-Tabular";
+  src: url('../fonts/Montserrat-Bold-Tabular.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
   font-family: "Helvetica Neue";
   src: url('../fonts/HelveticaNeue.otf') format('opentype');
 }

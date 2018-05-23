@@ -1,7 +1,0 @@
-@each $sentiment, $color in $sentiment-colors {
-  .execsum-highlighted-kpi[data-sentiment="#{$sentiment}"] {
-    .execsum-highlighted-kpi__value {
-      background-color: $color;
-    }
-  }
-}

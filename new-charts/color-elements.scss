@@ -17,4 +17,16 @@
 
   // tc-lines
   @include colorTcLinesSerieByName($name, $color);
+
+  // tc-bubblechart
+  @include colorBubbleChartByName($name, $color);
+
+  // tc-waterfall
+  @include colorWaterfallBarAndValuesByName($name, $color);
+
+  // tc-radarchart
+  @include colorTcRadarchartShapeByName($name, $color);
+
+  // tc-stackedbarchart
+  @include colorStackedBarsByName($name, $color);
 }

@@ -16,6 +16,7 @@
 
 @mixin colorTcLinesSerieByName($name, $color) {
   @include colorTcLinesSerieByAttr(data-serie, $name, $color);
+  @include colorTcLinesSerieByAttr(data-style, $name, $color);
 }
 
 @each $color in $chartColors {

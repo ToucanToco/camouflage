@@ -917,7 +917,7 @@ $slide-height: $viewportHeight - $headerHeight;
 }
 
 @mixin colorSVGElement($color) {
-  &.bar, &.arc, &.area, &.legend-rect, &.node, &.node-part, &.target, .text-serie, &.circle {
+  &.bar, &.arc, &.area, &.legend-rect, &.node, &.node-part, &.target, .text-serie, &.circle, &.circle-main {
     fill: $color;
   }
 

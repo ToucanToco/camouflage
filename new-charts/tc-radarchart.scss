@@ -20,10 +20,10 @@
   .radar-shape[#{$attr}="#{$value}"] {
     stroke: $color;
   }
-    .fill-shape[#{$attr}="#{$value}"] {
-        fill: $color;
-        stroke: none;
-    }
+  .fill-shape[#{$attr}="#{$value}"] {
+    fill: $color;
+    stroke: none;
+  }
 }
 
 @mixin colorTcRadarchartShapeById($id, $color) {
@@ -32,6 +32,7 @@
 
 @mixin colorTcRadarchartShapeByName($name, $color) {
   @include colorTcRadarchartShapeByAttr(data-serie, $name, $color);
+  @include colorTcRadarchartShapeByAttr(data-style, $name, $color);
 }
 
 @each $color in $chartColors {
@@ -50,7 +51,7 @@
   @include colorTcRadarchartMetricsLabelsByAttr(data-serie-index, $id, $color);
 }
 
-@mixin colorTcRadarchartShapeByName($name, $color) {
+@mixin colorTcRadarchartMetricsLabelByName($name, $color) {
   @include colorTcRadarchartMetricsLabelsByAttr(data-serie, $name, $color);
 }
 

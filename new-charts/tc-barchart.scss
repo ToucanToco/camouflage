@@ -12,6 +12,7 @@ $tc-bar-chart-bar-color--selected: $emphasis-color;
 
 @mixin colorTcBarchartBarByName($name, $color) {
   @include colorTcBarchartBarByAttr(data-serie, $name, $color);
+  @include colorTcBarchartBarByAttr(data-style, $name, $color);
 }
 
 @each $color in $chartColors {

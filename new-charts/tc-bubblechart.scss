@@ -1,3 +1,23 @@
+@mixin colorBubbleChartByAttr($attr, $value, $color) {
+  .bubblechart__bubbles__main[#{$attr}="#{$value}"],
+  .circle-main[#{$attr}="#{$value}"] {
+    fill: $color;
+    stroke: $color;
+  }
+  &.selected {
+    .circle-main{
+      fill: $emphasis-color!important;
+      stroke: $emphasis-color!important;
+    }
+  }
+}
+
+@mixin colorBubbleChartByName($name, $color) {
+  @include colorBubbleChartByAttr(data-serie, $name, $color);
+  @include colorBubbleChartByAttr(data-group, $name, $color);
+  @include colorBubbleChartByAttr(data-style, $name, $color);
+}
+
 .bubblechart__color-gradient__tick {
   fill: $grey;
 }

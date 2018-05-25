@@ -16,6 +16,18 @@ $tc-waterfall-boundaries-color: $waterfallInitialColor;
 $tc-waterfall-positive-color: $waterfallPositiveColor;
 $tc-waterfall-negative-color: $waterfallNegativeColor;
 
+@mixin colorWaterfallBarAndValuesByAttr($attr, $value, $color) {
+  .waterfall-chart__bar-group[#{$attr}="#{$value}"] .vertical-bar__bar,
+  .waterfall-chart__bar-group[#{$attr}="#{$value}"] .vertical-bar__bar-value,
+  .waterfall-chart__bar-group[#{$attr}="#{$value}"] .vertical-bar__bar-variation {
+    fill: $color;
+  }
+}
+
+@mixin colorWaterfallBarAndValuesByName($name, $color) {
+  @include colorWaterfallBarAndValuesByAttr(data-label, $name, $color);
+}
+
 @mixin colorWaterfallBarAndValues($color) {
   .vertical-bar__bar-value,
   .vertical-bar__bar-variation,

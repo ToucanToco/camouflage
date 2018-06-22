@@ -85,8 +85,32 @@ settings-panel {
     }
     .share-container {
       .share-actions-container {
-        .share-action{
+        .share-action {
           @extend .bordered-button-inverted;
+          color: white;
+          border-color: white;
+          text-align: center;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          border-width: 2px;
+          font-size: 14px;
+          margin: 10px 0!important;
+
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+      .share-links-container {
+        .share-action {
+          @extend .bordered-button-inverted;
+          @extend .unbordered-button;
+          font-size: 14px;
+          margin: 0;
+
+          &:hover {
+            color: $emphasis-color;
+          }
         }
       }
     }

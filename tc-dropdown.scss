@@ -2,6 +2,7 @@
   background-color: white;
   border: 1px solid #d9d9d9;
   box-shadow: 4px 4px 0px 0px $shadow-color;
+  color: $text-color;
 }
 .select2-results__option--highlighted {
   background-color: $emphasis-color;

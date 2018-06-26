@@ -15,4 +15,8 @@
   .line {
     stroke: nth($chartColors,1);
   }
+
+  .sparkline-selected {
+    background: $text-color;
+  }
 }

@@ -1,11 +1,22 @@
 header {
   background: $backgroundHeaderColor;
   box-shadow: 0px 2px 9px -2px $home-shadow-color;
+
+  .multi-select-search__display {
+    box-shadow: 0 0 0 3px $text-color inset;
+    color: $text-color;
+
+    &:hover {
+      background-color: $text-color;
+      color: #fff;
+    }
+  }
 }
 
 .header {
   background: $backgroundHeaderColor;
   box-shadow: 0px 2px 9px -2px $home-shadow-color;
+  color: $text-color;
   .header-button {
     @extend .bordered-button-discreet;
     margin: 6px;

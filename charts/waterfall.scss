@@ -3,6 +3,11 @@
     stroke: $emphasis-color;
   }
 
+  .waterfall-evolution,
+  .waterfall-label {
+    fill: $text-color;
+  }
+
   [data-serie="positive"] {
     &.bar{
       fill: $waterfallPositiveColor;

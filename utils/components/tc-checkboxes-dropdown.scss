@@ -1,0 +1,38 @@
+.tc-checkboxes-dropdown__action {
+  color: $text-color;
+}
+
+.tc-checkboxes-dropdown__action--primary {
+  box-shadow: 0 0 0 3px $text-color inset;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $text-color;
+    box-shadow: none;
+    color: #fff;
+  }
+}
+
+.tc-checkboxes-dropdown__checkbox {
+  &::before {
+    box-shadow: 0 0 0 2px $text-color inset;
+  }
+
+  &::after {
+    box-shadow: 3px -3px 0 0 $text-color inset;
+  }
+}
+
+.tc-checkboxes-dropdown__field {
+  box-shadow: 0 0 0 2px $text-color inset;
+  color: $text-color;
+}
+
+.tc-checkboxes-dropdown__shortcut {
+  + .tc-checkboxes-dropdown__shortcut {
+    &::before {
+      border-left-color: $text-color;
+    }
+  }
+}

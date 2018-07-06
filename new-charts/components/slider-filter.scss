@@ -1,0 +1,15 @@
+.tc-slider-vue {
+  border-color: $controllerColor;
+}
+
+.tc-slider-vue__tooltip {
+  color: $controllerColor;
+}
+
+.tc-slider-vue__limit {
+  color: $controllerColor;
+}
+
+.tc-slider-vue__input::-webkit-slider-runnable-track {
+  background: $controllerColor;
+}

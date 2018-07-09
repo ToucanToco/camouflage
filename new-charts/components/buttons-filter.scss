@@ -1,0 +1,22 @@
+.tc-controller-buttons__button {
+  color: $controllerColor;
+  background-color: #fff;
+  border-top: 1px solid $controllerColor;
+  border-bottom: 1px solid $controllerColor;
+  border-right: 1px solid $controllerColor;
+
+  &:first-child {
+    border-left: 1px solid $controllerColor;
+  }
+
+
+  @include respond-to(phone) {
+    border-color: $button-inactive-color;
+    color: $button-inactive-color;
+  }
+
+  &.active {
+    background-color: $controllerColor;
+    color: #fff;
+  }
+}

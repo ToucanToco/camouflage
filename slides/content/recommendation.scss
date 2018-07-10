@@ -1,16 +1,14 @@
-#recommendation {
-  .recommendation-container {
-    .recommendation-content {
-      background: $recommendation-color;
+.recommendation-container {
+  .recommendation-content {
+    background-color: $recommendation-color;
+  }
+  .story-recommendation__flag,
+  .recommendation-notifier {
+    .content {
+      background-color: $recommendation-color;
     }
-    .recommendation-notifier {
-      .content {
-        background-color: $recommendation-color;
-      }
-      .flag {
-        background: $recommendation-color;
-
-      }
+    .flag {
+      background-color: $recommendation-color;
     }
   }
 }

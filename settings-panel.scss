@@ -108,7 +108,7 @@ settings-panel {
           font-size: 14px;
           margin: 0;
 
-          &:hover {
+          &:not(.disabled):hover {
             color: $emphasis-color;
           }
         }

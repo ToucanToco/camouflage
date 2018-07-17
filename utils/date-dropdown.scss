@@ -1,3 +1,10 @@
-.date-dropdown .multi-select-search__display {
-  background-color: $emphasis-color;
+.header__requester {
+  .multi-select-search__display {
+    box-shadow: 0 0 0 3px #fff inset;
+    color: #fff;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
 }

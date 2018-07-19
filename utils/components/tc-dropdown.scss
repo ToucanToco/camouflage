@@ -1,22 +1,16 @@
-.tc-dropdown__display {
+.tc-dropdown__display--default {
+  box-shadow: 0 0 0 3px $text-color inset;
   color: $text-color;
 }
 
-.tc-dropdown__display--default {
-  box-shadow: 0 0 0 3px $text-color inset;
-}
-
 .tc-dropdown__display--filter-dropdown {
-  box-shadow: 0 -1px 0 0 $shadow-color inset;
-
-  @include respond-to(phone) {
-    box-shadow: 0 0 0 1px $shadow-color inset;
-  }
+  box-shadow: 0 0 0 1px $shadow-color inset;
+  color: $text-color;
 }
 
 .tc-dropdown__display--reversed {
   box-shadow: 0 0 0 3px #fff inset;
-  color: $text-color;
+  color: #fff;
 }
 
 .tc-dropdown__dropdown--bottom {
@@ -59,4 +53,11 @@
 
 .tc-dropdown__tag {
   background-color: $search-selected-bg-color;
+}
+
+// Media queries
+@media (min-width: 768px) {
+  .tc-dropdown__display--filter-dropdown {
+    box-shadow: 0 -1px 0 0 $shadow-color inset;
+  }
 }

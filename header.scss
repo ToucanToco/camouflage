@@ -26,12 +26,6 @@
   top: -8px;
 }
 
-report-selector-button {
-  .select2-container--header {
-    @extend .bordered-button-discreet;
-  }
-}
-
 .header__requester {
   @media screen and (min-width: $screen-phone-max+1) {
     //We can't @extend inside a @media or @include

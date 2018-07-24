@@ -1,4 +1,4 @@
-.header__requester, .date-dropdown {
+.header__requester {
   .multi-select-search__display {
     box-shadow: 0 0 0 3px #fff inset;
     color: #fff;
@@ -6,5 +6,13 @@
     &:hover {
       background-color: transparent;
     }
+  }
+}
+
+.date-dropdown {
+  .multi-select-search__display {
+    box-shadow: none;
+    background-color: $emphasis-color;
+    color: #fff;
   }
 }

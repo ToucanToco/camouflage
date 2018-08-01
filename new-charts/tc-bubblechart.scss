@@ -87,3 +87,23 @@ text.bubblechart__label{
 .bubblechart__lines__children {
   stroke: $greyLight;
 }
+
+// BUBBLES
+@mixin colorBubblesByAttr($attr, $value, $color) {
+  circle.bubblechart__bubbles[#{$attr}="#{$value}"] {
+    fill: $color !important;
+  }
+  .metric__color__rect[#{$attr}="#{$value}"],
+  .tc-legend-ordinal__serie[#{$attr}="#{$value}"] .tc-legend-ordinal__serie-color {
+    background-color: $color;
+  }
+}
+
+@mixin colorBubblesById($id, $color) {
+  @include colorBubblesByAttr(data-serie-index, $id, $color);
+}
+
+@each $color in $chartColors {
+  $i: index($chartColors, $color) - 1;
+  @include colorBubblesById($i, $color);
+}

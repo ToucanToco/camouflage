@@ -103,12 +103,6 @@ text.bubblechart__label{
 }
 
 
-@include colorBubblesByAttr(data-serie, "Confirmée", #82BE2A!important);
-@include colorBubblesByAttr(data-serie, "A confirmer", orange!important);
-@include colorBubblesByAttr(data-serie, "Terminée", grey!important);
-@include colorBubblesByAttr(data-serie, "Vide", red!important);
-
-
 @mixin colorBubbleChartByName($name, $color) {
   @include colorBubbleChartByAttr(data-serie, $name, $color);
   @include colorBubbleChartByAttr(data-group, $name, $color);

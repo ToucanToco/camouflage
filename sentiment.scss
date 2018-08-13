@@ -1,11 +1,10 @@
-
-chart{
+.tc-story__chart,
+chart {
   @each $name, $color in $sentimentColors {
     [data-sentiment="#{$name}"] {
       @include colorSVGElement($color);
     }
   }
-
 }
 
 .kpi{

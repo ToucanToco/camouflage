@@ -12,12 +12,6 @@
   }
 }
 
-@mixin colorBubbleChartByName($name, $color) {
-  @include colorBubbleChartByAttr(data-serie, $name, $color);
-  @include colorBubbleChartByAttr(data-group, $name, $color);
-  @include colorBubbleChartByAttr(data-style, $name, $color);
-}
-
 .bubblechart__color-gradient__tick {
   fill: $grey;
 }
@@ -86,4 +80,35 @@ text.bubblechart__label{
 // CHILDREN LINES
 .bubblechart__lines__children {
   stroke: $greyLight;
+}
+
+// BUBBLES
+@mixin colorBubblesByAttr($attr, $value, $color) {
+  circle.bubblechart__bubbles[#{$attr}="#{$value}"] {
+    fill: $color;
+  }
+  .metric__color__rect[#{$attr}="#{$value}"],
+  .tc-legend-ordinal__serie[#{$attr}="#{$value}"] .tc-legend-ordinal__serie-color {
+    background-color: $color;
+  }
+}
+
+@mixin colorBubblesById($id, $color) {
+  @include colorBubblesByAttr(data-serie-index, $id, $color);
+}
+
+@each $color in $chartColors {
+  $i: index($chartColors, $color) - 1;
+  @include colorBubblesById($i, $color);
+}
+
+
+@mixin colorBubbleChartByName($name, $color) {
+  @include colorBubbleChartByAttr(data-serie, $name, $color);
+  @include colorBubbleChartByAttr(data-group, $name, $color);
+  @include colorBubbleChartByAttr(data-style, $name, $color);
+  // new bubble
+  @include colorBubblesByAttr(data-serie, $name, $color);
+  @include colorBubblesByAttr(data-group, $name, $color);
+  @include colorBubblesByAttr(data-style, $name, $color);
 }

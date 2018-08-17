@@ -71,6 +71,11 @@ nav-menu {
   }
 }
 
+.chapter__edit-title,
+.subchapter__edit-title {
+  border-bottom: 1px solid darken($nav-menu-bg-color, 30%);
+}
+
 .nav-menu__chapter--new .chapter__title,
 .nav-menu__subchapter--new {
   color: $nav-menu-selected-color;

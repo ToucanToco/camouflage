@@ -87,9 +87,11 @@ text.bubblechart__label{
   circle.bubblechart__bubbles[#{$attr}="#{$value}"] {
     fill: $color;
   }
-  .metric__color__rect[#{$attr}="#{$value}"],
-  .tc-legend-ordinal__serie[#{$attr}="#{$value}"] .tc-legend-ordinal__serie-color {
-    background-color: $color;
+  .bubblechart__legend {
+    .metric__color__rect[#{$attr}="#{$value}"],
+    .tc-legend-ordinal__serie[#{$attr}="#{$value}"] .tc-legend-ordinal__serie-color {
+      background-color: $color;
+    }
   }
 }
 

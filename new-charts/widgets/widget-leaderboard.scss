@@ -1,11 +1,12 @@
 @each $sentiment, $color in $sentiment-colors {
- 
-  rect:not(.sentiment-zones)[data-sentiment="#{$sentiment}"] {
-    fill: $color !important;
+  .widget-type-leaderboard {
+    rect:not(.sentiment-zones)[data-sentiment="#{$sentiment}"] {
+      fill: $color !important;
+    }
+
+    stop[data-sentiment="#{$sentiment}"] {
+      stop-color: $color;
+    }
   }
-  
-  stop[data-sentiment="#{$sentiment}"] {
-    stop-color: $color;
-  }
-  
+
 }

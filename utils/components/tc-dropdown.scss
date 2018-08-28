@@ -8,6 +8,12 @@
   color: $text-color;
 }
 
+.dashboard-report-requester--settings-panel {
+  .tc-dropdown__display--filter-dropdown {
+    color: white;
+  }
+}
+
 .tc-dropdown__display--search {
   box-shadow: 0 0 0 3px #fff inset;
   color: #fff;

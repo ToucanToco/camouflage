@@ -16,7 +16,8 @@
   border-bottom: 1px solid $text-color;
 }
 
-.map-zone--selected {
+.map-zone--selected,
+.map-chart__zone--selected {
   stroke: $emphasis-color;
   stroke-width: 2.5px;
 }

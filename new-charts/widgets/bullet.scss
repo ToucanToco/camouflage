@@ -3,3 +3,11 @@
     background-color: transparent;
   }
 }
+
+@each $sentiment, $color in $sentiment-colors {
+  .tc-widget--bullet {
+    rect.tc-bullet.tc-horizontal-bar-with-bullet__bullet[data-sentiment="#{$sentiment}"] {
+      fill: $color;
+    }
+  }
+}

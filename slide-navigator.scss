@@ -27,3 +27,9 @@
     color: white;
   }
 }
+
+.slide-navigator__edit-title-container {
+  &:before {
+    color: darken($nav-menu-bg-color, 30%);
+  }
+}

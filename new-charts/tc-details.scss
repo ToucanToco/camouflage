@@ -11,3 +11,9 @@
 .tc-details__color {
   margin-right: 5px;
 }
+
+.tc-detals--horizontal {
+  .tc-details__meta {
+    border-right-color: $text-color;
+  }
+}

@@ -1,3 +1,7 @@
+.grid-view-highlighted-kpi__value {
+  background-color: $neutral-color;
+}
+
 @each $sentiment, $color in $sentiment-colors {
   .grid-view-highlighted-kpi[data-sentiment="#{$sentiment}"] {
     .grid-view-highlighted-kpi__value {

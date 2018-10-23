@@ -36,11 +36,3 @@
     background-color: $main-color;
   }
 }
-
-.staging-banner {
-  border-bottom-color: $toucan-button-hover-blue;
-
-  &::after {
-    border-color: darken($toucan-button-hover-blue, 25%) transparent transparent transparent;
-  }
-}

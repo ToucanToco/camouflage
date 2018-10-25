@@ -1,1 +1,8 @@
+.small-app-home__logout {
+  background: $main-color;
+  &:hover, &:focus {
+    background: $emphasis-color;
+  }
+}
+
 @import "widgets/widget-value";

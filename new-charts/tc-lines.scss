@@ -23,6 +23,3 @@
   $i: index($chartColors, $color) - 1;
   @include colorTcLinesSerieById($i, $color);
 }
-
-.tc-chart-line__path {}
-.tc-chart-line__point {}

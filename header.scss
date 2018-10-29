@@ -14,16 +14,6 @@
   background: $backgroundHeaderColor;
   box-shadow: 0px 2px 9px -2px $home-shadow-color;
   color: $text-color;
-  .header-button {
-    @extend .bordered-button-discreet;
-    margin: 6px;
-  }
-}
-
-.report-selector-button {
-  @extend .bordered-button-discreet;
-  cursor: default;
-  top: -8px;
 }
 
 .header__requester {

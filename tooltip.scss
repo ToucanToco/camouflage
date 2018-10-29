@@ -21,15 +21,3 @@ md-tooltip {
     }
   }
 }
-
-.small-app-tooltip-modal {
-  @extend .small-app-tooltip;
-  z-index: 10000;
-}
-
-.small-app-tooltip-long {
-  @extend .small-app-tooltip;
-  text-align: left;
-  width: 300px;
-  text-transform: none;
-}

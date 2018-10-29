@@ -2,9 +2,6 @@ report-selector {
   .report-selector-wrapper {
     $report-selector-main-color-overlay: transparentize($report-selector-main-color, $report-selector-overlay-alpha);
     $report-selector-bg-overlay: linear-gradient(to bottom, $report-selector-main-color-overlay, $report-selector-main-color-overlay);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     background-color: $report-selector-bg-overlay;
 
     .input-report-wrapper {
@@ -35,18 +32,9 @@ report-selector {
             i {
               color: $secondary-emphasis-color;
             }
-            .report-button {
-              @extend .bordered-button-discreet-inverted;
-              @extend .bordered-button-medium;
-            }
           }
         }
       }
-    }
-
-    .report-button {
-      @extend .bordered-button-inverted;
-      @extend .bordered-button-medium;
     }
   }
 }

@@ -67,6 +67,14 @@
   .mobile-legend {
     background-color: $mobileLegendBackgroundColor;
 
+    .mobile-commentary {
+      .slide-commentary-container {
+        padding: $mobileLegendPadding;
+        height: auto;
+        letter-spacing: 0px;
+      }
+    }
+
     .mobile-legend-handle {
       color: $faded-text;
     }

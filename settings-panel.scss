@@ -86,6 +86,7 @@ settings-panel {
     .share-container {
       .share-actions-container {
         .share-action {
+          @extend .bordered-button-inverted;
           &:hover {
             color: $main-color;
           }
@@ -93,6 +94,8 @@ settings-panel {
       }
       .share-links-container {
         .share-action {
+          @extend .bordered-button-inverted;
+          @extend .unbordered-button;
           &:not(.disabled):hover {
             color: $emphasis-color;
           }

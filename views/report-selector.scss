@@ -32,9 +32,18 @@ report-selector {
             i {
               color: $secondary-emphasis-color;
             }
+
+            .report-button {
+              @extend .bordered-button-discreet-inverted;
+              @extend .bordered-button-medium;
+            }
           }
         }
       }
+    }
+    .report-button {
+      @extend .bordered-button-inverted;
+      @extend .bordered-button-medium;
     }
   }
 }

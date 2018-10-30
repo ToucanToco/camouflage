@@ -1,1 +1,9 @@
+.small-app-home__logout {
+  background: $main-color;
+  &:hover, &:focus {
+    background: $emphasis-color;
+  }
+}
+
+@import "send-email-button";
 @import "widgets/widget-value";

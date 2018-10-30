@@ -1,0 +1,23 @@
+.document-rendering--small-app-home {
+  body,
+  ui-view,
+  .main-small-app-wrapper,
+  .small-app-workspace,
+  small-app,
+  .screen-container,
+  .screen-container > .main-space-wrapper,
+  .report-homes-wrapper,
+  report-home,
+  .execsum,
+  .home-report-wrapper,
+  .small-app-home,
+  .small-app-workspace small-app,
+  .screen-container,
+  .small-app-home__tiles,
+  .small-app-home__tiles .category,
+  .small-app-home__content,
+  new-dashboard,
+  .dashboard-report__background-image{
+    background-color: $main-color;
+  }
+}

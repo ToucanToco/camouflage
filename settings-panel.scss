@@ -87,6 +87,8 @@ settings-panel {
       .share-actions-container {
         .share-action {
           @extend .bordered-button-inverted;
+          color: white;
+          border-color: white;
           &:hover {
             color: $main-color;
           }

@@ -16,7 +16,6 @@
   color: $text-color;
   .header-button {
     @extend .bordered-button-discreet;
-    margin: 6px;
   }
 }
 

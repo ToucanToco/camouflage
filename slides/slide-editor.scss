@@ -15,9 +15,7 @@ slide-editor {
       background-color: $slide-editor-even-bg-color;
     }
   }
-  .create-screen .button-wrapper button {
-    @extend .bordered-button-discreet;
-  }
+
   .sample-datasets {
     color: $greyMissing;
   }

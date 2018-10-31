@@ -1,17 +1,3 @@
-// $tc-bar-chart-bar-color--selected: $emphasis-color;
-//
-// .bar-chart__chart-container .bar-chart__bar-group {
-//   @each $color in $chartColors {
-//     $i: index($chartColors, $color) - 1;
-//     &[data-serie-index="#{$i}"] .vertical-bar__bar {
-//       fill: $color;
-//     }
-//   }
-// }
-//
-// .bar-chart__chart-container .x-groups--selected .bar-group .vertical-bar__bar {
-//   fill: $tc-bar-chart-bar-color--selected;
-// }
 $tc-waterfall-boundaries-color: $waterfallInitialColor;
 $tc-waterfall-positive-color: $waterfallPositiveColor;
 $tc-waterfall-negative-color: $waterfallNegativeColor;
@@ -38,11 +24,6 @@ $tc-waterfall-negative-color: $waterfallNegativeColor;
 
 .waterfall-chart__bar-group--boundary {
   @include colorWaterfallBarAndValues($tc-waterfall-boundaries-color);
-
-  .vertical-bar__bar-label {
-    text-transform: uppercase;
-    font-weight: bold;
-  }
 
   .vertical-bar__bar-label,
   .vertical-bar__bar-meta {

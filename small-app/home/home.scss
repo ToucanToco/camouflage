@@ -1,3 +1,28 @@
+.small-app-home__tile:hover,
+.small-app-home__tile:focus,
+.small-app-home__tile:active {
+  &.linked::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 5px solid $emphasis-color;
+    z-index: 1;
+  }
+
+  &.linked {
+    .tile-content__name {
+      color: $emphasis-color;
+    }
+
+    .link {
+      background-color: $emphasis-color;
+    }
+  }
+}
+
 .small-app-home__logout {
   background: $main-color;
   &:hover, &:focus {

@@ -1,13 +1,13 @@
 @mixin bordered-button-creator($color: $main-color, $bg-color: white, $hover-color: $bg-color) {
   @extend .primary-font;
-  padding: 5px 15px;
+  background: $bg-color;
   border: 3px solid $color;
+  color: $color;
+  cursor: pointer;
   font-size: 15px;
   margin: 10px;
-  cursor: pointer;
+  padding: 5px 15px;
   text-decoration: none;
-  background: $bg-color;
-  color: $color;
 
   &:not(.disabled):hover {
     background-color: $color;
@@ -43,10 +43,10 @@
   }
 
   &.disabled {
-    cursor: not-allowed;
     border-color: lighten($color, 10);
     background: lighten($bg-color, 10);
     color: lighten($color, 10);
+    cursor: not-allowed;
   }
 }
 
@@ -66,30 +66,6 @@
   @include bordered-button-creator($text-color, transparent, $main-color);
 }
 
-.bordered-button-faded {
-  @include bordered-button-creator($main-color-fade);
-}
-
 .bordered-button-emphasis {
   @include bordered-button-creator($emphasis-color);
-}
-
-.header-button--underline {
-  @extend .montserrat-bold;
-  border-bottom: solid 3px $text-color;
-  padding: 7px 0px;
-  margin: 10px;
-  cursor: pointer;
-  font-size: 13px;
-  color: $text-color;
-}
-
-.rotated-90 {
-  @include rotate(-90deg);
-}
-
-.icon-caret-bold-left {
-  @extend .icon-caret-bold-right;
-  display: inline-block;
-  @include rotate(-180deg);
 }

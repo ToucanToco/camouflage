@@ -46,14 +46,11 @@ $scrollbarSize: 0;
 $scroll-cue-height: 150px;
 $slide-height: $viewportHeight - $headerHeight;
 $commentary-height: 70px;
-$admin-footer-height: 50px;
-$header-report-selector-dropdown-max-height: 50vh;
 
 /******* RESPONSIVENESS ****/
 $headerHeight-mobile: 60px;
 $offsetMenu-mobile: 310px;
 $kpiNavigatorHeight-mobile: 45px;
-$knWidth-mobile: 130px;
 $scroll-cue-height-mobile: 50px;
 // Mobile legend/pane-details
 $mobileLegendPositionTop: 15px;
@@ -146,10 +143,8 @@ $charts-font-size-mobile: 13px;
 $splash-color: black;
 
 
-$metaColor: #2a5c74;
 
 $nav-menuColor1: $main-color;
-$nav-menuColor1_2: $main-color-fade;
 
 
 $red: #ec1b2f;
@@ -207,11 +202,6 @@ $colorChart4: $chart-color-4;
 $scale-colors: $scale-color-0 $scale-color-1 $scale-color-2 $scale-color-3 $scale-color-4;
 $scaleColors: $scale-colors;
 
-$scaleColor0: $scale-color-0;
-$scaleColor1: $scale-color-1;
-$scaleColor2: $scale-color-2;
-$scaleColor3: $scale-color-3;
-$scaleColor4: $scale-color-4;
 
 $barStackColor0: $colorChart0;
 $barStackColor1: $colorChart1;
@@ -247,7 +237,6 @@ $execsumBgColor: $main-color;
 $transparentize-execsum-bg-overlay: 0.3; // 0: opaque overlay, 1: no overlay
 $execsumArrowColor: white;
 $search-selected-bg-color: transparentize($execsumBgColor, $transparentize-execsum-bg-overlay);
-$cartoSelectedColor: $emphasis-color;
 
 $sparkline-fill: $main-color-fade;
 $sparkline-selection-stroke: $main-color;
@@ -263,16 +252,11 @@ $backgroundHeaderColor: $home-secondary-color;
 $nav-menu-color:                              white !default;
 $nav-menu-bg-color:                           $main-color-fade !default;
 $nav-menu-fade-color:                         $main-color !default;
-$nav-menu-fade-hover-color:                   transparentize($nav-menu-color, 0.5) !default;
 $nav-menu-selected-color:                     $main-color !default;
 // Dimensions
 $nav-menu-padding-left:                       30px;
 $nav-menu-padding-left-mobile:                20px;
 $nav-menu-border-width:                       2px !default;
-$nav-menu-icon-home-width:                    25 + 2 *  $nav-menu-padding-left;
-$nav-menu-button-padding:                     2em;
-$nav-menu-declinaison-width: 165px;
-$nav-menu-date-width: 125px;
 
 // NAV-MENU-ITEM
 // Colors
@@ -295,22 +279,12 @@ $nav-menu-item-actions-size:                  20px !default;
 // KPINAVIGATOR
 $knHeight:                                    122px;
 $knHeightLarge:                               212px;
-$knPaddingLeft:                               20px;
-$knPaddingRight:                              20px + $scrollbarSize;
-$knPaddingBottom:                             30px ;
-$knPaddingTop:                                32px;
 $knPaddingVertical:                           20px;
 $knPaddingHorizontal:                         32px;
-$knTitleHeight:                               45px;
 
-$knPaddingVertical-mobile:                    13px;
-$knPaddingHorizontal-mobile:                  13px;
-
-$kpiValueWidth:                               90px;
 
 /*** STORE ***/
 $new-small-app-primary-color:                 $main-color-dark !default;
-$new-small-app-secondary-color:               darken($main-color-fade, 10) !default;
 
 // CHARTS
 // BAR/BARLINE
@@ -356,16 +330,11 @@ $notification-padding-vertical:               $notification-padding-horizontal /
 /*** UTILS ***/
 $dialog-min-height:                           250px !default;
 $dialog-width:                                350px !default;
-$dialog-bg-color:                             $greyLight !default;
 
 /*** Report-selector ***/
 $report-selector-main-color:                  $main-color !default;
-$report-selector-secondary-color:             $main-color-fade !default;
 $report-selector-text-color:                  transparentize(white, 0.3) !default;
-$report-selector-half-padding:                20px !default;
 $report-selector-overlay-alpha:               .5 !default;
-$report-selector-bg-image-desktop:            "tctc-bg-desktop.png" !default;
-$report-selector-bg-image-phone:              "tctc-bg-phone.png" !default;
 /*** dashboard-report ***/
 $dashboard-report-block-height:               190px;
 $dashboard-report-min-block-height:           150px;
@@ -377,12 +346,10 @@ $button-inactive-color:                       $inactive-color !default;
 $bottom-right-filter-bottom:                  2em;
 $bottom-right-filter-right:                   $paddingRightSlide + 20px;
 /*** HEADER ***/
-$headerPaddingTop:                            10px;
 $paddingHeader:                               8px;
 $menu-button-width:                           50px;
 /*** LOGIN ***/
 $login-input-height:                          60px;
-$login-submit-button-margin-top:              90px;
 /*** Settigns panel ***/
 $settings-panel-width:                        350px !default;
 $mobile-settings-panel-width:                 300px !default;
@@ -390,7 +357,6 @@ $settings-panel-tab-heading-bg:               $main-color-dark !default;
 $settings-panel-tab-inactive-color:           darken($settings-panel-tab-heading-bg, 7%) !default;
 $settings-panel-tab-inactive-text-color:      darken($settings-panel-tab-heading-bg, 15%) !default;
 $settings-panel-tab-size:                     60px !default;
-$settings-button-size:                        2em;
 $settings-panel-tab-horizontal-padding:       10px;
 /*** SPARKLINES ***/
 $sparkline-fill:                              $main-color-fade !default;

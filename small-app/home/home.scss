@@ -5,5 +5,9 @@
   }
 }
 
+.home-data-wall-button {
+  @extend .bordered-button-inverted;
+}
+
 @import "send-email-button";
 @import "widgets/widget-value";

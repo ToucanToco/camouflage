@@ -89,13 +89,6 @@ settings-panel {
           @extend .bordered-button-inverted;
           color: white;
           border-color: white;
-          text-align: center;
-          padding-top: 10px;
-          padding-bottom: 10px;
-          border-width: 2px;
-          font-size: 14px;
-          margin: 10px 0!important;
-
           &:hover {
             color: $main-color;
           }
@@ -105,9 +98,6 @@ settings-panel {
         .share-action {
           @extend .bordered-button-inverted;
           @extend .unbordered-button;
-          font-size: 14px;
-          margin: 0;
-
           &:not(.disabled):hover {
             color: $emphasis-color;
           }

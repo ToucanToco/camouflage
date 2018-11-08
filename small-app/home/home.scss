@@ -5,6 +5,14 @@
   }
 }
 
+.small-app-home__date-requester .tc-dropdown__display {
+  background-color: $emphasis-color;
+}
+
+.small-app-home__date-requester .tc-dropdown__display--filter-dropdown {
+  color: white;
+}
+
 .home-data-wall-button {
   @extend .bordered-button-inverted;
 }

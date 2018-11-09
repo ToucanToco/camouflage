@@ -1,14 +1,7 @@
 .small-app-home__tile--linked:hover::before,
 .small-app-home__tile--linked:focus::before,
 .small-app-home__tile--linked:active::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border: 5px solid $emphasis-color;
-  z-index: 1;
+  border-color: $emphasis-color;
 }
 
 .small-app-home__tile--linked:hover .tile-content__name,

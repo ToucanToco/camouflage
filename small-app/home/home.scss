@@ -1,3 +1,21 @@
+.small-app-home__tile--linked:hover::before,
+.small-app-home__tile--linked:focus::before,
+.small-app-home__tile--linked:active::before {
+  border-color: $emphasis-color;
+}
+
+.small-app-home__tile--linked:hover .tile-content__name,
+.small-app-home__tile--linked:focus .tile-content__name,
+.small-app-home__tile--linked:active .tile-content__name {
+  color: $emphasis-color;
+}
+
+.small-app-home__tile--linked:hover .link,
+.small-app-home__tile--linked:focus .link,
+.small-app-home__tile--linked:active .link {
+  background-color: $emphasis-color;
+}
+
 .small-app-home__logout {
   background: $main-color;
 }

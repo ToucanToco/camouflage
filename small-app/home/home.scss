@@ -1,8 +1,17 @@
 .small-app-home__logout {
   background: $main-color;
-  &:hover, &:focus {
-    background: $emphasis-color;
-  }
+}
+.small-app-home__logout:hover,
+.small-app-home__logout:focus {
+  background: $emphasis-color;
+}
+
+.small-app-home__date-requester .tc-dropdown__display {
+  background-color: $emphasis-color;
+}
+
+.small-app-home__date-requester .tc-dropdown__display--filter-dropdown {
+  color: white;
 }
 
 .home-data-wall-button {

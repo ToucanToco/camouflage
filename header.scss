@@ -25,6 +25,17 @@
   top: -8px;
 }
 
+.header__requester {
+  @media screen and (min-width: $screen-phone-max+1) {
+    //We can't @extend inside a @media or @include
+    @include bordered-button-creator($text-color);
+  }
+
+  @include respond-to(phone) {
+    background-color: $main-color;
+  }
+}
+
 .header__date-requester .tc-dropdown__display--filter-dropdown {
   box-shadow: none;
 }

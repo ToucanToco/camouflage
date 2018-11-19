@@ -36,34 +36,8 @@
   }
 }
 
-.header__date-requester .tc-dropdown__display--filter-dropdown {
-  box-shadow: none;
-}
-
 .header__report-requester .tc-dropdown__display--search {
   box-shadow: none;
-}
-
-.header__date-requester, .header__report-requester {
-  @extend .primary-font;
-  border: 3px solid $text-color;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-.header__date-requester .tc-dropdown__display--filter-dropdown {
-  color: $text-color;
-  background: white;
-
-  &:hover {
-    color: white;
-    background-color: $text-color;
-  }
-
-  @include respond-to(phone) {
-    background-color: $main-color;
-  }
-
 }
 
 .header__report-requester .tc-dropdown__display--search {
@@ -73,9 +47,5 @@
   &:hover {
     color: white;
     background-color: $text-color;
-  }
-
-  @include respond-to(phone) {
-    background-color: $main-color;
   }
 }

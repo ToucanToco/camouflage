@@ -1,0 +1,34 @@
+.home-tile--clickable,
+.home-tile--wholly-clickable {
+  &:active,
+  &:focus,
+  &:hover {
+    .tile-content__link {
+      background-color: $emphasis-color;
+      border: 2px solid transparentize($text-color, .7);
+      color: #fff;
+    }
+
+    .tile-content__name {
+      color: $emphasis-color;
+    }
+  }
+}
+
+.home-tile__border {
+  background-color: $emphasis-color;
+}
+
+.home-tile__content {
+  color: $text-color;
+}
+
+.tile-content__link {
+  border: 2px solid transparentize($text-color, .7); //camouflage
+}
+
+.tile__edit-overlay {
+  .fa.fa-cogs {
+    color: $emphasis-color;
+  }
+}

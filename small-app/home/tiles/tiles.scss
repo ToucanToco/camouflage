@@ -5,7 +5,7 @@
   &:hover {
     .tile-content__link {
       background-color: $emphasis-color;
-      border: 2px solid transparentize($text-color, .7);
+      border-color: transparentize($text-color, .7);
       color: #fff;
     }
 
@@ -24,7 +24,7 @@
 }
 
 .tile-content__link {
-  border: 2px solid transparentize($text-color, .7); //camouflage
+  border-color: transparentize($text-color, .7);
 }
 
 .tile__edit-overlay {

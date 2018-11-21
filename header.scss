@@ -35,3 +35,17 @@
     background-color: $main-color;
   }
 }
+
+.header__report-requester .tc-dropdown__display--search {
+  box-shadow: none;
+}
+
+.header__report-requester .tc-dropdown__display--search {
+  color: $text-color;
+  background: white;
+
+  &:hover {
+    color: white;
+    background-color: $text-color;
+  }
+}

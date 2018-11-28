@@ -270,6 +270,9 @@ a {
 
 @import 'brand-editor';
 
+@import 'studio/slide-editor/dataset-viewer/dataset-viewer-cell';
+@import 'studio/slide-editor/sentiment-editor/sentiment-selector';
+
 @import 'utils/components/tc-checkboxes-dropdown';
 @import 'utils/components/tc-dropdown';
 @import 'utils/dialog';

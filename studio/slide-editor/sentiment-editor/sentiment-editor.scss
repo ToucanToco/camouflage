@@ -1,6 +1,6 @@
 @each $name, $color in $sentimentColors {
-  .sentiment-editor__bar--#{$name},
-  .sentiment-editor__bar-label--#{$name} {
+  .sentiment-editor__bar.sentiment-editor__bar--#{$name},
+  .sentiment-editor__bar-label.sentiment-editor__bar-label--#{$name} {
     background-color: $color;
   }
 }

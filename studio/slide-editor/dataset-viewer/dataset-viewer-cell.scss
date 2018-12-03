@@ -1,0 +1,7 @@
+.dataset-viewer__cell {
+  @each $name, $color in $sentimentColors {
+    &.dataset-viewer__cell--formatted-#{$name} {
+      color: $color;
+    }
+  }
+}

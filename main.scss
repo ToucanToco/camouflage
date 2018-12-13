@@ -74,6 +74,10 @@ a {
   transition-delay: 0.001s;
 }
 
+.small-app--presentation-mode {
+  border: 7px solid $emphasis-color;
+}
+
 .offsetright{
   transform: translate3d($offsetMenu,0,0);
 

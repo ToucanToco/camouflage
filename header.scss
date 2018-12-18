@@ -1,12 +1,11 @@
-.search-report-container {
-  .multi-select-search__display {
-    box-shadow: 0 0 0 3px $text-color inset;
-    color: $text-color;
+.search-report-container .multi-select-search__display,
+.header__app-report-requester .tc-dropdown__display--search {
+  box-shadow: 0 0 0 3px $text-color inset;
+  color: $text-color;
 
-    &:hover {
-      background-color: $text-color;
-      color: #fff;
-    }
+  &:hover {
+    background-color: $text-color;
+    color: #fff;
   }
 }
 
@@ -33,19 +32,5 @@
 
   @include respond-to(phone) {
     background-color: $main-color;
-  }
-}
-
-.header__report-requester .tc-dropdown__display--search {
-  box-shadow: none;
-}
-
-.header__report-requester .tc-dropdown__display--search {
-  color: $text-color;
-  background: white;
-
-  &:hover {
-    color: white;
-    background-color: $text-color;
   }
 }

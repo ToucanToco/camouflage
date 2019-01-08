@@ -2,4 +2,13 @@
   background-color: $backgroundSlideCommentary;
 }
 
+.tc-story-links__text {
+  border-color: $main-color;
+  color: $main-color;
+  &:hover {
+    background-color: $main-color;
+    color: #fff;
+  }
+}
+
 @import "content/recommendation";

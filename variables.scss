@@ -379,50 +379,50 @@ $toucan-button-hover-blue:                    #60919f;
 /**** FONTS ******/
 @font-face {
   font-family: "Montserrat";
-  src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+  src: url('../assets/fonts/Montserrat-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: "Montserrat";
-  src: url('fonts/Montserrat-Bold.ttf') format('truetype');
+  src: url('../assets/fonts/Montserrat-Bold.ttf') format('truetype');
   font-weight: bold;
 }
 @font-face {
   font-family: "Montserrat-Tabular";
-  src: url('fonts/Montserrat-SemiBold-Tabular.ttf') format('truetype');
+  src: url('../assets/fonts/Montserrat-SemiBold-Tabular.ttf') format('truetype');
 }
 @font-face {
   font-family: "Montserrat-Tabular";
-  src: url('fonts/Montserrat-Bold-Tabular.ttf') format('truetype');
+  src: url('../assets/fonts/Montserrat-Bold-Tabular.ttf') format('truetype');
   font-weight: bold;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url('fonts/HelveticaNeue.otf') format('opentype');
+  src: url('../assets/fonts/HelveticaNeue.otf') format('opentype');
 }
 @font-face {
   font-family: "Roboto Slab";
   font-weight: 200;
-  src: url('fonts/RobotoSlab-Thin.ttf') format('truetype');
+  src: url('../assets/fonts/RobotoSlab-Thin.ttf') format('truetype');
 }
 @font-face {
   font-family: "Roboto Slab";
   font-weight: 300;
-  src: url('fonts/RobotoSlab-Light.ttf') format('truetype');
+  src: url('../assets/fonts/RobotoSlab-Light.ttf') format('truetype');
 }
 @font-face {
   font-family: "Roboto Slab";
   font-weight: 400;
-  src: url('fonts/RobotoSlab-Regular.ttf') format('truetype');
+  src: url('../assets/fonts/RobotoSlab-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: "Roboto Slab";
   font-weight: 700;
-  src: url('fonts/RobotoSlab-Bold.ttf') format('truetype');
+  src: url('../assets/fonts/RobotoSlab-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: "Helvetica Neue";
-  src: url('fonts/HelveticaNeueLTPro.otf') format('opentype');
+  src: url('../assets/fonts/HelveticaNeueLTPro.otf') format('opentype');
   font-weight: bold;
 }
 
@@ -840,7 +840,7 @@ $slide-height: $viewportHeight - $headerHeight;
 @mixin imageWithRetina($url, $width, $height) {
   width: $width;
   height: $height;
-  background: url('images/#{$url}.png') no-repeat;
+  background: url('../assets/images/#{$url}.png') no-repeat;
   background-size: $width $height;
   background-position: center;
   @media
@@ -848,7 +848,7 @@ $slide-height: $viewportHeight - $headerHeight;
   screen and (min-resolution: 192dpi),
   projection and (-webkit-min-device-pixel-ratio: 2),
   projection and (min-resolution: 192dpi) {
-    background: url('images/#{$url}@2x.png') no-repeat;
+    background: url('../assets/images/#{$url}@2x.png') no-repeat;
     background-size: $width $height;
     background-position: center;
   }

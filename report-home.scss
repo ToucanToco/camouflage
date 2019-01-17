@@ -2,22 +2,4 @@
   .show-report-container {
     color: $execsumArrowColor;
   }
-
-  @for $i from 1 through 3 {
-    .bg-#{$i} {
-      background: url('../assets/images/bg-#{$i}.png');
-      background-size: cover;
-      &.bg-overlay {
-        background:
-        linear-gradient(
-        transparentize($execsumBgColor, $transparentize-execsum-bg-overlay),
-        transparentize($execsumBgColor, $transparentize-execsum-bg-overlay)
-        ),
-        url('../assets/images/bg-#{$i}.png');
-        background-size: cover;
-      }
-      background-repeat: no-repeat;
-      background-position: top center;
-    }
-  }
 }

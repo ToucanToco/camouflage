@@ -376,55 +376,6 @@ $red-color:                                   #e78352;
 // These colors will stay the same regardless of the client's colors
 $toucan-brand-accent:                         $emphasis-color;
 $toucan-button-hover-blue:                    #60919f;
-/**** FONTS ******/
-@font-face {
-  font-family: "Montserrat";
-  src: url('../assets/fonts/Montserrat-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url('../assets/fonts/Montserrat-Bold.ttf') format('truetype');
-  font-weight: bold;
-}
-@font-face {
-  font-family: "Montserrat-Tabular";
-  src: url('../assets/fonts/Montserrat-SemiBold-Tabular.ttf') format('truetype');
-}
-@font-face {
-  font-family: "Montserrat-Tabular";
-  src: url('../assets/fonts/Montserrat-Bold-Tabular.ttf') format('truetype');
-  font-weight: bold;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url('../assets/fonts/HelveticaNeue.otf') format('opentype');
-}
-@font-face {
-  font-family: "Roboto Slab";
-  font-weight: 200;
-  src: url('../assets/fonts/RobotoSlab-Thin.ttf') format('truetype');
-}
-@font-face {
-  font-family: "Roboto Slab";
-  font-weight: 300;
-  src: url('../assets/fonts/RobotoSlab-Light.ttf') format('truetype');
-}
-@font-face {
-  font-family: "Roboto Slab";
-  font-weight: 400;
-  src: url('../assets/fonts/RobotoSlab-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: "Roboto Slab";
-  font-weight: 700;
-  src: url('../assets/fonts/RobotoSlab-Bold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url('../assets/fonts/HelveticaNeueLTPro.otf') format('opentype');
-  font-weight: bold;
-}
 
 $primary-font-family: 'Montserrat';
 $secondary-font-family: 'Roboto Slab';
@@ -833,24 +784,6 @@ $slide-height: $viewportHeight - $headerHeight;
   }
   &:after {
     clear: both;
-  }
-}
-
-
-@mixin imageWithRetina($url, $width, $height) {
-  width: $width;
-  height: $height;
-  background: url('../assets/images/#{$url}.png') no-repeat;
-  background-size: $width $height;
-  background-position: center;
-  @media
-  screen and (-webkit-min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  projection and (-webkit-min-device-pixel-ratio: 2),
-  projection and (min-resolution: 192dpi) {
-    background: url('../assets/images/#{$url}@2x.png') no-repeat;
-    background-size: $width $height;
-    background-position: center;
   }
 }
 

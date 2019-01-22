@@ -36,6 +36,8 @@ in your app.
 ## Develop using your local version
 Use `yarn` or `bower` depending on which one you used for setup
 
+:warning: **This will work only if you add a new class, attribute, ... . Otherwise it will be overwritten by laputa camouflage.**:warning:
+
 In your local `camouflage` folder:
 
     yarn link

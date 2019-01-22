@@ -13,7 +13,7 @@ $scale-color-3: #437F9D !default;
 $scale-color-4: #00354E !default;
 
 $chart-color-0: #9394b4 !default;
-$chart-color-1: #d8c03d !default;
+$chart-color-1: #A5D8D3 !default;
 $chart-color-2: #b0c297 !default;
 $chart-color-3: #61839b !default;
 $chart-color-4: #60947f !default;
@@ -184,7 +184,7 @@ $sentiment-colors: (
 );
 $sentimentColors: $sentiment-colors; // Backwards compat
 
-$comparisonColor: #D3EFF4;
+$comparisonColor: $chart-color-1;
 
 
 $waterfallInitialColor: #00354e;

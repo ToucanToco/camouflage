@@ -1,4 +1,4 @@
-.tc-story__chart,
+.tc-story__chart, .grid-view-container,
 chart {
   @each $name, $color in $sentimentColors {
     [data-sentiment="#{$name}"] {

@@ -77,39 +77,6 @@ body {
   }
 }
 
-.overlay {
-  @extend .full-content;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  transition: opacity $transition-duration/2 $transition-type;
-
-  &.ng-hide-add,
-  &.ng-hide-remove {
-    display: block !important;
-  }
-
-  &.ng-hide
-   {
-    opacity: 0;
-  }
-
-  &.loading {
-    height: 100%;
-    top: 0;
-    background: rgba(255, 255, 255, 0.7);
-    transition: all 1s;
-
-    .spinner {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background: url('images/loading-bubbles.svg') no-repeat center center;
-      background-size: 15%;
-    }
-  }
-}
-
 .opaque {
   background-color: transparentize(white, .3);
 }
@@ -145,12 +112,12 @@ body {
     font-size: 16px;
   }
   .pdf {
-    /*background-image: url('images/pdf.png');*/
     width: 1024px;
     height: 1450px;
     background-size: 1024px 1450px;
   }
 }
+
 .float{
   float: left;
 }
@@ -202,10 +169,6 @@ body {
   .slideprev {
     @include slide-animation(-100%);
   }
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 .scroll-opaque-cue {

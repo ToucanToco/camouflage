@@ -18,12 +18,6 @@
   }
 }
 
-.report-selector-button {
-  @extend .bordered-button-discreet;
-  cursor: default;
-  top: -8px;
-}
-
 .header__requester {
   @media screen and (min-width: $screen-phone-max+1) {
     //We can't @extend inside a @media or @include

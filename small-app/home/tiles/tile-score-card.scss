@@ -1,0 +1,14 @@
+.tile-score-card__variation__icon--positive,
+.tile-score-card__value--positive {
+  color: $positive-color;
+}
+
+.tile-score-card__variation__icon--negative,
+.tile-score-card__value--negative {
+  color: $negative-color;
+}
+
+.tile-score-card__variation__icon--warning,
+.tile-score-card__value--warning {
+  color: $warning-color;
+}

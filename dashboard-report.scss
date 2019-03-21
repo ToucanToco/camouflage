@@ -84,10 +84,10 @@
         .widget-type-leaderboard {
           .widget-chart-container {
             .bar:not(.sentiment-zones) {
-                fill: nth($chartColors,2);
+                fill: nth($chartColors,1);
               }
             .target:not(.sentiment-zones) {
-                fill: nth($chartColors,1);
+                fill: nth($chartColors,3);
               }
           }
           .horizontal-barchart-subgroup.horizontal-barchart-subgroup--highlighted .bar-label {

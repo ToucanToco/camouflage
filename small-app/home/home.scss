@@ -10,7 +10,7 @@
   border-color: transparentize(white, 0.6);
 }
 
-.small-app-home__date-requester .tc-controller-buttons .tc-controller-buttons__button.active,
+.small-app-home__date-requester .tc-controller-buttons.tc-controller-buttons--flat .tc-controller-buttons__button.active,
 .small-app-home__date-requester .tc-dropdown__display {
   background-color: $emphasis-color;
 }

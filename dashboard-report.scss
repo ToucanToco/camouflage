@@ -26,6 +26,13 @@
         }
       }
     }
+    .tc-date-dropdown {
+      .multi-select-search__display {
+        background-color: $emphasis-color;
+        color: #fff;
+        box-shadow: none;
+      }
+    }
 
     .category {
       > .name {

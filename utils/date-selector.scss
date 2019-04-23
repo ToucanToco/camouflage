@@ -1,0 +1,9 @@
+.header-date-selector {
+  background-color: $main-color;
+}
+
+.header-date-selector__value {
+  @include respond-to(phone) {
+    color: white;
+  }
+}

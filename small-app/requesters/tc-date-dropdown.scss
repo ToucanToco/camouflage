@@ -1,0 +1,9 @@
+// Customisations for the new and old home
+.small-app-home__date-requester,
+dashboard-report {
+  .multi-select-search__display {
+    background-color: $emphasis-color;
+    box-shadow: none;
+    color: white;
+  }
+}

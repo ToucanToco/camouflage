@@ -81,7 +81,7 @@ $closeIconColor: #D4D4D4;
   .tc-variation__symbol[data-sentiment="#{$sentiment}"]{
     fill: $color;
   }
-  .table-element__bullet-bar[data-sentiment="#{$sentiment}"]{
+  .table-element__bullet-bar__bar[data-sentiment="#{$sentiment}"]{
     fill: $color;
   }
 }

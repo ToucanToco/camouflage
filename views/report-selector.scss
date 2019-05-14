@@ -1,8 +1,6 @@
 report-selector {
   .report-selector-wrapper {
-    $report-selector-main-color-overlay: transparentize($report-selector-main-color, $report-selector-overlay-alpha);
-    $report-selector-bg-overlay: linear-gradient(to bottom, $report-selector-main-color-overlay, $report-selector-main-color-overlay);
-    background-color: $report-selector-bg-overlay;
+    background-color: transparentize($report-selector-main-color, $report-selector-overlay-alpha);
 
     .input-report-wrapper {
       $report-selector-input-color: $report-selector-text-color;

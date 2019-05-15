@@ -1,3 +1,29 @@
+// Tc Details Multiple Series
+@mixin colorTcDetailsCategoryByAttr($attr, $value, $color) {
+  .tc-details-serie-container[#{$attr}='#{$value}'] .tc-details-serie-color__rect {
+    background-color: $color;
+  }
+}
+
+@mixin colorTcDetailsCategoryById($id, $color) {
+  @include colorTcDetailsCategoryByAttr(data-serie-index, $id, $color);
+}
+
+@mixin colorTcDetailsCategoryByName($name, $color) {
+  @include colorTcDetailsCategoryByAttr(data-serie, $name, $color);
+}
+
+@each $color in $chartColors {
+  $i: index($chartColors, $color) - 1;
+  @include colorTcDetailsCategoryById($i, $color);
+}
+
+@each $sentiment, $color in $sentiment-colors {
+  @include colorTcDetailsCategoryByAttr(data-sentiment, $sentiment, $color);
+}
+@include colorTcDetailsCategoryByAttr(data-serie-index, comparison, $comparisonColor);
+//
+
 .tc-details {
   background-color: $backgroundSlideCommentary;
 }

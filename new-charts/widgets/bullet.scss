@@ -5,7 +5,7 @@
 }
 
 @each $sentiment, $color in $sentiment-colors {
-  .tc-widget--bullet {
+  .tc-widget--bullet__chart {
     rect.tc-bullet.tc-horizontal-bar-with-bullet__bullet[data-sentiment="#{$sentiment}"] {
       fill: $color;
     }

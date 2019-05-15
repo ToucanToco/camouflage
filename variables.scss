@@ -62,11 +62,12 @@ $mobile-charts-wrapper-margin-bottom: $mobileLegendHandleHeight + 30px;
 
 $tc-slider-width: 350px;
 $screen-phone-max: 767px;
+$screen-phone-max-height: 480px;
 $screen-tablet-max: 1024px;
 
 @mixin respond-to($media) {
   @if $media == phone {
-    @media screen and (max-width: $screen-phone-max), screen and (max-height: $screen-phone-max) {
+    @media screen and (max-width: $screen-phone-max), screen and (max-height: $screen-phone-max-height) {
       @content;
     }
   }

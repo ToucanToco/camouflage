@@ -1,22 +1,12 @@
-.tc-dropdown__display--default {
-  box-shadow: 0 0 0 3px $text-color inset;
-  color: $text-color;
-}
-
-.tc-dropdown__display--filter-dropdown {
-  box-shadow: 0 0 0 1px $shadow-color inset;
-  color: $text-color;
-}
-
 .dashboard-report-requester--settings-panel {
   .tc-dropdown__display--filter-dropdown {
     color: white;
   }
 }
 
-.tc-dropdown__display--search {
-  box-shadow: 0 0 0 3px #fff inset;
-  color: #fff;
+.tc-dropdown__display--default {
+  box-shadow: 0 0 0 3px $text-color inset;
+  color: $text-color;
 }
 
 .tc-dropdown__display--filled {
@@ -24,28 +14,14 @@
   color: white;
 }
 
-.tc-dropdown__dropdown--bottom {
-  box-shadow:
-    -1px 0 0 0 $shadow-color inset,
-    -1px 0 0 0 #fff inset,
-    1px -1px 0 0 $shadow-color inset,
-    6px 6px 0 0 $shadow-color;
+.tc-dropdown__display--filter-dropdown {
+  box-shadow: 0 0 0 1px $shadow-color inset;
+  color: $text-color;
 }
 
-.tc-dropdown__dropdown--searchable {
-  .tc-dropdown__search {
-    box-shadow: 0 0 0 3px $emphasis-color inset;
-
-    &::after {
-      color: $text-color;
-    }
-  }
-}
-
-.tc-dropdown__dropdown--top {
-  box-shadow:
-    0 0 0 1px $shadow-color inset,
-    6px 6px 0 0 $shadow-color;
+.tc-dropdown__display--search {
+  box-shadow: 0 0 0 3px #fff inset;
+  color: #fff;
 }
 
 .tc-dropdown__field {
@@ -60,6 +36,24 @@
 .tc-dropdown__option--active {
   background-color: $emphasis-color;
   color: #fff;
+}
+
+.tc-dropdown__popover {
+  box-shadow:
+    -1px 0 0 0 $shadow-color inset,
+    -1px 0 0 0 #fff inset,
+    1px -1px 0 0 $shadow-color inset,
+    6px 6px 0 0 $shadow-color;
+}
+
+.tc-dropdown__popover--searchable {
+  .tc-dropdown__search {
+    box-shadow: 0 0 0 3px $emphasis-color inset;
+
+    &::after {
+      color: $text-color;
+    }
+  }
 }
 
 .tc-dropdown__tag {

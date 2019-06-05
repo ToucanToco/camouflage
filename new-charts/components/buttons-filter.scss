@@ -40,3 +40,20 @@
     }
   }
 }
+
+// Customization inside side panel
+.side-panel .tc-controller-buttons.tc-controller-buttons--flat {
+
+  .tc-controller-buttons__button {
+    background-color: transparent;
+    border-color: white;
+    border-left: 1px solid white;
+    color: white;
+  }
+
+  .tc-controller-buttons__button.active {
+    background-color: white;
+    border-color: white;
+    color: $controllerColor;
+  }
+}

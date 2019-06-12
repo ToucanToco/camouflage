@@ -1,3 +1,37 @@
 .comments__form {
   background-color: darken($main-color, 10);
 }
+
+.comments__context-filters {
+  background-color: lighten($main-color, 7%);
+}
+
+.comments__filter-current-view,
+.comments__current-view-option {
+  background-color: $settings-panel-tab-inactive-color;
+  color: white;
+}
+
+.comments__current-view-option.comments__current-view-option--close {
+  background-color: $settings-panel-tab-heading-bg;
+}
+
+.comment-context {
+  background-color: #cacaca;
+  color: white;
+  &:hover {
+    background-color: $main-color;
+  }
+}
+
+.comment-navigation-modal .comment-navigation-value {
+  background-color: $main-color;
+  color: white;
+}
+
+.comment-navigation-modal .tc-modal__action--primary {
+  background-color: $emphasis-color;
+}
+.comment-navigation-modal .tc-modal__action--primary:hover {
+  background-color: $secondary-emphasis-color;
+}

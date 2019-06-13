@@ -28,3 +28,9 @@ $tc-mapchart-serie-colors: $chartColors;
     background-color: $color;
   }
 }
+
+@each $sentiment, $color in $sentiment-colors {
+  .map-chart__zone[data-sentiment="#{$sentiment}"] {
+    fill: $color;
+  }
+}

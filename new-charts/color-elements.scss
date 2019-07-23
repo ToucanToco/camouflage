@@ -1,9 +1,11 @@
 @mixin colorChartsElementsByName($name, $color) {
   // Legacy
-  [data-subgroup="#{$name}"],
-  [data-label="#{$name}"],
-  [data-serie="#{$name}"] {
-    @include colorSVGElement($color);
+  tc-chart {
+    [data-subgroup="#{$name}"],
+    [data-label="#{$name}"],
+    [data-serie="#{$name}"] {
+      @include colorSVGElement($color);
+    }
   }
 
   // tc-barchart

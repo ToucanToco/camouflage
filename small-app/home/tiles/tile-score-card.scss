@@ -12,3 +12,18 @@
 .tile-score-card__value--warning {
   color: $warning-color;
 }
+
+.tile-score-card__variation__icon--neutral,
+.tile-score-card__value--neutral {
+  color: $neutral-color;
+}
+
+.tile-score-card__variation__icon--verypositive,
+.tile-score-card__value--verypositive {
+  color: $verypositive-color;
+}
+
+.tile-score-card__variation__icon--verynegative,
+.tile-score-card__value--verynegative {
+  color: $verynegative-color;
+}

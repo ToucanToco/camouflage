@@ -1,6 +1,6 @@
 @mixin colorChartsElementsByName($name, $color) {
   // Legacy
-  tc-chart {
+  barlinechart, bubblechart, bullet-chart, carto, filtrable-waterfall-chart, force-directed-chartlinechart, heatmap, horizontal-barchart, leaderboard-centered-average, score-card, slopegraph, stacked-barchart, tc-treemap, text-slide, verbatim, waterfall-chart {
     [data-subgroup="#{$name}"],
     [data-label="#{$name}"],
     [data-serie="#{$name}"] {

@@ -1,6 +1,11 @@
-// Tc Details Multiple Series
+// Tc Details
 @mixin colorTcDetailsCategoryByAttr($attr, $value, $color) {
+  // Tc Details Multiple Series
   .tc-details-serie-container[#{$attr}='#{$value}'] .tc-details-serie-color__rect {
+    background-color: $color;
+  }
+  // Tc Details Bubble chart
+  .tc-details-color-container[#{$attr}='#{$value}'] .tc-details-rect {
     background-color: $color;
   }
 }

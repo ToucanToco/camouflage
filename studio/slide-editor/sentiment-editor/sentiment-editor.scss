@@ -3,4 +3,7 @@
   .sentiment-editor__bar-label.sentiment-editor__bar-label--#{$name} {
     background-color: $color;
   }
+  .sentiment-editor__bar-label.sentiment-editor__bar-label--#{$name}::before {
+    border-bottom-color: $color;
+  }
 }

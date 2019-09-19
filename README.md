@@ -46,3 +46,14 @@ Then in your dependent project folder:
 
     yarn link tc-camouflage
 
+
+## Git Workflow
+
+We use `master` as the main branch, pull requests should point to it.
+You can then release camouflage and update the version on `tucana` and `laputa`.
+
+For developments that cannot be merged yet on the master branch but need to be used, use a feature branch:
+
+```
+"tc-camouflage": "git+ssh://git@github.com/ToucanToco/camouflage.git#f/my-new-feature"
+```

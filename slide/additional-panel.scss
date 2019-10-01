@@ -15,30 +15,30 @@ $additional-panel-name-tab-color:     darken($main-color-dark, 15%) !default;
   background-color: $additional-panel-header-color;
 }
 
-.additional-panel-tab {
+.additional-panel-tab-button {
   &:hover {
-    .additional-panel-tab__bubble {
+    .additional-panel-tab-button__bubble {
       background: lighten($additional-panel-bubble-tab-color, 5%);
     }
-    .additional-panel-tab__name {
+    .additional-panel-tab-button__name {
       color: lighten($additional-panel-name-tab-color, 5%);
     }
   }
 }
 
-.additional-panel-tab__bubble {
+.additional-panel-tab-button__bubble {
   background-color: $additional-panel-bubble-tab-color;
 }
 
-.additional-panel-tab__name {
+.additional-panel-tab-button__name {
   color: $additional-panel-name-tab-color;
 }
 
-.additional-panel-tab.additional-panel-tab--active {
+.additional-panel-tab-button.additional-panel-tab-button--active {
   &::after {
     border-bottom-color: $additional-panel-content-color;
   }
-  .additional-panel-tab__icon {
+  .additional-panel-tab-button__icon {
     color: $additional-panel-bubble-tab-color;
   }
 }

@@ -4,6 +4,13 @@
   }
 }
 
+.additional-panel {
+  .tc-dropdown__display--filter-dropdown {
+    box-shadow: 0 -1px 0 0 #fff inset;
+    color: #fff;
+  }
+}
+
 .tc-dropdown__display--default {
   box-shadow: 0 0 0 3px $text-color inset;
   color: $text-color;

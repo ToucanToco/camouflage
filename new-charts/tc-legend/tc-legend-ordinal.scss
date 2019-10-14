@@ -1,5 +1,10 @@
 @mixin colorTcLegendCategoryByAttr($attr, $value, $color) {
+  // legacy
   .tc-legend-ordinal__serie[#{$attr}="#{$value}"] .tc-legend-ordinal__serie-color {
+    background-color: $color;
+  }
+  // New legend
+  .tc-details-serie-container[#{$attr}="#{$value}"] .tc-details-serie-color__rect {
     background-color: $color;
   }
 }

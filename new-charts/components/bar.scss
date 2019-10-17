@@ -1,0 +1,9 @@
+@each $sentiment, $color in $sentiment-colors {
+  .tc-bar__main-bar[data-sentiment='#{$sentiment}'] {
+    background-color: $color;
+  }
+}
+
+.tc-bar__complement {
+  background-color: $greyLight;
+}

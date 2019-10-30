@@ -1,0 +1,5 @@
+@each $sentiment, $color in $sentiment-colors {
+  [data-sentiment="#{$sentiment}"] > .value {
+    color: $color;
+  }
+}

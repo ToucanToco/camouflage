@@ -46,3 +46,9 @@ $additional-panel-name-tab-color:     darken($main-color-dark, 15%) !default;
 .additional-panel-tabs__content {
   background-color: $additional-panel-content-color;
 }
+
+.share__button {
+  &:hover {
+    color: $main-color;
+  }
+}

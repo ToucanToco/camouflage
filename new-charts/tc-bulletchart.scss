@@ -1,0 +1,37 @@
+$barColor: nth($chartColors, 1);
+$comparisonColor: nth($chartColors, 2);
+$targetColor: nth($chartColors, 3);
+
+
+.bullet-bars__value-bar[data-sentiment], .bullet-bars__value-bar {
+  background-color: $barColor;
+}
+
+.bullet-bars__comparison-bar {
+  background-color: $comparisonColor;
+}
+
+.bullet-bars__target {
+  background-color: $targetColor;
+}
+
+@each $sentiment, $color in $sentiment-colors {
+  .bullet-bars__target[data-sentiment='#{$sentiment}'] {
+    background-color: $color;
+  }
+}
+
+@include colorTcDetailsCategoryByAttr(data-type, 'value', $barColor)
+@include colorTcDetailsCategoryByAttr(data-type, 'comparison', $comparisonColor)
+@include colorTcDetailsCategoryByAttr(data-type, 'target', $targetColor)
+@each $sentiment, $color in $sentiment-colors {
+  @include colorTcDetailsCategoryByAttr(data-sentiment, $sentiment, $color)
+}
+
+.bullet-bars__axis {
+  color: $bullet-chart-axis-text-color;
+}
+
+.bullet-bars__label--highlighted {
+  color: $emphasis-color;
+}

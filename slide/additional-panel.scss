@@ -38,8 +38,14 @@ $additional-panel-name-tab-color:     darken($main-color-dark, 15%) !default;
   &::after {
     border-bottom-color: $additional-panel-content-color;
   }
+  .additional-panel-tab-button__bubble {
+    background-color: #fff;
+  }
   .additional-panel-tab-button__icon {
     color: $additional-panel-bubble-tab-color;
+  }
+  .additional-panel-tab-button__name {
+    color: #fff;
   }
 }
 

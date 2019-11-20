@@ -55,6 +55,14 @@ $additional-panel-name-tab-color:     darken($main-color-dark, 15%) !default;
 
 .share__button {
   &:hover {
+    background-color: #fff;
     color: $main-color;
+  }
+}
+
+.share__button.share__button--no-border {
+  &:hover {
+    background-color: transparent;
+    box-shadow: 0px 3px 0 0px #fff;
   }
 }

@@ -38,8 +38,14 @@ $additional-panel-name-tab-color:     darken($main-color-dark, 15%) !default;
   &::after {
     border-bottom-color: $additional-panel-content-color;
   }
+  .additional-panel-tab-button__bubble {
+    background-color: #fff;
+  }
   .additional-panel-tab-button__icon {
     color: $additional-panel-bubble-tab-color;
+  }
+  .additional-panel-tab-button__name {
+    color: #fff;
   }
 }
 
@@ -49,6 +55,14 @@ $additional-panel-name-tab-color:     darken($main-color-dark, 15%) !default;
 
 .share__button {
   &:hover {
+    background-color: #fff;
     color: $main-color;
+  }
+}
+
+.share__button.share__button--no-border {
+  &:hover {
+    background-color: transparent;
+    box-shadow: 0px 3px 0 0px #fff;
   }
 }

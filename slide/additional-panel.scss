@@ -69,3 +69,13 @@ $additional-panel-name-tab-color:     darken($main-color-dark, 15%) !default;
     box-shadow: 0px 3px 0 0px #fff;
   }
 }
+
+.annotate-and-share__submit-button {
+  background-color: $emphasis-color;
+  color: #fff;
+}
+
+.annotate-and-share__submit-button--disabled {
+  background-color: $grey;
+  color: darken($greyDark, 15%);
+}

@@ -1,18 +1,18 @@
-$barColor: nth($chartColors, 1);
-$comparisonColor: nth($chartColors, 2);
-$targetColor: nth($chartColors, 3);
+$bulletchartBarColor: nth($chartColors, 2);
+$bulletchartComparisonColor: rgba(nth($chartColors, 2), .33);
+$bulletchartTargetColor: nth($chartColors, 1);
 
 
 .bullet-bars__value-bar[data-sentiment], .bullet-bars__value-bar {
-  background-color: $barColor;
+  background-color: $bulletchartBarColor;
 }
 
 .bullet-bars__comparison-bar {
-  background-color: $comparisonColor;
+  background-color: $bulletchartComparisonColor;
 }
 
 .bullet-bars__target {
-  background-color: $targetColor;
+  background-color: $bulletchartTargetColor;
 }
 
 @each $sentiment, $color in $sentiment-colors {
@@ -21,11 +21,11 @@ $targetColor: nth($chartColors, 3);
   }
 }
 
-@include colorTcDetailsCategoryByAttr(data-type, 'value', $barColor)
-@include colorTcDetailsCategoryByAttr(data-type, 'comparison', $comparisonColor)
-@include colorTcDetailsCategoryByAttr(data-type, 'target', $targetColor)
+@include colorTcDetailsCategoryByAttr(data-type, 'value', $bulletchartBarColor);
+@include colorTcDetailsCategoryByAttr(data-type, 'comparison', $bulletchartComparisonColor);
+@include colorTcDetailsCategoryByAttr(data-type, 'target', $bulletchartTargetColor);
 @each $sentiment, $color in $sentiment-colors {
-  @include colorTcDetailsCategoryByAttr(data-sentiment, $sentiment, $color)
+  @include colorTcDetailsCategoryByAttr(data-sentiment, $sentiment, $color);
 }
 
 .bullet-bars__axis {

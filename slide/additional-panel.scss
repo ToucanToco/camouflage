@@ -79,3 +79,7 @@ $additional-panel-name-tab-color:     darken($main-color-dark, 15%) !default;
   background-color: $grey;
   color: darken($greyDark, 15%);
 }
+
+.annotate-and-share__loading-bar__progress {
+  background-color: $emphasis-color;
+}

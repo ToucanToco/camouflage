@@ -1,0 +1,69 @@
+// TcBulletChart
+%bullet-chart__cell {
+  background-color: $tc-color--white;
+}
+
+.bullet-chart__cell--details {
+  @extend %bullet-chart__cell;
+}
+
+.bullet-chart__cell--pack {
+  @extend %bullet-chart__cell;
+}
+
+// TcBullet
+%bullet__cell {
+  background-color: $tc-color--white;
+}
+
+.bullet__body {
+  @extend %bullet__cell;
+}
+
+.bullet__comparison {
+  background-color: mix($tc-color--serie-2, $tc-color--white, 33%);
+}
+
+.bullet__display {
+  @extend %bullet__cell;
+}
+
+.bullet__label {
+  @extend %bullet__cell;
+}
+
+.bullet__sparkline {
+  @extend %bullet__cell;
+}
+
+.bullet__target {
+  background-color: $tc-color--serie-1;
+}
+
+@each $sentiment, $color in $tc-color__sentiments {
+  .bullet__target[data-sentiment='#{$sentiment}'] {
+    background-color: $color;
+  }
+}
+
+.bullet__value {
+  background-color: $tc-color--serie-2;
+}
+
+.bullet__value-container {
+  background-color: $tc-color--grey-extralight-1;
+}
+
+// TcBulletDetails
+@mixin bullet-details__serie($serie, $color, $attribute: 'type') {
+  .bullet-details__serie[data-#{$attribute}='#{$serie}'] .tc-details-serie-color__rect {
+    background-color: $color;
+  }
+}
+
+@include bullet-details__serie(comparison, mix($tc-color--serie-2, $tc-color--white, 33%));
+@include bullet-details__serie(target, $tc-color--serie-1);
+@each $sentiment, $color in $tc-color__sentiments {
+  @include bullet-details__serie($sentiment, $color, sentiment);
+}
+@include bullet-details__serie(value, $tc-color--serie-2);

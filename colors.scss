@@ -1,15 +1,81 @@
-.carto-cat-0 {
-    background-color: #ffe7c9 !important;
-}
-.carto-cat-1 {
-    background-color: #ffb78b !important;
-}
-.carto-cat-2 {
-    background-color: #ffae5e !important;
-}
-.carto-cat-3 {
-    background-color: #ff5e1f !important;
-}
-.transparent{
-  fill: transparent;
-}
+// # Use variables' colors
+$tc-color--brand: $main-color;
+$tc-color--brand-light: $main-color-fade;
+$tc-color--text: $text-color;
+$tc-color--dark: $dark-color;
+$tc-color--emphasis: $emphasis-color;
+$tc-color--accent: $secondary-emphasis-color;
+$tc-color--positive: $positive-color;
+$tc-color--negative: $negative-color;
+$tc-color--neutral: $neutral-color;
+$tc-color--serie-1: $chart-color-0;
+$tc-color--serie-2: $chart-color-1;
+$tc-color--serie-3: $chart-color-2;
+$tc-color--serie-4: $chart-color-3;
+$tc-color--serie-5: $chart-color-4;
+$tc-color--serie-6: $chart-color-5;
+$tc-color--quartile-1: $scale-color-0;
+$tc-color--quartile-2: $scale-color-1;
+$tc-color--quartile-3: $scale-color-2;
+$tc-color--quartile-4: $scale-color-3;
+
+// # Palette
+// ## Grayscales
+$tc-color--black: #000;
+$tc-color--grey: #888;
+$tc-color--grey-light-1: #ccc;
+$tc-color--grey-light-2: #ddd;
+$tc-color--grey-light-3: #eee;
+$tc-color--grey-extralight-1: #f5f5f5;
+$tc-color--grey-extralight-2: #fafafa;
+$tc-color--white: #fff;
+
+// ## Studio
+$tc-color--studio: #2a66a1;
+
+// ## Interface
+$tc-color--brand: #88b2a8 !default;
+$tc-color--brand-dark-1: darken(
+  $tc-color--brand,
+  lightness($tc-color--brand) * .1
+);
+$tc-color--brand-dark-2: darken(
+  $tc-color--brand,
+  lightness($tc-color--brand) * .21
+);
+$tc-color--brand-dark-3: change-color(
+  $tc-color--brand,
+  $lightness: lightness($tc-color--brand) * .75,
+  $saturation: saturation($tc-color--brand) * .7
+);
+$tc-color--brand-light: #b9d1cb !default;
+$tc-color--text: #4c4c4c !default;
+$tc-color--dark: #000 !default;
+
+// ## Highlights
+$tc-color--emphasis: #f3c600 !default;
+$tc-color--accent: #e78352 !default;
+$tc-color--positive: #a7bd3e !default;
+$tc-color--negative: #d44710 !default;
+$tc-color--neutral: #c4c4c4 !default;
+$tc-color--warning: #ed8b49;
+$tc-color__sentiments: (
+  negative: $tc-color--negative,
+  warning: $tc-color--warning,
+  neutral: $tc-color--neutral,
+  positive: $tc-color--positive,
+);
+
+// ## Charts
+$tc-color--serie-1: #736b88 !default;
+$tc-color--serie-2: #b0c297 !default;
+$tc-color--serie-3: #877900 !default;
+$tc-color--serie-4: #a0a0a0 !default;
+$tc-color--serie-5: #986d5e !default;
+$tc-color--serie-6: #60947f !default;
+
+// ## Scales
+$tc-color--quartile-1: #b3d7d2 !default;
+$tc-color--quartile-2: #81b1bd !default;
+$tc-color--quartile-3: #437f9d !default;
+$tc-color--quartile-4: #00354e !default;

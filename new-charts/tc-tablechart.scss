@@ -78,6 +78,9 @@ $closeIconColor: #D4D4D4;
   .tc-value__value[data-sentiment="#{$sentiment}"]{
     color: $color;
   }
+  .table-value__value[data-sentiment="#{$sentiment}"]{
+    color: $color;
+  }
   .tc-variation__symbol[data-sentiment="#{$sentiment}"]{
     fill: $color;
   }

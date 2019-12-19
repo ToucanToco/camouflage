@@ -55,10 +55,10 @@ $tc-color--dark: #000 !default;
 // ## Highlights
 $tc-color--emphasis: #f3c600 !default;
 $tc-color--accent: #e78352 !default;
-$tc-color--positive: #a7bd3e !default;
 $tc-color--negative: #d44710 !default;
-$tc-color--neutral: #c4c4c4 !default;
 $tc-color--warning: #ed8b49;
+$tc-color--neutral: #c4c4c4 !default;
+$tc-color--positive: #a7bd3e !default;
 $tc-color__sentiments: (
   negative: $tc-color--negative,
   warning: $tc-color--warning,
@@ -73,9 +73,23 @@ $tc-color--serie-3: #877900 !default;
 $tc-color--serie-4: #a0a0a0 !default;
 $tc-color--serie-5: #986d5e !default;
 $tc-color--serie-6: #60947f !default;
+$tc-color__series: (
+  0: $tc-color--serie-1,
+  1: $tc-color--serie-2,
+  2: $tc-color--serie-3,
+  3: $tc-color--serie-4,
+  4: $tc-color--serie-5,
+  5: $tc-color--serie-6,
+);
 
 // ## Scales
 $tc-color--quartile-1: #b3d7d2 !default;
 $tc-color--quartile-2: #81b1bd !default;
 $tc-color--quartile-3: #437f9d !default;
 $tc-color--quartile-4: #00354e !default;
+$tc-color__quartiles: (
+  0: $tc-color--quartile-1,
+  1: $tc-color--quartile-2,
+  2: $tc-color--quartile-3,
+  3: $tc-color--quartile-4,
+);

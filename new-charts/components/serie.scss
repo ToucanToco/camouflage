@@ -1,0 +1,35 @@
+%serie__label {
+  color: $tc-color--dark;
+}
+
+.serie--clickable {
+  border-color: $tc-color--grey-light-2;
+}
+
+@each $index, $color in $tc-color__series {
+  .serie__color[data-index='#{$index}'] {
+    background-color: $color;
+  }
+}
+
+@each $sentiment, $color in $tc-color__sentiments {
+  .serie__color[data-sentiment='#{$sentiment}'] {
+    background-color: $color;
+  }
+}
+
+.serie__label {
+  @extend %serie__label;
+}
+
+.serie__label--value {
+  @extend %serie__label;
+}
+
+.serie__meta {
+  color: $tc-color--grey;
+}
+
+.serie__value {
+  color: $tc-color--dark;
+}

@@ -8,7 +8,7 @@
 
 .comments__filter-current-view,
 .comments__current-view-option {
-  background-color: $settings-panel-tab-inactive-color;
+  background-color: darken($main-color-dark, 10%);
   color: white;
 }
 

@@ -1,7 +1,7 @@
 $additional-panel-content-color:      $main-color !default;
 $additional-panel-header-color:       $main-color-dark !default;
-$additional-panel-bubble-tab-color:   darken($main-color-dark, 7%) !default;
-$additional-panel-name-tab-color:     darken($main-color-dark, 15%) !default;
+$additional-panel-bubble-tab-color:   darken($main-color-dark, 10%) !default;
+$additional-panel-name-tab-color:     darken($main-color-dark, 20%) !default;
 
 .additional-panel__toggle-button {
   background-color: $additional-panel-content-color;
@@ -18,10 +18,10 @@ $additional-panel-name-tab-color:     darken($main-color-dark, 15%) !default;
 .additional-panel-tab-button {
   &:hover {
     .additional-panel-tab-button__bubble {
-      background: lighten($additional-panel-bubble-tab-color, 5%);
+      background: $main-color;
     }
     .additional-panel-tab-button__name {
-      color: lighten($additional-panel-name-tab-color, 5%);
+      color: #fff;
     }
   }
 }
@@ -66,8 +66,8 @@ $additional-panel-name-tab-color:     darken($main-color-dark, 15%) !default;
 .share-tab__button.share-tab__button--no-border {
   &:hover {
     background-color: transparent;
-    box-shadow: 0px 3px 0 0px #fff;
     color: #fff;
+    opacity: 0.5;
   }
 }
 

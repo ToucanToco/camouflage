@@ -1,0 +1,5 @@
+@each $sentiment, $color in $sentiment-colors {
+  .tc-value[data-sentiment="#{$sentiment}"] {
+    color: $color;
+  }
+}

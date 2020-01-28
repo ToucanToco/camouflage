@@ -54,16 +54,16 @@
   background-color: $tc-color--grey-extralight-1;
 }
 
-// TcBulletDetails
-@mixin bullet-details__serie($serie, $color, $attribute: 'type') {
-  .bullet-details__serie[data-#{$attribute}='#{$serie}'] .tc-details-serie-color__rect {
+// Series
+@mixin bullet-chart__serie($serie, $color, $attribute: 'type') {
+  .bullet-chart__details .serie__color[data-#{$attribute}='#{$serie}'] {
     background-color: $color;
   }
 }
 
-@include bullet-details__serie(comparison, mix($tc-color--serie-2, $tc-color--white, 33%));
-@include bullet-details__serie(target, $tc-color--serie-1);
+@include bullet-chart__serie(comparison, mix($tc-color--serie-2, $tc-color--white, 33%));
+@include bullet-chart__serie(target, $tc-color--serie-1);
 @each $sentiment, $color in $tc-color__sentiments {
-  @include bullet-details__serie($sentiment, $color, sentiment);
+  @include bullet-chart__serie($sentiment, $color, sentiment);
 }
-@include bullet-details__serie(value, $tc-color--serie-2);
+@include bullet-chart__serie(value, $tc-color--serie-2);

@@ -1,9 +1,0 @@
-@each $sentiment, $color in $sentiment-colors {
-  .tc-progress-bar__main-bar[data-sentiment='#{$sentiment}'] {
-    background-color: $color;
-  }
-}
-
-.tc-progress-bar__complement {
-  background-color: $greyLight;
-}

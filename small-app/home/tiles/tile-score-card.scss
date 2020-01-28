@@ -1,29 +1,6 @@
-.tile-score-card__variation__icon--positive,
-.tile-score-card__value--positive {
-  color: $positive-color;
-}
-
-.tile-score-card__variation__icon--negative,
-.tile-score-card__value--negative {
-  color: $negative-color;
-}
-
-.tile-score-card__variation__icon--warning,
-.tile-score-card__value--warning {
-  color: $warning-color;
-}
-
-.tile-score-card__variation__icon--neutral,
-.tile-score-card__value--neutral {
-  color: $neutral-color;
-}
-
-.tile-score-card__variation__icon--verypositive,
-.tile-score-card__value--verypositive {
-  color: $verypositive-color;
-}
-
-.tile-score-card__variation__icon--verynegative,
-.tile-score-card__value--verynegative {
-  color: $verynegative-color;
+@each $sentiment, $color in $sentiment-colors {
+  .tile-score-card__variation__icon--#{$sentiment},
+  .tile-score-card__value--#{$sentiment} {
+    color: $color;
+  }
 }

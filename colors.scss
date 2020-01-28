@@ -14,6 +14,20 @@ $tc-color--serie-3: $chart-color-2;
 $tc-color--serie-4: $chart-color-3;
 $tc-color--serie-5: $chart-color-4;
 $tc-color--serie-6: $chart-color-5;
+$tc-color--serie-7: $chart-color-6;
+$tc-color--serie-8: $chart-color-7;
+$tc-color--serie-9: $chart-color-8;
+$tc-color--serie-10: $chart-color-9;
+$tc-color--serie-11: $chart-color-10;
+$tc-color--serie-12: $chart-color-11;
+$tc-color--serie-13: $chart-color-12;
+$tc-color--serie-14: $chart-color-13;
+$tc-color--serie-15: $chart-color-14;
+$tc-color--serie-16: $chart-color-15;
+$tc-color--serie-17: $chart-color-16;
+$tc-color--serie-18: $chart-color-17;
+$tc-color--serie-19: $chart-color-18;
+$tc-color--serie-20: $chart-color-19;
 $tc-color--quartile-1: $scale-color-0;
 $tc-color--quartile-2: $scale-color-1;
 $tc-color--quartile-3: $scale-color-2;
@@ -55,10 +69,10 @@ $tc-color--dark: #000 !default;
 // ## Highlights
 $tc-color--emphasis: #f3c600 !default;
 $tc-color--accent: #e78352 !default;
-$tc-color--positive: #a7bd3e !default;
 $tc-color--negative: #d44710 !default;
-$tc-color--neutral: #c4c4c4 !default;
 $tc-color--warning: #ed8b49;
+$tc-color--neutral: #c4c4c4 !default;
+$tc-color--positive: #a7bd3e !default;
 $tc-color__sentiments: (
   negative: $tc-color--negative,
   warning: $tc-color--warning,
@@ -67,15 +81,57 @@ $tc-color__sentiments: (
 );
 
 // ## Charts
-$tc-color--serie-1: #736b88 !default;
-$tc-color--serie-2: #b0c297 !default;
-$tc-color--serie-3: #877900 !default;
-$tc-color--serie-4: #a0a0a0 !default;
-$tc-color--serie-5: #986d5e !default;
-$tc-color--serie-6: #60947f !default;
+$tc-color--serie-1: #9394b4 !default;
+$tc-color--serie-2: #a5d8d3 !default;
+$tc-color--serie-3: #b0c297 !default;
+$tc-color--serie-4: #61839b !default;
+$tc-color--serie-5: #60947f !default;
+$tc-color--serie-6: #736b88 !default;
+$tc-color--serie-7: #637939 !default;
+$tc-color--serie-8: #ad494a !default;
+$tc-color--serie-9: #a0a0a0 !default;
+$tc-color--serie-10: #b39286 !default;
+$tc-color--serie-11: #d09da1 !default;
+$tc-color--serie-12: #b09c4d !default;
+$tc-color--serie-13: #9eb6c8 !default;
+$tc-color--serie-14: #ace0c6 !default;
+$tc-color--serie-15: #d8773d !default;
+$tc-color--serie-16: #a9d9df !default;
+$tc-color--serie-17: #b96e6e !default;
+$tc-color--serie-18: #d8d63d !default;
+$tc-color--serie-19: #407181 !default;
+$tc-color--serie-20: #d3bdde !default;
+$tc-color__series: (
+  0: $tc-color--serie-1,
+  1: $tc-color--serie-2,
+  2: $tc-color--serie-3,
+  3: $tc-color--serie-4,
+  4: $tc-color--serie-5,
+  5: $tc-color--serie-6,
+  6: $tc-color--serie-7,
+  7: $tc-color--serie-8,
+  8: $tc-color--serie-9,
+  9: $tc-color--serie-10,
+  10: $tc-color--serie-11,
+  11: $tc-color--serie-12,
+  12: $tc-color--serie-13,
+  13: $tc-color--serie-14,
+  14: $tc-color--serie-15,
+  15: $tc-color--serie-16,
+  16: $tc-color--serie-17,
+  17: $tc-color--serie-18,
+  18: $tc-color--serie-19,
+  19: $tc-color--serie-20,
+);
 
 // ## Scales
 $tc-color--quartile-1: #b3d7d2 !default;
 $tc-color--quartile-2: #81b1bd !default;
 $tc-color--quartile-3: #437f9d !default;
 $tc-color--quartile-4: #00354e !default;
+$tc-color__quartiles: (
+  0: $tc-color--quartile-1,
+  1: $tc-color--quartile-2,
+  2: $tc-color--quartile-3,
+  3: $tc-color--quartile-4,
+);

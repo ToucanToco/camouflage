@@ -1,0 +1,28 @@
+// Details
+%details {
+  background-color: $tc-color--grey-extralight-1;
+}
+
+.details--aside {
+  @extend %details;
+}
+
+.details--aside-clickable {
+  @extend %details;
+}
+
+.details--inside {
+  @extend %details;
+}
+
+.details--inside-clickable {
+  @extend %details;
+}
+
+.details__label {
+  color: $tc-color--dark;
+}
+
+.details__meta {
+  color: $tc-color--grey;
+}

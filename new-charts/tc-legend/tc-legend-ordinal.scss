@@ -3,8 +3,12 @@
   .tc-legend-ordinal__serie[#{$attr}="#{$value}"] .tc-legend-ordinal__serie-color {
     background-color: $color;
   }
-  // New legend
+  // legacy
   .tc-details-serie-container[#{$attr}="#{$value}"] .tc-details-serie-color__rect {
+    background-color: $color;
+  }
+  // new
+  .details__series .serie__color[data-label="#{$value}"] {
     background-color: $color;
   }
 }

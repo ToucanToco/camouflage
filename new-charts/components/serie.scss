@@ -1,16 +1,32 @@
 // Serie
+.serie {
+  @extend %serie;
+}
+
+.serie--clickable {
+  @extend %serie;
+}
+
+.serie--value {
+  @extend %serie;
+}
+
+.serie--value-clickable {
+  @extend %serie;
+}
+
 .serie--clickable {
   border-color: $tc-color--grey-light-2;
 }
 
 @each $index, $color in $tc-color__series {
-  .serie__color[data-index='#{$index}'] {
+  %serie[data-index='#{$index}'] .serie__color {
     background-color: $color;
   }
 }
 
 @each $sentiment, $color in $tc-color__sentiments {
-  .serie__color[data-sentiment='#{$sentiment}'] {
+  %serie[data-sentiment='#{$sentiment}'] .serie__color {
     background-color: $color;
   }
 }

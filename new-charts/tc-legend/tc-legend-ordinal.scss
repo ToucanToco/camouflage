@@ -1,3 +1,20 @@
+// Series
+.serie {
+  @extend %serie;
+}
+
+.serie--clickable {
+  @extend %serie;
+}
+
+.serie--value {
+  @extend %serie;
+}
+
+.serie--value-clickable {
+  @extend %serie;
+}
+
 @mixin colorTcLegendCategoryByAttr($attr, $value, $color) {
   // legacy
   .tc-legend-ordinal__serie[#{$attr}="#{$value}"] .tc-legend-ordinal__serie-color {
@@ -7,8 +24,8 @@
   .tc-details-serie-container[#{$attr}="#{$value}"] .tc-details-serie-color__rect {
     background-color: $color;
   }
-  // new
-  .details__series .serie__color[data-label="#{$value}"] {
+  // current
+  %serie[data-label="#{$value}"] .serie__color {
     background-color: $color;
   }
 }

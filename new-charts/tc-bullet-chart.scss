@@ -55,8 +55,24 @@
 }
 
 // Series
+.serie {
+  @extend %serie;
+}
+
+.serie--clickable {
+  @extend %serie;
+}
+
+.serie--value {
+  @extend %serie;
+}
+
+.serie--value-clickable {
+  @extend %serie;
+}
+
 @mixin bullet-chart__serie($serie, $color, $attribute: 'type') {
-  .bullet-chart__details .serie__color[data-#{$attribute}='#{$serie}'] {
+  .bullet-chart__details %serie[data-#{$attribute}='#{$serie}'] .serie__color {
     background-color: $color;
   }
 }

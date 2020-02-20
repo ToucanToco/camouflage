@@ -1,10 +1,15 @@
 // Serie
+%serie--clickable {
+  border-color: $tc-color--grey-light-2;
+}
+
 .serie {
   @extend %serie;
 }
 
 .serie--clickable {
   @extend %serie;
+  @extend %serie--clickable;
 }
 
 .serie--value {
@@ -13,10 +18,7 @@
 
 .serie--value-clickable {
   @extend %serie;
-}
-
-.serie--clickable {
-  border-color: $tc-color--grey-light-2;
+  @extend %serie--clickable;
 }
 
 @each $index, $color in $tc-color__series {

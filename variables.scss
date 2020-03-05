@@ -165,6 +165,7 @@ $averageBoxColor: #4e4e4e;
 $averageBoxText: #fff;
 $averageLineColor: #808080;
 
+$seriesColors: "override-me-1" #000, "overidde-me-2" #000;
 $chartColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5 $chart-color-6 $chart-color-7 $chart-color-8 $chart-color-9 $chart-color-10 $chart-color-11 $chart-color-12 $chart-color-13 $chart-color-14 $chart-color-15 $chart-color-16 $chart-color-17 $chart-color-18 $chart-color-19;
 $stackedColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5 $chart-color-6 $chart-color-7 $chart-color-8 $chart-color-9 $chart-color-10 $chart-color-11 $chart-color-12 $chart-color-13 $chart-color-14 $chart-color-15 $chart-color-16 $chart-color-17 $chart-color-18 $chart-color-19;
 $sentiment-colors: (
@@ -295,6 +296,7 @@ $bullet-chart-axis-text-color:                #cacac9 !default;
 $tc-map-base-map-color:                       white !default;
 $tc-map-border-color:                         lightergray !default;
 // Series colors
+$tc-series-colors:                            $seriesColors !default;
 $tc-map-categories-colors:                    $chartColors !default;
 $tc-map-missing-data:                         $tc-map-base-map-color !default;
 $tc-map-selected-color:                       $secondary-emphasis-color !default;

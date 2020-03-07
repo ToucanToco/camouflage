@@ -3,12 +3,10 @@ $additional-panel-header-color:       $main-color-dark !default;
 $additional-panel-bubble-tab-color:   darken($main-color-dark, 10%) !default;
 $additional-panel-name-tab-color:     darken($main-color-dark, 20%) !default;
 
+.additional-panel,
+.additional-panel-tabs,
 .additional-panel__toggle-button {
   background-color: $additional-panel-content-color;
-}
-
-.additional-panel-tabs {
-  background-color: $additional-panel-content-color; // Hack for phone extra space when scrolling
 }
 
 .additional-panel-tabs__scrolling-zone {

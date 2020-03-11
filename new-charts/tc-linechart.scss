@@ -7,6 +7,10 @@
 @mixin colorLinesById($id, $color) {
     @include colorLinesByAttr(data-serie-index, $id, $color);
 }
+
+@mixin colorTcLinechartSerieByName($name, $color) {
+  @include colorLinesByAttr(data-serie, $name, $color);
+}
   
 @each $color in $chartColors {
     $i: index($chartColors, $color) - 1;

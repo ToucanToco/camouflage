@@ -20,6 +20,9 @@
   // tc-lines
   @include colorTcLinesSerieByName($name, $color);
 
+  // tc-linechart v2
+  @include colorTcLinechartSerieByName($name, $color);
+
   // tc-bubblechart
   @include colorBubbleChartByName($name, $color);
 
@@ -28,6 +31,7 @@
 
   // tc-radarchart
   @include colorTcRadarchartShapeByName($name, $color);
+  @include colorTcRadarchartMetricsLabelByName($name, $color);
 
   // tc-stackedbarchart
   @include colorStackedBarsByName($name, $color);

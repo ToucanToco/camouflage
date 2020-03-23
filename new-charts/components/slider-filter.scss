@@ -13,3 +13,7 @@
 .tc-slider-vue__input::-webkit-slider-runnable-track {
   background: $controllerColor;
 }
+
+.tc-slider-vue__input::-moz-range-track {
+  background: $controllerColor;
+}

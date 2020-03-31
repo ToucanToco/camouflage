@@ -10,9 +10,18 @@
   color: $controllerColor;
 }
 
-.tc-slider-vue__input::-webkit-slider-runnable-track,
-.tc-slider-vue__input::-moz-range-track,
-.tc-slider-vue__input::-ms-fill-lower,
+.tc-slider-vue__input::-webkit-slider-runnable-track {
+  background: $controllerColor;
+}
+
+.tc-slider-vue__input::-moz-range-track {
+  background: $controllerColor;
+}
+
+.tc-slider-vue__input::-ms-fill-lower {
+  background: $controllerColor;
+}
+
 .tc-slider-vue__input::-ms-fill-upper {
   background: $controllerColor;
 }

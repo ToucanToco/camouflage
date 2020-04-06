@@ -12,7 +12,6 @@
   @include colorLinesByAttr(data-serie, $name, $color);
 }
   
-@each $color in $chartColors {
-    $i: index($chartColors, $color) - 1;
+@each $i, $color in $chartColors {
     @include colorLinesById($i, $color);
 }

@@ -49,8 +49,7 @@ chart,
   }
 
   stacked-barchart {
-    @each $color in $stackedColors {
-      $i: index($stackedColors, $color) - 1;
+    @each $i, $color in $stackedColors {
       [data-stack-index="#{$i}"] {
         @include colorSVGElement($color);
       }

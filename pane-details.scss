@@ -26,8 +26,7 @@
 
   }
   /* Colors */
-  @each $color in $chartColors {
-    $i: index($chartColors, $color) - 1;
+  @each $i, $color in $chartColors {
     [data-serie="#{$i}"], [data-serie-index="#{$i}"] {
       @include colorSVGElement($color);
     }
@@ -48,8 +47,7 @@
       &.selected {
         border-color: $emphasis-color;
 
-        @each $color in $scaleColors {
-          $i: index($scaleColors, $color) - 1;
+        @each $i, $color in $scaleColors {
           &[data-scale-index="#{$i}"] {
             border-color: transparent;
             background-color: $color;

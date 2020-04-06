@@ -19,7 +19,6 @@
   @include colorTcLinesSerieByAttr(data-style, $name, $color);
 }
 
-@each $color in $chartColors {
-  $i: index($chartColors, $color) - 1;
+@each $i, $color in $chartColors {
   @include colorTcLinesSerieById($i, $color);
 }

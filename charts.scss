@@ -2,8 +2,7 @@
 chart,
 .grid-tile__chart-container {
   /* Colors */
-  @each $color in $chartColors {
-    $i: index($chartColors, $color) - 1;
+  @each $i, $color in $chartColors {
     [data-serie="#{$i}"], [data-serie-index="#{$i}"] {
       @include colorSVGElement($color);
     }

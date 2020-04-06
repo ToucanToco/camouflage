@@ -33,8 +33,7 @@
   @include colorTcRadarchartShapeByAttr(data-style, $name, $color);
 }
 
-@each $color in $chartColors {
-  $i: index($chartColors, $color) - 1;
+@each $i, $color in $chartColors {
   @include colorTcRadarchartShapeById($i, $color);
 }
 
@@ -53,7 +52,6 @@
   @include colorTcRadarchartMetricsLabelsByAttr(data-serie, $name, $color);
 }
 
-@each $color in $chartColors {
-  $i: index($chartColors, $color) - 1;
+@each $i, $color in $chartColors {
   @include colorTcRadarchartMetricsLabelById($i, $color);
 }

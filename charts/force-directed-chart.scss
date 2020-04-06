@@ -7,8 +7,7 @@ force-directed-chart {
       stroke: $emphasis-color;
     }
   }
-  @each $color in $chartColors {
-    $i: index($chartColors, $color) - 1;
+  @each $i, $color in $chartColors {
     [data-source-index="#{$i}"], [data-source-index="#{$i}"].selected {
       @include colorSVGElement($color);
     }

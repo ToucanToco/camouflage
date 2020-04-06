@@ -1,8 +1,7 @@
 $tc-mapchart-scale-colors: $scaleColors;
 $tc-mapchart-serie-colors: $chartColors;
 
-@each $color in $tc-mapchart-scale-colors {
-  $i: index($tc-mapchart-scale-colors, $color) - 1;
+@each $i, $color in $tc-mapchart-scale-colors {
   .map-chart__zone[data-scale-index="#{$i}"] {
     fill: $color;
   }

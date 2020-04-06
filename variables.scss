@@ -236,8 +236,13 @@ $colorChart2: $chart-color-2;
 $colorChart3: $chart-color-3;
 $colorChart4: $chart-color-4;
 
-$scale-colors: $scale-color-0 $scale-color-1 $scale-color-2 $scale-color-3 $scale-color-4;
-$scaleColors: $scale-colors;
+$scaleColors: (
+  0: $scale-color-0, 
+  1: $scale-color-1,
+  2: $scale-color-2,
+  3: $scale-color-3,
+  4: $scale-color-4
+);
 
 
 $barStackColor0: $colorChart0;

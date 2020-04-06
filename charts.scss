@@ -9,8 +9,7 @@ chart,
   }
 
 
-  @each $color in $scaleColors {
-    $i: index($scaleColors, $color) - 1;
+  @each $i, $color in $scaleColors {
     [data-scale-index="#{$i}"] {
       @include colorSVGElement($color);
     }

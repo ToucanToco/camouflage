@@ -1,5 +1,4 @@
-@each $color in $scaleColors {
-  $i: index($scaleColors, $color) - 1;
+@each $i, $color in $scaleColors {
   .tc-legend-quantile__quantile[data-scale-index="#{$i}"] {
     background-color: $color;
   }

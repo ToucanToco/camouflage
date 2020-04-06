@@ -47,8 +47,7 @@
       &.selected {
         border-color: $emphasis-color;
 
-        @each $color in $scaleColors {
-          $i: index($scaleColors, $color) - 1;
+        @each $i, $color in $scaleColors {
           &[data-scale-index="#{$i}"] {
             border-color: transparent;
             background-color: $color;

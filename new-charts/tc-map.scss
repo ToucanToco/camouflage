@@ -4,8 +4,7 @@
     fill: $tc-map-base-map-color;
   }
   // Series colors
-  @each $color in $tc-map-categories-colors {
-    $i: index($tc-map-categories-colors, $color);
+  @each $i, $color in $tc-map-categories-colors {
     .zone[data-category-id="#{$i}"] {
       fill: $color;
     }

@@ -188,7 +188,28 @@ $chartColors: (
   18: $chart-color-18,
   19: $chart-color-19
 );
-$stackedColors: $chart-color-0 $chart-color-1 $chart-color-2 $chart-color-3 $chart-color-4 $chart-color-5 $chart-color-6 $chart-color-7 $chart-color-8 $chart-color-9 $chart-color-10 $chart-color-11 $chart-color-12 $chart-color-13 $chart-color-14 $chart-color-15 $chart-color-16 $chart-color-17 $chart-color-18 $chart-color-19;
+$stackedColors: (
+  0: $chart-color-0, 
+  1: $chart-color-1,
+  2: $chart-color-2,
+  3: $chart-color-3,
+  4: $chart-color-4,
+  5: $chart-color-5,
+  6: $chart-color-6,
+  7: $chart-color-7,
+  8: $chart-color-8,
+  9: $chart-color-9,
+  10: $chart-color-10,
+  11: $chart-color-11,
+  12: $chart-color-12,
+  13: $chart-color-13,
+  14: $chart-color-14,
+  15: $chart-color-15,
+  16: $chart-color-16,
+  17: $chart-color-17,
+  18: $chart-color-18,
+  19: $chart-color-19
+);
 $sentiment-colors: (
   positive: $positive-color,
   negative: $negative-color,

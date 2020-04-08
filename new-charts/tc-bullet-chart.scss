@@ -1,39 +1,6 @@
-// TcBulletChart
-%bullet-chart__cell {
-  background-color: $tc-color--white;
-}
-
-.bullet-chart__cell--details {
-  @extend %bullet-chart__cell;
-}
-
-.bullet-chart__cell--pack {
-  @extend %bullet-chart__cell;
-}
-
 // TcBullet
-%bullet__cell {
-  background-color: $tc-color--white;
-}
-
-.bullet__body {
-  @extend %bullet__cell;
-}
-
 .bullet__comparison {
   background-color: mix($tc-color--serie-2, $tc-color--white, 33%);
-}
-
-.bullet__display {
-  @extend %bullet__cell;
-}
-
-.bullet__label {
-  @extend %bullet__cell;
-}
-
-.bullet__sparkline {
-  @extend %bullet__cell;
 }
 
 .bullet__target {

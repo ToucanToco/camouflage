@@ -1,7 +1,7 @@
 bullet-chart {
-  $barColor: map-get($chartColors,1);
-  $comparisonColor: map-get($chartColors,2);
-  $targetColor: map-get($chartColors,3);
+  $barColor: map-get($chartColors,0);
+  $comparisonColor: map-get($chartColors,1);
+  $targetColor: map-get($chartColors,2);
 
   .bar rect, rect.bar {
     fill: $barColor;

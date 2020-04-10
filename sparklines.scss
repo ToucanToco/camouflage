@@ -13,7 +13,7 @@
 }
 .widget-sparkline-container {
   .line {
-    stroke: map-get($chartColors,1);
+    stroke: map-get($chartColors,0);
   }
 
   .sparkline-selected {

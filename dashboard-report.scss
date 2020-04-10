@@ -91,10 +91,10 @@
         .widget-type-leaderboard {
           .widget-chart-container {
             .bar:not(.sentiment-zones) {
-                fill: map-get($chartColors,1);
+                fill: map-get($chartColors,0);
               }
             .target:not(.sentiment-zones) {
-                fill: map-get($chartColors,3);
+                fill: map-get($chartColors,2);
               }
           }
           .horizontal-barchart-subgroup.horizontal-barchart-subgroup--highlighted .bar-label {

@@ -49,6 +49,9 @@
 
   // tc-stackedbarchart
   @include colorStackedBarsByName($name, $color);
+
+  // tc-tablechart
+  @include colorTcTableByName($name, $color);
 }
 
 @each $serieLabel, $serieColor in $tc-series-colors {

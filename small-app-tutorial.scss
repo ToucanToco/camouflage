@@ -1,0 +1,15 @@
+.small-app-tutorial__subtitle {
+  color: lighten($text-color, 15%);
+}
+.small-app-tutorial__start-button {
+  background-color: $emphasis-color;
+  &:hover {
+    background-color: $toucan-button-hover-blue;
+  }
+}
+.small-app-tutorial__bullet {
+  background-color: $grey-light-1;
+  &.small-app-tutorial__bullet--active {
+    background-color: $main-color;
+  }
+}

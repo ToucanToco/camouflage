@@ -64,6 +64,10 @@ $closeIconColor: #D4D4D4;
   @include colorTcTableByAttr(data-serie-index, $id, $color);
 }
 
+@mixin colorTcTableByName($name, $color) {
+  @include colorTcTableByAttr(data-serie-label, $name, $color);
+}
+
 @each $i, $color in $chartColors {
   @include colorTcTableById($i, $color);
 }

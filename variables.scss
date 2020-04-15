@@ -332,10 +332,6 @@ $new-small-app-primary-color:                 $main-color-dark !default;
 // BAR/BARLINE
 $barColor:                                    map-get($chartColors,2);
 $lineColor:                                   map-get($chartColors,0);
-// BULLETCHART
-$bullet-chart-detail-block-bg:                #f0f0f0 !default;
-$bullet-chart-axis-color:                     #f5f5f5 !default;
-$bullet-chart-axis-text-color:                #cacac9 !default;
 
 /*** NEW CHARTS ***/
 // TC-MAP

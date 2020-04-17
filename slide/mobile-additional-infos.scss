@@ -1,15 +1,4 @@
-.mobile-additional-infos__toggle-button--with-reco {
-  &::after {
-    background-color: $emphasis-color;
-  }
-}
-
-.mobile-additional-infos__icon.icon-bookmark {
-  color: $main-color;
-}
-
-.mobile-additional-infos__recommendation {
-  &::before {
-    background-color: $emphasis-color;
-  }
+.mobile-additional-infos__warning,
+.mobile-additional-infos__warning--small {
+  background: $emphasis-color;
 }

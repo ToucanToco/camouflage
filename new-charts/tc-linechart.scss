@@ -2,6 +2,9 @@
     .linechart__line[#{$attr}='#{$value}'] {
       stroke: $color !important;
     }
+    .linechart__value[#{$attr}='#{$value}'] {
+      fill: $color !important;
+    }
   }
   
 @mixin colorLinesById($id, $color) {

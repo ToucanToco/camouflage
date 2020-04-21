@@ -348,6 +348,10 @@ $tc-map-transition-duration:                  $transition-duration !default;
 // Stroke
 $tc-bar-selector-stroke: 		      #D8D8D8 !default;
 
+//FUNNELCHART
+// Bars color
+$funnelchart-bar-color: map-get($chartColors,1);
+
 /*** SLIDES ***/
 // RECOMMENDATION
 $recommendation-color:                        $emphasis-color !default;

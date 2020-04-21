@@ -1,15 +1,3 @@
-
-@mixin colorTcFunnelChartBarByAttr($attr, $value, $color) {
-  .funnel-chart__chart-container .funnel-chart__bar[#{$attr}="#{$value}"] {
-    fill: $color !important;
-  }
-}
-
-@mixin colorTcFunnelChartBarById($id, $color) {
-  @include colorTcFunnelChartBarByAttr(data-serie-index, $id, $color);
-}
-
-
-@each $i, $color in $chartColors {
-  @include colorTcFunnelChartBarById($i, $color);
+.funnel-chart__bar {
+  fill: $funnelchart-bar-color;
 }

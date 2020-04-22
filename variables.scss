@@ -167,7 +167,7 @@ $averageLineColor: #808080;
 
 $seriesColors: "override-me-1" #000, "overidde-me-2" #000;
 $chartColors: (
-  0: $chart-color-0, 
+  0: $chart-color-0,
   1: $chart-color-1,
   2: $chart-color-2,
   3: $chart-color-3,
@@ -189,7 +189,7 @@ $chartColors: (
   19: $chart-color-19
 );
 $stackedColors: (
-  0: $chart-color-0, 
+  0: $chart-color-0,
   1: $chart-color-1,
   2: $chart-color-2,
   3: $chart-color-3,
@@ -237,7 +237,7 @@ $colorChart3: $chart-color-3;
 $colorChart4: $chart-color-4;
 
 $scaleColors: (
-  0: $scale-color-0, 
+  0: $scale-color-0,
   1: $scale-color-1,
   2: $scale-color-2,
   3: $scale-color-3,
@@ -581,10 +581,6 @@ $font-size-nav-menu-level1-mobile: 22.5px;
   font-family: $chart-font-family;
   text-transform: uppercase;
   font-style: normal;
-
-  @include respond-to(phone) {
-    font-size: 11px;
-  }
 }
 
 .font-recommendation {

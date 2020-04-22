@@ -18,3 +18,9 @@
 @each $i, $color in $chartColors {
     @include colorLinesById($i, $color);
 }
+
+@each $sentiment, $color in $sentiment-colors {
+  .sentiment-zone[data-sentiment='#{$sentiment}'] .sentiment-zone__rect {
+    fill: lighten($color, 10);
+  }
+}

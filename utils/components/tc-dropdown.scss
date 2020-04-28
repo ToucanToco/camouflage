@@ -71,8 +71,8 @@
   background-color: $search-selected-bg-color;
 }
 
-// Media queries
-@media (min-width: 768px) {
+// Desktop mode
+.tc-dropdown:not(.tc-dropdown--compact) {
   .tc-dropdown__display--filter-dropdown {
     box-shadow: 0 -1px 0 0 $shadow-color inset;
   }

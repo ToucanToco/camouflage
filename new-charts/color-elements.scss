@@ -50,6 +50,9 @@
 
   // tc-tablechart
   @include colorTcTableByName($name, $color);
+
+  //tc-bullet-chart
+  @include colorBulletChartSerieByName($name, $color);
 }
 
 @each $serieLabel, $serieColor in $tc-series-colors {

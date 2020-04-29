@@ -34,3 +34,21 @@
   @include bullet-chart__serie($sentiment, $color, sentiment);
 }
 @include bullet-chart__serie(value, $tc-color--serie-2);
+
+@mixin colorBulletAttrByName($attr, $serie, $color, $el: $serie) {
+  .bullet-chart__bullet[data-#{$attr}='#{$serie}'] .bullet__#{$attr},
+  .bullet-chart__details .serie[data-type="#{$attr}"][data-label='#{$serie}'] .serie__color {
+    background-color: $color;
+  }
+  // el is needed because in tile we have no consistancy between classes and params
+  // TODO: refacto tile bullet to have similar behaviour than in bullet chart
+  .tc-horizontal-bar-with-bullet[data-#{$attr}='#{$serie}'] .tc-horizontal-bar-with-bullet__#{$el} {
+    fill: $color;
+  }
+}
+
+@mixin colorBulletChartSerieByName($serie, $color) {
+  @include colorBulletAttrByName(comparison, $serie, $color, comparison);
+  @include colorBulletAttrByName(target, $serie, $color, bullet);
+  @include colorBulletAttrByName(value, $serie, $color, bar);
+}

@@ -45,4 +45,4 @@
 @each $sentiment, $color in $sentiment-colors {
   @include colorTcLegendCategoryByAttr(data-sentiment, $sentiment, $color);
 }
-@include colorTcLegendCategoryByAttr(data-serie-index, comparison, $comparisonColor);
+@include colorTcLegendCategoryByAttr(data-serie-index, comparison, $bullet-comparison-color);

@@ -221,9 +221,6 @@ $sentiment-colors: (
 );
 $sentimentColors: $sentiment-colors; // Backwards compat
 
-$comparisonColor: $chart-color-1;
-
-
 $waterfallInitialColor: #00354e;
 $waterfallPositiveColor: $positive-color;
 $waterfallNegativeColor: $negative-color;
@@ -351,6 +348,11 @@ $tc-bar-selector-stroke: 		      #D8D8D8 !default;
 //FUNNELCHART
 // Bars color
 $funnelchart-bar-color: map-get($chartColors,1);
+
+//BULLETCHART
+$bullet-comparison-color:  mix($chart-color-2, white, 33%);
+$bullet-value-color: $chart-color-2;
+$bullet-target-color: $chart-color-1;
 
 /*** SLIDES ***/
 // RECOMMENDATION

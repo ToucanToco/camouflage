@@ -37,7 +37,11 @@
   .bullet-chart__details .serie[data-#{$attribute}='#{$serie}'] .serie__color {
     background-color: $color;
   }
-  .tc-legend-ordinal__serie[data-#{$attribute}='#{$serie}'] .tc-legend-ordinal__serie-color {
+  @include colorTileBulletChartPartBySerie($serie, $color);
+}
+
+@mixin colorTileBulletChartPartBySerie($serie, $color) {
+  .tc-legend-ordinal__serie[data-style='#{$serie}'] .tc-legend-ordinal__serie-color {
     background-color: $color;
   }
 }
@@ -45,6 +49,7 @@
 @include bullet-chart__serie(comparison, $bullet-comparison-color);
 @include bullet-chart__serie(target, $bullet-target-color);
 @include bullet-chart__serie(value, $bullet-value-color);
+
 @each $sentiment, $color in $tc-color__sentiments {
   @include bullet-chart__serie($sentiment, $color, sentiment);
 }

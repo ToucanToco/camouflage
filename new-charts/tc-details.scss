@@ -20,7 +20,7 @@
 @each $sentiment, $color in $sentiment-colors {
   @include colorTcDetailsCategoryByAttr(data-sentiment, $sentiment, $color);
 }
-@include colorTcDetailsCategoryByAttr(data-serie-index, comparison, $comparisonColor);
+@include colorTcDetailsCategoryByAttr(data-serie-index, comparison, $bullet-comparison-color);
 //
 
 .tc-details {

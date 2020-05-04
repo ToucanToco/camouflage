@@ -30,8 +30,6 @@
 @each $name, $color in $tc-bullet-default-colors {
   @include colorBulletLegendByName($name, $color);
   @include colorBulletPart($color, $name);
-  @include colorBulletPart($color, $name);
-  @include colorBulletPart($color, $name);
 }
 
 // Sentiments

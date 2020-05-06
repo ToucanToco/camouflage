@@ -350,9 +350,12 @@ $tc-bar-selector-stroke: 		      #D8D8D8 !default;
 $funnelchart-bar-color: map-get($chartColors,1);
 
 //BULLETCHART
-$bullet-comparison-color:  mix($chart-color-2, white, 33%);
-$bullet-value-color: $chart-color-2;
-$bullet-target-color: $chart-color-1;
+$bullet-comparison-color: mix($chart-color-2, white, 33%);
+$tc-bullet-default-colors: (
+  comparison: $bullet-comparison-color,
+  target: $chart-color-1,
+  value: $chart-color-2,
+);
 
 /*** SLIDES ***/
 // RECOMMENDATION

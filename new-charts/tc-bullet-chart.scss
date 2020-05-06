@@ -1,55 +1,49 @@
-// Tile
-.tc-horizontal-bar-with-bullet__comparison {
-  fill: $bullet-comparison-color;
-}
-.tc-horizontal-bar-with-bullet__bar {
-  fill: $bullet-value-color;
-}
-.tc-horizontal-bar-with-bullet__bullet {
-  fill: $bullet-target-color;
-}
-
-// TcBullet
-.bullet__comparison {
-  background-color: $bullet-comparison-color;
-}
-
-.bullet__target {
-  background-color: $bullet-target-color;
-}
-
-@each $sentiment, $color in $tc-color__sentiments {
-  .bullet__target[data-sentiment='#{$sentiment}'] {
-    background-color: $color;
-  }
-}
-
-.bullet__value {
-  background-color: $bullet-value-color;
-}
-
-.bullet__value-container {
-  background-color: $tc-color--grey-extralight-1;
-}
-
-// Series
-@mixin bullet-chart__serie($serie, $color, $attribute: 'type') {
+// Legend
+@mixin colorBulletLegendByName($serie, $color, $attribute: 'type') {
+  .tc-legend-ordinal__serie[data-style='#{$serie}'] .tc-legend-ordinal__serie-color,
   .bullet-chart__details .serie[data-#{$attribute}='#{$serie}'] .serie__color {
     background-color: $color;
   }
-  @include colorTileBulletChartPartBySerie($serie, $color);
 }
 
-@mixin colorTileBulletChartPartBySerie($serie, $color) {
-  .tc-legend-ordinal__serie[data-style='#{$serie}'] .tc-legend-ordinal__serie-color {
+@mixin colorBulletPart($color, $part: comparison) {
+  .tc-horizontal-bar-with-bullet__#{$part} {
+    fill: $color;
+  }
+  .bullet__#{$part} {
     background-color: $color;
   }
 }
 
-@include bullet-chart__serie(comparison, $bullet-comparison-color);
-@include bullet-chart__serie(target, $bullet-target-color);
-@include bullet-chart__serie(value, $bullet-value-color);
+@mixin colorBulletPartByAttr($serie, $color, $part, $attr: serie) {
+  .tc-horizontal-bar-with-bullet__#{$part}[data-#{$attr}='#{$serie}'] {
+    fill: $color;
+  }
+  .bullet__#{$part}[data-#{$attr}='#{$serie}'] {
+    background-color: $color;
+  }
+}
 
+/****** APPLY COLORS ******/
+
+// Default
+@each $name, $color in $tc-bullet-default-colors {
+  @include colorBulletLegendByName($name, $color);
+  @include colorBulletPart($color, $name);
+}
+
+// Sentiments
 @each $sentiment, $color in $tc-color__sentiments {
-  @include bullet-chart__serie($sentiment, $color, sentiment);
+  @include colorBulletLegendByName($sentiment, $color, sentiment);
+  @include colorBulletPartByAttr($sentiment, $color, target, sentiment);
+}
+
+/****** SERIES ******/
+
+// Custom colors
+@mixin colorBulletChartSerieByName($serie, $color) {
+  @include colorBulletPartByAttr($serie, $color, value);
+  @include colorBulletPartByAttr($serie, $color, target);
+  @include colorBulletPartByAttr($serie, $color, comparison);
+  @include colorBulletLegendByName($serie, $color, label);
 }

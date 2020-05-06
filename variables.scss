@@ -797,28 +797,6 @@ $slide-height: $viewportHeight - $headerHeight;
   height: 100%;
 }
 
-.button {
-  @extend .font-buttons;
-  border: 1px solid $main-color;
-  background-color: white;
-  color: $main-color;
-  text-align:center;
-  min-width: 125px;
-  padding: 15px;
-  line-height: 38px;
-  font-weight: 400;
-  cursor: pointer;
-
-  &.active, &:hover, &:focus {
-    background-color: $main-color-fade;
-    color: #fff;
-  }
-
-  &:hover {
-    background-color: $controllerColor;
-    color: #fff;
-  }
-}
 
 @mixin colorSVGElement($color) {
   &.bar, &.arc, &.area, &.legend-rect, &.node, &.node-part, &.target, .text-serie, &.circle, &.circle-main {

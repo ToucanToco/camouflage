@@ -103,6 +103,11 @@ text.bubblechart__label{
   @include colorBubblesById($i, $color);
 }
 
+@each $sentiment, $color in $sentiment-colors {
+  .bubblechart__bubbles[data-sentiment="#{$sentiment}"] {
+    fill: $color;
+  }
+}
 
 @mixin colorBubbleChartByName($name, $color) {
   @include colorBubbleChartByAttr(data-serie, $name, $color);
@@ -112,4 +117,11 @@ text.bubblechart__label{
   @include colorBubblesByAttr(data-serie, $name, $color);
   @include colorBubblesByAttr(data-group, $name, $color);
   @include colorBubblesByAttr(data-style, $name, $color);
+}
+
+// LEGEND
+@each $sentiment, $color in $sentiment-colors {
+  .metric__color__rect[data-sentiment="#{$sentiment}"] {
+    background-color: $color;
+  }
 }

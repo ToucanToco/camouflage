@@ -7,8 +7,7 @@
   stacked-barchart,
   tc-treemap,
   text-slide,
-  verbatim,
-  waterfall-chart {
+  verbatim {
     [data-subgroup="#{$name}"],
     [data-label="#{$name}"],
     [data-serie="#{$name}"] {

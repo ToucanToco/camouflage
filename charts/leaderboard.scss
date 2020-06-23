@@ -2,8 +2,7 @@
 chart,
 .grid-tile__chart-container {
   bullet-chart,
-  stacked-barchart,
-  leaderboard-centered-average {
+  stacked-barchart {
     .horizontal-barchart {
       .horizontal-barchart-label {
         &.highlighted {
@@ -23,26 +22,6 @@ chart,
         &[data-index="2"] .bar-0 {
           fill: $colorChart2;
         }
-      }
-    }
-  }
-
-  leaderboard-centered-average {
-    .horizontal-barchart-variation-sign {
-      &.evolution-up{
-        fill: $aboveAverageColor;
-      }
-      &.evolution-down{
-        fill: $underAverageColor;
-      }
-    }
-
-    .bar{
-      &.above-average {
-        fill: $aboveAverageColor;
-      }
-      &.under-average {
-        fill: $underAverageColor;
       }
     }
   }

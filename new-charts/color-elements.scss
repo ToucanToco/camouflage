@@ -1,16 +1,12 @@
 @mixin colorChartsElementsByName($name, $color) {
   // Legacy
   barlinechart,
-  force-directed-chartlinechart,
-  heatmap,
-  linechart .chart-container, // Give a higher priority to this rule than data-serie-index
   score-card,
   slopegraph,
   stacked-barchart,
   tc-treemap,
   text-slide,
-  verbatim,
-  waterfall-chart {
+  verbatim {
     [data-subgroup="#{$name}"],
     [data-label="#{$name}"],
     [data-serie="#{$name}"] {

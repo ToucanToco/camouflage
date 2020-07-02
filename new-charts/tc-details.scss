@@ -1,6 +1,6 @@
 // Tc Details Multiple Series
 @mixin colorTcDetailsCategoryByAttr($attr, $value, $color) {
-  .tc-details-serie-container[#{$attr}='#{$value}'] .tc-details-serie-color__rect {
+  .tc-details-serie-container[#{$attr}="#{$value}"] .tc-details-serie-color__rect {
     background-color: $color;
   }
 }

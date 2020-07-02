@@ -1,11 +1,11 @@
 @mixin colorLinesByAttr($attr, $value, $color) {
-    .linechart__line[#{$attr}='#{$value}'] {
-      stroke: $color !important;
-    }
-    .linechart__value[#{$attr}='#{$value}'] {
-      fill: $color !important;
-    }
+  .linechart__line[#{$attr}="#{$value}"] {
+    stroke: $color;
   }
+  .linechart__value[#{$attr}="#{$value}"] {
+    fill: $color;
+  }
+}
   
 @mixin colorLinesById($id, $color) {
     @include colorLinesByAttr(data-serie-index, $id, $color);
@@ -20,7 +20,7 @@
 }
 
 @each $sentiment, $color in $sentiment-colors {
-  .sentiment-zone[data-sentiment='#{$sentiment}'] .sentiment-zone__rect {
+  .sentiment-zone[data-sentiment="#{$sentiment}"] .sentiment-zone__rect {
     fill: lighten($color, 10);
   }
 }

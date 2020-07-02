@@ -1,7 +1,7 @@
 // Legend
 @mixin colorBulletLegendByName($serie, $color, $attribute: 'type') {
-  .tc-legend-ordinal__serie[data-style='#{$serie}'] .tc-legend-ordinal__serie-color,
-  .bullet-chart__details .serie[data-#{$attribute}='#{$serie}'] .serie__color {
+  .tc-legend-ordinal__serie[data-style="#{$serie}"] .tc-legend-ordinal__serie-color,
+  .bullet-chart__details .serie[data-#{$attribute}="#{$serie}"] .serie__color {
     background-color: $color;
   }
 }
@@ -16,10 +16,10 @@
 }
 
 @mixin colorBulletPartByAttr($serie, $color, $part, $attr: serie) {
-  .tc-horizontal-bar-with-bullet__#{$part}[data-#{$attr}='#{$serie}'] {
+  .tc-horizontal-bar-with-bullet__#{$part}[data-#{$attr}="#{$serie}"] {
     fill: $color;
   }
-  .bullet__#{$part}[data-#{$attr}='#{$serie}'] {
+  .bullet__#{$part}[data-#{$attr}="#{$serie}"] {
     background-color: $color;
   }
 }

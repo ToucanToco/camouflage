@@ -4,8 +4,7 @@
   score-card,
   stacked-barchart,
   tc-treemap,
-  text-slide,
-  verbatim {
+  text-slide {
     [data-subgroup="#{$name}"],
     [data-label="#{$name}"],
     [data-serie="#{$name}"] {

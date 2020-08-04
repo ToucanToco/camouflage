@@ -12,6 +12,13 @@ $tc-mapchart-serie-colors: $chartColors;
     fill: $color;
   }
 }
+
+@mixin colorTcMapchartMarkerByName($name, $color) {
+  .map-chart__marker[data-color="#{$name}"] {
+    fill: $color;
+  }
+}
+
 // TC-DETAILS colors
 @each $i, $color in $tc-mapchart-scale-colors {
   .tc-details__color.map-zone[data-color-index="#{$i}"] {

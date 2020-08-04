@@ -22,6 +22,9 @@
   // tc-legend
   @include colorTcLegendCategoryByName($name, $color);
 
+  // tc-mapchart
+  @include colorTcMapchartMarkerByName($name, $color);
+
   // tc-lines
   @include colorTcLinesSerieByName($name, $color);
 

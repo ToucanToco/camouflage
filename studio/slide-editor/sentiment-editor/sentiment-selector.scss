@@ -1,5 +1,0 @@
-@each $name, $color in $sentimentColors {
-  .sentiment-selector__element--#{$name} {
-    color: $color;
-  }
-}

@@ -33,7 +33,8 @@ $tc-mapchart-serie-colors: $chartColors;
 }
 
 @each $sentiment, $color in $sentiment-colors {
-  .map-chart__zone[data-sentiment="#{$sentiment}"] {
+  .map-chart__zone[data-sentiment="#{$sentiment}"],
+  .map-chart__marker[data-sentiment="#{$sentiment}"] {
     fill: $color;
   }
 }

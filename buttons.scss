@@ -1,5 +1,5 @@
 @mixin bordered-button-creator($color: $main-color, $bg-color: white, $hover-color: $bg-color) {
-  @extend .primary-font;
+  @include primary-font;
   background: $bg-color;
   border: 3px solid $color;
   color: $color;

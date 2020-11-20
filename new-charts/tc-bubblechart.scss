@@ -1,13 +1,11 @@
 @mixin colorBubbleChartByAttr($attr, $value, $color) {
-  .bubblechart__bubbles__main[#{$attr}="#{$value}"],
-  .circle-main[#{$attr}="#{$value}"] {
+  .bubblechart__bubbles__main[#{$attr}="#{$value}"] {
     fill: $color;
     stroke: $color;
-  }
-  &.selected {
-    .circle-main{
-      fill: $emphasis-color!important;
-      stroke: $emphasis-color!important;
+
+    &.selected {
+      fill: $emphasis-color !important;
+      stroke: $emphasis-color !important;
     }
   }
 }

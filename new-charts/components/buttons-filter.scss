@@ -42,7 +42,7 @@
 }
 
 // Customization inside additional-panel
-.additional-panel /deep/ .tc-controller-buttons.tc-controller-buttons--flat {
+.additional-panel ::v-deep .tc-controller-buttons.tc-controller-buttons--flat {
 
   .tc-controller-buttons__button {
     background-color: transparent;

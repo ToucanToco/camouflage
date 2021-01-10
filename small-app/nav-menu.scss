@@ -81,7 +81,6 @@ nav-menu {
   color: $nav-menu-selected-color;
 }
 
-.nav-action-buttons,
 .nav-menu__add-subchapter {
   color: $nav-menu-item-actions-color;
 
@@ -97,8 +96,7 @@ nav-menu {
 }
 
 .nav-menu__chapter--active,
-.nav-menu__subchapter--active,
-.slide-navigator__unit.selected {
+.nav-menu__subchapter--active {
   .nav-action-buttons,
   .nav-menu__add-subchapter {
     color: transparentize($nav-menu-item-actions-hover-color, 0.5);

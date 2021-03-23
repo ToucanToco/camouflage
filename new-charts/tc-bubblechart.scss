@@ -68,6 +68,11 @@ circle.bubblechart__bubbles__main__drill-circle {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
+.bubblechart__legend .metric__color__rect {
+    background-color: $neutralColor;
+  
+}
+
 // BUBBLE LABELS
 text.bubblechart__label{
   &.highlighted {
@@ -85,7 +90,7 @@ text.bubblechart__label{
   circle.bubblechart__bubbles[#{$attr}="#{$value}"] {
     fill: $color;
   }
-  .bubblechart__legend {
+  .bubblechart__legend {  
     .metric__color__rect[#{$attr}="#{$value}"],
     .tc-legend-ordinal__serie[#{$attr}="#{$value}"] .tc-legend-ordinal__serie-color {
       background-color: $color;
@@ -116,6 +121,7 @@ text.bubblechart__label{
   @include colorBubblesByAttr(data-group, $name, $color);
   @include colorBubblesByAttr(data-style, $name, $color);
 }
+
 
 // LEGEND
 @each $sentiment, $color in $sentiment-colors {

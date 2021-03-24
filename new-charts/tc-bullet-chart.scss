@@ -1,10 +1,21 @@
 // Legend
-@mixin colorBulletLegendByName($serie, $color, $attribute: 'type') {
-  .tc-legend-ordinal__serie[data-style="#{$serie}"] .tc-legend-ordinal__serie-color,
+@mixin colorBulletTileLegendByName($serie, $color, $attribute) {
+  .tc-legend-ordinal__serie[data-#{$attribute}="#{$serie}"] .tc-legend-ordinal__serie-color {
+    background-color: $color;
+  }
+}
+
+@mixin colorBulletChartLegendByName($serie, $color, $attribute) {
   .bullet-chart__details .serie[data-#{$attribute}="#{$serie}"] .serie__color {
     background-color: $color;
   }
 }
+
+@mixin colorBulletLegendByName($serie, $color, $attribute) {
+  @include colorBulletTileLegendByName($serie, $color, $attribute);
+  @include colorBulletChartLegendByName($serie, $color, $attribute);
+}
+
 
 @mixin colorBulletPart($color, $part: comparison) {
   .tc-horizontal-bar-with-bullet__#{$part} {
@@ -28,7 +39,8 @@
 
 // Default
 @each $name, $color in $tc-bullet-default-colors {
-  @include colorBulletLegendByName($name, $color);
+  @include colorBulletTileLegendByName($name, $color, style);
+  @include colorBulletChartLegendByName($name, $color, type);
   @include colorBulletPart($color, $name);
 }
 

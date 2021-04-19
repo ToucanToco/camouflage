@@ -8,6 +8,10 @@
   @include colorversusBarsByAttr(data-serie-index, $id, $color);
 }
 
+@mixin colorversusBarsByName($name, $color) {
+  @include colorversusBarsByAttr(data-serie-label, $name, $color);
+}
+
 @each $i, $color in $chartColors {
   @include colorversusBarsById($i, $color);
 }

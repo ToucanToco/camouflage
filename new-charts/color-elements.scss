@@ -48,6 +48,9 @@
 
   //tc-bullet-chart
   @include colorBulletChartSerieByName($name, $color);
+
+  //tc-versuschart
+  @include colorversusBarsByName($name, $color);
 }
 
 @each $serieLabel, $serieColor in $tc-series-colors {

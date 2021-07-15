@@ -20,7 +20,7 @@
 }
 
 @each $sentiment, $color in $sentiment-colors {
-  .sentiment-zone[data-sentiment="#{$sentiment}"] .sentiment-zone__rect {
+  .sentiment-zone[data-sentiment="#{$sentiment}"] .sentiment-zone__area {
     fill: lighten($color, 10);
   }
 }

@@ -3,10 +3,6 @@
     //We can't @extend inside a @media or @include
     @include bordered-button-creator($main-color);
   }
-
-  @include respond-to(phone) {
-    background-color: $main-color;
-  }
 }
 
 .header-date-selector__panel {
